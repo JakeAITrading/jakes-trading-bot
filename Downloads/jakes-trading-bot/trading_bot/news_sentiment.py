@@ -1,0 +1,1 @@
+# Placeholder for trading_bot/news_sentiment.py
