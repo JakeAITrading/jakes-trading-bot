@@ -86,9 +86,9 @@
    "entry_vs_seen_pct": 32.8,
    "take_profit_price": 0.0005109469988016672,
    "tp_order": {
-    "order_id": "d197a3b5-e961-4fd1-8cac-9f7464c2536e",
+    "order_id": "3db90e20-7d72-4bd2-b330-16df6baedd90",
     "order_ids": [
-     "d197a3b5-e961-4fd1-8cac-9f7464c2536e"
+     "3db90e20-7d72-4bd2-b330-16df6baedd90"
     ],
     "network": "solana",
     "funding_network": null,
@@ -273,9 +273,9 @@
    "entry_vs_seen_pct": 24.9,
    "take_profit_price": 3.5303236821712255e-05,
    "tp_order": {
-    "order_id": "386a7b76-eda1-4b45-909b-47b297b62c7b",
+    "order_id": "39329755-8b42-4f81-bdeb-3c034752f08e",
     "order_ids": [
-     "386a7b76-eda1-4b45-909b-47b297b62c7b"
+     "39329755-8b42-4f81-bdeb-3c034752f08e"
     ],
     "network": "solana",
     "funding_network": null,
