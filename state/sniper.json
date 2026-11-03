@@ -468,7 +468,12 @@
     "failed_leg_error": null
    },
    "status": "holding, take-profit set",
-   "views": 59
+   "views": 59,
+   "closed": "take-profit filled at 6.92262e-05",
+   "sold_price": 6.9226245365e-05,
+   "proceeds_usd": 6.021913,
+   "profit_usd": 1.02,
+   "rebuy_until": null
   },
   {
    "token_address": "7728iEBJwFNx4Z2YR3y5Bw8xeSFS755NKZ2g9VDTkJiQ",
@@ -492,6 +497,57 @@
    "limit_placed_at": "2026-11-03T05:08:21Z",
    "limit_expires": 1793682621.602626,
    "views": 10
+  },
+  {
+   "token_address": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
+   "symbol": "BAWSAQS",
+   "mode": "LIVE",
+   "rebuy_of": "2026-11-03T05:03:38Z",
+   "rebuys": 1,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "price_when_seen": 6.759756797691807e-05,
+   "buy_response": {
+    "status": "Success",
+    "quote_id": "c93ddb06-0f3f-4e19-b181-679e21729588",
+    "transaction_signature": "3BcKgVQ6SrSo5AxApE4z2PYBun6SKh7X1FBTkZpBpHsiwjw4Ynyh9v1G6s6m9rFN2hdtpzne8CZ4s3YrpBxQUErP",
+    "blocked": null,
+    "reason": null
+   },
+   "bought_at": "2026-11-03T05:09:24Z",
+   "buy_after_whale_s": 4.0,
+   "tokens": 58091.752344,
+   "spent_usd": 5.0,
+   "entry_price": 8.607073806952261e-05,
+   "entry_vs_seen_pct": 27.3,
+   "take_profit_price": 9.898134877995099e-05,
+   "tp_order": {
+    "order_id": "4204380d-113d-42b0-8c63-ee823d3bceea",
+    "order_ids": [
+     "4204380d-113d-42b0-8c63-ee823d3bceea"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
+    "amount": 58091.752344,
+    "input_token": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
+    "input_token_symbol": null,
+    "take_profit_price": 9.898134877995099e-05,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   },
+   "status": "holding, take-profit set"
   }
  ],
  "skipped": [
