@@ -5451,6 +5451,141 @@
    "mcap": 11246.00021285005,
    "whale_usd": 114.25225459326857,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "FeLcSxH3thMH5zzQ8qyrkqATFo8RrVT7RXRnPUTExuna",
+   "symbol": "SI",
+   "ts": "2026-11-03T18:47:22",
+   "t": 1793731642.0,
+   "mcap": 23487.496946472675,
+   "whale_usd": 275.856066,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9RnrGaZXuJF3V1dtZcVTC8aS8K4eZBLw6AMbJjWeWUyv",
+   "symbol": "VICE",
+   "ts": "2026-11-03T18:47:53",
+   "t": 1793731673.0,
+   "mcap": 6208.647391758859,
+   "whale_usd": 277.77642801509705,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8JV8zd9dxvNBs57t8R1pRMdvrWf1DWn43SzVNiT7pump",
+   "symbol": "METAL",
+   "ts": "2026-11-03T18:48:45",
+   "t": 1793731725.0,
+   "mcap": 9021.408004628029,
+   "whale_usd": 369.4498939287387,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AW6aRQf1RqdXa26SLdK5dwaPY4y5JUUxCvooNGP8pump",
+   "symbol": "LOFIBOY",
+   "ts": "2026-11-03T18:48:52",
+   "t": 1793731732.0,
+   "mcap": 6395.766831701621,
+   "whale_usd": 935.0737927352397,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5JLLDsZu63PyNDUiBo3pFnoV1Wdwd53RV9EE2tn1r1g1",
+   "symbol": "MI",
+   "ts": "2026-11-03T18:48:53",
+   "t": 1793731733.0,
+   "mcap": 5656.442681356566,
+   "whale_usd": 129.0360421127374,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "wyv3QHeGC9MBLPiyaVSvwbBRzqqtQHYpazcoUDApump",
+   "symbol": "Fengolin",
+   "ts": "2026-11-03T18:49:53",
+   "t": 1793731793.0,
+   "mcap": 11065.22813643096,
+   "whale_usd": 125.28829000000042,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Cet8AgwPxyBuqtZyRnbFucaw6DYjoNRi7wyJ3GrXts4z",
+   "symbol": "hopium",
+   "ts": "2026-11-03T18:49:57",
+   "t": 1793731797.0,
+   "mcap": 23914.16819591541,
+   "whale_usd": 105.0546076835181,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CznBoH83GAXPtDN1SttW114QFiQj6yABgaj1viKupump",
+   "symbol": "MI",
+   "ts": "2026-11-03T18:50:05",
+   "t": 1793731805.0,
+   "mcap": 6186.173322930699,
+   "whale_usd": 138.731216662467,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Ei8e4TV54PuRMuvmL9E9N6b8FGF6EpV2pFYxBAWfrfHM",
+   "symbol": "MI",
+   "ts": "2026-11-03T18:50:27",
+   "t": 1793731827.0,
+   "mcap": 9183.928341371939,
+   "whale_usd": 134.58482611464132,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2KwPc4FxdNm92DKo6Zy8vUF9sGYsXuKjykXEhXkdpump",
+   "symbol": "HUGO",
+   "ts": "2026-11-03T18:50:50",
+   "t": 1793731850.0,
+   "mcap": 21359.652697716636,
+   "whale_usd": 199.58432097393657,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9tNgef21Uk8D9jqkVVvg8KfoW5N5D8ZwesCU41e7pump",
+   "symbol": "PROTEC",
+   "ts": "2026-11-03T18:51:14",
+   "t": 1793731874.0,
+   "mcap": 6688.360826956341,
+   "whale_usd": 129.2882150000005,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Bv5JPzTRUoHR9ounRESxbAdbZZuFbozQVoQBuKYQ6FKN",
+   "symbol": "MI",
+   "ts": "2026-11-03T18:51:22",
+   "t": 1793731882.0,
+   "mcap": 8484.89213447,
+   "whale_usd": 138.74255761934702,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
+   "symbol": "Anakin",
+   "ts": "2026-11-03T18:51:23",
+   "t": 1793731883.0,
+   "mcap": 863528.2375362401,
+   "whale_usd": 248.888738,
+   "whale_type": "trader"
+  },
+  {
+   "token_address": "t2TGpqDS81fNNXCST8hxNrRsfVPxJdw41Cct4yLpump",
+   "symbol": "Suica",
+   "ts": "2026-11-03T18:52:10",
+   "t": 1793731930.0,
+   "mcap": 5420.863089966588,
+   "whale_usd": 125.28801600000043,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CG1DmSiMXw9WjQXCzP5JDnma5BDY3Cks9bRTdXNLpump",
+   "symbol": "MACHKA",
+   "ts": "2026-11-03T18:52:24",
+   "t": 1793731944.0,
+   "mcap": 89735.30690799342,
+   "whale_usd": 548.0876297509117,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793728894.6423943
