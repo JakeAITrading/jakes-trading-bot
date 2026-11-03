@@ -8884,6 +8884,87 @@
    "mcap": 17372.614820487797,
    "whale_usd": 145.93482999978258,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8MCEzirWF6PnCyUzkMDGwLYf6AvrfahVhyPcLV2zpump",
+   "symbol": "AI",
+   "ts": "2026-11-03T21:42:10",
+   "t": 1793742130.0,
+   "mcap": 6933.120403118664,
+   "whale_usd": 247.19365369745492,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5tbAuXBDxckyzPyGCWVQJnUYst46wKFaJeetfTGtpump",
+   "symbol": "Cryptocrats",
+   "ts": "2026-11-03T21:43:13",
+   "t": 1793742193.0,
+   "mcap": 7302.52213543281,
+   "whale_usd": 185.516088906258,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4wmT5vPBJ3iiFRmNhciCZ67yasiXSjzz3g9VukXrpump",
+   "symbol": "HOPE",
+   "ts": "2026-11-03T21:43:21",
+   "t": 1793742201.0,
+   "mcap": 38065.36784916004,
+   "whale_usd": 916.3468626843741,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5T2zZ8qfaeYKVadjsjMGxzX59kXa1Lo7q1JqnAyFoDZW",
+   "symbol": "SAMSARA",
+   "ts": "2026-11-03T21:43:44",
+   "t": 1793742224.0,
+   "mcap": 11080.44853026513,
+   "whale_usd": 181.80548758572326,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "36CNzFyiMSMGM7ZG97YgBedZHF99Kcf5b5PKZq8fLoat",
+   "symbol": "AMD",
+   "ts": "2026-11-03T21:43:56",
+   "t": 1793742236.0,
+   "mcap": 51214.628911111504,
+   "whale_usd": 463.6733117894078,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-03T21:44:34",
+   "t": 1793742274.0,
+   "mcap": 106283.31519949416,
+   "whale_usd": 205.26503529972754,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2D4xtnXUkZh1gQPu6uKsbVMcmAxcG3afp3SoRz7aNGVR",
+   "symbol": "Amada",
+   "ts": "2026-11-03T21:46:11",
+   "t": 1793742371.0,
+   "mcap": 12154.026990174316,
+   "whale_usd": 231.98158367291455,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8MF4bAmNtkgsde73RPUScAA1PUVZKMqzwUa4zTmmpump",
+   "symbol": "RED",
+   "ts": "2026-11-03T21:46:25",
+   "t": 1793742385.0,
+   "mcap": 8753.841029829346,
+   "whale_usd": 155.70828743504703,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3mgCYLXS9PuSpdDAu393HxwWzHP8dTaBWNqnQJfnpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T21:47:44",
+   "t": 1793742464.0,
+   "mcap": 6344.894700305304,
+   "whale_usd": 200.15337999999974,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
