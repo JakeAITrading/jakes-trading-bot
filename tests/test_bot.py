@@ -404,3 +404,8 @@ def test_sniper_own_limits(sniper_dir):
     sniper.save({"trades": open_recs[:2]})
     assert "floor" in sniper.Sniper(M(14), 5, 20, 20, dry_run=False).can_buy()
     assert sniper.Sniper(M(15), 5, 20, 20, dry_run=False).can_buy() is None
+
+
+def test_sniper_rebuy_has_no_cap_by_default(sniper_dir):
+    s = sniper.Sniper(SniperMoby(), 5, 20, 20, dry_run=False)
+    assert s.max_rebuys == 0

@@ -11,7 +11,8 @@ Watches Moby's whale feed every few seconds. A whale buy qualifies when it is:
 Then: quick_buy $usd, wait for the fill, place a take-profit order at entry * (1 + tp%).
 When a take-profit fills and the coin is still rising (price at or above the sale and the last
 1-minute candle green, checked for 10 minutes), it buys the same coin again with a fresh take-profit,
-up to 3 re-buys per coin. Re-buys don't count toward --trades.
+once per sale (no cap on how many times a coin can cycle; --max-rebuys sets one). Re-buys don't
+count toward --trades.
 Every trade is written to state/sniper.json (the main bot leaves these coins alone).
 Stops when --trades buys are done, or immediately if a STOP / REMOTE_STOP file exists.
 """
@@ -68,7 +69,7 @@ class Sniper:
         self.min_whale_usd, self.min_mcap, self.max_mcap = min_whale_usd, min_mcap, max_mcap
         self.state = load()
         self.seen: set[str] = set()
-        self.max_rebuys, self.rebuy_window = 3, 600  # per coin chain; look for 10 min after a sale
+        self.max_rebuys, self.rebuy_window = 0, 600  # 0 = no cap per coin; look for 10 min after a sale
         self.max_open, self.cash_floor = 5, 10.0       # our own limits (Moby's are off)
 
     def call(self, tool: str, args: dict | None = None):
@@ -213,7 +214,7 @@ class Sniper:
                     rec["closed"] = f"take-profit {o.get('status')}"
             if not rec.get("rebuy_until"):
                 continue
-            if _now() > rec["rebuy_until"] or rec.get("rebuys", 0) >= self.max_rebuys:
+            if _now() > rec["rebuy_until"] or (self.max_rebuys and rec.get("rebuys", 0) >= self.max_rebuys):
                 rec["rebuy_until"] = None
                 save(self.state)
                 continue
@@ -330,6 +331,7 @@ def main() -> None:
     ap.add_argument("--poll", type=float, default=3)
     ap.add_argument("--hours", type=float, default=20)
     ap.add_argument("--max-open", type=int, default=5, help="most whale coins held at once")
+    ap.add_argument("--max-rebuys", type=int, default=0, help="re-buy cycles per coin (0 = no cap)")
     ap.add_argument("--cash-floor", type=float, default=10, help="never let USDC fall below this")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--retarget", action="store_true",
@@ -338,7 +340,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     load_env()
     s = Sniper(MobyClient(), a.usd, a.take_profit, a.max_age, a.dry_run)
-    s.max_open, s.cash_floor = a.max_open, a.cash_floor
+    s.max_open, s.cash_floor, s.max_rebuys = a.max_open, a.cash_floor, a.max_rebuys
     if a.retarget and not a.dry_run:
         s.retarget()
     s.run(a.trades, a.poll, a.hours)
