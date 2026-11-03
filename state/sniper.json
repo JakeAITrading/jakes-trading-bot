@@ -2071,7 +2071,12 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "closed": "take-profit filled at 0.000255696",
+   "sold_price": 0.000255695709284,
+   "proceeds_usd": 6.070963,
+   "profit_usd": 1.07,
+   "rebuy_until": null
   },
   {
    "token_address": "VcojebnWkceasp2v72p68zpNca4yW8Q4sJ3SjLnpump",
@@ -2500,6 +2505,27 @@
    "status": "skipped: already pumped: +145% above 5-min low",
    "views": 20,
    "skipped_at": "2026-11-03T18:12:41Z"
+  },
+  {
+   "token_address": "F1wDbQ7L5KFMHA2nD9YUmR8qqm695am6YJhkwrFrpump",
+   "symbol": "MEMESTOCK",
+   "whale_time": "2026-11-03T18:14:34",
+   "whale_type": "kol",
+   "whale_usd": 110.91147041890515,
+   "whale_mcap": 6474.613655882422,
+   "seen_after_s": 19.0,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 6.015755388943944e-06,
+   "glance": {
+    "above_5m_low_pct": 89.9,
+    "this_minute_pct": 89.9
+   },
+   "status": "skipped: already pumped: +90% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 12,
+   "skipped_at": "2026-11-03T18:14:53Z"
   }
  ],
  "learning_log": [
@@ -4709,6 +4735,24 @@
    "mcap": 5364.882781577762,
    "whale_usd": 474.49171112115374,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "F1wDbQ7L5KFMHA2nD9YUmR8qqm695am6YJhkwrFrpump",
+   "symbol": "MEMESTOCK",
+   "ts": "2026-11-03T18:14:34",
+   "t": 1793729674.0,
+   "mcap": 6474.613655882422,
+   "whale_usd": 110.91147041890515,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EMikFcUqNX4YmUVAQCHaHR9YnFpVtDdQMWpFFYFhpump",
+   "symbol": "MEMECOIN",
+   "ts": "2026-11-03T18:15:05",
+   "t": 1793729705.0,
+   "mcap": 12664.554560615215,
+   "whale_usd": 277.91590825399504,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793728894.6423943
