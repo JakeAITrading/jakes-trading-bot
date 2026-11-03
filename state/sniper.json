@@ -1004,6 +1004,30 @@
    "limit_expires": 1793686766.5110693,
    "views": 31,
    "closed": "limit buy not filled in time, cancelled"
+  },
+  {
+   "token_address": "5Zke3gk1ByYGwAjiFpqYT65WG5fTdSQ1ErwWo5JApump",
+   "symbol": "WarPup",
+   "whale_time": "2026-11-03T06:24:11",
+   "whale_type": "kol",
+   "whale_usd": 452.42623360291503,
+   "whale_mcap": 12433.688425517175,
+   "seen_after_s": 2.2,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.2707662790489849e-05,
+   "glance": {
+    "above_5m_low_pct": 366.1,
+    "this_minute_pct": 89.5
+   },
+   "explore": "rule: market cap out of range",
+   "status": "limit pending",
+   "limit_price": 1.2707662790489849e-05,
+   "limit_order_id": "152ad14a-d4be-4b98-9916-444d18b9812c",
+   "limit_placed_at": "2026-11-03T06:24:26Z",
+   "limit_expires": 1793687186.1995208,
+   "views": 17
   }
  ],
  "skipped": [
