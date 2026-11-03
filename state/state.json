@@ -1,7 +1,9 @@
 {
- "bought_today_usd": 0.0,
+ "bought_today_usd": 10.0,
  "day": "2026-11-03",
- "last_traded": {},
+ "last_traded": {
+  "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-03T03:50:15.674450+00:00"
+ },
  "paper": {},
  "paper_closed": []
 }
