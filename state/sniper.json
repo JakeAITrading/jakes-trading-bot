@@ -3887,6 +3887,33 @@
    "mcap": 82109.32675251801,
    "whale_usd": 1200.14489,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "9gKArqT6qp3goHfuwAnfG7LioqwUtJ8TFu7P1Bhbpump",
+   "symbol": "404",
+   "ts": "2026-11-03T11:33:53",
+   "t": 1793705633.0,
+   "mcap": 13414.380191534292,
+   "whale_usd": 368.1596561954736,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Ct4Az8rLR51WhzUavzw9i9rrpwwWic62xThDjCTa5fA1",
+   "symbol": "SI",
+   "ts": "2026-11-03T11:34:48",
+   "t": 1793705688.0,
+   "mcap": 26511.70320104952,
+   "whale_usd": 457.1104544607738,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5NSMTnd5pFjAV1owBs383cd7ung5npLYCadtS6iBpump",
+   "symbol": "MOGGING",
+   "ts": "2026-11-03T11:36:38",
+   "t": 1793705798.0,
+   "mcap": 6062.895408831537,
+   "whale_usd": 182.822196821814,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
