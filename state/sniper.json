@@ -6000,6 +6000,15 @@
    "mcap": 27536.701963981614,
    "whale_usd": 184.54768745797756,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "EoeXNBDLgUo3omuEqBXiUFRfoCpn1v2q1u6AXRCTpump",
+   "symbol": "NAPOLEON",
+   "ts": "2026-11-03T19:15:40",
+   "t": 1793733340.0,
+   "mcap": 7366.647182233873,
+   "whale_usd": 273.46400043584777,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
