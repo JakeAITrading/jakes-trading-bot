@@ -2907,6 +2907,63 @@
    "explore": "rule: market cap out of range",
    "views": 195,
    "closed": "limit buy not filled in time, cancelled"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "whale_time": "2026-11-03T23:08:35",
+   "whale_type": "kol",
+   "whale_usd": 3729.9359336993753,
+   "whale_mcap": 2673855.9419464986,
+   "seen_after_s": 4.7,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.002829275792464614,
+   "glance": {
+    "above_5m_low_pct": 6.4,
+    "this_minute_pct": 0.3
+   },
+   "status": "partly filled ($0.42) before cancel; holding, take-profit set",
+   "limit_price": 0.002829275792464614,
+   "limit_order_id": "cdac8d52-3678-4616-aeff-f899fde68aa4",
+   "limit_placed_at": "2026-11-03T23:08:43Z",
+   "limit_expires": 1793747443.114107,
+   "explore": "rule: market cap out of range",
+   "views": 5823,
+   "entry_price": 0.002829275792464614,
+   "spent_usd": 0.4163,
+   "tokens": 147.127544,
+   "partial_fill": true,
+   "bought_at": "2026-11-03T23:10:50Z",
+   "entry_vs_seen_pct": 0.0,
+   "take_profit_price": 0.0035365947405807674,
+   "tp_order": {
+    "order_id": "7e225e29-2796-4751-9ef9-01f46948aaff",
+    "order_ids": [
+     "7e225e29-2796-4751-9ef9-01f46948aaff"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+    "amount": 147.127544,
+    "input_token": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+    "input_token_symbol": null,
+    "take_profit_price": 0.0035365947405807674,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   }
   }
  ],
  "skipped": [
@@ -11156,6 +11213,78 @@
    "t": 1793747253.0,
    "mcap": 6573.122846020851,
    "whale_usd": 128.7723675668874,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AJemLPYLW9Vmen9W4gLgAXWxxd5C4WQHdQtUdvUYpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T23:08:30",
+   "t": 1793747310.0,
+   "mcap": 10050.568562292028,
+   "whale_usd": 189.02157608852684,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ApkbkQAFsoVdw9rjWQXrbTb9YQ5cRY8n8Hmc7xRnEApb",
+   "symbol": "CANONKEY",
+   "ts": "2026-11-03T23:08:58",
+   "t": 1793747338.0,
+   "mcap": 10544.039469095878,
+   "whale_usd": 295.1413529043704,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Gwb2faLqB829K8V6eN45bAnSiDXui8qmA45dnRTqpump",
+   "symbol": "Chip",
+   "ts": "2026-11-03T23:09:05",
+   "t": 1793747345.0,
+   "mcap": 7150.898876676247,
+   "whale_usd": 159.52058024559804,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "92Kq9C5CDL4fFT9Gfxqd8NFYZ8dfpeNcdpmWH9Ejbonk",
+   "symbol": "BEPE",
+   "ts": "2026-11-03T23:09:10",
+   "t": 1793747350.0,
+   "mcap": 17757.30197550729,
+   "whale_usd": 133.8748136592365,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "odTaWs469tY3BaxPRnQnHqmVMzaY4JS8eXUqojLpump",
+   "symbol": "Ellie",
+   "ts": "2026-11-03T23:09:22",
+   "t": 1793747362.0,
+   "mcap": 5289.0368351654615,
+   "whale_usd": 112.6172466894006,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GEpFiJe4UZHBYH7tVFN1fgih3xmf2mMAQE6p66SMX3QJ",
+   "symbol": "Lisa",
+   "ts": "2026-11-03T23:09:34",
+   "t": 1793747374.0,
+   "mcap": 8044.6598076377995,
+   "whale_usd": 212.58894964482582,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AKtUUyoLw3BrexHhZnX5WyPrVTSLPNqvW32joUs5pump",
+   "symbol": "Elon",
+   "ts": "2026-11-03T23:11:43",
+   "t": 1793747503.0,
+   "mcap": 6433.509042835794,
+   "whale_usd": 276.787249235771,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9ZN1jvyaJKqr7fYzZ9BmLSdSe5PCznPmgNVEDQaepump",
+   "symbol": "HARRIET",
+   "ts": "2026-11-03T23:11:43",
+   "t": 1793747503.0,
+   "mcap": 5103.483090351801,
+   "whale_usd": 467.25068098628356,
    "whale_type": "kol"
   }
  ],
