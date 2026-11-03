@@ -6187,6 +6187,42 @@
    "mcap": 9436.68419495225,
    "whale_usd": 138.5202141237785,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "J9298rzfgWxxTGSTmqsTiPQ1ZfdfADgV6UuFYKMFpump",
+   "symbol": "GTA$",
+   "ts": "2026-11-03T19:22:18",
+   "t": 1793733738.0,
+   "mcap": 64272.10644792434,
+   "whale_usd": 235.88654671135572,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FTafjhdsVGSwKcSqdi6daM8EtQmHQwtGnXs2jeiNZ6Kx",
+   "symbol": "GTA$",
+   "ts": "2026-11-03T19:22:43",
+   "t": 1793733763.0,
+   "mcap": 7677.054549437683,
+   "whale_usd": 317.6220917337421,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DMomGxFZU65q7Frva6s6kzP4GCmNTh3zyAbBb62jpump",
+   "symbol": "Puppies",
+   "ts": "2026-11-03T19:22:53",
+   "t": 1793733773.0,
+   "mcap": 6191.02684140671,
+   "whale_usd": 277.072570720737,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "D7F1RVVQUzPPJBvLwEnngZwM6oo2vCFX1jZ4cwWbk5rE",
+   "symbol": "MrBeast",
+   "ts": "2026-11-03T19:23:23",
+   "t": 1793733803.0,
+   "mcap": 5306.247203407111,
+   "whale_usd": 138.4839457382205,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
