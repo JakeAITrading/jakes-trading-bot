@@ -5181,6 +5181,33 @@
    "mcap": 22406.395146390423,
    "whale_usd": 277.7870122286653,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "EG782UDzBDEkLQNoNbKPKw7fAkAojqobt2Hmo3yqpump",
+   "symbol": "Coin",
+   "ts": "2026-11-03T18:33:37",
+   "t": 1793730817.0,
+   "mcap": 13459.315596264787,
+   "whale_usd": 296.26741716500766,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ECpdeMSRci3MMn5Diy868Tj3zww9rt2SqzGvp4oH3afy",
+   "symbol": "Sink",
+   "ts": "2026-11-03T18:34:01",
+   "t": 1793730841.0,
+   "mcap": 21247.264157864265,
+   "whale_usd": 926.7044640757201,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7ogFYHrFRMGgRALi8JvZbtJSPANoooKj5FPupXDNwsnB",
+   "symbol": "ELON",
+   "ts": "2026-11-03T18:34:22",
+   "t": 1793730862.0,
+   "mcap": 48836.92963630892,
+   "whale_usd": 882.668875,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793728894.6423943
