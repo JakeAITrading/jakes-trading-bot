@@ -440,7 +440,7 @@ class Sniper:
         A coin already at or above the new target is sold now."""
         orders = {o["id"]: o for o in (self.call("get_my_orders").get("orders") or [])}
         for rec in self.state["trades"]:
-            if rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed"):
+            if rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed") or rec.get("keep_tp"):
                 continue
             token, sym = rec["token_address"], rec.get("symbol")
             old_id = (rec.get("tp_order") or {}).get("order_id")
