@@ -1699,6 +1699,15 @@
    "mcap": 16206.76960871997,
    "whale_usd": 179.29736458677942,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "5DnWmSL9t3YqK5MeYq8ozJpna46VcdePWzHvyN8avg2g",
+   "symbol": "CAPY",
+   "ts": "2026-11-03T06:44:44",
+   "t": 1793688284.0,
+   "mcap": 225994.56506813862,
+   "whale_usd": 2269.82185481871,
+   "whale_type": "kol"
   }
  ]
 }
