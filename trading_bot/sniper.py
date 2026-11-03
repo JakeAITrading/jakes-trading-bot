@@ -16,6 +16,9 @@ When a take-profit fills it buys the same coin right back with a fresh take-prof
 kept; --rebuy-if-rising only re-buys while the price is at/above the sale with a green last minute),
 once per sale (no cap on how many times a coin can cycle; --max-rebuys sets one). Re-buys don't
 count toward --trades.
+The take-profit is self-learning (trading_bot/learner.py): every 10 minutes it scores each candidate
+target on how high bought and skipped coins went in the 2 hours after entry, adopts the best one and
+moves open take-profits to it. --no-learn keeps --take-profit fixed.
 Every trade is written to state/sniper.json (the main bot leaves these coins alone).
 Stops when --trades buys are done, or immediately if a STOP / REMOTE_STOP file exists.
 """
@@ -27,6 +30,7 @@ import json
 import logging
 import time
 
+from trading_bot.learner import Learner
 from trading_bot.moby_client import MobyClient, MobyError
 from trading_bot.settings import ROOT, load_env
 from trading_bot.store import _path
@@ -77,7 +81,8 @@ class Sniper:
         self.look_first, self.max_runup, self.max_spike = True, 1.0, 0.20
         self.rebuy_always = True
         self.rebuy_enabled = True   # --no-rebuy: take the profit and keep the cash for the next whale signal
-        self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min   # re-buy right after every +tp% sale (False = only if still rising)
+        self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min
+        self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning take-profit   # re-buy right after every +tp% sale (False = only if still rising)
 
     def call(self, tool: str, args: dict | None = None):
         for _ in range(4):
@@ -373,6 +378,24 @@ class Sniper:
             log.info("%s: %s", sym, rec["status"])
             save(self.state)
 
+    def learn(self) -> None:
+        """Self-learning take-profit: learn from matured trades/skips, adopt the best-scoring target,
+        and move every open take-profit to it when it changes."""
+        added = self.learner.collect(self.state)
+        tp, scores = self.learner.choose()
+        entry = {"at": _iso(_now()), "new_samples": added, "live_samples": len(self.learner.live),
+                 "chosen_tp_pct": round(tp * 100), "scores_pct": {f"{k*100:.0f}": round(v * 100, 1) for k, v in scores.items()}}
+        hist = self.state.setdefault("learning_log", [])
+        if not hist or hist[-1]["chosen_tp_pct"] != entry["chosen_tp_pct"] or added:
+            hist.append(entry)
+            self.state["learning_log"] = hist[-200:]
+            save(self.state)
+        if abs(tp - self.tp) > 1e-9:
+            log.info("learned: take-profit %+.0f%% -> %+.0f%% (%d live samples)", self.tp * 100, tp * 100, len(self.learner.live))
+            self.tp = tp
+            if not self.dry_run:
+                self.retarget()
+
     def _watching(self) -> bool:
         """Keep running while a live position could still sell and be re-bought."""
         return not self.dry_run and any(r.get("mode") == "LIVE" and (r.get("entry_price") or r.get("status") == "limit pending")
@@ -398,6 +421,12 @@ class Sniper:
                     self.check_rebuys()
                 except Exception as e:
                     log.warning("pending/re-buy check error: %s", e)
+            if self.learner and _now() - self._last_learn > self.learn_every:
+                self._last_learn = _now()
+                try:
+                    self.learn()
+                except Exception as e:
+                    log.warning("learning error: %s", e)
             if done >= trades:
                 time.sleep(poll)
                 continue
@@ -451,6 +480,7 @@ def main() -> None:
     ap.add_argument("--market-buy", action="store_true", help="whale buys at market instead of a limit order")
     ap.add_argument("--limit-cushion", type=float, default=5, help="limit price = price seen + this %%")
     ap.add_argument("--limit-wait", type=float, default=120, help="cancel an unfilled limit buy after this many seconds")
+    ap.add_argument("--no-learn", action="store_true", help="fixed --take-profit instead of the self-learning target")
     ap.add_argument("--no-rebuy", action="store_true",
                     help="never buy back after a take-profit (history: lost less at every target)")
     ap.add_argument("--rebuy-if-rising", action="store_true",
@@ -469,6 +499,8 @@ def main() -> None:
     s.look_first, s.max_runup, s.max_spike = not a.no_look, a.max_runup / 100, a.max_spike / 100
     s.rebuy_always = not a.rebuy_if_rising
     s.rebuy_enabled = not a.no_rebuy
+    if not a.no_learn:
+        s.learner = Learner(s.c)   # starts from --take-profit, then adopts the learned target
     s.limit_cushion = None if a.market_buy else a.limit_cushion / 100
     s.limit_wait = a.limit_wait
     if a.retarget and not a.dry_run:

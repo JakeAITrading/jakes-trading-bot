@@ -615,3 +615,45 @@ def test_no_rebuy_takes_profit_and_stops(sniper_dir):
     assert t["profit_usd"] == 0.75 and t["rebuy_until"] is None and len(s.state["trades"]) == 1
     assert not any(n in ("quick_buy", "create_order") for n, _ in moby.calls)
     assert not s._watching()
+
+
+def test_learner_scores_and_raises_target_when_coins_run():
+    from trading_bot import learner
+    faders = [{"max_pct": 0.11, "end_pct": -0.5}] * 10            # pop ~11% then crash
+    assert learner.best_tp(faders)[0] == 0.10
+    runners = faders + [{"max_pct": 0.6, "end_pct": 0.4, "w": 3.0}] * 10   # live coins running past target
+    assert learner.best_tp(runners)[0] >= 0.40
+
+
+def test_learner_collects_matured_samples(sniper_dir, monkeypatch):
+    import time, datetime as dt
+    from trading_bot import learner
+    old = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    new = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    t0 = dt.datetime.fromisoformat(old.replace("Z", "")).replace(tzinfo=dt.timezone.utc).timestamp()
+
+    class C:
+        def call_tool(self, name, args=None):
+            return {"t": [int((t0 + 60) * 1000), int((t0 + 120) * 1000)], "h": [1.3, 1.1], "c": [1.2, 0.9]}
+    L = learner.Learner(C())
+    monkeypatch.setattr(learner.time, "sleep", lambda s: None)
+    state = {"trades": [{"mode": "LIVE", "token_address": "A", "symbol": "A", "entry_price": 1.0, "bought_at": old},
+                        {"mode": "LIVE", "token_address": "B", "symbol": "B", "entry_price": 1.0, "bought_at": new}],
+             "skipped": []}
+    assert L.collect(state) == 1                     # only the trade that is 2h+ old
+    assert L.live[0]["max_pct"] == 0.3 and L.live[0]["end_pct"] == -0.1
+    assert L.collect(state) == 0                     # not counted twice
+
+
+def test_sniper_learn_moves_open_orders(sniper_dir, monkeypatch):
+    s = sniper.Sniper(SniperMoby(), 5, 10, 20, dry_run=False)
+
+    class FakeLearner:
+        live = []
+        def collect(self, state): return 0
+        def choose(self): return 0.2, {0.2: 0.01}
+    s.learner = FakeLearner()
+    moved = []
+    monkeypatch.setattr(s, "retarget", lambda: moved.append(s.tp))
+    s.learn()
+    assert s.tp == 0.2 and moved == [0.2]
