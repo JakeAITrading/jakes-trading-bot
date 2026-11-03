@@ -2404,6 +2404,23 @@
    },
    "expected_avg_pct": 8.7,
    "expected_trades_in_samples": 154.0
+  },
+  {
+   "at": "2026-11-03T11:02:35Z",
+   "new_samples": 3,
+   "live_samples": 82,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 8.8,
+   "expected_trades_in_samples": 163.0
   }
  ],
  "observed": [
@@ -3630,6 +3647,24 @@
    "mcap": 188590.1828788628,
    "whale_usd": 201.21384860595938,
    "whale_type": "trader"
+  },
+  {
+   "token_address": "8ozpQfvuPzxaLiKnX6cqTDbqs8HMzqduHUe1J15mpump",
+   "symbol": "AI",
+   "ts": "2026-11-03T11:03:24",
+   "t": 1793703804.0,
+   "mcap": 127816.08328311631,
+   "whale_usd": 452.652427556631,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CXKwLHe9xwi4YEx3Z9pfg7ju6tinXnawgC8GstWCpump",
+   "symbol": "WAR",
+   "ts": "2026-11-03T11:05:48",
+   "t": 1793703948.0,
+   "mcap": 73100.13164427782,
+   "whale_usd": 277.2365414126304,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
