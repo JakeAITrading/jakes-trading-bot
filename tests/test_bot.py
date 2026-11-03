@@ -577,3 +577,18 @@ def test_rebuy_uses_limit_at_sale_price(sniper_dir):
     assert len(lim) == 1 and lim[0]["limit_price"] == pytest.approx(0.00115 * 1.05)
     assert not any(n == "quick_buy" for n, _ in moby.calls)
     assert s.state["trades"][1]["status"] == "limit pending" and s.state["trades"][0]["rebuy_until"] is None
+
+
+def test_review_what_if():
+    from trading_bot.review import what_if
+    t0 = 1000
+    up = [(1000, 1.0, 1.0, 0.98, 1.0), (1060, 1.0, 1.3, 1.0, 1.25)]
+    assert what_if(up, t0, 1.0, 0.15)["outcome"] == "hit +15%"
+    runaway = [(1000, 1.6, 2.0, 1.5, 1.9), (1060, 1.9, 3.0, 2.0, 2.9)]   # never back to 1.05
+    assert what_if(runaway, t0, 1.0, 0.15)["outcome"] == "limit would not fill"
+    crash_candle = [(1000, 1.2, 1.2, 0.3, 0.35), (1060, 0.35, 0.5, 0.3, 0.45)]
+    r = what_if(crash_candle, t0, 1.0, 0.15)                          # fills at 1.05 on the way down
+    assert r["outcome"] != "hit +15%" and r["pnl_pct"] < -50
+    dump = [(1000, 1.0, 1.0, 0.98, 1.0), (1060, 1.0, 1.0, 0.4, 0.5)]
+    r = what_if(dump, t0, 1.0, 0.15)
+    assert r["outcome"] != "hit +15%" and r["pnl_pct"] < -40
