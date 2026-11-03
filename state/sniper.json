@@ -10723,6 +10723,15 @@
    "mcap": 9172.506906907074,
    "whale_usd": 280.2793316929908,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "GmJng7LSFYYSHHkMaVabz8BhL4H2NXY3VWKhN3bSpump",
+   "symbol": "CLAUDE",
+   "ts": "2026-11-03T22:51:40",
+   "t": 1793746300.0,
+   "mcap": 10660.609405022115,
+   "whale_usd": 106.80692642768412,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793744448.034351
