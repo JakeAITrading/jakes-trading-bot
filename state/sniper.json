@@ -1585,6 +1585,76 @@
    "proceeds_usd": 5.615255,
    "profit_usd": 0.62,
    "rebuy_until": null
+  },
+  {
+   "token_address": "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump",
+   "symbol": "Peekhole",
+   "whale_time": "2026-11-03T08:14:09",
+   "whale_type": "whale",
+   "whale_usd": 1377.9837360621714,
+   "whale_mcap": 417672.863322176,
+   "seen_after_s": 2.6,
+   "usd": 5.0,
+   "take_profit_pct": 8.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.0004366184293758124,
+   "glance": {
+    "above_5m_low_pct": 3.4,
+    "this_minute_pct": 1.8
+   },
+   "status": "limit buy not filled in time, cancelled",
+   "limit_price": 0.0004366184293758124,
+   "limit_order_id": "7f5e613f-469a-43e4-b7dd-4c7388914306",
+   "limit_placed_at": "2026-11-03T08:14:14Z",
+   "limit_expires": 1793693774.403959,
+   "views": 89,
+   "closed": "limit buy not filled in time, cancelled"
+  },
+  {
+   "token_address": "3rLbP63g74ugwqpwqTpwsELmRkQR9wnR2fv5mhtGHNZi",
+   "symbol": "PHISH",
+   "whale_time": "2026-11-03T08:15:29",
+   "whale_type": "whale",
+   "whale_usd": 709.8265968024127,
+   "whale_mcap": 49405.57061028478,
+   "seen_after_s": 3.1,
+   "usd": 5.0,
+   "take_profit_pct": 8.0,
+   "mode": "LIVE",
+   "price_when_seen": 5.011248867958784e-05,
+   "glance": {
+    "above_5m_low_pct": 70.1,
+    "this_minute_pct": -4.8
+   },
+   "status": "limit pending",
+   "limit_price": 5.011248867958784e-05,
+   "limit_order_id": "f16a896f-a6ce-45f4-a0e1-06b6521f86f7",
+   "limit_placed_at": "2026-11-03T08:15:35Z",
+   "limit_expires": 1793693855.162654,
+   "views": 20
+  },
+  {
+   "token_address": "7gQTgzd8BakkYhEKACiDGQrzERnvsQNFN1Vkj3w5pump",
+   "symbol": "PRESSURE",
+   "whale_time": "2026-11-03T08:16:27",
+   "whale_type": "whale",
+   "whale_usd": 303.48771700000003,
+   "whale_mcap": 22134.64904343707,
+   "seen_after_s": 1.2,
+   "usd": 5.0,
+   "take_profit_pct": 8.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.3266751668415964e-05,
+   "glance": {
+    "above_5m_low_pct": 52.5,
+    "this_minute_pct": -4.8
+   },
+   "status": "limit pending",
+   "limit_price": 2.3266751668415964e-05,
+   "limit_order_id": "a434a461-1934-4270-a706-e2fd8fc39af1",
+   "limit_placed_at": "2026-11-03T08:16:39Z",
+   "limit_expires": 1793693919.5750096,
+   "views": 15
   }
  ],
  "skipped": [
@@ -1849,6 +1919,23 @@
    "at": "2026-11-03T08:03:42Z",
    "new_samples": 6,
    "live_samples": 6,
+   "settings": {
+    "take_profit": 0.08,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.2,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 2.8,
+   "expected_trades_in_samples": 25.0
+  },
+  {
+   "at": "2026-11-03T08:13:39Z",
+   "new_samples": 1,
+   "live_samples": 7,
    "settings": {
     "take_profit": 0.08,
     "limit_cushion": 0.0,
@@ -2430,6 +2517,42 @@
    "mcap": 47443.309546546494,
    "whale_usd": 450.14840579824573,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump",
+   "symbol": "Peekhole",
+   "ts": "2026-11-03T08:14:09",
+   "t": 1793693649.0,
+   "mcap": 417672.863322176,
+   "whale_usd": 1377.9837360621714,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3rLbP63g74ugwqpwqTpwsELmRkQR9wnR2fv5mhtGHNZi",
+   "symbol": "PHISH",
+   "ts": "2026-11-03T08:15:29",
+   "t": 1793693729.0,
+   "mcap": 49405.57061028478,
+   "whale_usd": 709.8265968024127,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "CFduyU5tv6AtpsF3U8jhLSYx1iAhSutnCTbRUC75pump",
+   "symbol": "NongRotTai",
+   "ts": "2026-11-03T08:16:17",
+   "t": 1793693777.0,
+   "mcap": 5246.925866231322,
+   "whale_usd": 364.11087913001995,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7gQTgzd8BakkYhEKACiDGQrzERnvsQNFN1Vkj3w5pump",
+   "symbol": "PRESSURE",
+   "ts": "2026-11-03T08:16:27",
+   "t": 1793693787.0,
+   "mcap": 22134.64904343707,
+   "whale_usd": 303.48771700000003,
+   "whale_type": "whale"
   }
  ]
 }
