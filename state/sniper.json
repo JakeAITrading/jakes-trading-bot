@@ -5694,6 +5694,33 @@
    "mcap": 226691.45255349576,
    "whale_usd": 1293.0456642205647,
    "whale_type": "trader"
+  },
+  {
+   "token_address": "27rsHtbDEVgZ8nqSQUX3QaF5u38X2UkwTbKLdr8cs7j6",
+   "symbol": "I&M",
+   "ts": "2026-11-03T19:00:07",
+   "t": 1793732407.0,
+   "mcap": 13326.37020823313,
+   "whale_usd": 241.98216456233118,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GKfxbrZJNzVgVEoJurJjV8C3qvfuWMHhKsz8AqnQXUBY",
+   "symbol": "MAYA",
+   "ts": "2026-11-03T19:00:20",
+   "t": 1793732420.0,
+   "mcap": 11243.655535508879,
+   "whale_usd": 128.8640207903499,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AyJtPJTmWeNSjmB1Vh2A8oh1MBgBSvRU2tZRsTH2pump",
+   "symbol": "Alouatta",
+   "ts": "2026-11-03T19:00:35",
+   "t": 1793732435.0,
+   "mcap": 5486.830104928231,
+   "whale_usd": 134.42092999475233,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793728894.6423943
