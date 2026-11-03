@@ -323,11 +323,17 @@ class Sniper:
                    "rebuy_of": rec.get("bought_at"), "rebuys": rec.get("rebuys", 0) + 1,
                    "usd": self.usd, "take_profit_pct": self.tp * 100, "price_when_seen": price}
             log.info("%s sold at %.6g, now %.6g: buying again", rec["symbol"], rec["sold_price"], price)
-            self._buy(new, rec["token_address"], rec["symbol"], _now(),
-                      f"Re-buy: {rec['symbol']} still rising after +{self.tp*100:.0f}% take-profit.")
+            why = f"Re-buy: {rec['symbol']} after +{self.tp*100:.0f}% take-profit."
+            if self.limit_cushion is not None:
+                # Limit at the SALE price + cushion: a market re-buy into a spike filled 22% high (ANON).
+                new["price_when_seen"] = rec["sold_price"]
+                self._limit_buy(new, rec["token_address"], rec["sold_price"], why)
+            else:
+                self._buy(new, rec["token_address"], rec["symbol"], _now(), why)
             log.info("re-buy: %s", json.dumps({k: v for k, v in new.items() if k not in ("tp_order", "sell")}, default=str))
-            if new.get("entry_price"):
-                # Bought: one re-buy per sale; the new position re-buys again only after it sells at +tp%.
+            if new.get("entry_price") or new.get("status") == "limit pending":
+                # Bought (or limit resting): one re-buy per sale; the new position re-buys again only after
+                # it sells at +tp%. An unfilled re-buy limit is cancelled after limit_wait like any other.
                 rec["rebuy_until"] = None
                 self.state["trades"].append(new)
             else:

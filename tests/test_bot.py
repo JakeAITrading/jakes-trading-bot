@@ -381,6 +381,7 @@ def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
 
     moby = M(green=True)
     s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.limit_cushion = None   # market re-buy mode for this test
     s.check_rebuys()
     t = s.state["trades"]
     assert t[0]["profit_usd"] == 1.0 and len(t) == 2 and t[1]["rebuys"] == 1
@@ -389,6 +390,7 @@ def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
     sniper.save({"trades": [{**t[0], "closed": None, "rebuy_until": None, "profit_usd": None}]})
     moby = M(green=False)
     s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.limit_cushion = None
     s.rebuy_always = False
     s.check_rebuys()
     assert not any(n == "quick_buy" for n, _ in moby.calls)   # if-rising mode, falling: no re-buy
@@ -396,6 +398,7 @@ def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
     sniper.save({"trades": [{**t[0], "closed": None, "rebuy_until": None, "profit_usd": None}]})
     moby = M(green=False)
     s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)          # default: always re-buy after a sale
+    s.limit_cushion = None
     s.check_rebuys()
     assert [n for n, _ in moby.calls].count("quick_buy") == 1
 
@@ -471,6 +474,7 @@ def test_sniper_blocked_rebuy_retries_within_window(sniper_dir):
 
     moby = M()
     s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.limit_cushion = None
     s.check_rebuys()
     assert len(s.state["trades"]) == 1 and s.state["trades"][0]["rebuy_until"]   # still eligible
     moby.blocked = False
@@ -549,3 +553,27 @@ def test_limit_refused_because_price_already_lower_buys_at_market(sniper_dir):
     moby = M()
     rec = sniper.Sniper(moby, 5, 15, 20, dry_run=False).trade(whale_row(), time.time())
     assert any(n == "quick_buy" for n, _ in moby.calls) and rec["status"] == "holding, take-profit set"
+
+
+def test_rebuy_uses_limit_at_sale_price(sniper_dir):
+    sniper.save({"trades": [{"mode": "LIVE", "token_address": "T", "symbol": "T", "entry_price": 0.001,
+                             "spent_usd": 5.0, "take_profit_price": 0.00115, "bought_at": "x",
+                             "tp_order": {"order_id": "tp1"}}]})
+
+    class M(LimitMoby):
+        def call_tool(self, name, args=None):
+            if name == "get_my_orders" and (args or {}).get("status") == "terminal" and self.state == "open":
+                return {"orders": [{"id": "tp1", "status": "filled_tp", "filled_price": 0.00115,
+                                    "filled_output_amount": 5.75}]}
+            if name == "get_my_orders" and self.state == "open":
+                return {"orders": []}
+            if name == "get_token_price":
+                return {"price_usd": 0.0014}       # spiking after the sale
+            return super().call_tool(name, args)
+    moby = M()
+    s = sniper.Sniper(moby, 5, 15, 20, dry_run=False)
+    s.check_rebuys()
+    lim = [a for n, a in moby.calls if n == "create_order" and a["order_type"] == "limit_buy"]
+    assert len(lim) == 1 and lim[0]["limit_price"] == pytest.approx(0.00115 * 1.05)
+    assert not any(n == "quick_buy" for n, _ in moby.calls)
+    assert s.state["trades"][1]["status"] == "limit pending" and s.state["trades"][0]["rebuy_until"] is None
