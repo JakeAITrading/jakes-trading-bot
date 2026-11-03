@@ -247,6 +247,15 @@ class Sniper:
             elif oid in live and _now() > rec["limit_expires"]:
                 self.call("cancel_order", {"order_id": oid})
                 rec["status"] = rec["closed"] = "limit buy not filled in time, cancelled"
+                # A limit can fill partly before the cancel; give whatever we got its take-profit.
+                held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+                if held > 0:
+                    entry = rec["limit_price"]
+                    rec.pop("closed", None)
+                    rec.update(entry_price=entry, spent_usd=round(held * entry, 4), tokens=held, partial_fill=True,
+                               bought_at=_iso(_now()), entry_vs_seen_pct=round((entry / rec["price_when_seen"] - 1) * 100, 1))
+                    self._place_tp(rec, token, entry, held)
+                    rec["status"] = f"partly filled (${held * entry:.2f}) before cancel; {rec['status']}"
                 log.info("%s: %s", rec["symbol"], rec["status"])
             save(self.state)
 
@@ -287,13 +296,31 @@ class Sniper:
         except MobyError as e:
             # Moby words this two ways: a "tp_below_market" code, or "must be above current price".
             if "tp_below_market" in str(e) or "must be above current price" in str(e):  # past target: take it now
-                sell = self.call("quick_sell", {"token_address": token, "pct": 100})
-                got = float(sell.get("filled_output_amount_ui") or sell.get("quoted_output_amount_ui") or 0)
-                rec.update(sell=sell, status="sold immediately (already past take-profit)", closed="sold past target",
-                           proceeds_usd=got, profit_usd=round(got - rec.get("spent_usd", self.usd), 2) if got else None)
+                self._take_now(rec, token, held)
             else:
                 rec["status"] = f"bought, take-profit FAILED: {e}"
         return rec
+
+    def _take_now(self, rec: dict, token: str, held: float) -> None:
+        """Price is already past the target. A market sell (quick_sell) costs ~$0.90 on Moby, a take-profit
+        order ~0.75%, so first try a take-profit order just above the current price (it fills almost at
+        once); only if Moby rejects that too, sell at market."""
+        try:
+            price = float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0)
+            if price > 0:
+                order = self.call("create_order", {"order_type": "tp_only", "token_address": token, "amount": held,
+                                                   "take_profit_price": price * 1.005})
+                if not (isinstance(order, dict) and (order.get("blocked") or order.get("error")
+                                                     or "tp_below_market" in json.dumps(order))):
+                    rec.update(tp_order=order, take_profit_price=price * 1.005,
+                               status="holding, take-profit set just above market (already past target)")
+                    return
+        except MobyError as e:
+            log.info("%s: near-market take-profit refused (%s); selling at market", rec.get("symbol"), e)
+        sell = self.call("quick_sell", {"token_address": token, "pct": 100})
+        got = float(sell.get("filled_output_amount_ui") or sell.get("quoted_output_amount_ui") or 0)
+        rec.update(sell=sell, status="sold immediately (already past take-profit)", closed="sold past target",
+                   proceeds_usd=got, profit_usd=round(got - rec.get("spent_usd", self.usd), 2) if got else None)
 
     def open_count(self) -> int:
         return sum(1 for r in self.state["trades"]
@@ -400,8 +427,7 @@ class Sniper:
             price = float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0)
             rec["take_profit_pct"], rec["take_profit_price"] = self.tp * 100, target
             if price >= target:
-                rec["sell"] = self.call("quick_sell", {"token_address": token, "pct": 100})
-                rec["status"] = rec["closed"] = f"sold at +{(price / rec['entry_price'] - 1) * 100:.0f}% when retargeting"
+                self._take_now(rec, token, held)
             else:
                 rec["tp_order"] = self.call("create_order", {"order_type": "tp_only", "token_address": token,
                                                              "amount": held, "take_profit_price": target})

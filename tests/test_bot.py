@@ -359,8 +359,10 @@ def test_sniper_retarget_moves_take_profit_or_sells(sniper_dir):
     names = [n for n, _ in moby.calls]
     assert names.count("cancel_order") == 2
     new_tp = [a for n, a in moby.calls if n == "create_order"]
-    assert len(new_tp) == 1 and new_tp[0]["take_profit_price"] == pytest.approx(1.2)   # A: price 0.001 < 1.2
-    assert ("quick_sell", {"token_address": "B", "pct": 100}) in moby.calls              # B: 0.001 >= 0.0006
+    assert new_tp[0]["take_profit_price"] == pytest.approx(1.2)                          # A: price 0.001 < 1.2
+    # B: 0.001 >= 0.0006 already past target -> take-profit just above market, not a ~$0.90 market sell
+    assert new_tp[1]["token_address"] == "B" and new_tp[1]["take_profit_price"] == pytest.approx(0.001005)
+    assert not any(n == "quick_sell" for n, _ in moby.calls)
 
 
 def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
@@ -495,11 +497,14 @@ def test_sniper_views(sniper_dir):
 
 class LimitMoby(SniperMoby):
     """Fake Moby with a resting limit buy that is open, then filled or left to expire."""
-    def __init__(self):
+    def __init__(self, partial: float = 0.0):
         super().__init__()
         self.state = "open"
+        self.partial = partial          # tokens bought before the cancel
 
     def call_tool(self, name, args=None):
+        if name == "get_my_token_balance" and self.state == "cancelled":
+            return {"balance_token_amount": self.partial}
         if name == "create_order" and args["order_type"] == "limit_buy":
             self.calls.append((name, args))
             return {"order_id": "L1"}
@@ -547,6 +552,19 @@ def test_limit_buy_cancelled_if_not_filled(sniper_dir):
     s.check_pending()
     assert ("cancel_order", {"order_id": "L1"}) in moby.calls and rec["closed"]
     assert s.open_count() == 0
+
+
+def test_limit_partly_filled_before_cancel_gets_take_profit(sniper_dir):
+    import time
+    moby = LimitMoby(partial=400.0)
+    s = sniper.Sniper(moby, 5, 15, 20, dry_run=False)
+    rec = s.trade(whale_row(), time.time())
+    s.state["trades"].append(rec)
+    rec["limit_expires"] = time.time() - 1
+    s.check_pending()
+    assert rec.get("partial_fill") and not rec.get("closed") and rec["tokens"] == 400.0
+    tp = [a for n, a in moby.calls if n == "create_order" and a["order_type"] == "tp_only"][0]
+    assert tp["amount"] == 400.0 and tp["take_profit_price"] == pytest.approx(rec["limit_price"] * 1.15)
 
 
 def test_limit_refused_because_price_already_lower_buys_at_market(sniper_dir):

@@ -1440,13 +1440,43 @@
     "above_5m_low_pct": 8.0,
     "this_minute_pct": 8.0
    },
-   "status": "limit buy not filled in time, cancelled",
+   "status": "partly filled ($0.43) before cancel; holding, take-profit set",
    "limit_price": 0.0003124112554360181,
    "limit_order_id": "3f7556a3-8f8a-4a9a-909e-b53040b9916c",
    "limit_placed_at": "2026-11-03T07:09:55Z",
    "limit_expires": 1793689915.7601373,
    "views": 489,
-   "closed": "limit buy not filled in time, cancelled"
+   "entry_price": 0.0003109413707788645,
+   "spent_usd": 0.428,
+   "tokens": 1366.920069,
+   "partial_fill": true,
+   "tp_order": {
+    "order_id": "d1f982ba-d247-4c35-94cb-742c8f6c7825",
+    "order_ids": [
+     "d1f982ba-d247-4c35-94cb-742c8f6c7825"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+    "amount": 1366.920069,
+    "input_token": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+    "input_token_symbol": null,
+    "take_profit_price": 0.0003482543352723283,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   },
+   "take_profit_price": 0.0003482543352723283
   },
   {
    "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
@@ -2215,6 +2245,15 @@
    "mcap": 405201.84763469355,
    "whale_usd": 451.4259167249622,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "5komJVYEdqxn8teLnKRwKXnvYBgzW8jNJoZcPg2vpump",
+   "symbol": "tractor",
+   "ts": "2026-11-03T07:42:00",
+   "t": 1793691720.0,
+   "mcap": 8197.688657674007,
+   "whale_usd": 273.053641215762,
+   "whale_type": "kol"
   }
  ]
 }
