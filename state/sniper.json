@@ -1,0 +1,58 @@
+{
+ "trades": [
+  {
+   "token_address": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
+   "symbol": "PEPE2",
+   "whale_time": "2026-11-03T04:11:59",
+   "whale_type": "kol",
+   "whale_usd": 1380.3445561855856,
+   "whale_mcap": 65887.982173337,
+   "seen_after_s": 2.6,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 7.810466195223853e-05,
+   "buy_response": {
+    "status": "Success",
+    "quote_id": "swap:191ff926-43bd-46de-97fb-3d8b88e685fb:0",
+    "transaction_signature": "3UN1HXkZHpcxzXf43m5LxwTnkhcYiBgrkpzgwYE9L1nCVcZyew4CY5zDquyAEADCXcpyNViQQL5nNpQerNgm9U5s",
+    "blocked": null,
+    "reason": null
+   },
+   "bought_at": "2026-11-03T04:12:06Z",
+   "buy_after_whale_s": 7.0,
+   "tokens": 55076.072782,
+   "spent_usd": 5.0,
+   "entry_price": 9.078352444973352e-05,
+   "entry_vs_seen_pct": 16.2,
+   "take_profit_price": 0.0001134794055621669,
+   "tp_order": {
+    "order_id": "5f3bf377-7afd-4ba0-890c-e204514ebf03",
+    "order_ids": [
+     "5f3bf377-7afd-4ba0-890c-e204514ebf03"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
+    "amount": 55076.072782,
+    "input_token": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
+    "input_token_symbol": null,
+    "take_profit_price": 0.0001134794055621669,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   },
+   "status": "holding, take-profit set"
+  }
+ ]
+}
