@@ -469,6 +469,29 @@
    },
    "status": "holding, take-profit set",
    "views": 59
+  },
+  {
+   "token_address": "7728iEBJwFNx4Z2YR3y5Bw8xeSFS755NKZ2g9VDTkJiQ",
+   "symbol": "XDG",
+   "whale_time": "2026-11-03T05:08:04",
+   "whale_type": "kol",
+   "whale_usd": 271.017652,
+   "whale_mcap": 22887.99441885203,
+   "seen_after_s": 3.3,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.2048201572033577e-05,
+   "glance": {
+    "above_5m_low_pct": 8.4,
+    "this_minute_pct": -8.7
+   },
+   "status": "limit pending",
+   "limit_price": 2.3150611650635255e-05,
+   "limit_order_id": "828902d8-89a2-4b5e-9d32-6081472dd9e1",
+   "limit_placed_at": "2026-11-03T05:08:21Z",
+   "limit_expires": 1793682621.602626,
+   "views": 10
   }
  ],
  "skipped": [
