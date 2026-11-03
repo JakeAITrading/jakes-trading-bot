@@ -1423,6 +1423,29 @@
     "failed_leg": null,
     "failed_leg_error": null
    }
+  },
+  {
+   "token_address": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+   "symbol": "mihao",
+   "whale_time": "2026-11-03T07:09:52",
+   "whale_type": "kol",
+   "whale_usd": 1347.3357309095154,
+   "whale_mcap": 267663.94752127305,
+   "seen_after_s": 0.7,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.0003124112554360181,
+   "glance": {
+    "above_5m_low_pct": 8.0,
+    "this_minute_pct": 8.0
+   },
+   "status": "limit pending",
+   "limit_price": 0.0003124112554360181,
+   "limit_order_id": "3f7556a3-8f8a-4a9a-909e-b53040b9916c",
+   "limit_placed_at": "2026-11-03T07:09:55Z",
+   "limit_expires": 1793689915.7601373,
+   "views": 489
   }
  ],
  "skipped": [
@@ -1900,6 +1923,33 @@
    "t": 1793689451.0,
    "mcap": 11190.24364015786,
    "whale_usd": 452.502659763,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "E3rUtbq3mcuxidcDPEshaTQcyUfYK8apjGFzZep5pump",
+   "symbol": "hedge",
+   "ts": "2026-11-03T07:07:48",
+   "t": 1793689668.0,
+   "mcap": 8446.655556326732,
+   "whale_usd": 271.707010081254,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EcCpMnjc3wJQrCKSsyrzyJiXRwY6AZPLzSaWR2bPpump",
+   "symbol": "GTAFY",
+   "ts": "2026-11-03T07:08:22",
+   "t": 1793689702.0,
+   "mcap": 33195.148745114086,
+   "whale_usd": 900.155693,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4CxjZyMNoF1p6eXHXHv1TWpS2X47CuUmLwtGe18spump",
+   "symbol": "mihao",
+   "ts": "2026-11-03T07:09:52",
+   "t": 1793689792.0,
+   "mcap": 267663.94752127305,
+   "whale_usd": 1347.3357309095154,
    "whale_type": "kol"
   }
  ]
