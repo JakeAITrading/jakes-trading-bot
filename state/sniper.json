@@ -673,7 +673,12 @@
     ],
     "note": "Two orders: a stop loss and a take profit. When one fills, Moby cancels the other."
    },
-   "time_exit": "2026-11-03T22:44:19Z"
+   "time_exit": "2026-11-03T22:44:19Z",
+   "closed": "take-profit filled at 0.000268489",
+   "sold_price": 0.0002684889446716,
+   "proceeds_usd": 3.323601,
+   "profit_usd": -1.67,
+   "rebuy_until": null
   },
   {
    "token_address": "9DwPa8v7DTCgPWEgXbCLeg7F5FpruHHTHCsNnjR9pump",
@@ -2484,7 +2489,12 @@
     ],
     "note": "Two orders: a stop loss and a take profit. When one fills, Moby cancels the other."
    },
-   "time_exit": "2026-11-03T22:44:35Z"
+   "time_exit": "2026-11-03T22:44:35Z",
+   "closed": "take-profit filled at 0.00390472",
+   "sold_price": 0.0039047244230052,
+   "proceeds_usd": 4.554832,
+   "profit_usd": -0.44,
+   "rebuy_until": null
   },
   {
    "token_address": "FnNMqKryQx7ewNRuo4ZLb6oyyzYAxKQfFGDyZeyfpump",
@@ -2560,6 +2570,61 @@
    "status": "limit buy FAILED: {\"error\": \"Moby tool error: Error executing tool create_order: Moby rejected the request: This token can't be traded right now \\u2014 there's no market for it. You won't be able to sell it or set orde",
    "explore": "rule: whale buy too small",
    "views": 17
+  },
+  {
+   "token_address": "GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump",
+   "symbol": "LOOKSMAX",
+   "whale_time": "2026-11-03T22:45:33",
+   "whale_type": "whale",
+   "whale_usd": 2554.048353873004,
+   "whale_mcap": 262419.7308647381,
+   "seen_after_s": 1.9,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.00029080608510412276,
+   "glance": {
+    "above_5m_low_pct": 130.3,
+    "this_minute_pct": 22.9
+   },
+   "status": "holding, take-profit set",
+   "limit_price": 0.00029080608510412276,
+   "limit_order_id": "0486aeb9-8541-4f90-ba69-fa00f845a452",
+   "limit_placed_at": "2026-11-03T22:45:37Z",
+   "limit_expires": 1793746057.8133724,
+   "views": 38,
+   "entry_price": 0.0002832376783405,
+   "spent_usd": 4.999154508113861,
+   "tokens": 17653.018586,
+   "bought_at": "2026-11-03 22:45:43",
+   "entry_vs_seen_pct": -2.6,
+   "take_profit_price": 0.00035404709792562504,
+   "tp_order": {
+    "order_id": "cdf98b8e-aa75-471c-954d-87a90d851cc1",
+    "order_ids": [
+     "cdf98b8e-aa75-471c-954d-87a90d851cc1"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump",
+    "amount": 17653.018586,
+    "input_token": "GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump",
+    "input_token_symbol": null,
+    "take_profit_price": 0.00035404709792562504,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   }
   }
  ],
  "skipped": [
@@ -10346,6 +10411,60 @@
    "t": 1793745855.0,
    "mcap": 6923.409273440484,
    "whale_usd": 280.0404950768815,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ANSMARfXJM1m3PBHjJGJShmj2F29CPTk7Zc5Cw1xJB7D",
+   "symbol": "CNB",
+   "ts": "2026-11-03T22:45:01",
+   "t": 1793745901.0,
+   "mcap": 56889.85879707908,
+   "whale_usd": 104.70149306857535,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump",
+   "symbol": "LOOKSMAX",
+   "ts": "2026-11-03T22:45:33",
+   "t": 1793745933.0,
+   "mcap": 262419.7308647381,
+   "whale_usd": 2554.048353873004,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "AxcQnkML5EyoqUbCJffXrHoZKAarpHkqsXqNP4B2pump",
+   "symbol": "CLAWD",
+   "ts": "2026-11-03T22:45:36",
+   "t": 1793745936.0,
+   "mcap": 5750.115178670967,
+   "whale_usd": 283.0091926798425,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EJsfvgsRPfTT6ku8DLjxezw8WtDgvZYLokzXgnRmpump",
+   "symbol": "CLAWD",
+   "ts": "2026-11-03T22:45:55",
+   "t": 1793745955.0,
+   "mcap": 5260.7792895287275,
+   "whale_usd": 135.45857436357386,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CbPVBfEETx2VufiKkCpHG1VVdTf46Xwh5SU7syvnpump",
+   "symbol": "Alona",
+   "ts": "2026-11-03T22:45:59",
+   "t": 1793745959.0,
+   "mcap": 15184.454241534695,
+   "whale_usd": 371.8059748761504,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AoFHDQcopdhxHQkLF1RY6qghuBCzJ19CQufG58ompump",
+   "symbol": "puter",
+   "ts": "2026-11-03T22:45:59",
+   "t": 1793745959.0,
+   "mcap": 5609.503205050714,
+   "whale_usd": 278.8544811571128,
    "whale_type": "kol"
   }
  ],
