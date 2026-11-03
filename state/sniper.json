@@ -9950,6 +9950,15 @@
    "mcap": 8205.197445931844,
    "whale_usd": 641.7300753541507,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8bVibCDpGx8iGJYCqKGBoTCwU1hKba3jcYPt8ujaHK1Y",
+   "symbol": "AMD",
+   "ts": "2026-11-03T22:32:12",
+   "t": 1793745132.0,
+   "mcap": 30416.756999329664,
+   "whale_usd": 500.0,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793744448.034351
