@@ -12488,6 +12488,24 @@
    "mcap": 7892.472240200732,
    "whale_usd": 276.671216523042,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7JB2w8yD1dyjvUdu3LeTvKDWPYFb9qMpVBq8nWAzpump",
+   "symbol": "INA",
+   "ts": "2026-11-03T23:49:09",
+   "t": 1793749749.0,
+   "mcap": 6011.751338519389,
+   "whale_usd": 163.00415477451799,
+   "whale_type": "trader"
+  },
+  {
+   "token_address": "DWmsVkCDbeW2RWMuiJ3AyLomfp8mhGF7vBEMMSBNpump",
+   "symbol": "Bingling",
+   "ts": "2026-11-03T23:49:14",
+   "t": 1793749754.0,
+   "mcap": 6992.151611484587,
+   "whale_usd": 186.77554440767238,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
