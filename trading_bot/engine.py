@@ -121,7 +121,17 @@ class TradingEngine:
         tp = max(entry, price) * (1 + _num(self.r.get("take_profit_pct"), 50) / 100)
         return sl, tp
 
+    def _has_stop(self, token: str) -> bool:
+        """True if Moby already has a live stop-loss on this token. Checked against the open
+        orders themselves: get_my_position's stop_loss_set flag stayed false after a bracket
+        was placed, which made the bot place a new bracket every cycle."""
+        orders = self._read("get_my_orders") or {}
+        return any(o.get("token_address") == token and o.get("order_type") in ("sl_only", "sl_and_tp")
+                   for o in orders.get("orders") or [])
+
     def _protect(self, report: dict, token: str, symbol: str, qty: float) -> None:
+        if self._has_stop(token):
+            return
         pos = self._read("get_my_position", {"token_address": token}) or {}
         if pos.get("stop_loss_set"):
             return

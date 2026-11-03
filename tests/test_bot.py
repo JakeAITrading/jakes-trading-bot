@@ -30,9 +30,18 @@ class FakeMoby:
         self.guard = guard or {"paused": False, "maxTradeUsd": None}
         self.cash = cash
         self.position = position or {"stop_loss_set": False, "cost_basis_usd": 10, "basis_known_token_amount": 100}
+        self.orders = []
         self.calls = []
 
     def call_tool(self, name, args=None):
+        result = self._call(name, args)
+        if name == "create_order" and args.get("order_type") == "sl_and_tp":
+            # Like Moby: a bracket shows up as live orders; the position flag does NOT change.
+            self.orders += [{"token_address": args["token_address"], "order_type": "sl_only"},
+                            {"token_address": args["token_address"], "order_type": "tp_only"}]
+        return result
+
+    def _call(self, name, args=None):
         self.calls.append((name, args))
         return {
             "get_my_guardrails": self.guard,
@@ -44,6 +53,7 @@ class FakeMoby:
             "quick_buy": {"filled_output_amount_ui": 80.0},
             "quick_sell": {"status": "ok"},
             "create_order": {"ok": True},
+            "get_my_orders": {"orders": self.orders},
         }[name]
 
     def money_calls(self):
@@ -129,6 +139,15 @@ def test_sells_when_smart_money_flips():
     moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}], brief=selling)
     TradingEngine(moby, cfg()).run_cycle()
     assert moby.money_calls() == [("quick_sell", {"token_address": "X", "pct": 100})]
+
+
+def test_exits_placed_once_not_every_cycle():
+    """Regression: the position flag stays false on Moby, so the bot must check the open orders."""
+    moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}])
+    eng = TradingEngine(moby, cfg())
+    for _ in range(4):
+        eng.run_cycle()
+    assert [n for n, _ in moby.money_calls()].count("create_order") == 1
 
 
 def test_existing_position_without_stop_gets_one():
