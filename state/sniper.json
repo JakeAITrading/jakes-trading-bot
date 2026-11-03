@@ -6479,6 +6479,24 @@
    "mcap": 6231.929546629544,
    "whale_usd": 279.44921144085026,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "AdNqCG9CeMb8i6KjQBCDLyuUkBRtb5AMnfNqzjUcpump",
+   "symbol": "XingXing",
+   "ts": "2026-11-03T19:31:47",
+   "t": 1793734307.0,
+   "mcap": 35077.29870954573,
+   "whale_usd": 676.1178153107321,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "6xegAhjwU4uo2oxTy4ovnXbFbDGzjg1wK7H3rWG9pump",
+   "symbol": "Aped",
+   "ts": "2026-11-03T19:32:20",
+   "t": 1793734340.0,
+   "mcap": 7507.224381697597,
+   "whale_usd": 184.433768662572,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163

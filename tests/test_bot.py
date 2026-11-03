@@ -753,7 +753,7 @@ def test_main_goes_live_only_when_learner_expects_profit():
     assert ml.live_allowed()[0] is False                                    # too little data
     ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": -0.02, "trades": 80}})
     assert ml.live_allowed()[0] is False                                    # losing
-    ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": 0.02, "trades": 80}})
+    ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": 0.04, "trades": 80}})
     assert ml.live_allowed()[0] is True
 
 
