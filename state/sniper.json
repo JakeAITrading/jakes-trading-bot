@@ -5874,6 +5874,15 @@
    "mcap": 8298.255124827847,
    "whale_usd": 295.1256255177661,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "Dgba3kzn1o8HKSnrShy294kQ1CLYXe5Jav5iiH65pump",
+   "symbol": "BITCOIN",
+   "ts": "2026-11-03T19:09:16",
+   "t": 1793732956.0,
+   "mcap": 7880.371413193643,
+   "whale_usd": 200.14538399999992,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
