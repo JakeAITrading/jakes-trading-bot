@@ -4920,6 +4920,15 @@
    "mcap": 292101.6857023192,
    "whale_usd": 5996.25,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "4qzaxAJAin2LMy6TzbhqvSS6hoYLjgFiB8X8FMWjGMFt",
+   "symbol": "FLOATER",
+   "ts": "2026-11-03T18:21:29",
+   "t": 1793730089.0,
+   "mcap": 22531.556169269606,
+   "whale_usd": 179.39515752806977,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793728894.6423943
