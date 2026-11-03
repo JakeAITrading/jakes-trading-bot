@@ -3487,6 +3487,33 @@
    "mcap": 5171.9734983635135,
    "whale_usd": 184.8052401527968,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "9B2ntR6g5VCcKWjiCDQ5z5vvqMCDBFGzgAErQXVGpump",
+   "symbol": "Maggie",
+   "ts": "2026-11-03T10:44:58",
+   "t": 1793702698.0,
+   "mcap": 5974.841315037338,
+   "whale_usd": 561.4675516696823,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "D1DPJq6g1oXqPkyujxMHsPEW24zaRUmUAjy6b3Vxpump",
+   "symbol": "zkSNARK",
+   "ts": "2026-11-03T10:45:32",
+   "t": 1793702732.0,
+   "mcap": 39931.62042800755,
+   "whale_usd": 857.2562288622181,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8ozpQfvuPzxaLiKnX6cqTDbqs8HMzqduHUe1J15mpump",
+   "symbol": "AI",
+   "ts": "2026-11-03T10:45:34",
+   "t": 1793702734.0,
+   "mcap": 62500.64202575423,
+   "whale_usd": 119.129975,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
