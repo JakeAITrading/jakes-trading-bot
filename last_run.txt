@@ -1,1 +1,1 @@
-2026-11-03T05:23:12Z FAILED: Moby tool error: Error executing tool get_token_trade_brief: Moby's rate limit for this API key has been hit. STOP calling Moby tools for 1 seconds, then try again. Retrying sooner will just fail again and may extend the limit.
+2026-11-03T05:28:18Z LIVE: exit CLAUDIA: smart money turned to net selling [sent] | max open positions reached
