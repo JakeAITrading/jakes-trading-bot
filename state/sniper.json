@@ -7855,6 +7855,42 @@
    "mcap": 7593.032478325767,
    "whale_usd": 295.7279007905964,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "32wRT79XJAtqWobEtCzFQ4ddBezcohLV53zRJwEfLoat",
+   "symbol": "Micro",
+   "ts": "2026-11-03T20:44:05",
+   "t": 1793738645.0,
+   "mcap": 55098.575103329495,
+   "whale_usd": 184.93199734581,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "ChatbxK32pGJ3Gm6ga36aHzXiJ1w2EmhJ3m8jA5UCoiN",
+   "symbol": "CHATCOIN",
+   "ts": "2026-11-03T20:44:11",
+   "t": 1793738651.0,
+   "mcap": 36541.736335493624,
+   "whale_usd": 929.7990870344922,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EiSekFhid17xkxH1hor7dbsUprDSkvU8BDzjLjjtpump",
+   "symbol": "RIP",
+   "ts": "2026-11-03T20:44:38",
+   "t": 1793738678.0,
+   "mcap": 5280.091500026174,
+   "whale_usd": 118.36291803709825,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GYG9ezuhhUzq4p68K4a2phhHW9qZqTXaPimgp8NWpump",
+   "symbol": "SEXBOT",
+   "ts": "2026-11-03T20:44:41",
+   "t": 1793738681.0,
+   "mcap": 208216.04107105054,
+   "whale_usd": 2290.0635633486354,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793736823.872862
