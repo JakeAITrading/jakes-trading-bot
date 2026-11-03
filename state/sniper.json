@@ -9144,6 +9144,141 @@
    "mcap": 46896.206404551514,
    "whale_usd": 421.82523004894387,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump",
+   "symbol": "LOOKSMAX",
+   "ts": "2026-11-03T21:54:47",
+   "t": 1793742887.0,
+   "mcap": 164276.90431588178,
+   "whale_usd": 1999.750381,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
+   "symbol": "Sexbot",
+   "ts": "2026-11-03T21:55:13",
+   "t": 1793742913.0,
+   "mcap": 113263.7035746404,
+   "whale_usd": 137.55891248289433,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8MCEzirWF6PnCyUzkMDGwLYf6AvrfahVhyPcLV2zpump",
+   "symbol": "AI",
+   "ts": "2026-11-03T21:56:35",
+   "t": 1793742995.0,
+   "mcap": 18466.051187715493,
+   "whale_usd": 280.9534351892266,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "iNTCy1qTsUEZQe3DSocLz1ZXXai34Gdw8THQh5rxFaF",
+   "symbol": "INTC",
+   "ts": "2026-11-03T21:57:21",
+   "t": 1793743041.0,
+   "mcap": 466548.0216871319,
+   "whale_usd": 932.446018,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3p1XAKNnkTZ1iXcW5xy4xMSq6nb4Y3gsGZpjUqMCpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T21:57:35",
+   "t": 1793743055.0,
+   "mcap": 14913.678569428157,
+   "whale_usd": 123.52841058368314,
+   "whale_type": "trader"
+  },
+  {
+   "token_address": "4wmT5vPBJ3iiFRmNhciCZ67yasiXSjzz3g9VukXrpump",
+   "symbol": "HOPE",
+   "ts": "2026-11-03T21:57:39",
+   "t": 1793743059.0,
+   "mcap": 100403.56022119548,
+   "whale_usd": 500.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2D4xtnXUkZh1gQPu6uKsbVMcmAxcG3afp3SoRz7aNGVR",
+   "symbol": "Amada",
+   "ts": "2026-11-03T21:58:26",
+   "t": 1793743106.0,
+   "mcap": 14314.62533219019,
+   "whale_usd": 561.7002775761067,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "78wEmxtSTKGZYj18SZWRgUqv39jnPkmgQN8qYgoipump",
+   "symbol": "Amada",
+   "ts": "2026-11-03T21:58:27",
+   "t": 1793743107.0,
+   "mcap": 5151.717232365627,
+   "whale_usd": 281.29326369912104,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HFUNM93XSP5Wbzg8K7cN2enGGrgU6aLeGYSNx5mXpump",
+   "symbol": "ABMD",
+   "ts": "2026-11-03T21:58:30",
+   "t": 1793743110.0,
+   "mcap": 8292.481652460992,
+   "whale_usd": 200.1467130000001,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "ts": "2026-11-03T21:59:00",
+   "t": 1793743140.0,
+   "mcap": 2705662.2854422983,
+   "whale_usd": 4986.25,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3mgCYLXS9PuSpdDAu393HxwWzHP8dTaBWNqnQJfnpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T21:59:12",
+   "t": 1793743152.0,
+   "mcap": 72325.47068269923,
+   "whale_usd": 249.05,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "JDStFLAZbFwYiUrEW5F7hWFkcakH5by8nzzyjDZppump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T21:59:21",
+   "t": 1793743161.0,
+   "mcap": 8302.270543936174,
+   "whale_usd": 144.2901023331833,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GbxnXN1WbGrmrMSPaNBej4YHZPjVLY9H2b5FUjwmpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T21:59:46",
+   "t": 1793743186.0,
+   "mcap": 5227.36445418559,
+   "whale_usd": 234.3179822673785,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "61nPLZLFkGGGNSEHr4c7LmF82jESvagFsV3jfYLYpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T21:59:59",
+   "t": 1793743199.0,
+   "mcap": 22342.635929817334,
+   "whale_usd": 469.5142823792566,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5C4m8DgwwNgr9CNZ2G4aNahzTvuB9oMo1F1K7kkXpump",
+   "symbol": "BabyAMD",
+   "ts": "2026-11-03T22:00:01",
+   "t": 1793743201.0,
+   "mcap": 8188.002539100125,
+   "whale_usd": 187.47727928106588,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
