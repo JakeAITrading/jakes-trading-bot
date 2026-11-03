@@ -12389,6 +12389,105 @@
    "mcap": 5711.060111934785,
    "whale_usd": 112.66702122179423,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8QcuUfU6zWfcyXyaemoTbptozyLf4VuTFfp8qjZ3pump",
+   "symbol": "\u03b1",
+   "ts": "2026-11-03T23:46:01",
+   "t": 1793749561.0,
+   "mcap": 7659.241418878082,
+   "whale_usd": 134.3311512403582,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2z5vMZb4bDWXpfymkezGhjKjTdZwe4ByUiJFN4prR2yh",
+   "symbol": "AI",
+   "ts": "2026-11-03T23:46:06",
+   "t": 1793749566.0,
+   "mcap": 7029.356311250012,
+   "whale_usd": 103.75877915127451,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DLTUP1gMsmhZBoKuKKbZ4E3UaguZfyhVh1UN5gdtCGHf",
+   "symbol": "AI",
+   "ts": "2026-11-03T23:46:22",
+   "t": 1793749582.0,
+   "mcap": 5469.884854392149,
+   "whale_usd": 184.460051824488,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AKtUUyoLw3BrexHhZnX5WyPrVTSLPNqvW32joUs5pump",
+   "symbol": "Elon",
+   "ts": "2026-11-03T23:46:34",
+   "t": 1793749594.0,
+   "mcap": 14050.166100695491,
+   "whale_usd": 276.5395080269572,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7oH5jAR9X9nxDeBp5daWUCMEQbmY1izeAoAkfPjYpump",
+   "symbol": "Trump",
+   "ts": "2026-11-03T23:46:35",
+   "t": 1793749595.0,
+   "mcap": 10394.428500148933,
+   "whale_usd": 276.5395080269572,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8asNnzWi7GbirVWuppyksDadUDQqacGbG7ytvyS5pump",
+   "symbol": "X",
+   "ts": "2026-11-03T23:46:37",
+   "t": 1793749597.0,
+   "mcap": 7561.586244264618,
+   "whale_usd": 276.5395080269572,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5XvbZrTnfUCLhUBxABtPn3ShM5Q1TefuDtNtptwapump",
+   "symbol": "Hypha",
+   "ts": "2026-11-03T23:47:04",
+   "t": 1793749624.0,
+   "mcap": 6948.202553758165,
+   "whale_usd": 119.89297933740269,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EW55YMGBZvE1TqZ6hCCA6QBtKqsQV2G5ASB9Vx6fpump",
+   "symbol": "MI450",
+   "ts": "2026-11-03T23:47:06",
+   "t": 1793749626.0,
+   "mcap": 6486.738129751757,
+   "whale_usd": 281.154942696085,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+   "symbol": "FLOAT",
+   "ts": "2026-11-03T23:47:10",
+   "t": 1793749630.0,
+   "mcap": 1860789.6477344302,
+   "whale_usd": 1833.0121640000002,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "ChthJuwza52qMAshW34ASk8dfAn3EjWTFXfo8bDupump",
+   "symbol": "Bingling",
+   "ts": "2026-11-03T23:47:44",
+   "t": 1793749664.0,
+   "mcap": 6733.116606483236,
+   "whale_usd": 103.75277850305774,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "repsyrmA4Mk6sYxuXCf4NULjDjrP7fx1SZEcTazHC96",
+   "symbol": "reps",
+   "ts": "2026-11-03T23:48:38",
+   "t": 1793749718.0,
+   "mcap": 7892.472240200732,
+   "whale_usd": 276.671216523042,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
