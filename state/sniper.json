@@ -820,6 +820,26 @@
    "status": "skipped: mid-spike: +22% this minute",
    "views": 80,
    "skipped_at": "2026-11-03T05:27:49Z"
+  },
+  {
+   "token_address": "GrF4sXCmWPPCBfUW8q6N11MKF5cF3RjFfMdVQ6bDpump",
+   "symbol": "GPTFAT",
+   "whale_time": "2026-11-03T05:36:16",
+   "whale_type": "kol",
+   "whale_usd": 274.7920388550946,
+   "whale_mcap": 29019.94412241038,
+   "seen_after_s": 5.5,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 3.0581366445403546e-05,
+   "glance": {
+    "above_5m_low_pct": 316.8,
+    "this_minute_pct": 10.1
+   },
+   "status": "skipped: already pumped: +317% above 5-min low",
+   "views": 55,
+   "skipped_at": "2026-11-03T05:36:22Z"
   }
  ]
 }
