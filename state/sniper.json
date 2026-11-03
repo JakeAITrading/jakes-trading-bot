@@ -2368,6 +2368,24 @@
    "mcap": 107668.57303678968,
    "whale_usd": 847.6358889251416,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "J2ftCjfu7MGejUKqJvecymH8Pgsd5tUwpNJUvbyGpump",
+   "symbol": "\u0e23\u0e16\u0e44\u0e16",
+   "ts": "2026-11-03T07:57:07",
+   "t": 1793692627.0,
+   "mcap": 68469.19491729853,
+   "whale_usd": 1093.504308259733,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "H5KvsmJPjYSpSc7bP9APEzdaxtEWucq5Q9A55URVpump",
+   "symbol": "Ber",
+   "ts": "2026-11-03T07:57:30",
+   "t": 1793692650.0,
+   "mcap": 9656.760994403157,
+   "whale_usd": 364.457783247624,
+   "whale_type": "kol"
   }
  ]
 }
