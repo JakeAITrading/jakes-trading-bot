@@ -2,69 +2,140 @@ import json
 
 import pytest
 
-from trading_bot.engine import TradingEngine, extract_signals
+from trading_bot.engine import MONEY_TOOLS, TradingEngine
 from trading_bot.moby_client import MobyClient, MobyError, _parse_sse, decode_tool_result
+from trading_bot.settings import load_config
 
 
-class FakeClient:
-    def __init__(self, signals):
-        self.signals = signals
+GOOD_ROW = {
+    "token_address": "GOOD", "symbol": "GOOD", "safety_tier": "green",
+    "market_cap_usd": 5e6, "liquidity_usd": 5e5,
+    "price_change_pct_h1": 5, "price_change_pct_h24": 20,
+    "whale": {"h1": {"whale_net_flow_usd": 5000}, "h4": {"whale_net_flow_usd": 20000, "whale_buyers_count": 5}},
+}
+GOOD_BRIEF = {
+    "safety": {"safety_tier": "green"},
+    "smart_money_read": {"tier": "green", "label": "Buying"},
+    "smart_money_flow": {"flow": {"h1": {"net_flow_usd": 100}, "h4": {"net_flow_usd": 100}}},
+    "risk_signals": {"mint_authority_renounced": True, "freeze_authority_renounced": True},
+}
+
+
+class FakeMoby:
+    def __init__(self, rows=None, tokens=None, brief=None, guard=None, cash=72.0, position=None):
+        self.rows = rows if rows is not None else [GOOD_ROW]
+        self.tokens = tokens or []
+        self.brief = brief or GOOD_BRIEF
+        self.guard = guard or {"paused": False, "maxTradeUsd": None}
+        self.cash = cash
+        self.position = position or {"stop_loss_set": False, "cost_basis_usd": 10, "basis_known_token_amount": 100}
         self.calls = []
 
     def call_tool(self, name, args=None):
         self.calls.append((name, args))
-        return self.signals if name == "get_signals" else {"ok": True}
+        return {
+            "get_my_guardrails": self.guard,
+            "get_my_balances": {"usd_token": {"quantity": self.cash}, "tokens": self.tokens},
+            "get_screener_leaderboard": {"entries": self.rows},
+            "get_token_trade_brief": self.brief,
+            "get_my_position": self.position,
+            "get_token_price": {"price_usd": 0.12},
+            "quick_buy": {"filled_output_amount_ui": 80.0},
+            "quick_sell": {"status": "ok"},
+            "create_order": {"ok": True},
+        }[name]
+
+    def money_calls(self):
+        return [(n, a) for n, a in self.calls if n in MONEY_TOOLS]
 
 
-def cfg(dry_run=True, **risk):
-    base = {"amount_usd_per_trade": 25, "max_trades_per_day": 3}
-    base.update(risk)
-    return {
-        "moby": {"tools": {"signals": "get_signals", "trade": "place_trade"},
-                 "trade_arguments": {"symbol": "{symbol}", "side": "{side}", "amount_usd": "{amount_usd}",
-                                     "note": "bot {side}"}},
-        "trading": {"dry_run": dry_run},
-        "risk": base,
-    }
+def cfg(dry_run=False, **risk):
+    c = load_config()
+    c["trading"]["dry_run"] = dry_run
+    c["trading"]["kill_switch"] = False
+    c["risk"].update(risk)
+    return c
 
 
-def test_extract_signals_handles_common_shapes():
-    data = {"signals": [{"ticker": "sol", "action": "BUY"}, {"symbol": "ETH", "direction": "short"},
-                        {"symbol": "X", "action": "hold"}, "junk"]}
-    sigs = extract_signals(data)
-    assert [(s.symbol, s.side) for s in sigs] == [("SOL", "buy"), ("ETH", "sell")]
-
-
-def test_dry_run_never_calls_trade_tool():
-    client = FakeClient([{"symbol": "SOL", "side": "buy"}])
-    report = TradingEngine(client, cfg(dry_run=True)).run_cycle()
+def test_dry_run_sends_no_money_calls():
+    moby = FakeMoby()
+    report = TradingEngine(moby, cfg(dry_run=True)).run_cycle()
+    assert [a["tool"] for a in report["actions"]] == ["quick_buy"]
     assert report["actions"][0]["status"] == "simulated"
-    assert all(name != "place_trade" for name, _ in client.calls)
+    assert moby.money_calls() == []
 
 
-def test_live_places_trade_with_typed_args():
-    client = FakeClient([{"symbol": "SOL", "side": "buy"}])
-    report = TradingEngine(client, cfg(dry_run=False)).run_cycle()
-    assert report["actions"][0]["status"] == "placed"
-    assert ("place_trade", {"symbol": "SOL", "side": "buy", "amount_usd": 25.0, "note": "bot buy"}) in client.calls
+def test_live_buy_then_bracket_exit():
+    moby = FakeMoby()
+    TradingEngine(moby, cfg()).run_cycle()
+    money = moby.money_calls()
+    assert money[0][0] == "quick_buy" and money[0][1]["amount_usd"] == 20
+    order = money[1][1]
+    assert money[1][0] == "create_order" and order["order_type"] == "sl_and_tp" and order["amount"] == 80.0
+    # entry = 10/100 = 0.10, price 0.12 -> SL below the lower, TP above the higher
+    assert order["stop_loss_price"] == pytest.approx(0.075)
+    assert order["take_profit_price"] == pytest.approx(0.18)
 
 
-def test_risk_limits():
-    sigs = [{"symbol": s, "side": "buy"} for s in ("A", "B", "C", "D")] + [{"symbol": "A", "side": "buy"}]
-    client = FakeClient(sigs)
-    eng = TradingEngine(client, cfg(dry_run=False, max_trades_per_day=2, blocked_symbols=["b"]))
-    report = eng.run_cycle()
-    assert [a["symbol"] for a in report["actions"]] == ["A", "C"]
-    reasons = {s["symbol"]: s["reason"] for s in report["skipped"]}
-    assert reasons["B"] == "in blocked_symbols" and reasons["D"] == "daily trade limit reached"
-    # second cycle same day: nothing new
-    assert eng.run_cycle()["actions"] == []
+def test_moby_max_trade_guardrail_caps_size():
+    moby = FakeMoby(guard={"paused": False, "maxTradeUsd": 10})
+    TradingEngine(moby, cfg()).run_cycle()
+    assert moby.money_calls()[0][1]["amount_usd"] == 10
 
 
-def test_missing_signals_tool_is_reported():
-    c = cfg()
-    c["moby"]["tools"]["signals"] = ""
-    assert "error" in TradingEngine(FakeClient([]), c).run_cycle()
+def test_paused_and_kill_switch_stop_everything():
+    moby = FakeMoby(guard={"paused": True})
+    assert "paused" in TradingEngine(moby, cfg()).run_cycle()["notes"][0]
+    c = cfg(); c["trading"]["kill_switch"] = True
+    moby = FakeMoby()
+    TradingEngine(moby, c).run_cycle()
+    assert moby.calls == []
+
+
+@pytest.mark.parametrize("change,reason", [
+    ({"safety_tier": "red"}, "safety"),
+    ({"market_cap_usd": 5e9}, "market cap"),
+    ({"liquidity_usd": 1000}, "liquidity"),
+    ({"price_change_pct_h1": -2}, "trending"),
+    ({"price_change_pct_h24": 400}, "ran too far"),
+    ({"whale": {"h1": {"whale_net_flow_usd": -1}, "h4": {"whale_net_flow_usd": 9e4, "whale_buyers_count": 9}}}, "1h"),
+])
+def test_screen_rejects(change, reason):
+    moby = FakeMoby(rows=[{**GOOD_ROW, **change}])
+    report = TradingEngine(moby, cfg()).run_cycle()
+    assert moby.money_calls() == []
+    assert reason in report["screened_out"][0]
+
+
+def test_brief_rejects_smart_money_not_buying():
+    moby = FakeMoby(brief={**GOOD_BRIEF, "smart_money_read": {"tier": "red"}})
+    TradingEngine(moby, cfg()).run_cycle()
+    assert moby.money_calls() == []
+
+
+def test_limits_cash_slots_and_cooldown():
+    moby = FakeMoby(cash=20)
+    assert "not enough cash" in TradingEngine(moby, cfg()).run_cycle()["notes"][0]
+    held = [{"token_address": t, "symbol": t, "quantity": 1} for t in ("A", "B", "C")]
+    moby = FakeMoby(tokens=held, position={"stop_loss_set": True})
+    assert "max open" in TradingEngine(moby, cfg()).run_cycle()["notes"][-1]
+    moby = FakeMoby()
+    eng = TradingEngine(moby, cfg())
+    eng.run_cycle(); eng.run_cycle()
+    assert [n for n, _ in moby.money_calls()].count("quick_buy") == 1
+
+
+def test_sells_when_smart_money_flips():
+    selling = {**GOOD_BRIEF, "smart_money_flow": {"flow": {"h1": {"net_flow_usd": -5}, "h4": {"net_flow_usd": -9}}}}
+    moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}], brief=selling)
+    TradingEngine(moby, cfg()).run_cycle()
+    assert moby.money_calls() == [("quick_sell", {"token_address": "X", "pct": 100})]
+
+
+def test_existing_position_without_stop_gets_one():
+    moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}])
+    TradingEngine(moby, cfg()).run_cycle()
+    assert moby.money_calls()[0][0] == "create_order"
 
 
 def test_sse_and_tool_result_decoding():

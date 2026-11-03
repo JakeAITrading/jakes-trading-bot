@@ -2,7 +2,8 @@
 
 GET  /health  - liveness check (no auth)
 GET  /tools   - list the Moby MCP tools         (needs RUN_TOKEN)
-GET  /wallet  - call the configured wallet tool (needs RUN_TOKEN)
+GET  /wallet  - Moby portfolio                 (needs RUN_TOKEN)
+GET  /last    - report from the last cycle     (needs RUN_TOKEN)
 POST /run     - run one trading cycle           (needs RUN_TOKEN)
 
 Send the token as "Authorization: Bearer <RUN_TOKEN>".
@@ -50,6 +51,7 @@ def _require_token() -> None:
 def health():
     cfg = load_config()
     return jsonify(ok=True, dry_run=cfg.get("trading", {}).get("dry_run", True),
+                   kill_switch=cfg.get("trading", {}).get("kill_switch", False),
                    moby_key_set=bool(os.environ.get("MOBY_API_KEY")))
 
 
@@ -63,7 +65,13 @@ def tools():
 @app.get("/wallet")
 def wallet():
     _require_token()
-    return jsonify(engine().wallet())
+    return jsonify(engine().client.call_tool("get_my_portfolio"))
+
+
+@app.get("/last")
+def last():
+    _require_token()
+    return jsonify(engine().last_report)
 
 
 @app.post("/run")

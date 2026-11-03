@@ -1,52 +1,62 @@
-# Jake's Trading Bot — Moby automation
+# Jake's Trading Bot — Moby smart-money trend strategy
 
-Automates trading through **Moby: Trade Smarter** (moby.win) using Moby's MCP
-server at `https://mcp.moby.win/mcp`.
+Automated trading on **Moby: Trade Smarter** (moby.win) through Moby's MCP server
+(`https://mcp.moby.win/mcp`). Solana only, funded with USDC in your Moby agent wallet.
 
-Each cycle the bot:
-1. calls Moby's **signals** tool,
-2. filters signals through risk rules (allow/block lists, $ per trade, trades per day),
-3. calls Moby's **trade** tool for each one, or only logs it when `dry_run: true` (the default).
+## Strategy (runs every 15 minutes)
 
-## Setup
+1. **Safety first.** Stops if `KILL_SWITCH=true` or trading is paused in the Moby app.
+   Moby's own limits (max per trade, daily volume) are always enforced by Moby and
+   also respected by the bot.
+2. **Manage what it holds.**
+   - Every position gets a stop-loss (−25%) and take-profit (+50%) placed on Moby.
+   - It sells early if tracked whales turn to net selling on both 1h and 4h.
+3. **Find a trend Moby's whales are backing.** From the top 30 on Moby's leaderboard, a coin must:
+   - be green safety, $1M–$500M market cap, with $200k+ liquidity;
+   - be up on 1h and 24h, but not more than +100% in 24h (no chasing);
+   - have tracked whales net buying over 1h *and* 4h, with 3+ distinct whale buyers;
+   - pass Moby's trade brief: Smart Money Read = buying, mint/freeze renounced, no honeypot.
+4. **Buy the strongest one.** $20 per trade (or Moby's max, if lower), at most 1 buy per
+   cycle, 3 open positions and $40 of buys a day, always keeping $5 cash.
 
-1. In the Moby app, go to **Agent settings** and create an API key (`moby_agent_...`).
-   Never commit it. Revoke any key that has been shared in a screenshot or chat.
-2. Find out which tools Moby exposes:
-   ```bash
-   pip install -r requirements.txt
-   export MOBY_API_KEY=moby_agent_...
-   python -m trading_bot.moby_client tools
-   python -m trading_bot.moby_client call <wallet_tool_name>     # read-only check
-   ```
-3. Put the tool names in `config.yaml` under `moby.tools` (`wallet`, `signals`, `trade`),
-   and make `moby.trade_arguments` match the trade tool's input fields.
-4. Run `pytest` and then do a dry run: `curl -X POST -H "Authorization: Bearer $RUN_TOKEN" localhost:8080/run`.
-5. When the simulated trades look right, set `trading.dry_run: false` (or env `DRY_RUN=false`).
+All numbers live in `config.yaml`. **No strategy guarantees profit**: memecoins can drop fast, and
+stop-losses can fill below their price in a crash. Start small.
+
+## Run locally
+
+```bash
+pip install -r requirements.txt
+export MOBY_API_KEY=moby_agent_...     # Moby > AI Trading > Agent settings. Never commit it.
+pytest
+python -m trading_bot.moby_client tools                 # list Moby tools
+RUN_TOKEN=pick-a-secret python app.py                   # dry run, cycles every 15 min
+```
+
+`trading.dry_run: true` (default) reads Moby and logs every buy/sell/order it *would* send.
+Go live with env `DRY_RUN=false`. Stop instantly with `KILL_SWITCH=true`, or pause AI Trading in the Moby app.
 
 ## Deploy (Cloud Run)
 
-`cloudbuild.yaml` builds this folder and deploys the `jakes-trading-bot` service. Store secrets
-in Secret Manager and attach them once:
+`cloudbuild.yaml` builds this folder and deploys the `jakes-trading-bot` service.
 
 ```bash
 printf '%s' 'moby_agent_...' | gcloud secrets create moby-api-key --data-file=-
 printf '%s' "$(openssl rand -hex 24)" | gcloud secrets create run-token --data-file=-
 gcloud run services update jakes-trading-bot --region us-central1 \
-  --update-secrets MOBY_API_KEY=moby-api-key:latest,RUN_TOKEN=run-token:latest
+  --update-secrets MOBY_API_KEY=moby-api-key:latest,RUN_TOKEN=run-token:latest \
+  --min-instances 1 --max-instances 1 --no-cpu-throttling \
+  --update-env-vars DRY_RUN=true
 ```
 
-To trade on a schedule, create a Cloud Scheduler job that POSTs to `/run` with the run token
-(for example every 15 minutes), or set `schedule.interval_seconds`. With the in-container
-loop, keep `--min-instances 1` so the container keeps running between requests.
+`--min-instances 1 --max-instances 1 --no-cpu-throttling` keeps exactly one copy running so the
+15-minute loop runs and two copies never trade at once.
 
-## Endpoints
+## Endpoints (send `Authorization: Bearer $RUN_TOKEN`)
 
-| Method | Path      | Auth      | Purpose                              |
-|--------|-----------|-----------|--------------------------------------|
-| GET    | `/health` | none      | status, dry-run flag, key present    |
-| GET    | `/tools`  | RUN_TOKEN | list Moby MCP tools                  |
-| GET    | `/wallet` | RUN_TOKEN | call the configured wallet tool      |
-| POST   | `/run`    | RUN_TOKEN | run one trading cycle                |
-
-Optional email summaries: set `ALERT_EMAIL_TO`, `SMTP_USER`, `SMTP_PASSWORD` (`SMTP_HOST`/`SMTP_PORT` default to Gmail).
+| Method | Path      | Purpose                                   |
+|--------|-----------|-------------------------------------------|
+| GET    | `/health` | status, dry-run and kill-switch flags (no auth) |
+| GET    | `/wallet` | Moby portfolio                            |
+| GET    | `/last`   | what the last cycle did and why           |
+| POST   | `/run`    | run one cycle now                         |
+| GET    | `/tools`  | list Moby MCP tools                       |

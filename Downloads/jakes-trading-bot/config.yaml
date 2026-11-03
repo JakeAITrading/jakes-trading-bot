@@ -1,39 +1,54 @@
-# Jake's Trading Bot - Moby automation
+# Jake's Trading Bot - Moby "smart money trend" strategy
 #
-# Secrets are NEVER stored in this file. Set them as environment variables
-# (on Cloud Run, map them from Google Secret Manager):
-#   MOBY_API_KEY   - the moby_agent_... key from Moby > Agent settings
-#   RUN_TOKEN      - shared secret required to call POST /run on the web app
-#   ALERT_EMAIL_TO, SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD - optional trade summaries
+# Secrets are NEVER stored in this file. Environment variables:
+#   MOBY_API_KEY   - the moby_agent_... key from Moby > AI Trading > Agent settings
+#   RUN_TOKEN      - shared secret required to call the web app's protected endpoints
+#   DRY_RUN        - "false" to trade real money (overrides trading.dry_run)
+#   KILL_SWITCH    - "true" stops ALL new buys and sells immediately
+#   ALERT_EMAIL_TO, SMTP_USER, SMTP_PASSWORD - optional email summaries
 
 moby:
   mcp_url: https://mcp.moby.win/mcp
-  # Names of the Moby MCP tools the bot uses. Run
-  #   python -m trading_bot.moby_client tools
-  # to see what Moby exposes, then fill these in. Leave a tool blank to disable it.
-  tools:
-    wallet: ""      # read-only: balances / positions
-    signals: ""     # read-only: trade ideas / signals Moby produces
-    trade: ""       # PLACES ORDERS - only called when dry_run is false
-  # Arguments sent to the trade tool. {symbol}, {side} and {amount_usd} are filled in.
-  trade_arguments:
-    symbol: "{symbol}"
-    side: "{side}"
-    amount_usd: "{amount_usd}"
 
 trading:
-  # true = log what the bot WOULD trade, send nothing. Flip to false only after
-  # you've checked the logs and the tool names above.
+  # true = read Moby, decide, and LOG trades without sending them.
   dry_run: true
 
+strategy:
+  # Where candidates come from: Moby's main leaderboard (what's moving right now).
+  leaderboard_size: 30
+  # Market-cap band: big enough to be liquid, small enough to still move.
+  min_market_cap_usd: 1000000
+  max_market_cap_usd: 500000000
+  min_liquidity_usd: 200000
+  # Trend: price must be up on the hour and the day...
+  min_price_change_h1_pct: 0
+  min_price_change_h24_pct: 0
+  # ...but don't chase anything that already ran too far today.
+  max_price_change_h24_pct: 100
+  # Smart money must be net BUYING over both the last 1h and 4h.
+  min_whale_net_flow_h1_usd: 1000
+  min_whale_net_flow_h4_usd: 5000
+  min_whale_buyers_h4: 3
+  # Moby's "Smart Money Read" must say buying (green).
+  required_smart_money_tiers: [green]
+  # Don't re-buy a token for this long after we last traded it.
+  cooldown_hours: 24
+
 risk:
-  amount_usd_per_trade: 25
-  max_trades_per_day: 3
-  # If non-empty, only these symbols are ever traded.
-  allowed_symbols: []
-  blocked_symbols: []
+  usd_per_trade: 20
+  max_open_positions: 3
+  max_buys_per_cycle: 1
+  max_daily_buy_usd: 40
+  # Keep this much USDC untouched.
+  min_cash_reserve_usd: 5
+  # Exits placed on Moby right after every buy (Moby adds none by itself).
+  stop_loss_pct: 25      # sell if price falls 25% below entry
+  take_profit_pct: 50    # sell if price rises 50% above entry
+  # Also sell early when smart money flips to net SELLING on both 1h and 4h.
+  exit_on_smart_money_selling: true
+  blocked_tokens: []     # contract addresses never to buy
 
 schedule:
-  # Seconds between automatic cycles inside the container (0 = only on POST /run,
-  # e.g. from Cloud Scheduler).
-  interval_seconds: 0
+  # Seconds between automatic cycles inside the container (0 = only via POST /run).
+  interval_seconds: 900
