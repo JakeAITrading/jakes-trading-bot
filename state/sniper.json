@@ -6533,6 +6533,60 @@
    "mcap": 5892.729404877173,
    "whale_usd": 138.29943777140699,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "22r9JGoWRBYc4Z1pkSFw8p2tdjefS2ZZshw1vr8bBC2K",
+   "symbol": "STONKS",
+   "ts": "2026-11-03T19:33:53",
+   "t": 1793734433.0,
+   "mcap": 1163399.957193101,
+   "whale_usd": 1977.740456,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "CMqCX2XLZx3L1XDHzdUY2b32NQtLcBwQoq6PXLaBehaa",
+   "symbol": "UNI",
+   "ts": "2026-11-03T19:33:55",
+   "t": 1793734435.0,
+   "mcap": 6114.491498010466,
+   "whale_usd": 144.39751194966354,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GUwrat2yP6RrMUzetw3NcVEozsFDCKUYHst9qRyCpump",
+   "symbol": "\u8c5a",
+   "ts": "2026-11-03T19:34:09",
+   "t": 1793734449.0,
+   "mcap": 8221.715688705444,
+   "whale_usd": 141.43912183196218,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GXZ8rMNkCmfkwmqXtwYUkPW825AgDWpbscUoTKhBMYiQ",
+   "symbol": "SPCX6900",
+   "ts": "2026-11-03T19:34:21",
+   "t": 1793734461.0,
+   "mcap": 9394.970220455434,
+   "whale_usd": 276.45417747936443,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "MAXXib7SQAQn4ymrwhhR9qMRUcYv8BNhbQxizJn5CCk",
+   "symbol": "Maxxmas",
+   "ts": "2026-11-03T19:34:26",
+   "t": 1793734466.0,
+   "mcap": 26065.91586200831,
+   "whale_usd": 450.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "LPq7UJJqXExmVhTPDhzGhFjUbPupWfkp3PBN9irpump",
+   "symbol": "BitInu",
+   "ts": "2026-11-03T19:34:41",
+   "t": 1793734481.0,
+   "mcap": 6103.696705395123,
+   "whale_usd": 200.14610100000004,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
