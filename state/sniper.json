@@ -1240,7 +1240,12 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "closed": "take-profit filled at 4.20319e-05",
+   "sold_price": 4.20318979053e-05,
+   "proceeds_usd": 5.959115,
+   "profit_usd": 0.96,
+   "rebuy_until": null
   }
  ],
  "skipped": [
