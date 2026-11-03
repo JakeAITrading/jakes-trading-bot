@@ -1,1 +1,1 @@
-2026-11-03T04:00:30Z LIVE: protect CLAUDIA: stop-loss 0.00193318, take-profit 0.00386637 [sent] | max open positions reached
+2026-11-03T04:05:37Z LIVE: protect CLAUDIA: stop-loss 0.0019288, take-profit 0.00385761 [sent] | max open positions reached
