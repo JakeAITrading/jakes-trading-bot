@@ -1,0 +1,48 @@
+# Jake's Trading Bot - Moby "smart money trend" strategy
+#
+# Secrets are NEVER stored in this file. Put them in .env (gitignored, see .env.example):
+#   MOBY_API_KEY   - the moby_agent_... key from Moby > AI Trading > Agent settings
+#   DRY_RUN        - "false" to trade real money (overrides trading.dry_run)
+# Stop: STOP or REMOTE_STOP file in the repo root, or pause AI Trading in the Moby app.
+
+moby:
+  mcp_url: https://mcp.moby.win/mcp
+
+trading:
+  # true = read Moby, decide, and LOG trades without sending them.
+  dry_run: true
+
+strategy:
+  # Where candidates come from: Moby's main leaderboard (what's moving right now).
+  leaderboard_size: 30
+  # Market-cap band: big enough to be liquid, small enough to still move.
+  min_market_cap_usd: 1000000
+  max_market_cap_usd: 500000000
+  min_liquidity_usd: 200000
+  # Trend: price must be up on the hour and the day...
+  min_price_change_h1_pct: 0
+  min_price_change_h24_pct: 0
+  # ...but don't chase anything that already ran too far today.
+  max_price_change_h24_pct: 100
+  # Smart money must be net BUYING over both the last 1h and 4h.
+  min_whale_net_flow_h1_usd: 1000
+  min_whale_net_flow_h4_usd: 5000
+  min_whale_buyers_h4: 3
+  # Moby's "Smart Money Read" must say buying (green).
+  required_smart_money_tiers: [green]
+  # Don't re-buy a token for this long after we last traded it.
+  cooldown_hours: 24
+
+risk:
+  usd_per_trade: 20
+  max_open_positions: 3
+  max_buys_per_cycle: 1
+  max_daily_buy_usd: 40
+  # Keep this much USDC untouched.
+  min_cash_reserve_usd: 5
+  # Exits placed on Moby right after every buy (Moby adds none by itself).
+  stop_loss_pct: 25      # sell if price falls 25% below entry
+  take_profit_pct: 50    # sell if price rises 50% above entry
+  # Also sell early when smart money flips to net SELLING on both 1h and 4h.
+  exit_on_smart_money_selling: true
+  blocked_tokens: []     # contract addresses never to buy

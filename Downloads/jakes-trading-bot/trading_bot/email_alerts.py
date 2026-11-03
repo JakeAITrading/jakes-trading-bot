@@ -1,1 +1,0 @@
-# Placeholder for trading_bot/email_alerts.py
