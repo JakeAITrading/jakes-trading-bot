@@ -975,6 +975,29 @@
    "proceeds_usd": 6.848675,
    "profit_usd": 1.85,
    "rebuy_until": null
+  },
+  {
+   "token_address": "EcCpMnjc3wJQrCKSsyrzyJiXRwY6AZPLzSaWR2bPpump",
+   "symbol": "GTAFY",
+   "whale_time": "2026-11-03T06:17:18",
+   "whale_type": "whale",
+   "whale_usd": 1354.485378,
+   "whale_mcap": 37753.62711166963,
+   "seen_after_s": 2.2,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 3.775362711166963e-05,
+   "glance": {
+    "above_5m_low_pct": 28.3,
+    "this_minute_pct": 15.4
+   },
+   "status": "limit pending",
+   "limit_price": 3.775362711166963e-05,
+   "limit_order_id": "1a852951-ce21-483a-bf73-758f3f585abd",
+   "limit_placed_at": "2026-11-03T06:17:26Z",
+   "limit_expires": 1793686766.5110693,
+   "views": 31
   }
  ],
  "skipped": [
@@ -1246,6 +1269,15 @@
    "mcap": 6943.608241272159,
    "whale_usd": 159.35451496190484,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "EcCpMnjc3wJQrCKSsyrzyJiXRwY6AZPLzSaWR2bPpump",
+   "symbol": "GTAFY",
+   "ts": "2026-11-03T06:17:18",
+   "t": 1793686638.0,
+   "mcap": 37753.62711166963,
+   "whale_usd": 1354.485378,
+   "whale_type": "whale"
   }
  ]
 }
