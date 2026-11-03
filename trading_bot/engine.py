@@ -1,15 +1,16 @@
 """Smart-money trend strategy on Moby.
 
 Each cycle:
-  1. Safety checks (kill switch, Moby guardrails paused).
-  2. Manage what we hold: make sure every position has a stop-loss + take-profit
-     on Moby, and sell early if smart money has flipped to selling.
-  3. Look for new entries on Moby's leaderboard: trending up, tracked whales
-     net buying on 1h AND 4h, Moby's Smart Money Read = buying, safe contract.
+  1. Safety checks (Moby guardrails paused).
+  2. Manage what we hold: every position gets a stop-loss + take-profit on Moby,
+     and is sold early if smart money flips to net selling.
+  3. Look for new entries on Moby's leaderboard: trending up, tracked whales net
+     buying on 1h AND 4h, Moby's Smart Money Read = buying, safe contract.
   4. Buy the best candidate (if room and cash), then place its exits.
 
-In dry-run mode every money-moving call (quick_buy, quick_sell, create_order)
-is logged instead of sent. Read-only calls still run so the decisions are real.
+Dry run (practice) mode never calls a money-moving tool. Instead it keeps "paper"
+positions at the real market price and closes them with the same exit rules, so
+practice results show what the strategy would have made.
 """
 from __future__ import annotations
 
@@ -33,15 +34,15 @@ def _now() -> dt.datetime:
     return dt.datetime.now(dt.timezone.utc)
 
 
+def new_state() -> dict:
+    return {"last_traded": {}, "day": None, "bought_today_usd": 0.0, "paper": {}, "paper_closed": []}
+
+
 class TradingEngine:
-    def __init__(self, client, config: dict, notifier=None):
+    def __init__(self, client, config: dict, state: dict | None = None):
         self.client = client
         self.cfg = config
-        self.notifier = notifier
-        self.last_traded: dict[str, dt.datetime] = {}   # token -> last buy/sell time
-        self._day: dt.date | None = None
-        self._bought_today_usd = 0.0
-        self.last_report: dict | None = None
+        self.state = {**new_state(), **(state or {})}
 
     # -- config helpers --------------------------------------------------
     @property
@@ -61,8 +62,13 @@ class TradingEngine:
         assert tool not in MONEY_TOOLS
         return self.client.call_tool(tool, args or {})
 
+    def _price(self, token: str) -> float:
+        q = self._read("get_token_price", {"token_address": token})
+        return _num(q.get("price_usd") if isinstance(q, dict) else q)
+
     def _money(self, report: dict, tool: str, args: dict, why: str) -> Any:
-        entry = {"tool": tool, "arguments": args, "why": why}
+        """Send a money-moving call (live), or record it as simulated (dry run)."""
+        entry = {"time": _now().isoformat(), "tool": tool, "arguments": args, "why": why}
         if self.dry_run:
             entry["status"] = "simulated"
             report["actions"].append(entry)
@@ -75,53 +81,62 @@ class TradingEngine:
             report["actions"].append(entry)
             log.error("%s failed: %s", tool, exc)
             return None
-        if isinstance(result, dict) and result.get("blocked"):
-            entry["status"] = f"blocked by Moby: {result.get('reason')}"
-        else:
-            entry["status"] = "sent"
+        blocked = isinstance(result, dict) and result.get("blocked")
+        entry["status"] = f"blocked by Moby: {result.get('reason')}" if blocked else "sent"
         entry["result"] = result
         report["actions"].append(entry)
         log.info("%s %s -> %s", tool, args, entry["status"])
-        return result if entry["status"] == "sent" else None
+        return None if blocked else result
+
+    def _mark_traded(self, token: str) -> None:
+        self.state["last_traded"][token] = _now().isoformat()
+
+    def _in_cooldown(self, token: str) -> bool:
+        last = self.state["last_traded"].get(token)
+        if not last:
+            return False
+        hours = _num(self.s.get("cooldown_hours"), 24)
+        return _now() - dt.datetime.fromisoformat(last) < dt.timedelta(hours=hours)
 
     # -- holdings --------------------------------------------------------
     def holdings(self) -> tuple[float, list[dict]]:
-        """Return (USDC cash, list of non-cash, non-SOL positions)."""
+        """(USDC cash, real non-cash, non-SOL positions) from the chain via Moby."""
         bal = self._read("get_my_balances")
         cash = _num((bal.get("usd_token") or {}).get("quantity"))
         positions = []
         for t in bal.get("tokens") or []:
             if t.get("is_quote") or t.get("is_cash"):
                 cash = _num(t.get("quantity"), cash)
-                continue
-            if t.get("is_native") or t.get("is_dust"):
-                continue  # SOL: Moby can't place TP/SL on it, and we never buy it
-            if _num(t.get("quantity")) > 0:
-                positions.append(t)
+            elif not (t.get("is_native") or t.get("is_dust")) and _num(t.get("quantity")) > 0:
+                positions.append(t)  # SOL is skipped: no TP/SL on it, and we never buy it
         return cash, positions
 
-    # -- step 2: manage positions -----------------------------------------
+    # -- exits -----------------------------------------------------------
+    def _levels(self, entry: float, price: float) -> tuple[float, float]:
+        sl = min(entry, price) * (1 - _num(self.r.get("stop_loss_pct"), 25) / 100)
+        tp = max(entry, price) * (1 + _num(self.r.get("take_profit_pct"), 50) / 100)
+        return sl, tp
+
     def _protect(self, report: dict, token: str, symbol: str, qty: float) -> None:
         pos = self._read("get_my_position", {"token_address": token}) or {}
         if pos.get("stop_loss_set"):
             return
-        quote = self._read("get_token_price", {"token_address": token})
-        price = _num(quote.get("price_usd") if isinstance(quote, dict) else quote)
+        price = self._price(token)
         if price <= 0:
             report["notes"].append(f"{symbol}: no price, could not place exits")
             return
         basis_qty = _num(pos.get("basis_known_token_amount"))
         entry = _num(pos.get("cost_basis_usd")) / basis_qty if basis_qty > 0 else price
-        # Use the lower of entry and current so the stop is never above market.
-        base = min(entry, price)
-        sl = base * (1 - _num(self.r.get("stop_loss_pct"), 25) / 100)
-        tp = max(entry, price) * (1 + _num(self.r.get("take_profit_pct"), 50) / 100)
+        sl, tp = self._levels(entry, price)
         self._money(report, "create_order", {
             "order_type": "sl_and_tp", "token_address": token, "amount": qty,
             "stop_loss_price": round(sl, 12), "take_profit_price": round(tp, 12),
         }, f"protect {symbol}: stop-loss {sl:.6g}, take-profit {tp:.6g}")
 
-    def _smart_money_selling(self, brief: dict) -> bool:
+    def _smart_money_selling(self, token: str) -> bool:
+        if not self.r.get("exit_on_smart_money_selling", True):
+            return False
+        brief = self._read("get_token_trade_brief", {"token_address": token}) or {}
         flow = (brief.get("smart_money_flow") or {}).get("flow") or {}
         h1 = _num((flow.get("h1") or {}).get("net_flow_usd"))
         h4 = _num((flow.get("h4") or {}).get("net_flow_usd"))
@@ -131,18 +146,40 @@ class TradingEngine:
     def manage_positions(self, report: dict, positions: list[dict]) -> None:
         for p in positions:
             token, symbol, qty = p["token_address"], p.get("symbol", "?"), _num(p.get("quantity"))
-            if self.r.get("exit_on_smart_money_selling", True):
-                brief = self._read("get_token_trade_brief", {"token_address": token}) or {}
-                if self._smart_money_selling(brief):
-                    self._money(report, "quick_sell", {"token_address": token, "pct": 100},
-                                f"exit {symbol}: smart money turned to net selling")
-                    self.last_traded[token] = _now()
-                    continue
+            if self._smart_money_selling(token):
+                self._money(report, "quick_sell", {"token_address": token, "pct": 100},
+                            f"exit {symbol}: smart money turned to net selling")
+                self._mark_traded(token)
+                continue
             self._protect(report, token, symbol, qty)
 
-    # -- step 3: find entries -------------------------------------------
+    def manage_paper(self, report: dict) -> None:
+        """Close practice positions with the same rules the live exits use."""
+        for token, p in list(self.state["paper"].items()):
+            price = self._price(token)
+            if price <= 0:
+                continue
+            reason = None
+            if price <= p["stop_loss"]:
+                reason = "stop-loss"
+            elif price >= p["take_profit"]:
+                reason = "take-profit"
+            elif self._smart_money_selling(token):
+                reason = "smart money selling"
+            if reason:
+                pnl = p["usd"] * (price / p["entry_price"] - 1)
+                closed = {**p, "token_address": token, "exit_price": price, "closed_at": _now().isoformat(),
+                          "exit_reason": reason, "pnl_usd": round(pnl, 4)}
+                self.state["paper_closed"].append(closed)
+                del self.state["paper"][token]
+                self._mark_traded(token)
+                report["actions"].append({"time": closed["closed_at"], "tool": "quick_sell", "status": "simulated",
+                                          "arguments": {"token_address": token, "pct": 100},
+                                          "why": f"paper exit {p['symbol']}: {reason}, P&L ${pnl:+.2f}"})
+
+    # -- entries ---------------------------------------------------------
     def passes_screen(self, row: dict) -> str | None:
-        """Return None if the leaderboard row qualifies, else the reason it doesn't."""
+        """None if the leaderboard row qualifies, else why not."""
         s = self.s
         mc, liq = _num(row.get("market_cap_usd")), _num(row.get("liquidity_usd"))
         h1, h24 = _num(row.get("price_change_pct_h1")), _num(row.get("price_change_pct_h24"))
@@ -186,25 +223,20 @@ class TradingEngine:
             "limit": int(self.s.get("leaderboard_size", 30)), "whale_windows": ["h1", "h4"]})
         rows = lb.get("entries", []) if isinstance(lb, dict) else []
         blocked = set(self.r.get("blocked_tokens") or [])
-        cooldown = dt.timedelta(hours=_num(self.s.get("cooldown_hours"), 24))
         picks = []
         for row in rows:
             token, sym = row.get("token_address"), row.get("symbol")
-            if not token or token in held or token in blocked:
-                continue
-            if token in self.last_traded and _now() - self.last_traded[token] < cooldown:
+            if not token or token in held or token in blocked or self._in_cooldown(token):
                 continue
             reason = self.passes_screen(row)
             if reason:
                 report["screened_out"].append(f"{sym}: {reason}")
-                continue
-            picks.append(row)
-        # Strongest smart-money inflow first.
+            else:
+                picks.append(row)
         picks.sort(key=lambda r: _num(((r.get("whale") or {}).get("h4") or {}).get("whale_net_flow_usd")),
                    reverse=True)
         return picks
 
-    # -- step 4: buy ------------------------------------------------------
     def buy(self, report: dict, row: dict, usd: float) -> None:
         token, sym = row["token_address"], row.get("symbol", "?")
         w = row.get("whale") or {}
@@ -217,54 +249,59 @@ class TradingEngine:
         result = self._money(report, "quick_buy",
                              {"output_token": token, "amount_usd": usd, "rationale": rationale},
                              f"buy ${usd:.2f} of {sym}")
-        self.last_traded[token] = _now()
-        self._bought_today_usd += usd
-        if result is None:
+        self._mark_traded(token)
+        self.state["bought_today_usd"] += usd
+        if self.dry_run:
+            price = _num(row.get("price_usd")) or self._price(token)
+            sl, tp = self._levels(price, price)
+            self.state["paper"][token] = {"symbol": sym, "usd": usd, "entry_price": price,
+                                          "stop_loss": sl, "take_profit": tp, "opened_at": _now().isoformat()}
             return
-        # Place exits now if the fill is booked; otherwise next cycle's manage step does it.
+        # Place exits now if the fill is booked; otherwise the next cycle's manage step does it.
         qty = _num(result.get("filled_output_amount_ui") if isinstance(result, dict) else None)
         if qty > 0:
             self._protect(report, token, sym, qty)
 
-    # -- the cycle --------------------------------------------------------
+    # -- the cycle -------------------------------------------------------
     def run_cycle(self) -> dict:
-        today = _now().date()
-        if today != self._day:
-            self._day, self._bought_today_usd = today, 0.0
+        today = _now().date().isoformat()
+        if today != self.state["day"]:
+            self.state["day"], self.state["bought_today_usd"] = today, 0.0
         report: dict = {"time": _now().isoformat(), "dry_run": self.dry_run,
                         "actions": [], "notes": [], "screened_out": []}
-        self.last_report = report
 
-        if self.cfg.get("trading", {}).get("kill_switch"):
-            report["notes"].append("KILL_SWITCH is on: no trading")
-            return report
         guard = self._read("get_my_guardrails") or {}
         if guard.get("paused"):
             report["notes"].append("Trading is paused in the Moby app")
             return report
 
         cash, positions = self.holdings()
-        report["cash_usd"], report["positions"] = round(cash, 2), [p.get("symbol") for p in positions]
+        report["cash_usd"] = round(cash, 2)
+        report["positions"] = [p.get("symbol") for p in positions]
         self.manage_positions(report, positions)
+        held = {p["token_address"] for p in positions}
+        if self.dry_run:
+            self.manage_paper(report)
+            report["paper_positions"] = [p["symbol"] for p in self.state["paper"].values()]
+            cash -= sum(p["usd"] for p in self.state["paper"].values())
+            held |= set(self.state["paper"])
 
         usd = _num(self.r.get("usd_per_trade"), 20)
-        max_trade = guard.get("maxTradeUsd")
-        if max_trade is not None:
-            usd = min(usd, _num(max_trade))
-        slots = int(self.r.get("max_open_positions", 3)) - len(positions)
+        if guard.get("maxTradeUsd") is not None:
+            usd = min(usd, _num(guard["maxTradeUsd"]))
+        slots = int(self.r.get("max_open_positions", 3)) - len(held)
         buys_left = int(self.r.get("max_buys_per_cycle", 1))
         if slots <= 0:
             report["notes"].append("max open positions reached")
-            return self._finish(report)
+            return report
 
-        held = {p["token_address"] for p in positions}
         for row in self.find_candidates(report, held):
             if slots <= 0 or buys_left <= 0:
                 break
             if cash - usd < _num(self.r.get("min_cash_reserve_usd"), 5):
                 report["notes"].append(f"not enough cash (${cash:.2f}) for a ${usd:.2f} buy")
                 break
-            if self._bought_today_usd + usd > _num(self.r.get("max_daily_buy_usd"), 40):
+            if self.state["bought_today_usd"] + usd > _num(self.r.get("max_daily_buy_usd"), 40):
                 report["notes"].append("daily buy budget used up")
                 break
             brief = self._read("get_token_trade_brief", {"token_address": row["token_address"]}) or {}
@@ -276,9 +313,4 @@ class TradingEngine:
             cash -= usd
             slots -= 1
             buys_left -= 1
-        return self._finish(report)
-
-    def _finish(self, report: dict) -> dict:
-        if self.notifier and report["actions"]:
-            self.notifier.send_report(report)
         return report

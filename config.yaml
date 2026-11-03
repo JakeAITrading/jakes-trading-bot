@@ -1,11 +1,9 @@
 # Jake's Trading Bot - Moby "smart money trend" strategy
 #
-# Secrets are NEVER stored in this file. Environment variables:
+# Secrets are NEVER stored in this file. Put them in .env (gitignored, see .env.example):
 #   MOBY_API_KEY   - the moby_agent_... key from Moby > AI Trading > Agent settings
-#   RUN_TOKEN      - shared secret required to call the web app's protected endpoints
 #   DRY_RUN        - "false" to trade real money (overrides trading.dry_run)
-#   KILL_SWITCH    - "true" stops ALL new buys and sells immediately
-#   ALERT_EMAIL_TO, SMTP_USER, SMTP_PASSWORD - optional email summaries
+# Stop: STOP or REMOTE_STOP file in the repo root, or pause AI Trading in the Moby app.
 
 moby:
   mcp_url: https://mcp.moby.win/mcp
@@ -48,7 +46,3 @@ risk:
   # Also sell early when smart money flips to net SELLING on both 1h and 4h.
   exit_on_smart_money_selling: true
   blocked_tokens: []     # contract addresses never to buy
-
-schedule:
-  # Seconds between automatic cycles inside the container (0 = only via POST /run).
-  interval_seconds: 900

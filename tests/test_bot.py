@@ -4,6 +4,7 @@ import pytest
 
 from trading_bot.engine import MONEY_TOOLS, TradingEngine
 from trading_bot.moby_client import MobyClient, MobyError, _parse_sse, decode_tool_result
+from trading_bot import run, store
 from trading_bot.settings import load_config
 
 
@@ -52,7 +53,6 @@ class FakeMoby:
 def cfg(dry_run=False, **risk):
     c = load_config()
     c["trading"]["dry_run"] = dry_run
-    c["trading"]["kill_switch"] = False
     c["risk"].update(risk)
     return c
 
@@ -83,13 +83,10 @@ def test_moby_max_trade_guardrail_caps_size():
     assert moby.money_calls()[0][1]["amount_usd"] == 10
 
 
-def test_paused_and_kill_switch_stop_everything():
+def test_paused_in_moby_stops_everything():
     moby = FakeMoby(guard={"paused": True})
     assert "paused" in TradingEngine(moby, cfg()).run_cycle()["notes"][0]
-    c = cfg(); c["trading"]["kill_switch"] = True
-    moby = FakeMoby()
-    TradingEngine(moby, c).run_cycle()
-    assert moby.calls == []
+    assert moby.money_calls() == []
 
 
 @pytest.mark.parametrize("change,reason", [
@@ -136,6 +133,46 @@ def test_existing_position_without_stop_gets_one():
     moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}])
     TradingEngine(moby, cfg()).run_cycle()
     assert moby.money_calls()[0][0] == "create_order"
+
+
+def test_paper_position_opens_and_closes_on_take_profit():
+    moby = FakeMoby(rows=[{**GOOD_ROW, "price_usd": 0.10}])
+    eng = TradingEngine(moby, cfg(dry_run=True))
+    eng.run_cycle()
+    assert eng.state["paper"]["GOOD"]["entry_price"] == 0.10
+    moby.rows = []
+    moby.call_tool = (lambda orig: lambda n, a=None: {"price_usd": 0.16} if n == "get_token_price" else orig(n, a))(moby.call_tool)
+    report = eng.run_cycle()
+    closed = eng.state["paper_closed"][0]
+    assert closed["exit_reason"] == "take-profit" and closed["pnl_usd"] == pytest.approx(12.0)
+    assert "paper exit" in report["actions"][0]["why"]
+    assert moby.money_calls() == []
+
+
+def test_paper_positions_use_up_slots_and_cash():
+    held = {t: {"symbol": t, "usd": 20, "entry_price": 1, "stop_loss": 0.5, "take_profit": 9} for t in "ABC"}
+    moby = FakeMoby()
+    eng = TradingEngine(moby, cfg(dry_run=True), {"paper": held})
+    moby.call_tool = (lambda orig: lambda n, a=None: {"price_usd": 1} if n == "get_token_price" else orig(n, a))(moby.call_tool)
+    assert "max open" in eng.run_cycle()["notes"][-1]
+
+
+def test_state_survives_restart_cooldown(tmp_path, monkeypatch):
+    monkeypatch.setenv("BOT_STATE_DIR", str(tmp_path))
+    moby = FakeMoby()
+    eng = TradingEngine(moby, cfg())
+    eng.run_cycle()
+    store.save_state(eng.state)
+    TradingEngine(moby, cfg(), store.load_state()).run_cycle()
+    assert [n for n, _ in moby.money_calls()].count("quick_buy") == 1
+
+
+def test_run_respects_stop_files(tmp_path, monkeypatch):
+    monkeypatch.setattr(run, "ROOT", tmp_path)
+    (tmp_path / "REMOTE_STOP").write_text("")
+    monkeypatch.setattr(run, "MobyClient", lambda **k: (_ for _ in ()).throw(AssertionError("must not connect")))
+    assert run.main() == 0
+    assert "REMOTE_STOP" in (tmp_path / "last_run.txt").read_text()
 
 
 def test_sse_and_tool_result_decoding():
