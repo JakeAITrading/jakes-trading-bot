@@ -860,6 +860,26 @@
    "status": "skipped: already pumped: +135% above 5-min low",
    "views": 76,
    "skipped_at": "2026-11-03T05:37:59Z"
+  },
+  {
+   "token_address": "9X5UwHT7gWSPtAH5yeEzrLHqv3Nedmhy3HyZN3Yspump",
+   "symbol": "PumpFun",
+   "whale_time": "2026-11-03T05:40:07",
+   "whale_type": "kol",
+   "whale_usd": 627.3938531761019,
+   "whale_mcap": 35195.655073039234,
+   "seen_after_s": 2.1,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 3.744608329725452e-05,
+   "glance": {
+    "above_5m_low_pct": 596.6,
+    "this_minute_pct": 11.5
+   },
+   "status": "skipped: already pumped: +597% above 5-min low",
+   "views": 56,
+   "skipped_at": "2026-11-03T05:40:09Z"
   }
  ]
 }
