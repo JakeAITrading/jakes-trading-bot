@@ -28,6 +28,7 @@ import argparse
 import random
 import datetime as dt
 import json
+import re
 import logging
 import time
 
@@ -89,13 +90,26 @@ class Sniper:
         self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning settings
         self.whale_type, self.explore = "any", 0.2   # explore: share of rule-failing signals traded anyway
 
+    WRITE_TOOLS = ("create_order", "cancel_order", "quick_buy", "quick_sell")
+
     def call(self, tool: str, args: dict | None = None):
+        until = float(self.state.get("orders_blocked_until") or 0)
+        if tool in self.WRITE_TOOLS and _now() < until:
+            raise MobyError(f"{tool}: Moby order limit hit; paused until {_iso(until)}")
         for _ in range(4):
             try:
                 return self.c.call_tool(tool, args or {})
             except MobyError as e:
                 if "rate limit" not in str(e):
                     raise
+                # Moby sometimes says "STOP calling Moby tools for about N minutes (S seconds)": retrying
+                # sooner only extends it, so pause order tools until then (reads keep working).
+                m = re.search(r"\((\d+) seconds\)", str(e))
+                if m and int(m.group(1)) > 60:
+                    self.state["orders_blocked_until"] = _now() + int(m.group(1)) + 60
+                    save(self.state)
+                    log.warning("Moby order limit hit: pausing order tools until %s", _iso(self.state["orders_blocked_until"]))
+                    raise MobyError(f"{tool}: Moby order limit hit; paused until {_iso(self.state['orders_blocked_until'])}")
                 time.sleep(4)
         raise MobyError(f"{tool}: still rate limited")
 
@@ -345,6 +359,8 @@ class Sniper:
         """Our own safeguards. None = OK to buy, else the reason not to."""
         if stopped():
             return "STOP file present"
+        if _now() < float(self.state.get("orders_blocked_until") or 0):
+            return f"Moby order limit: paused until {_iso(self.state['orders_blocked_until'])}"
         if self.open_count() >= self.max_open:
             return f"{self.max_open} whale coins already held"
         bal = self.call("get_my_balances")
@@ -472,8 +488,15 @@ class Sniper:
             save(self.state)
         if p != old:
             log.info("learned settings: %s (expected %+.1f%% per trade)", p, exp.get("avg", 0) * 100)
+        # Retargeting cancels and re-creates every open take-profit (2 order calls per coin), which is
+        # what used up Moby's order limit; do it at most once an hour.
         if abs(self.tp - old_tp) > 1e-9 and not self.dry_run:
-            self.retarget()
+            if _now() - float(self.state.get("last_retarget") or 0) > 3600:
+                self.state["last_retarget"] = _now()
+                self.retarget()
+            else:
+                self.tp = old_tp   # keep current targets until the next allowed retarget
+                log.info("take-profit change to %+.0f%% deferred (retarget at most hourly)", p["take_profit"] * 100)
 
     def _watching(self) -> bool:
         """Keep running while a live position could still sell and be re-bought."""

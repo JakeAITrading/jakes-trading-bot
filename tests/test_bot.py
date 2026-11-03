@@ -766,3 +766,22 @@ def test_failed_take_profit_is_retried(sniper_dir):
     tp = [a for n, a in moby.calls if n == "create_order"]
     assert tp and tp[0]["token_address"] == "W" and tp[0]["take_profit_price"] == pytest.approx(0.0012)
     assert s.state["trades"][0]["status"] == "holding, take-profit set"
+
+
+def test_long_moby_rate_limit_pauses_order_tools(sniper_dir):
+    class M(SniperMoby):
+        def call_tool(self, name, args=None):
+            if name == "cancel_order":
+                self.calls.append((name, args))
+                raise MobyError("Moby's rate limit for this API key has been hit. STOP calling Moby tools for "
+                                "about 916 minutes (54941 seconds), then try again.")
+            return super().call_tool(name, args)
+    moby = M()
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    with pytest.raises(MobyError):
+        s.call("cancel_order", {"order_id": "x"})
+    assert sum(1 for n, _ in moby.calls if n == "cancel_order") == 1      # no hammering
+    with pytest.raises(MobyError):
+        s.call("create_order", {})                                       # paused without calling Moby
+    assert not any(n == "create_order" for n, _ in moby.calls)
+    assert "paused" in s.can_buy()
