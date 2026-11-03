@@ -157,6 +157,37 @@ class Sniper:
                 rec["status"] = f"bought, take-profit FAILED: {e}"
         return rec
 
+    def retarget(self) -> None:
+        """Move every open take-profit from this experiment to the current --take-profit level.
+        A coin already at or above the new target is sold now."""
+        orders = {o["id"]: o for o in (self.call("get_my_orders").get("orders") or [])}
+        for rec in self.state["trades"]:
+            if rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed"):
+                continue
+            token, sym = rec["token_address"], rec.get("symbol")
+            old_id = (rec.get("tp_order") or {}).get("order_id")
+            if old_id and old_id not in orders:
+                rec["closed"] = "take-profit no longer open (filled or cancelled)"
+                continue
+            held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+            if held <= 0:
+                rec["closed"] = "no tokens left"
+                continue
+            if old_id:
+                self.call("cancel_order", {"order_id": old_id})
+            target = rec["entry_price"] * (1 + self.tp)
+            price = float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0)
+            rec["take_profit_pct"], rec["take_profit_price"] = self.tp * 100, target
+            if price >= target:
+                rec["sell"] = self.call("quick_sell", {"token_address": token, "pct": 100})
+                rec["status"] = rec["closed"] = f"sold at +{(price / rec['entry_price'] - 1) * 100:.0f}% when retargeting"
+            else:
+                rec["tp_order"] = self.call("create_order", {"order_type": "tp_only", "token_address": token,
+                                                             "amount": held, "take_profit_price": target})
+                rec["status"] = f"holding, take-profit moved to +{self.tp * 100:.0f}%"
+            log.info("%s: %s", sym, rec["status"])
+            save(self.state)
+
     def run(self, trades: int, poll: float, hours: float) -> None:
         done = sum(1 for t in self.state["trades"] if t.get("mode") == ("practice" if self.dry_run else "LIVE"))
         deadline = _now() + hours * 3600
@@ -200,10 +231,15 @@ def main() -> None:
     ap.add_argument("--poll", type=float, default=3)
     ap.add_argument("--hours", type=float, default=20)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--retarget", action="store_true",
+                    help="move open take-profits to --take-profit, then keep trading")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     load_env()
-    Sniper(MobyClient(), a.usd, a.take_profit, a.max_age, a.dry_run).run(a.trades, a.poll, a.hours)
+    s = Sniper(MobyClient(), a.usd, a.take_profit, a.max_age, a.dry_run)
+    if a.retarget and not a.dry_run:
+        s.retarget()
+    s.run(a.trades, a.poll, a.hours)
 
 
 if __name__ == "__main__":

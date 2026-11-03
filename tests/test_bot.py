@@ -322,3 +322,28 @@ def test_main_bot_ignores_sniper_coins(sniper_dir):
     moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}])
     report = TradingEngine(moby, cfg()).run_cycle()
     assert moby.money_calls() == [] and report["positions"] == []
+
+
+def test_sniper_retarget_moves_take_profit_or_sells(sniper_dir):
+    sniper.save({"trades": [
+        {"mode": "LIVE", "token_address": "A", "symbol": "A", "entry_price": 1.0, "tp_order": {"order_id": "oA"}},
+        {"mode": "LIVE", "token_address": "B", "symbol": "B", "entry_price": 0.0005, "tp_order": {"order_id": "oB"}},
+    ]})
+
+    class M(SniperMoby):
+        def call_tool(self, name, args=None):
+            if name in ("get_my_orders", "cancel_order", "get_token_price"):
+                self.calls.append((name, args))
+            if name == "get_my_orders":
+                return {"orders": [{"id": "oA"}, {"id": "oB"}]}
+            if name == "cancel_order":
+                return {"status": "cancelled"}
+            return super().call_tool(name, args) if name != "get_token_price" else {"price_usd": 0.001}
+    moby = M()
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.retarget()
+    names = [n for n, _ in moby.calls]
+    assert names.count("cancel_order") == 2
+    new_tp = [a for n, a in moby.calls if n == "create_order"]
+    assert len(new_tp) == 1 and new_tp[0]["take_profit_price"] == pytest.approx(1.2)   # A: price 0.001 < 1.2
+    assert ("quick_sell", {"token_address": "B", "pct": 100}) in moby.calls              # B: 0.001 >= 0.0006
