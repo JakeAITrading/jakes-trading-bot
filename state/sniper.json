@@ -3257,6 +3257,51 @@
    "mcap": 6423.428076159929,
    "whale_usd": 136.914698547297,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "CytGj9iQTHCEDPbucqPy3LZKTBBgGBzhQCsLuihGpump",
+   "symbol": "QI",
+   "ts": "2026-11-03T10:00:15",
+   "t": 1793700015.0,
+   "mcap": 12744.25345395718,
+   "whale_usd": 144.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "49t765AnJMQAzSUutr9T7rC4QAtGxbqiL374qxsHpump",
+   "symbol": "MONEKO",
+   "ts": "2026-11-03T10:00:51",
+   "t": 1793700051.0,
+   "mcap": 17878.06259678355,
+   "whale_usd": 298.5,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "D6r6v8nJbVfPFGr7nW6VfQCshm63V1f6mUtya3QZpump",
+   "symbol": "Cooked",
+   "ts": "2026-11-03T10:02:15",
+   "t": 1793700135.0,
+   "mcap": 10458.518772818261,
+   "whale_usd": 100.2861129999983,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9upgjAi98ewek2gvQiRYGRcHtuJNsWF9vjBQEBk3pump",
+   "symbol": "Stonkero",
+   "ts": "2026-11-03T10:02:27",
+   "t": 1793700147.0,
+   "mcap": 5951.298135187244,
+   "whale_usd": 185.78657207281856,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9GGypKq6978RijrmUTgsWpNNQ6BQX6tLMg1ZEeS3pump",
+   "symbol": "Zeptoverse",
+   "ts": "2026-11-03T10:03:11",
+   "t": 1793700191.0,
+   "mcap": 9040.986697073095,
+   "whale_usd": 276.48030135,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
