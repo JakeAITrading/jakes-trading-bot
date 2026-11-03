@@ -224,7 +224,7 @@
    "sold_price": 4.2239255514e-05,
    "proceeds_usd": 6.219875,
    "profit_usd": 1.22,
-   "rebuy_until": 1793680987.122241
+   "rebuy_until": null
   },
   {
    "token_address": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
@@ -243,6 +243,57 @@
     "reason": "daily_volume"
    },
    "status": "blocked: daily_volume"
+  },
+  {
+   "token_address": "GKrbz5JYG6o36T8NRxxPp7Dsn6DEtkD7gsnLc1sNpump",
+   "symbol": "Doge2",
+   "mode": "LIVE",
+   "rebuy_of": "2026-11-03T04:22:23Z",
+   "rebuys": 1,
+   "usd": 5.0,
+   "take_profit_pct": 20.0,
+   "price_when_seen": 2.5229284801753238e-05,
+   "buy_response": {
+    "status": "Success",
+    "quote_id": "5e03edf2-971c-46cb-b9d1-0b92327b3c0e",
+    "transaction_signature": "2zd4Yc5pqNbtUy8PWXWwiSCWyyNuPi4ZkATwMNrNx9SGKdABCvZz5BURoYH9bpwG4avTAZPwFxhZDXodw84CgzH4",
+    "blocked": null,
+    "reason": null
+   },
+   "bought_at": "2026-11-03T04:38:49Z",
+   "buy_after_whale_s": 2.9,
+   "tokens": 158625.6815,
+   "spent_usd": 5.0,
+   "entry_price": 3.152074716224308e-05,
+   "entry_vs_seen_pct": 24.9,
+   "take_profit_price": 3.7824896594691695e-05,
+   "tp_order": {
+    "order_id": "8917c0ae-005d-48c5-996a-230b592ecdc6",
+    "order_ids": [
+     "8917c0ae-005d-48c5-996a-230b592ecdc6"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "GKrbz5JYG6o36T8NRxxPp7Dsn6DEtkD7gsnLc1sNpump",
+    "amount": 158625.6815,
+    "input_token": "GKrbz5JYG6o36T8NRxxPp7Dsn6DEtkD7gsnLc1sNpump",
+    "input_token_symbol": null,
+    "take_profit_price": 3.7824896594691695e-05,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   },
+   "status": "holding, take-profit set"
   }
  ]
 }
