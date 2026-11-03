@@ -2341,6 +2341,33 @@
    "mcap": 6840.519745310303,
    "whale_usd": 827.3580480122397,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "GKEHgd7jrCda4E8U5EReSTANGPG3DCjyRkQN4zBWpump",
+   "symbol": "ROTTAI",
+   "ts": "2026-11-03T07:52:49",
+   "t": 1793692369.0,
+   "mcap": 9735.252189825644,
+   "whale_usd": 100.28390699999727,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DGTRwmxvW4k7JvD2k5LDhrDq136QBjuQ8ikHnkuopump",
+   "symbol": "pls",
+   "ts": "2026-11-03T07:53:28",
+   "t": 1793692408.0,
+   "mcap": 5846.106887474889,
+   "whale_usd": 125.88116885440104,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "J1pZjNKh4BnbXBsroE4acJv3TYzCGxTn46VrZii6orEZ",
+   "symbol": "XDG",
+   "ts": "2026-11-03T07:54:59",
+   "t": 1793692499.0,
+   "mcap": 107668.57303678968,
+   "whale_usd": 847.6358889251416,
+   "whale_type": "kol"
   }
  ]
 }
