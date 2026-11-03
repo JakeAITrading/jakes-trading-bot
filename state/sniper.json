@@ -633,9 +633,9 @@
    "entry_vs_seen_pct": 3.2,
    "take_profit_price": 0.00045238224749636805,
    "tp_order": {
-    "order_id": "9aee23f0-d64d-4c88-9989-c586e4105b13",
+    "order_id": "a3e82513-91dc-473d-af80-e9f0404c8428",
     "order_ids": [
-     "9aee23f0-d64d-4c88-9989-c586e4105b13"
+     "a3e82513-91dc-473d-af80-e9f0404c8428"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1161,6 +1161,29 @@
    "closed": "sold past target",
    "proceeds_usd": 5.774882,
    "profit_usd": 0.78
+  },
+  {
+   "token_address": "w16qoALFz66AEdRJM56jAAionWb5FhVyjGjznrYpump",
+   "symbol": "LILLY",
+   "whale_time": "2026-11-03T06:29:34",
+   "whale_type": "trader",
+   "whale_usd": 908.258343585547,
+   "whale_mcap": 263855.83960607933,
+   "seen_after_s": 6.9,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.0002673726121429354,
+   "glance": {
+    "above_5m_low_pct": 6.7,
+    "this_minute_pct": 6.7
+   },
+   "status": "limit pending",
+   "limit_price": 0.0002673726121429354,
+   "limit_order_id": "b6c05729-d7e7-487d-8305-e74583e23226",
+   "limit_placed_at": "2026-11-03T06:29:55Z",
+   "limit_expires": 1793687515.406412,
+   "views": 97
   }
  ],
  "skipped": [
@@ -1486,6 +1509,33 @@
    "mcap": 23348.144168267027,
    "whale_usd": 135.305374,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "5TgK5UZDqJgkW92HQ6mLz4v6ahtAeWKNUmoQhKcBpump",
+   "symbol": "AL",
+   "ts": "2026-11-03T06:28:07",
+   "t": 1793687287.0,
+   "mcap": 6075.488727219636,
+   "whale_usd": 106.44185644551854,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4tVH3LdqGNLk5NEXWVe5C6q3QSno7sHjygT4wXWspump",
+   "symbol": "RIP",
+   "ts": "2026-11-03T06:29:11",
+   "t": 1793687351.0,
+   "mcap": 6718.022632412612,
+   "whale_usd": 144.942145767936,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "w16qoALFz66AEdRJM56jAAionWb5FhVyjGjznrYpump",
+   "symbol": "LILLY",
+   "ts": "2026-11-03T06:29:34",
+   "t": 1793687374.0,
+   "mcap": 263855.83960607933,
+   "whale_usd": 908.258343585547,
+   "whale_type": "trader"
   }
  ]
 }
