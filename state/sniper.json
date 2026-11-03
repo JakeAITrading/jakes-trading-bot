@@ -3665,6 +3665,42 @@
    "mcap": 73100.13164427782,
    "whale_usd": 277.2365414126304,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "8Q8wXm71gihCR2ZLhkLb5Ag9YLokMdU8JtXkcXcTpump",
+   "symbol": "JubJub",
+   "ts": "2026-11-03T11:07:07",
+   "t": 1793704027.0,
+   "mcap": 14794.904863804875,
+   "whale_usd": 369.6194338626668,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "HbrR9p9gr9T4TVEMUcFS4PQgVbmQ9rQg96UQnoqipump",
+   "symbol": "REMILIO",
+   "ts": "2026-11-03T11:07:09",
+   "t": 1793704029.0,
+   "mcap": 5345.57284481707,
+   "whale_usd": 186.26161729156925,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2bdAkBEzKFPm2xP96AGJWWjzrSYjeAXbackZwEVcjSgu",
+   "symbol": "MOFFY",
+   "ts": "2026-11-03T11:08:23",
+   "t": 1793704103.0,
+   "mcap": 5999.431323289173,
+   "whale_usd": 185.3876331294697,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GiiJWgkSRCbXwYwcafVMa4eBmzxsz4xHQKFfESTSiheY",
+   "symbol": "Remilio",
+   "ts": "2026-11-03T11:08:59",
+   "t": 1793704139.0,
+   "mcap": 5877.474904991686,
+   "whale_usd": 229.0571794419975,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
