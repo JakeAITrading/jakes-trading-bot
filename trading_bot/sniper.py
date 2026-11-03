@@ -69,6 +69,7 @@ class Sniper:
         self.state = load()
         self.seen: set[str] = set()
         self.max_rebuys, self.rebuy_window = 3, 600  # per coin chain; look for 10 min after a sale
+        self.max_open, self.cash_floor = 5, 10.0       # our own limits (Moby's are off)
 
     def call(self, tool: str, args: dict | None = None):
         for _ in range(4):
@@ -166,6 +167,22 @@ class Sniper:
                 rec["status"] = f"bought, take-profit FAILED: {e}"
         return rec
 
+    def open_count(self) -> int:
+        return sum(1 for r in self.state["trades"]
+                   if r.get("mode") == "LIVE" and r.get("entry_price") and not r.get("closed"))
+
+    def can_buy(self) -> str | None:
+        """Our own safeguards. None = OK to buy, else the reason not to."""
+        if stopped():
+            return "STOP file present"
+        if self.open_count() >= self.max_open:
+            return f"{self.max_open} whale coins already held"
+        bal = self.call("get_my_balances")
+        cash = float((bal.get("usd_token") or {}).get("quantity") or 0)
+        if cash - self.usd < self.cash_floor:
+            return f"cash ${cash:.2f} would fall below ${self.cash_floor:.0f} floor"
+        return None
+
     def _rising(self, token: str, sold_price: float) -> tuple[bool, float]:
         """Still going up: price at or above where we sold AND the last closed 1-minute candle is green."""
         price = float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0)
@@ -202,6 +219,10 @@ class Sniper:
                 continue
             rising, price = self._rising(rec["token_address"], rec["sold_price"])
             if not rising:
+                continue
+            why_not = self.can_buy()
+            if why_not:
+                log.info("%s still rising but no re-buy: %s", rec["symbol"], why_not)
                 continue
             rec["rebuy_until"] = None  # one re-buy per sale; the new trade can re-buy again when it sells
             new = {"token_address": rec["token_address"], "symbol": rec["symbol"], "mode": "LIVE",
@@ -284,6 +305,10 @@ class Sniper:
                 self.seen.add(r["id"])
             for r in sorted(rows, key=lambda r: r["timestamp"]):
                 if self.qualifies(r, now) is None and done < trades:
+                    why_not = self.can_buy()
+                    if why_not:
+                        log.info("skip whale buy in %s: %s", r["token"].get("symbol"), why_not)
+                        continue
                     log.info("whale %s opened $%.0f in %s (mcap $%.0f): buying", r.get("wallet_list_type"),
                              r.get("amount_usd", 0), r["token"].get("symbol"), r.get("token_market_cap", 0))
                     rec = self.trade(r, now)
@@ -304,6 +329,8 @@ def main() -> None:
     ap.add_argument("--max-age", type=float, default=20, help="ignore whale buys older than this many seconds")
     ap.add_argument("--poll", type=float, default=3)
     ap.add_argument("--hours", type=float, default=20)
+    ap.add_argument("--max-open", type=int, default=5, help="most whale coins held at once")
+    ap.add_argument("--cash-floor", type=float, default=10, help="never let USDC fall below this")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--retarget", action="store_true",
                     help="move open take-profits to --take-profit, then keep trading")
@@ -311,6 +338,7 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     load_env()
     s = Sniper(MobyClient(), a.usd, a.take_profit, a.max_age, a.dry_run)
+    s.max_open, s.cash_floor = a.max_open, a.cash_floor
     if a.retarget and not a.dry_run:
         s.retarget()
     s.run(a.trades, a.poll, a.hours)

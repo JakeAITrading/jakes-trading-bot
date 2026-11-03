@@ -263,6 +263,7 @@ class SniperMoby:
             "quick_buy": {"quote_id": "q1", "fill_pending": False, "filled_output_amount_ui": 4000.0,
                           "filled_input_amount_ui": 5.0},
             "get_my_token_balance": {"balance_token_amount": 3990.0},
+            "get_my_balances": {"usd_token": {"quantity": 50.0}},
             "create_order": self.tp_reply,
             "quick_sell": {"status": "ok"},
         }[name]
@@ -384,3 +385,22 @@ def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
     s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
     s.check_rebuys()
     assert not any(n == "quick_buy" for n, _ in moby.calls)   # falling: take the profit, no re-buy
+
+
+def test_sniper_own_limits(sniper_dir):
+    class M(SniperMoby):
+        def __init__(self, cash):
+            super().__init__()
+            self.cash = cash
+
+        def call_tool(self, name, args=None):
+            if name == "get_my_balances":
+                return {"usd_token": {"quantity": self.cash}}
+            return super().call_tool(name, args)
+
+    open_recs = [{"mode": "LIVE", "entry_price": 1, "token_address": str(i)} for i in range(5)]
+    sniper.save({"trades": open_recs})
+    assert "already held" in sniper.Sniper(M(100), 5, 20, 20, dry_run=False).can_buy()
+    sniper.save({"trades": open_recs[:2]})
+    assert "floor" in sniper.Sniper(M(14), 5, 20, 20, dry_run=False).can_buy()
+    assert sniper.Sniper(M(15), 5, 20, 20, dry_run=False).can_buy() is None
