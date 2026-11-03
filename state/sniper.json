@@ -549,6 +549,29 @@
     "failed_leg_error": null
    },
    "status": "holding, take-profit set"
+  },
+  {
+   "token_address": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
+   "symbol": "STANK",
+   "whale_time": "2026-11-03T05:11:29",
+   "whale_type": "whale",
+   "whale_usd": 500.1401985092492,
+   "whale_mcap": 393527.8390681707,
+   "seen_after_s": 1.1,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.0003912688698619604,
+   "glance": {
+    "above_5m_low_pct": 6.5,
+    "this_minute_pct": 2.9
+   },
+   "status": "limit pending",
+   "limit_price": 0.00041083231335505845,
+   "limit_order_id": "b256fdaf-3e5f-4411-b02c-69ecda0a540a",
+   "limit_placed_at": "2026-11-03T05:11:33Z",
+   "limit_expires": 1793682813.344626,
+   "views": 564
   }
  ],
  "skipped": [
