@@ -3932,6 +3932,15 @@
    "mcap": 239919.7661222375,
    "whale_usd": 2486.014925,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "7ZpKoVqzcP3i3kKJzRTiXFPKnnodkAYfAhXBywXDpump",
+   "symbol": "BEES",
+   "ts": "2026-11-03T11:41:14",
+   "t": 1793706074.0,
+   "mcap": 47863.35270885805,
+   "whale_usd": 452.2950036038848,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,

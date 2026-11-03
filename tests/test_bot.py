@@ -785,3 +785,13 @@ def test_long_moby_rate_limit_pauses_order_tools(sniper_dir):
         s.call("create_order", {})                                       # paused without calling Moby
     assert not any(n == "create_order" for n, _ in moby.calls)
     assert "paused" in s.can_buy()
+
+
+def test_main_learner_escapes_settings_that_match_nothing():
+    from trading_bot import main_learner as ml
+    win = {"mcap": 2e6, "liq": 3e5, "h1": -5, "h24": -10, "wf1": -1, "wf4": -1, "wb4": 0, "safety": "yellow",
+           "path": [[1.6, 0.95]], "end": 1.5}
+    start = ml.start_params({})                      # strict: green only, whale inflow required
+    assert ml.evaluate([win] * 20, start)["trades"] == 0
+    p, r = ml.optimize([win] * 20, start)
+    assert r["trades"] == 20 and r["avg"] > 0

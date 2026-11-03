@@ -107,7 +107,22 @@ def evaluate(samples: list[dict], p: dict) -> dict:
     return {"total": sum(rs), "trades": len(rs), "avg": sum(rs) / len(rs) if rs else 0.0}
 
 
+LOOSE = {"min_price_change_h1_pct": -100, "min_price_change_h24_pct": -100, "max_price_change_h24_pct": 1e9,
+         "min_whale_net_flow_h1_usd": -1e12, "min_whale_net_flow_h4_usd": -1e12, "min_whale_buyers_h4": 0,
+         "min_liquidity_usd": 50_000, "min_market_cap_usd": 100_000, "max_market_cap_usd": 1e15, "green_only": False}
+
+
 def optimize(samples: list[dict], start: dict, rounds: int = 3) -> tuple[dict, dict]:
+    """Coordinate search from the current settings and from the loosest filters; keep the better.
+    (From strict settings that match too few samples, changing one filter at a time can't escape.)"""
+    best_p, best_r = _search(samples, start, rounds)
+    lp, lr = _search(samples, {**start, **LOOSE}, rounds)
+    if lr["trades"] >= MIN_TRADES and (best_r["trades"] < MIN_TRADES or lr["total"] > best_r["total"]):
+        return lp, lr
+    return best_p, best_r
+
+
+def _search(samples: list[dict], start: dict, rounds: int) -> tuple[dict, dict]:
     p = dict(start)
     best = evaluate(samples, p)
     for _ in range(rounds):
