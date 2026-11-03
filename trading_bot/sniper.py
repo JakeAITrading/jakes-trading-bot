@@ -249,15 +249,20 @@ class Sniper:
             if why_not:
                 log.info("%s still rising but no re-buy: %s", rec["symbol"], why_not)
                 continue
-            rec["rebuy_until"] = None  # one re-buy per sale; the new trade can re-buy again when it sells
             new = {"token_address": rec["token_address"], "symbol": rec["symbol"], "mode": "LIVE",
                    "rebuy_of": rec.get("bought_at"), "rebuys": rec.get("rebuys", 0) + 1,
                    "usd": self.usd, "take_profit_pct": self.tp * 100, "price_when_seen": price}
             log.info("%s still rising (%.6g >= sold %.6g): buying again", rec["symbol"], price, rec["sold_price"])
             self._buy(new, rec["token_address"], rec["symbol"], _now(),
                       f"Re-buy: {rec['symbol']} still rising after +{self.tp*100:.0f}% take-profit.")
-            self.state["trades"].append(new)
             log.info("re-buy: %s", json.dumps({k: v for k, v in new.items() if k not in ("tp_order", "sell")}, default=str))
+            if new.get("entry_price"):
+                # Bought: one re-buy per sale; the new position re-buys again only after it sells at +tp%.
+                rec["rebuy_until"] = None
+                self.state["trades"].append(new)
+            else:
+                # Blocked or not filled: keep trying until the window ends (PEPE2 lost its re-buy this way).
+                rec.setdefault("rebuy_attempts", []).append({"at": _iso(_now()), "status": new.get("status")})
             save(self.state)
 
     def retarget(self) -> None:

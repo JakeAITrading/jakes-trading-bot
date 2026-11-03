@@ -432,3 +432,35 @@ def test_sniper_glance_skips_pumped_and_spiking(sniper_dir):
     moby = M(pumped)
     rec = sniper.Sniper(moby, 5, 20, 20, dry_run=False).trade(whale_row(), time.time())
     assert rec["status"].startswith("skipped") and not any(n == "quick_buy" for n, _ in moby.calls)
+
+
+def test_sniper_blocked_rebuy_retries_within_window(sniper_dir):
+    sniper.save({"trades": [{"mode": "LIVE", "token_address": "T", "symbol": "T", "entry_price": 0.001,
+                             "spent_usd": 5.0, "take_profit_price": 0.0012, "bought_at": "x",
+                             "tp_order": {"order_id": "tp1"}}]})
+
+    class M(SniperMoby):
+        blocked = True
+
+        def call_tool(self, name, args=None):
+            if name == "get_my_orders":
+                if (args or {}).get("status") == "terminal":
+                    return {"orders": [{"id": "tp1", "status": "filled_tp", "filled_price": 0.0012,
+                                        "filled_output_amount": 6.0}]}
+                return {"orders": []}
+            if name == "get_token_price":
+                return {"price_usd": 0.0013}
+            if name == "get_token_ohlcv":
+                return {"o": [1.0], "c": [1.1]}
+            if name == "quick_buy" and self.blocked:
+                self.calls.append((name, args))
+                return {"blocked": True, "reason": "daily_volume"}
+            return super().call_tool(name, args)
+
+    moby = M()
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.check_rebuys()
+    assert len(s.state["trades"]) == 1 and s.state["trades"][0]["rebuy_until"]   # still eligible
+    moby.blocked = False
+    s.check_rebuys()
+    assert len(s.state["trades"]) == 2 and s.state["trades"][1]["rebuys"] == 1   # retried and bought
