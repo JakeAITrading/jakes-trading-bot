@@ -3535,6 +3535,23 @@
    },
    "expected_avg_pct": 17.3,
    "expected_trades_in_samples": 121.0
+  },
+  {
+   "at": "2026-11-03T22:00:46Z",
+   "new_samples": 20,
+   "live_samples": 424,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 17.3,
+   "expected_trades_in_samples": 121.0
   }
  ],
  "observed": [
@@ -9278,6 +9295,96 @@
    "t": 1793743201.0,
    "mcap": 8188.002539100125,
    "whale_usd": 187.47727928106588,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9GEUA6pXNmf1c8nujWRoJDq17K8gfMyWBNp5d9cfw8xG",
+   "symbol": "GB",
+   "ts": "2026-11-03T22:01:13",
+   "t": 1793743273.0,
+   "mcap": 22217.98845585251,
+   "whale_usd": 648.1511933603259,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BbryBHhg1iSorUwwRXqqhdVpRMFJfPCRifzkWssUpump",
+   "symbol": "Ryzen",
+   "ts": "2026-11-03T22:01:25",
+   "t": 1793743285.0,
+   "mcap": 7336.183443840127,
+   "whale_usd": 187.4566927012219,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4ArNPRk8ATz6vVobaLgpvWxK2dQm6BeGi8TPDhCrfSPX",
+   "symbol": "AMD",
+   "ts": "2026-11-03T22:03:05",
+   "t": 1793743385.0,
+   "mcap": 17740.764128988976,
+   "whale_usd": 250.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3v4Bg8ZViJH6hybSuUHjSefwxMprGs6KyYpYyNHvpump",
+   "symbol": "AEHR",
+   "ts": "2026-11-03T22:03:29",
+   "t": 1793743409.0,
+   "mcap": 7362.341420957819,
+   "whale_usd": 280.68815131953727,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ASEg77wAVJhvDnv6PUBGMkEvnrD4WQCx866x9n5Uih4s",
+   "symbol": "BUSTER",
+   "ts": "2026-11-03T22:04:13",
+   "t": 1793743453.0,
+   "mcap": 9221.958862326574,
+   "whale_usd": 129.1215404027776,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CMo7GfUhSGXuEfnY7qAzv8hhsV2M2P8GpWqmWikhpump",
+   "symbol": "CYBER",
+   "ts": "2026-11-03T22:04:33",
+   "t": 1793743473.0,
+   "mcap": 41820.56793469906,
+   "whale_usd": 1000.0,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-03T22:04:42",
+   "t": 1793743482.0,
+   "mcap": 1686649.4354110048,
+   "whale_usd": 1402.9836295884568,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4WF2L5C3V16dkV82JhSzKpoN4ubLrSGFbiAEoCrYpump",
+   "symbol": "DATACENTER",
+   "ts": "2026-11-03T22:04:53",
+   "t": 1793743493.0,
+   "mcap": 5411.833171820035,
+   "whale_usd": 146.097530569712,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "zA4R38Ubfi1AkAqZBb9nMRhfXjZrNCuBZeqBRRxpump",
+   "symbol": "Ruby",
+   "ts": "2026-11-03T22:05:13",
+   "t": 1793743513.0,
+   "mcap": 29976.848963997327,
+   "whale_usd": 599.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AXi82Ed5C2U1ww1HAgA2ujSX7Efv1DUUj9k8nCeopump",
+   "symbol": "PDOG",
+   "ts": "2026-11-03T22:05:37",
+   "t": 1793743537.0,
+   "mcap": 6967.285571590764,
+   "whale_usd": 125.28854299999966,
    "whale_type": "kol"
   }
  ],
