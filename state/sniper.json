@@ -7999,6 +7999,15 @@
    "mcap": 5531.7150327027775,
    "whale_usd": 279.9797862674734,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8wL2ZmeFff8NqrhEuKT2geN6SZLD5F2cFWryw2r7pump",
+   "symbol": "Kalshit",
+   "ts": "2026-11-03T20:50:29",
+   "t": 1793739029.0,
+   "mcap": 5310.267169988947,
+   "whale_usd": 200.28781299999994,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793736823.872862
