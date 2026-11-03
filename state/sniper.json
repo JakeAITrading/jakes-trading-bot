@@ -3372,6 +3372,27 @@
    "explore": "rule: market cap out of range",
    "views": 13,
    "skipped_at": "2026-11-03T20:05:15Z"
+  },
+  {
+   "token_address": "8q6qfxg9tNYnGBvZx2x6f8Gb95xcnNtsfP8EYerhpump",
+   "symbol": "VALOR",
+   "whale_time": "2026-11-03T22:56:49",
+   "whale_type": "kol",
+   "whale_usd": 295.7522472632239,
+   "whale_mcap": 9779.372581229969,
+   "seen_after_s": 4.7,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.1639927834039554e-05,
+   "glance": {
+    "above_5m_low_pct": 220.1,
+    "this_minute_pct": 46.9
+   },
+   "status": "skipped: already pumped: +220% above 5-min low",
+   "explore": "rule: market cap out of range",
+   "views": 16,
+   "skipped_at": "2026-11-03T22:56:54Z"
   }
  ],
  "learning_log": [
@@ -10855,6 +10876,15 @@
    "mcap": 5061.337265607296,
    "whale_usd": 141.9169001947503,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "8q6qfxg9tNYnGBvZx2x6f8Gb95xcnNtsfP8EYerhpump",
+   "symbol": "VALOR",
+   "ts": "2026-11-03T22:56:49",
+   "t": 1793746609.0,
+   "mcap": 9779.372581229969,
+   "whale_usd": 295.7522472632239,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793744448.034351
