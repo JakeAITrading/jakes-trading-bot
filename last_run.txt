@@ -1,1 +1,1 @@
-2026-11-03T22:32:42Z LIVE: exit STONK: smart money turned to net selling [failed: Moby tool error: Error executing tool quick_sell: The Moby API did not respond in time. This is transient. Wait a few seconds before trying again rather than immediately repeating the call.] | max open positions reached
+2026-11-03T22:41:29Z LIVE: exit STONK: smart money turned to net selling [sent] | max open positions reached

@@ -3603,6 +3603,23 @@
    },
    "expected_avg_pct": 15.2,
    "expected_trades_in_samples": 136.0
+  },
+  {
+   "at": "2026-11-03T22:40:51Z",
+   "new_samples": 18,
+   "live_samples": 490,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 250000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 17.2,
+   "expected_trades_in_samples": 113.0
   }
  ],
  "observed": [
@@ -10066,6 +10083,15 @@
    "t": 1793745594.0,
    "mcap": 5152.940502739511,
    "whale_usd": 405.31211470322194,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7sTfS2jxuBRCcfGF45XabsxUv3gFXN83JCRpDciqpump",
+   "symbol": "MU",
+   "ts": "2026-11-03T22:40:32",
+   "t": 1793745632.0,
+   "mcap": 7457.114861608716,
+   "whale_usd": 283.0142991162614,
    "whale_type": "kol"
   }
  ],
