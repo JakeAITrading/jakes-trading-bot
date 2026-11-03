@@ -592,3 +592,26 @@ def test_review_what_if():
     dump = [(1000, 1.0, 1.0, 0.98, 1.0), (1060, 1.0, 1.0, 0.4, 0.5)]
     r = what_if(dump, t0, 1.0, 0.15)
     assert r["outcome"] != "hit +15%" and r["pnl_pct"] < -40
+
+
+def test_no_rebuy_takes_profit_and_stops(sniper_dir):
+    sniper.save({"trades": [{"mode": "LIVE", "token_address": "T", "symbol": "T", "entry_price": 0.001,
+                             "spent_usd": 5.0, "take_profit_price": 0.00115, "bought_at": "x",
+                             "tp_order": {"order_id": "tp1"}}]})
+
+    class M(SniperMoby):
+        def call_tool(self, name, args=None):
+            if name == "get_my_orders":
+                if (args or {}).get("status") == "terminal":
+                    return {"orders": [{"id": "tp1", "status": "filled_tp", "filled_price": 0.00115,
+                                        "filled_output_amount": 5.75}]}
+                return {"orders": []}
+            return super().call_tool(name, args)
+    moby = M()
+    s = sniper.Sniper(moby, 5, 15, 20, dry_run=False)
+    s.rebuy_enabled = False
+    s.check_rebuys()
+    t = s.state["trades"][0]
+    assert t["profit_usd"] == 0.75 and t["rebuy_until"] is None and len(s.state["trades"]) == 1
+    assert not any(n in ("quick_buy", "create_order") for n, _ in moby.calls)
+    assert not s._watching()

@@ -739,6 +739,29 @@
     "failed_leg_error": null
    },
    "status": "holding, take-profit set"
+  },
+  {
+   "token_address": "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump",
+   "symbol": "\u2588\u2588\u2588",
+   "whale_time": "2026-11-03T05:45:34",
+   "whale_type": "whale",
+   "whale_usd": 925.5103204002537,
+   "whale_mcap": 806687.9923659589,
+   "seen_after_s": 1.5,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.0008118593832477927,
+   "glance": {
+    "above_5m_low_pct": 15.0,
+    "this_minute_pct": -2.2
+   },
+   "status": "limit pending",
+   "limit_price": 0.0008524523524101824,
+   "limit_order_id": "6e27315a-b3bf-4c91-9da9-1f75449abe73",
+   "limit_placed_at": "2026-11-03T05:45:39Z",
+   "limit_expires": 1793684859.2451637,
+   "views": 5623
   }
  ],
  "skipped": [

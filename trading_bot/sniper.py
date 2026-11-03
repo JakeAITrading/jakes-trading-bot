@@ -76,6 +76,7 @@ class Sniper:
         self.max_open, self.cash_floor = 5, 10.0       # our own limits (Moby's are off)
         self.look_first, self.max_runup, self.max_spike = True, 1.0, 0.20
         self.rebuy_always = True
+        self.rebuy_enabled = True   # --no-rebuy: take the profit and keep the cash for the next whale signal
         self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min   # re-buy right after every +tp% sale (False = only if still rising)
 
     def call(self, tool: str, args: dict | None = None):
@@ -298,7 +299,7 @@ class Sniper:
                     rec.update(closed=f"take-profit filled at {sold:.6g}", sold_price=sold,
                                proceeds_usd=o.get("filled_output_amount"),
                                profit_usd=round(float(o.get("filled_output_amount") or 0) - rec.get("spent_usd", self.usd), 2),
-                               rebuy_until=_now() + self.rebuy_window)
+                               rebuy_until=(_now() + self.rebuy_window) if self.rebuy_enabled else None)
                     log.info("%s: take-profit filled, profit $%.2f", rec["symbol"], rec["profit_usd"])
                     save(self.state)
                 else:
@@ -450,6 +451,8 @@ def main() -> None:
     ap.add_argument("--market-buy", action="store_true", help="whale buys at market instead of a limit order")
     ap.add_argument("--limit-cushion", type=float, default=5, help="limit price = price seen + this %%")
     ap.add_argument("--limit-wait", type=float, default=120, help="cancel an unfilled limit buy after this many seconds")
+    ap.add_argument("--no-rebuy", action="store_true",
+                    help="never buy back after a take-profit (history: lost less at every target)")
     ap.add_argument("--rebuy-if-rising", action="store_true",
                     help="only re-buy after a sale if the coin is still rising (default: always re-buy)")
     ap.add_argument("--max-runup", type=float, default=100, help="skip if price is more than this %% above its 5-min low")
@@ -465,6 +468,7 @@ def main() -> None:
     s.max_open, s.cash_floor, s.max_rebuys = a.max_open, a.cash_floor, a.max_rebuys
     s.look_first, s.max_runup, s.max_spike = not a.no_look, a.max_runup / 100, a.max_spike / 100
     s.rebuy_always = not a.rebuy_if_rising
+    s.rebuy_enabled = not a.no_rebuy
     s.limit_cushion = None if a.market_buy else a.limit_cushion / 100
     s.limit_wait = a.limit_wait
     if a.retarget and not a.dry_run:
