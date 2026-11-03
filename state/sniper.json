@@ -1546,6 +1546,15 @@
    "mcap": 19557.88320628926,
    "whale_usd": 272.04792637294804,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+   "symbol": "baton",
+   "ts": "2026-11-03T06:36:18",
+   "t": 1793687778.0,
+   "mcap": 2948097.687019801,
+   "whale_usd": 5001.649437428002,
+   "whale_type": "whale"
   }
  ]
 }
