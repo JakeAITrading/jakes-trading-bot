@@ -2321,6 +2321,62 @@
    "proceeds_usd": 6.701815,
    "profit_usd": 1.7,
    "rebuy_until": null
+  },
+  {
+   "token_address": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+   "symbol": "CHOO",
+   "whale_time": "2026-11-03T20:06:58",
+   "whale_type": "whale",
+   "whale_usd": 466.12265123952,
+   "whale_mcap": 4233367.187040788,
+   "seen_after_s": 1.1,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.004281802102923393,
+   "glance": {
+    "above_5m_low_pct": 3.4,
+    "this_minute_pct": 1.2
+   },
+   "status": "holding, take-profit set",
+   "limit_price": 0.004281802102923393,
+   "limit_order_id": "d2738a1c-2633-4d86-b35f-acc186694ce7",
+   "limit_placed_at": "2026-11-03T20:07:02Z",
+   "limit_expires": 1793736542.0770223,
+   "explore": "rule: market cap out of range",
+   "views": 5040,
+   "entry_price": 0.0042863539456616,
+   "spent_usd": 4.998895525932312,
+   "tokens": 1166.492563,
+   "bought_at": "2026-11-03 20:07:02",
+   "entry_vs_seen_pct": 0.1,
+   "take_profit_price": 0.005357942432077,
+   "tp_order": {
+    "order_id": "e7e17d23-aeda-457c-b5c5-f3ce6c8afe59",
+    "order_ids": [
+     "e7e17d23-aeda-457c-b5c5-f3ce6c8afe59"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+    "amount": 1166.492563,
+    "input_token": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+    "input_token_symbol": null,
+    "take_profit_price": 0.005357942432077,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   }
   }
  ],
  "skipped": [
@@ -7235,6 +7291,96 @@
    "t": 1793736375.0,
    "mcap": 948320.0051467574,
    "whale_usd": 607.56,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+   "symbol": "CHOO",
+   "ts": "2026-11-03T20:06:58",
+   "t": 1793736418.0,
+   "mcap": 4233367.187040788,
+   "whale_usd": 466.12265123952,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "4CDJEhhXiC4Js7CzF8jDSa9wWEom5pfQEXMEPxvXpump",
+   "symbol": "SEXBOT",
+   "ts": "2026-11-03T20:07:10",
+   "t": 1793736430.0,
+   "mcap": 7353.542514465516,
+   "whale_usd": 295.3537887592829,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AoaLDnNayfoNjP3SzLevDm4eXusE5edZpGhqQbZtBAQa",
+   "symbol": "MAG",
+   "ts": "2026-11-03T20:07:37",
+   "t": 1793736457.0,
+   "mcap": 5012.733254261548,
+   "whale_usd": 112.76679007900177,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GrGCEeQU7FGA9Xky9ogpinxoMfexUbMTL27zhJ82pump",
+   "symbol": "River",
+   "ts": "2026-11-03T20:08:11",
+   "t": 1793736491.0,
+   "mcap": 41753.38387953552,
+   "whale_usd": 940.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "75dusgea1KNxHPRhF1xAL2Apnu4WffzsuKsbkbo2bu5v",
+   "symbol": "Buck",
+   "ts": "2026-11-03T20:08:56",
+   "t": 1793736536.0,
+   "mcap": 18101.39474400785,
+   "whale_usd": 277.06481016093005,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+   "symbol": "HOOKED",
+   "ts": "2026-11-03T20:10:16",
+   "t": 1793736616.0,
+   "mcap": 627359.3011143049,
+   "whale_usd": 103.914831,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "EJPWoVgMrkZrqZAtRkGvA4jppbo15rMF2hhe1EPzpump",
+   "symbol": "DCYC",
+   "ts": "2026-11-03T20:11:21",
+   "t": 1793736681.0,
+   "mcap": 64289.06954879075,
+   "whale_usd": 1119.8806830938975,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "21sLaTZeDqZJ41ss14MZ7SmrvWgdH2x3xRgV7ZS2B5FP",
+   "symbol": "meganfox",
+   "ts": "2026-11-03T20:11:28",
+   "t": 1793736688.0,
+   "mcap": 10678.66469384171,
+   "whale_usd": 200.62214000000017,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8Dm5TQ3azgg5AjusXtM2R6RximYS5HLFao4Q2v592P8W",
+   "symbol": "Bob",
+   "ts": "2026-11-03T20:11:41",
+   "t": 1793736701.0,
+   "mcap": 13397.427210293245,
+   "whale_usd": 283.36674479208966,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9mC42co2VifB758Z5bNDiMrf5q15EWZCPZzLRNgjpump",
+   "symbol": "CAP",
+   "ts": "2026-11-03T20:11:51",
+   "t": 1793736711.0,
+   "mcap": 7293.311227840604,
+   "whale_usd": 184.71313716352202,
    "whale_type": "kol"
   }
  ],
