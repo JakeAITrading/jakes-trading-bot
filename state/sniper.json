@@ -793,7 +793,12 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "closed": "take-profit filled at 0.000904122",
+   "sold_price": 0.0009041217876781,
+   "proceeds_usd": 5.488935,
+   "profit_usd": 0.49,
+   "rebuy_until": null
   },
   {
    "token_address": "9X5UwHT7gWSPtAH5yeEzrLHqv3Nedmhy3HyZN3Yspump",
@@ -885,6 +890,29 @@
    "closed": "sold past target",
    "proceeds_usd": 6.836479,
    "profit_usd": 1.84
+  },
+  {
+   "token_address": "HUycT3u2mgvJ2D1vhDahnNBJxHxrZJPMaSJQfEMU4npW",
+   "symbol": "ZDOG",
+   "whale_time": "2026-11-03T05:59:54",
+   "whale_type": "kol",
+   "whale_usd": 271.970831737836,
+   "whale_mcap": 22829.530280432664,
+   "seen_after_s": 1.6,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.320042040082626e-05,
+   "glance": {
+    "above_5m_low_pct": 19.6,
+    "this_minute_pct": 16.8
+   },
+   "status": "limit pending",
+   "limit_price": 2.320042040082626e-05,
+   "limit_order_id": "950b4949-712e-4a16-af12-d7ac2953033a",
+   "limit_placed_at": "2026-11-03T06:00:07Z",
+   "limit_expires": 1793685727.1324706,
+   "views": 20
   }
  ],
  "skipped": [
@@ -1026,6 +1054,26 @@
    "status": "skipped: already pumped: +597% above 5-min low",
    "views": 56,
    "skipped_at": "2026-11-03T05:40:09Z"
+  },
+  {
+   "token_address": "8kuQg3WivDtL85VEdw2jEmSXjYt6EEeYBATJ4DtQpump",
+   "symbol": "RICO",
+   "whale_time": "2026-11-03T05:59:16",
+   "whale_type": "whale",
+   "whale_usd": 13295.138046245838,
+   "whale_mcap": 555452.3013251651,
+   "seen_after_s": 4.5,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.0006587428506463766,
+   "glance": {
+    "above_5m_low_pct": 81.0,
+    "this_minute_pct": 66.9
+   },
+   "status": "skipped: mid-spike: +67% this minute",
+   "views": 1153,
+   "skipped_at": "2026-11-03T05:59:21Z"
   }
  ],
  "learning_log": [
@@ -1073,6 +1121,42 @@
    "mcap": 7387.832283711759,
    "whale_usd": 145.2354341855472,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8kuQg3WivDtL85VEdw2jEmSXjYt6EEeYBATJ4DtQpump",
+   "symbol": "RICO",
+   "ts": "2026-11-03T05:59:16",
+   "t": 1793685556.0,
+   "mcap": 555452.3013251651,
+   "whale_usd": 13295.138046245838,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DidDbSTqYUnjYZYPrf8fSpjXWop8BDs4Fisqb7r3zxTK",
+   "symbol": "Liquididdy",
+   "ts": "2026-11-03T05:59:21",
+   "t": 1793685561.0,
+   "mcap": 12997.08765145624,
+   "whale_usd": 299.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HUycT3u2mgvJ2D1vhDahnNBJxHxrZJPMaSJQfEMU4npW",
+   "symbol": "ZDOG",
+   "ts": "2026-11-03T05:59:54",
+   "t": 1793685594.0,
+   "mcap": 22829.530280432664,
+   "whale_usd": 271.970831737836,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump",
+   "symbol": "\u2588\u2588\u2588",
+   "ts": "2026-11-03T06:00:17",
+   "t": 1793685617.0,
+   "mcap": 921004.4747919451,
+   "whale_usd": 269.94775451843157,
+   "whale_type": "whale"
   }
  ]
 }
