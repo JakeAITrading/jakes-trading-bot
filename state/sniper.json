@@ -12096,6 +12096,24 @@
    "mcap": 67488.60836110185,
    "whale_usd": 907.991157,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8DgkxRb84BoG7CExuvrKSNTxm4tbjaZuZSAZUsyKpump",
+   "symbol": "Bunny",
+   "ts": "2026-11-03T23:38:38",
+   "t": 1793749118.0,
+   "mcap": 8752.137546252925,
+   "whale_usd": 130.7524977012722,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FoqkgUtCY7pDV5YNLLcvTNxo4Vck8enDoYX7w8bPpump",
+   "symbol": "MONEKO",
+   "ts": "2026-11-03T23:38:56",
+   "t": 1793749136.0,
+   "mcap": 13228.055960909698,
+   "whale_usd": 279.9628695458329,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
