@@ -9,7 +9,7 @@
    "whale_mcap": 65887.982173337,
    "seen_after_s": 2.6,
    "usd": 5.0,
-   "take_profit_pct": 25.0,
+   "take_profit_pct": 20.0,
    "mode": "LIVE",
    "price_when_seen": 7.810466195223853e-05,
    "buy_response": {
@@ -25,11 +25,11 @@
    "spent_usd": 5.0,
    "entry_price": 9.078352444973352e-05,
    "entry_vs_seen_pct": 16.2,
-   "take_profit_price": 0.0001134794055621669,
+   "take_profit_price": 0.00010894022933968022,
    "tp_order": {
-    "order_id": "5f3bf377-7afd-4ba0-890c-e204514ebf03",
+    "order_id": "5241151a-229f-4c7d-b9a5-da3f21d4ad33",
     "order_ids": [
-     "5f3bf377-7afd-4ba0-890c-e204514ebf03"
+     "5241151a-229f-4c7d-b9a5-da3f21d4ad33"
     ],
     "network": "solana",
     "funding_network": null,
@@ -38,7 +38,7 @@
     "amount": 55076.072782,
     "input_token": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
     "input_token_symbol": null,
-    "take_profit_price": 0.0001134794055621669,
+    "take_profit_price": 0.00010894022933968022,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -52,7 +52,7 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit set"
+   "status": "holding, take-profit moved to +20%"
   },
   {
    "token_address": "E7ayy5Se6gjwCNtw9NP629AucnTgqab4SSmSxDpUpump",
@@ -63,7 +63,7 @@
    "whale_mcap": 324461.76511243085,
    "seen_after_s": 2.2,
    "usd": 5.0,
-   "take_profit_pct": 25.0,
+   "take_profit_pct": 20.0,
    "mode": "LIVE",
    "price_when_seen": 0.0003434985992498696,
    "buy_response": {
@@ -79,11 +79,11 @@
    "spent_usd": 5.0,
    "entry_price": 0.0004562026775014885,
    "entry_vs_seen_pct": 32.8,
-   "take_profit_price": 0.0005702533468768606,
+   "take_profit_price": 0.0005474432130017862,
    "tp_order": {
-    "order_id": "eb9c97a0-ca56-4a52-bc0d-d968233a5f05",
+    "order_id": "4b1aaf3c-d06c-4535-848d-92336d4fcf10",
     "order_ids": [
-     "eb9c97a0-ca56-4a52-bc0d-d968233a5f05"
+     "4b1aaf3c-d06c-4535-848d-92336d4fcf10"
     ],
     "network": "solana",
     "funding_network": null,
@@ -92,7 +92,7 @@
     "amount": 10960.040891,
     "input_token": "E7ayy5Se6gjwCNtw9NP629AucnTgqab4SSmSxDpUpump",
     "input_token_symbol": null,
-    "take_profit_price": 0.0005702533468768606,
+    "take_profit_price": 0.0005474432130017862,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -106,7 +106,7 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit set"
+   "status": "holding, take-profit moved to +20%"
   },
   {
    "token_address": "5DnWmSL9t3YqK5MeYq8ozJpna46VcdePWzHvyN8avg2g",
@@ -117,7 +117,7 @@
    "whale_mcap": 166065.14504687392,
    "seen_after_s": 3.2,
    "usd": 5.0,
-   "take_profit_pct": 25.0,
+   "take_profit_pct": 20.0,
    "mode": "LIVE",
    "price_when_seen": 0.00016954525199253112,
    "buy_response": {
@@ -133,11 +133,11 @@
    "spent_usd": 5.0,
    "entry_price": 0.00020803521117841186,
    "entry_vs_seen_pct": 22.7,
-   "take_profit_price": 0.0002600440139730148,
+   "take_profit_price": 0.00024964225341409424,
    "tp_order": {
-    "order_id": "cb976b13-1f95-49fa-81f1-b2900e26283f",
+    "order_id": "7a5aa0c8-bdd5-4a79-99e2-aaaa2235bb41",
     "order_ids": [
-     "cb976b13-1f95-49fa-81f1-b2900e26283f"
+     "7a5aa0c8-bdd5-4a79-99e2-aaaa2235bb41"
     ],
     "network": "solana",
     "funding_network": null,
@@ -146,7 +146,7 @@
     "amount": 24034.392888,
     "input_token": "5DnWmSL9t3YqK5MeYq8ozJpna46VcdePWzHvyN8avg2g",
     "input_token_symbol": null,
-    "take_profit_price": 0.0002600440139730148,
+    "take_profit_price": 0.00024964225341409424,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -160,7 +160,7 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit set"
+   "status": "holding, take-profit moved to +20%"
   }
  ]
 }
