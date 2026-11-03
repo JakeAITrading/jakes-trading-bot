@@ -1167,6 +1167,15 @@
    "mcap": 1543244.0367363808,
    "whale_usd": 30699.04160991184,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "7dwDRTZe7NfhqVWbWQG5BcKmXh6Qobcyu1LsxuoJyZ4w",
+   "symbol": "BRICK",
+   "ts": "2026-11-03T06:07:27",
+   "t": 1793686047.0,
+   "mcap": 7420.57295527387,
+   "whale_usd": 179.19079670713515,
+   "whale_type": "kol"
   }
  ]
 }
