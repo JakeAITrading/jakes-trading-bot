@@ -12345,6 +12345,15 @@
    "mcap": 8366.964721062686,
    "whale_usd": 278.39998919762644,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "6YgWmKXxtCF3uwC2Egn3CGqVqLmpNhgDwCRXALkZpump",
+   "symbol": "Ina",
+   "ts": "2026-11-03T23:44:18",
+   "t": 1793749458.0,
+   "mcap": 6210.285846464103,
+   "whale_usd": 114.37879074263928,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
