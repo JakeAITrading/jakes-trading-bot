@@ -8965,6 +8965,15 @@
    "mcap": 6344.894700305304,
    "whale_usd": 200.15337999999974,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "EbFyFDufTQ3WkcrAByy2x7qV6ffgWWQfCPErnrgEpump",
+   "symbol": "Ruby",
+   "ts": "2026-11-03T21:48:39",
+   "t": 1793742519.0,
+   "mcap": 5903.551482333569,
+   "whale_usd": 134.80103912475911,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
