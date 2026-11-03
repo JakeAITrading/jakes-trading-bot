@@ -89,6 +89,7 @@ class Sniper:
         self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min
         self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning settings
         self.whale_type, self.explore = "any", 0.2   # explore: share of rule-failing signals traded anyway
+        self.hold_hours = 2.0   # sell what hasn't hit its target after this long (matches learner.WINDOW)
 
     WRITE_TOOLS = ("create_order", "cancel_order", "quick_buy", "quick_sell")
 
@@ -336,6 +337,63 @@ class Sniper:
         rec.update(sell=sell, status="sold immediately (already past take-profit)", closed="sold past target",
                    proceeds_usd=got, profit_usd=round(got - rec.get("spent_usd", self.usd), 2) if got else None)
 
+    def _held_hours(self, rec: dict) -> float | None:
+        b = rec.get("bought_at")
+        if not b:
+            return None
+        try:
+            t = dt.datetime.fromisoformat(str(b).replace("Z", "").replace(" ", "T").split(".")[0])
+        except ValueError:
+            return None
+        return (_now() - t.replace(tzinfo=dt.timezone.utc).timestamp()) / 3600
+
+    def time_exit(self) -> None:
+        """Sell coins that haven't hit their target within hold_hours (the learner scores trades the same
+        way: target hit within 2h, else the 2h price). Uses a tight bracket around the current price
+        (order fee ~0.75%) instead of a market sell (~$0.90 on Moby); market sell only as a fallback."""
+        if not self.hold_hours:
+            return
+        for rec in self.state["trades"]:
+            if (rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed")
+                    or rec.get("keep_tp") or rec.get("time_exit")):
+                continue
+            h = self._held_hours(rec)
+            if h is None or h < self.hold_hours:
+                continue
+            token, sym = rec["token_address"], rec.get("symbol")
+            held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+            price = float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0)
+            if held <= 0:
+                rec["closed"] = "no tokens left"
+                save(self.state)
+                continue
+            if held * price < 1.0:      # dust: Moby can't sell it for more than the fee; leave its take-profit
+                rec["time_exit"] = "skipped: dust"
+                save(self.state)
+                continue
+            old_id = (rec.get("tp_order") or {}).get("order_id")
+            if old_id:
+                try:
+                    self.call("cancel_order", {"order_id": old_id})
+                except MobyError as e:
+                    log.info("%s: cancel before time exit failed: %s", sym, e)
+            try:
+                o = self.call("create_order", {"order_type": "sl_and_tp", "token_address": token, "amount": held,
+                                               "stop_loss_price": price * 0.99, "take_profit_price": price * 1.01})
+                if isinstance(o, dict) and (o.get("blocked") or o.get("error") or o.get("failed_leg")):
+                    raise MobyError(json.dumps(o)[:300])
+                rec.update(tp_order=o, time_exit=_iso(_now()),
+                           status=f"time exit after {h:.1f}h: tight bracket at ${held * price:.2f}")
+            except MobyError as e:
+                log.info("%s: time-exit bracket refused (%s); selling at market", sym, e)
+                sell = self.call("quick_sell", {"token_address": token, "pct": 100})
+                got = float(sell.get("filled_output_amount_ui") or sell.get("quoted_output_amount_ui") or 0)
+                rec.update(sell=sell, time_exit=_iso(_now()), closed="time exit at market", proceeds_usd=got,
+                           profit_usd=round(got - rec.get("spent_usd", self.usd), 2) if got else None,
+                           status=f"time exit after {h:.1f}h: sold at market")
+            log.info("%s: %s", sym, rec["status"])
+            save(self.state)
+
     def fix_missing_tp(self) -> None:
         """Retry the take-profit for coins we hold whose take-profit order failed (e.g. rate limited)."""
         for rec in self.state["trades"]:
@@ -388,8 +446,12 @@ class Sniper:
             oid = (rec.get("tp_order") or {}).get("order_id")
             if not rec.get("closed") and oid and oid not in open_ids and oid in done:
                 o = done[oid]
+                sl_id = (rec.get("tp_order") or {}).get("stop_loss_order_id")
+                if not str(o.get("status", "")).startswith("filled") and sl_id in done \
+                        and str(done[sl_id].get("status", "")).startswith("filled"):
+                    o = done[sl_id]          # time-exit bracket: the stop leg sold it
                 if str(o.get("status", "")).startswith("filled"):
-                    sold = float(o.get("filled_price") or rec["take_profit_price"])
+                    sold = float(o.get("filled_price") or rec.get("take_profit_price") or 0)
                     rec.update(closed=f"take-profit filled at {sold:.6g}", sold_price=sold,
                                proceeds_usd=o.get("filled_output_amount"),
                                profit_usd=round(float(o.get("filled_output_amount") or 0) - rec.get("spent_usd", self.usd), 2),
@@ -443,7 +505,7 @@ class Sniper:
         A coin already at or above the new target is sold now."""
         orders = {o["id"]: o for o in (self.call("get_my_orders").get("orders") or [])}
         for rec in self.state["trades"]:
-            if rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed") or rec.get("keep_tp"):
+            if rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed") or rec.get("keep_tp") or rec.get("time_exit"):
                 continue
             token, sym = rec["token_address"], rec.get("symbol")
             old_id = (rec.get("tp_order") or {}).get("order_id")
@@ -534,6 +596,7 @@ class Sniper:
                     self.check_pending()
                     self.check_rebuys()
                     self.fix_missing_tp()
+                    self.time_exit()
                 except Exception as e:
                     log.warning("pending/re-buy check error: %s", e)
             if self.learner and _now() - self._last_learn > self.learn_every:

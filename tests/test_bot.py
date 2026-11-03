@@ -268,6 +268,7 @@ class SniperMoby:
             "get_token_overview": {"overview": {"view_count": 275}},
             "create_order": self.tp_reply,
             "quick_sell": {"status": "ok", "quoted_output_amount_ui": 5.6},
+            "cancel_order": {"status": "cancelled"},
         }[name]
 
 
@@ -813,3 +814,17 @@ def test_key_wide_moby_lock_stops_all_calls(monkeypatch):
     with pytest.raises(MobyError, match="paused until"):
         c.call_tool("get_token_price", {})
     assert sent == ["get_my_guardrails"]          # the second call never reached Moby
+
+
+def test_time_exit_brackets_coins_held_past_two_hours(sniper_dir):
+    sniper.save({"trades": [
+        {"mode": "LIVE", "token_address": "OLD", "symbol": "OLD", "entry_price": 0.001, "spent_usd": 5.0,
+         "bought_at": "2026-01-01T00:00:00Z", "tp_order": {"order_id": "t1"}},
+        {"mode": "LIVE", "token_address": "NEW", "symbol": "NEW", "entry_price": 0.001, "spent_usd": 5.0,
+         "bought_at": sniper._iso(sniper._now()), "tp_order": {"order_id": "t2"}}]})
+    moby = SniperMoby()
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.time_exit()
+    br = [a for n, a in moby.calls if n == "create_order" and a.get("order_type") == "sl_and_tp"]
+    assert len(br) == 1 and br[0]["token_address"] == "OLD"
+    assert s.state["trades"][0].get("time_exit") and not s.state["trades"][1].get("time_exit")

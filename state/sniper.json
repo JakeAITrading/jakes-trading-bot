@@ -2432,6 +2432,26 @@
     "failed_leg": null,
     "failed_leg_error": null
    }
+  },
+  {
+   "token_address": "GRT9MA94esNmGBWRyWm3A1WL2cYDqK5UvhfYybGRpump",
+   "symbol": "CLAUDE",
+   "whale_time": "2026-11-03T22:43:39",
+   "whale_type": "kol",
+   "whale_usd": 184.63786139669932,
+   "whale_mcap": 8455.35487314919,
+   "seen_after_s": 2.6,
+   "usd": 5.0,
+   "take_profit_pct": 50.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.0096788173541427e-05,
+   "glance": {
+    "above_5m_low_pct": 218.5,
+    "this_minute_pct": 218.5
+   },
+   "status": "limit buy FAILED: {\"error\": \"Moby tool error: Error executing tool create_order: Moby rejected the request: This token can't be traded right now \\u2014 there's no market for it. You won't be able to sell it or set orde",
+   "explore": "rule: whale buy too small",
+   "views": 17
   }
  ],
  "skipped": [
@@ -10166,6 +10186,33 @@
    "mcap": 1039486.7139637201,
    "whale_usd": 1999.45,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "6irsjY8Efp74uk6njXT6AwBMWMw2oAwWKvpNzjgPpump",
+   "symbol": "SPACE",
+   "ts": "2026-11-03T22:42:34",
+   "t": 1793745754.0,
+   "mcap": 7224.658475024626,
+   "whale_usd": 280.0012534784465,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GjRZZxLCzFb43MjHf4fazG1yeWyJZMrcvvy4q93Zpump",
+   "symbol": "SAMBOT",
+   "ts": "2026-11-03T22:42:55",
+   "t": 1793745775.0,
+   "mcap": 6388.966994563816,
+   "whale_usd": 279.8583212514139,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GRT9MA94esNmGBWRyWm3A1WL2cYDqK5UvhfYybGRpump",
+   "symbol": "CLAUDE",
+   "ts": "2026-11-03T22:43:30",
+   "t": 1793745810.0,
+   "mcap": 5391.563718148973,
+   "whale_usd": 121.882968,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793744448.034351
