@@ -279,9 +279,9 @@
    "entry_vs_seen_pct": 24.9,
    "take_profit_price": 4.7281120743364624e-05,
    "tp_order": {
-    "order_id": "8fdc12e8-2df1-46bb-81ba-b5879649ab78",
+    "order_id": "fe1930d1-320b-4328-b6c0-40bb46097e98",
     "order_ids": [
-     "8fdc12e8-2df1-46bb-81ba-b5879649ab78"
+     "fe1930d1-320b-4328-b6c0-40bb46097e98"
     ],
     "network": "solana",
     "funding_network": null,
@@ -338,9 +338,9 @@
    "entry_vs_seen_pct": 42.9,
    "take_profit_price": 5.349261154694703e-05,
    "tp_order": {
-    "order_id": "da8e0393-75ef-445e-86cd-e6592ab7e411",
+    "order_id": "f887aba9-67ad-4d06-ae65-617ac1641e40",
     "order_ids": [
-     "da8e0393-75ef-445e-86cd-e6592ab7e411"
+     "f887aba9-67ad-4d06-ae65-617ac1641e40"
     ],
     "network": "solana",
     "funding_network": null,
@@ -576,9 +576,9 @@
    "entry_vs_seen_pct": 27.3,
    "take_profit_price": 0.00012910610710428392,
    "tp_order": {
-    "order_id": "4effb7cd-d089-4b5a-a44a-21c50a511769",
+    "order_id": "39fbd391-d9af-4b9c-b6c3-4cc859c13d12",
     "order_ids": [
-     "4effb7cd-d089-4b5a-a44a-21c50a511769"
+     "39fbd391-d9af-4b9c-b6c3-4cc859c13d12"
     ],
     "network": "solana",
     "funding_network": null,
@@ -633,9 +633,9 @@
    "entry_vs_seen_pct": 3.2,
    "take_profit_price": 0.00060586908146835,
    "tp_order": {
-    "order_id": "37747089-e47f-4770-8da5-12c39059bbe1",
+    "order_id": "54bc0c06-357a-4fc4-88e6-42f36fb00f4d",
     "order_ids": [
-     "37747089-e47f-4770-8da5-12c39059bbe1"
+     "54bc0c06-357a-4fc4-88e6-42f36fb00f4d"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1398,9 +1398,9 @@
    "entry_vs_seen_pct": -13.6,
    "take_profit_price": 1.47615589884e-05,
    "tp_order": {
-    "order_id": "8bc33975-75de-45eb-b138-a44574195659",
+    "order_id": "afcd67f3-253b-4c29-aa63-92c25c6bf820",
     "order_ids": [
-     "8bc33975-75de-45eb-b138-a44574195659"
+     "afcd67f3-253b-4c29-aa63-92c25c6bf820"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1645,9 +1645,9 @@
    "entry_vs_seen_pct": 0.0,
    "take_profit_price": 7.516873301938176e-05,
    "tp_order": {
-    "order_id": "d0d6fd2f-2521-4948-9d50-6c6187950deb",
+    "order_id": "d9e82b48-506f-4ed5-8620-59fd18f6ae83",
     "order_ids": [
-     "d0d6fd2f-2521-4948-9d50-6c6187950deb"
+     "d9e82b48-506f-4ed5-8620-59fd18f6ae83"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1847,9 +1847,9 @@
    "entry_vs_seen_pct": -4.5,
    "take_profit_price": 2.8680063532799996e-05,
    "tp_order": {
-    "order_id": "ff1c70cc-6f78-4803-9bd4-990f26364d37",
+    "order_id": "361305cd-6728-436b-ab18-162816c719d0",
     "order_ids": [
-     "ff1c70cc-6f78-4803-9bd4-990f26364d37"
+     "361305cd-6728-436b-ab18-162816c719d0"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1902,9 +1902,9 @@
    "entry_vs_seen_pct": -1.9,
    "take_profit_price": 3.27372234939e-05,
    "tp_order": {
-    "order_id": "12018bf7-6486-41bc-b260-935551e86539",
+    "order_id": "093ba9d3-c98f-4d1b-8975-560b174307b8",
     "order_ids": [
-     "12018bf7-6486-41bc-b260-935551e86539"
+     "093ba9d3-c98f-4d1b-8975-560b174307b8"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1977,9 +1977,9 @@
    "entry_vs_seen_pct": -16.5,
    "take_profit_price": 3.295397675295e-05,
    "tp_order": {
-    "order_id": "457dc85f-6a25-469f-a1ed-21e489bd1a1a",
+    "order_id": "e9e62441-262b-4279-b444-a0a51e142803",
     "order_ids": [
-     "457dc85f-6a25-469f-a1ed-21e489bd1a1a"
+     "e9e62441-262b-4279-b444-a0a51e142803"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2136,9 +2136,9 @@
    "entry_vs_seen_pct": -1.1,
    "take_profit_price": 2.3648683138949998e-05,
    "tp_order": {
-    "order_id": "72141040-3f10-4f37-a4f5-0d68474cccb4",
+    "order_id": "97e6b2f1-654e-4c00-b8c0-eaaf154c6c07",
     "order_ids": [
-     "72141040-3f10-4f37-a4f5-0d68474cccb4"
+     "97e6b2f1-654e-4c00-b8c0-eaaf154c6c07"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2192,9 +2192,9 @@
    "entry_vs_seen_pct": -17.6,
    "take_profit_price": 4.43545128465e-06,
    "tp_order": {
-    "order_id": "de9968d1-079a-45c8-849c-a0508e8d38ea",
+    "order_id": "23ce3931-ba40-42f5-9c5d-67832933dd7a",
     "order_ids": [
-     "de9968d1-079a-45c8-849c-a0508e8d38ea"
+     "23ce3931-ba40-42f5-9c5d-67832933dd7a"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2352,9 +2352,9 @@
    "entry_vs_seen_pct": 0.1,
    "take_profit_price": 0.0064295309184923995,
    "tp_order": {
-    "order_id": "937bf112-859d-4692-a197-146dfc79796b",
+    "order_id": "dbda8ac1-8c80-4e51-8435-2393c305e52d",
     "order_ids": [
-     "937bf112-859d-4692-a197-146dfc79796b"
+     "dbda8ac1-8c80-4e51-8435-2393c305e52d"
     ],
     "network": "solana",
     "funding_network": null,
@@ -3569,6 +3569,23 @@
    },
    "expected_avg_pct": 16.1,
    "expected_trades_in_samples": 127.0
+  },
+  {
+   "at": "2026-11-03T22:20:48Z",
+   "new_samples": 17,
+   "live_samples": 460,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 15.3,
+   "expected_trades_in_samples": 130.0
   }
  ],
  "observed": [
@@ -9763,7 +9780,70 @@
    "mcap": 25086.69823951641,
    "whale_usd": 291.04163938857243,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7NkVrxZsHG3PeitAGiRqyTbM7cRvDfaW9strsH4Vpump",
+   "symbol": "GS",
+   "ts": "2026-11-03T22:20:20",
+   "t": 1793744420.0,
+   "mcap": 6898.159426782513,
+   "whale_usd": 276.05337966535967,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8N3mPrQ3V4e2NcqsocFvz2nKAS7oNNSdM7wDRSrkpump",
+   "symbol": "GM",
+   "ts": "2026-11-03T22:21:13",
+   "t": 1793744473.0,
+   "mcap": 5078.971298644319,
+   "whale_usd": 124.50352293139159,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CPz88wGhnXDhs6aCsNFTEqHS1qSUEiG84oNcgrmEpump",
+   "symbol": "Lisa",
+   "ts": "2026-11-03T22:22:56",
+   "t": 1793744576.0,
+   "mcap": 5422.278718469897,
+   "whale_usd": 129.78361093610513,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DejxVpASnzWwRAuZsJ9d6p1X3bDcCe789yLNLjhcpump",
+   "symbol": "DATACENTER",
+   "ts": "2026-11-03T22:23:11",
+   "t": 1793744591.0,
+   "mcap": 6910.820957273245,
+   "whale_usd": 280.1922133355026,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Af8Cpgp6rYpqwuBUW4zhaYfuRYzhC1s9bZStXRvQpump",
+   "symbol": "Ruby",
+   "ts": "2026-11-03T22:23:41",
+   "t": 1793744621.0,
+   "mcap": 5365.377091948176,
+   "whale_usd": 140.23980431847846,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DX8vmjV3eEwVq8jcEjYDbzYaCyc9gbbJLfC1j2qjpump",
+   "symbol": "GPU",
+   "ts": "2026-11-03T22:23:48",
+   "t": 1793744628.0,
+   "mcap": 7854.137948015705,
+   "whale_usd": 277.254047001371,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DsLv6cENztgA9P6x8ka21zyamFL85X3RZME5hY8apump",
+   "symbol": "sludgecoin",
+   "ts": "2026-11-03T22:23:58",
+   "t": 1793744638.0,
+   "mcap": 7157.408617786132,
+   "whale_usd": 400.36959396850284,
+   "whale_type": "kol"
   }
  ],
- "last_retarget": 1793740440.6549516
+ "last_retarget": 1793744448.034351
 }
