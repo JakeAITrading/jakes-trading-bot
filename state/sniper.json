@@ -5586,6 +5586,114 @@
    "mcap": 89735.30690799342,
    "whale_usd": 548.0876297509117,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "GeuSL76R5FgWPuHZpJJc9MUP78wMyf6crwTPHSzXpump",
+   "symbol": "PEPECOIN",
+   "ts": "2026-11-03T18:54:05",
+   "t": 1793732045.0,
+   "mcap": 14681.143511552364,
+   "whale_usd": 277.15092084018903,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FkuNrddnrgkYS1bGq71giszZrWw8fjd2n9mPKSYocjFA",
+   "symbol": "LINU",
+   "ts": "2026-11-03T18:54:19",
+   "t": 1793732059.0,
+   "mcap": 23179.59297215566,
+   "whale_usd": 923.8364028006301,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7pwcq3gqP7pSNzBxH3TnbjLhKnrdJJfd53TLu6sc2ay6",
+   "symbol": "BOYCOTT",
+   "ts": "2026-11-03T18:55:20",
+   "t": 1793732120.0,
+   "mcap": 22317.57935078349,
+   "whale_usd": 111.10788005412522,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "22r9JGoWRBYc4Z1pkSFw8p2tdjefS2ZZshw1vr8bBC2K",
+   "symbol": "STONKS",
+   "ts": "2026-11-03T18:56:49",
+   "t": 1793732209.0,
+   "mcap": 870962.8702218096,
+   "whale_usd": 375.290501,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "4VEGfFu44u7Y7x7TjHjb5JgC8gbmo1tPkQy8S4Wwpump",
+   "symbol": "Turtle",
+   "ts": "2026-11-03T18:57:09",
+   "t": 1793732229.0,
+   "mcap": 11518.251994857565,
+   "whale_usd": 295.29792067835757,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CPWt5Q4n2EBY4hMQKn21ZmNg5iMn316fYxYBnnwHqRTm",
+   "symbol": "CATK",
+   "ts": "2026-11-03T18:57:12",
+   "t": 1793732232.0,
+   "mcap": 29483.162506949157,
+   "whale_usd": 652.448273572053,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EH4bCJWryz6icbQAGJB51RKiD38XvSNumsdFKjFwpump",
+   "symbol": "long",
+   "ts": "2026-11-03T18:57:41",
+   "t": 1793732261.0,
+   "mcap": 43222.910822671176,
+   "whale_usd": 500.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Epe1vWLw6QpU46tovshzYffB3gUicpjwWzcXekMmvwzz",
+   "symbol": "DIDDYMAS",
+   "ts": "2026-11-03T18:57:45",
+   "t": 1793732265.0,
+   "mcap": 6232.236046344042,
+   "whale_usd": 184.727853937242,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Bg7eRz7dgXL7dii7q4DNNv3uU9EuGH3Fea4r25jiXAeg",
+   "symbol": "Iroi",
+   "ts": "2026-11-03T18:58:27",
+   "t": 1793732307.0,
+   "mcap": 7795.87026045192,
+   "whale_usd": 399.9356103380774,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6Ng4MHjMbNAUySLKXQDsRpCrvKdCeTUb2cePRXCSpump",
+   "symbol": "Alouatta",
+   "ts": "2026-11-03T18:59:36",
+   "t": 1793732376.0,
+   "mcap": 16608.25022412344,
+   "whale_usd": 134.73071325727824,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9L2SMznkvfCfwF3sLh1VvvAa9GwT581cZsucXWYypump",
+   "symbol": "A&M",
+   "ts": "2026-11-03T18:59:53",
+   "t": 1793732393.0,
+   "mcap": 6244.4255490845535,
+   "whale_usd": 128.84662269850983,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6gnB2H2hbTVvKUWCzNuqjWY8Rod6EVBmfHi7YxZpTWa7",
+   "symbol": "MEOWNERO",
+   "ts": "2026-11-03T19:00:05",
+   "t": 1793732405.0,
+   "mcap": 226691.45255349576,
+   "whale_usd": 1293.0456642205647,
+   "whale_type": "trader"
   }
  ],
  "last_retarget": 1793728894.6423943
