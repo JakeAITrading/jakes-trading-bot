@@ -1068,7 +1068,10 @@
     "cancel_failed_order_ids": [],
     "cancel_pending_order_ids": [],
     "cancel_note": null
-   }
+   },
+   "closed": "sold past target",
+   "proceeds_usd": 5.774882,
+   "profit_usd": 0.78
   }
  ],
  "skipped": [

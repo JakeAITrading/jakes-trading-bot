@@ -287,8 +287,10 @@ class Sniper:
         except MobyError as e:
             # Moby words this two ways: a "tp_below_market" code, or "must be above current price".
             if "tp_below_market" in str(e) or "must be above current price" in str(e):  # past target: take it now
-                rec["sell"] = self.call("quick_sell", {"token_address": token, "pct": 100})
-                rec["status"] = "sold immediately (already past take-profit)"
+                sell = self.call("quick_sell", {"token_address": token, "pct": 100})
+                got = float(sell.get("filled_output_amount_ui") or sell.get("quoted_output_amount_ui") or 0)
+                rec.update(sell=sell, status="sold immediately (already past take-profit)", closed="sold past target",
+                           proceeds_usd=got, profit_usd=round(got - rec.get("spent_usd", self.usd), 2) if got else None)
             else:
                 rec["status"] = f"bought, take-profit FAILED: {e}"
         return rec

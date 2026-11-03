@@ -51,7 +51,7 @@ class FakeMoby:
             "get_my_position": self.position,
             "get_token_price": {"price_usd": 0.12},
             "quick_buy": {"filled_output_amount_ui": 80.0},
-            "quick_sell": {"status": "ok"},
+            "quick_sell": {"status": "ok", "quoted_output_amount_ui": 5.6},
             "create_order": {"ok": True},
             "get_my_orders": {"orders": self.orders},
         }[name]
@@ -267,7 +267,7 @@ class SniperMoby:
             "get_token_ohlcv": {"o": [1.0, 1.0], "c": [1.05, 1.0], "l": [1.0, 0.95], "h": [1.06, 1.0]},
             "get_token_overview": {"overview": {"view_count": 275}},
             "create_order": self.tp_reply,
-            "quick_sell": {"status": "ok"},
+            "quick_sell": {"status": "ok", "quoted_output_amount_ui": 5.6},
         }[name]
 
 
@@ -328,7 +328,7 @@ def test_sniper_sells_now_if_already_past_target(sniper_dir):
     s = sniper.Sniper(moby, 5, 25, 20, dry_run=False)
     s.limit_cushion = None
     rec = s.trade(whale_row(), time.time())
-    assert rec["status"].startswith("sold immediately")
+    assert rec["status"].startswith("sold immediately") and rec["closed"]
 
 
 def test_main_bot_ignores_sniper_coins(sniper_dir):
@@ -700,7 +700,7 @@ def test_sells_now_when_moby_says_target_below_price(sniper_dir):
     s = sniper.Sniper(moby, 5, 10, 20, dry_run=False)
     s.limit_cushion = None
     rec = s.trade(whale_row(), time.time())
-    assert rec["status"].startswith("sold immediately")
+    assert rec["status"].startswith("sold immediately") and rec["closed"]
 
 
 def test_main_learner_learns_stops_and_targets():
