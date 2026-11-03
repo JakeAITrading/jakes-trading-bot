@@ -322,6 +322,20 @@ class Sniper:
         rec.update(sell=sell, status="sold immediately (already past take-profit)", closed="sold past target",
                    proceeds_usd=got, profit_usd=round(got - rec.get("spent_usd", self.usd), 2) if got else None)
 
+    def fix_missing_tp(self) -> None:
+        """Retry the take-profit for coins we hold whose take-profit order failed (e.g. rate limited)."""
+        for rec in self.state["trades"]:
+            if (rec.get("mode") == "LIVE" and rec.get("entry_price") and not rec.get("closed")
+                    and "take-profit FAILED" in (rec.get("status") or "")):
+                token = rec["token_address"]
+                held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+                if held <= 0:
+                    rec["closed"] = "no tokens left"
+                else:
+                    self._place_tp(rec, token, rec["entry_price"], held)
+                log.info("%s: retried take-profit: %s", rec.get("symbol"), rec.get("status"))
+                save(self.state)
+
     def open_count(self) -> int:
         return sum(1 for r in self.state["trades"]
                    if r.get("mode") == "LIVE" and (r.get("entry_price") or r.get("status") == "limit pending")
@@ -484,6 +498,7 @@ class Sniper:
                 try:
                     self.check_pending()
                     self.check_rebuys()
+                    self.fix_missing_tp()
                 except Exception as e:
                     log.warning("pending/re-buy check error: %s", e)
             if self.learner and _now() - self._last_learn > self.learn_every:

@@ -755,3 +755,14 @@ def test_main_goes_live_only_when_learner_expects_profit():
     assert ml.live_allowed()[0] is False                                    # losing
     ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": 0.02, "trades": 80}})
     assert ml.live_allowed()[0] is True
+
+
+def test_failed_take_profit_is_retried(sniper_dir):
+    sniper.save({"trades": [{"mode": "LIVE", "token_address": "W", "symbol": "W", "entry_price": 0.001,
+                             "status": "bought, take-profit FAILED: still rate limited"}]})
+    moby = SniperMoby()
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.fix_missing_tp()
+    tp = [a for n, a in moby.calls if n == "create_order"]
+    assert tp and tp[0]["token_address"] == "W" and tp[0]["take_profit_price"] == pytest.approx(0.0012)
+    assert s.state["trades"][0]["status"] == "holding, take-profit set"
