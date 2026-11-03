@@ -8830,6 +8830,51 @@
    "mcap": 53981.12238845534,
    "whale_usd": 500.0,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "5F2AvS4hSahZktk4Zp7Gzjx3zHjapQjQqpQ1Xknzpump",
+   "symbol": "Samsara",
+   "ts": "2026-11-03T21:41:04",
+   "t": 1793742064.0,
+   "mcap": 9559.677891957108,
+   "whale_usd": 282.6263362293393,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DnMuwmpuDacuFdzpqVLLmT7xcKJQnFrGSMJnAJeBZW7T",
+   "symbol": "CCAT",
+   "ts": "2026-11-03T21:41:22",
+   "t": 1793742082.0,
+   "mcap": 7684.20401918289,
+   "whale_usd": 191.01086163251207,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "BCCfLaoVZYGE8Nxb44czWVw1opfkE3BffQwSyLYopump",
+   "symbol": "amanda",
+   "ts": "2026-11-03T21:41:23",
+   "t": 1793742083.0,
+   "mcap": 9690.415026852861,
+   "whale_usd": 300.29584,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Aj3SoPMYWfbTvSk6ZxFpNWvXV8axFYUEuNrt68Qspump",
+   "symbol": "AMD",
+   "ts": "2026-11-03T21:41:25",
+   "t": 1793742085.0,
+   "mcap": 6369.933544192463,
+   "whale_usd": 187.51374709353246,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8qfyGBXhN43m8nWcLeTVZVdCVyH554F5gpEWFBAYpump",
+   "symbol": "Instinct",
+   "ts": "2026-11-03T21:41:32",
+   "t": 1793742092.0,
+   "mcap": 7727.042713269438,
+   "whale_usd": 149.6639930898324,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
