@@ -5046,6 +5046,15 @@
    "mcap": 7496.062607970089,
    "whale_usd": 132.61118150497404,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "DfbNd1sunJs1HeGTMXdSpWebg9RaKL1WToyVbgZgpump",
+   "symbol": "MEME",
+   "ts": "2026-11-03T18:27:43",
+   "t": 1793730463.0,
+   "mcap": 5697.416327166138,
+   "whale_usd": 227.9069401041602,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793728894.6423943
