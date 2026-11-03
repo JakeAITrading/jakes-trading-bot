@@ -7793,6 +7793,24 @@
    "mcap": 10721.112630562857,
    "whale_usd": 295.1306986503017,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8MDhBZyd3vXM42T3Var2ducmFKwkU8mMoDqZvbbpump",
+   "symbol": "Shovel",
+   "ts": "2026-11-03T20:38:12",
+   "t": 1793738292.0,
+   "mcap": 5096.099357615458,
+   "whale_usd": 110.4989215458453,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
+   "symbol": "fone",
+   "ts": "2026-11-03T20:38:33",
+   "t": 1793738313.0,
+   "mcap": 1799483.1509279725,
+   "whale_usd": 1854.0572474889884,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793736823.872862
