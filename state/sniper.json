@@ -52,7 +52,12 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +20%"
+   "status": "holding, take-profit moved to +20%",
+   "closed": "take-profit filled at 0.000108807",
+   "sold_price": 0.0001088070862227,
+   "proceeds_usd": 5.992667,
+   "profit_usd": 0.99,
+   "rebuy_until": null
   },
   {
    "token_address": "E7ayy5Se6gjwCNtw9NP629AucnTgqab4SSmSxDpUpump",
@@ -215,6 +220,24 @@
     "failed_leg_error": null
    },
    "status": "holding, take-profit set"
+  },
+  {
+   "token_address": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
+   "symbol": "PEPE2",
+   "mode": "LIVE",
+   "rebuy_of": "2026-11-03T04:12:06Z",
+   "rebuys": 1,
+   "usd": 5.0,
+   "take_profit_pct": 20.0,
+   "price_when_seen": 0.00014503925922326744,
+   "buy_response": {
+    "status": null,
+    "quote_id": null,
+    "transaction_signature": null,
+    "blocked": true,
+    "reason": "daily_volume"
+   },
+   "status": "blocked: daily_volume"
   }
  ]
 }
