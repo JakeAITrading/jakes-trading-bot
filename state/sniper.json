@@ -6497,6 +6497,42 @@
    "mcap": 7507.224381697597,
    "whale_usd": 184.433768662572,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "BqHoHAatdzhA9256d6aZ4BUJfxRe251AEjkNJrZupump",
+   "symbol": "MrBeast",
+   "ts": "2026-11-03T19:32:41",
+   "t": 1793734361.0,
+   "mcap": 8073.978278844152,
+   "whale_usd": 141.46058217121396,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3HvADMisEmrSNoSDYkK4dfxgTd7coPZr1BeRHsXKpump",
+   "symbol": "batman",
+   "ts": "2026-11-03T19:32:43",
+   "t": 1793734363.0,
+   "mcap": 15799.00344950147,
+   "whale_usd": 305.14227651582223,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BZYkZXtHNK7g1ZQ26iNgkLe1ufDrLUX8EcCGLGF7pump",
+   "symbol": "mag",
+   "ts": "2026-11-03T19:32:45",
+   "t": 1793734365.0,
+   "mcap": 177338.75607553622,
+   "whale_usd": 500.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "J2TCZ6d2ZyPLG8E2LnyeM5ChTTFTpBgHPBZLDsYGpump",
+   "symbol": "Inuversity",
+   "ts": "2026-11-03T19:33:15",
+   "t": 1793734395.0,
+   "mcap": 5892.729404877173,
+   "whale_usd": 138.29943777140699,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
