@@ -1785,7 +1785,12 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "keep_tp": true
+   "keep_tp": true,
+   "closed": "take-profit filled at 32.6516",
+   "sold_price": 32.65159548424101,
+   "proceeds_usd": 7.002102,
+   "profit_usd": 2.0,
+   "rebuy_until": null
   },
   {
    "token_address": "D4rzv9WAXJh9QZw1MjqfrtuSrmrkV4DckPTKBoMnpump",
@@ -2213,6 +2218,50 @@
     "failed_leg": null,
     "failed_leg_error": null
    }
+  },
+  {
+   "token_address": "Hu5Qdto25NKcUepDxZYRjkJigU1UX4vGrxDeomt2TYo5",
+   "symbol": "Satoshi",
+   "whale_time": "2026-11-03T19:18:55",
+   "whale_type": "whale",
+   "whale_usd": 932.258321377922,
+   "whale_mcap": 124603.30731944281,
+   "seen_after_s": 11.2,
+   "usd": 5.0,
+   "take_profit_pct": 40.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.00011654302215902135,
+   "glance": {
+    "above_5m_low_pct": 16.3,
+    "this_minute_pct": -2.9
+   },
+   "status": "limit buy not filled in time, cancelled",
+   "limit_price": 0.00011654302215902135,
+   "limit_order_id": "293dd561-c3a9-4548-96e6-0f67bc7750b3",
+   "limit_placed_at": "2026-11-03T19:19:13Z",
+   "limit_expires": 1793733673.905278,
+   "views": 709,
+   "closed": "limit buy not filled in time, cancelled"
+  },
+  {
+   "token_address": "E5bmEfaFywopKcQDo7tZNpaXZ89cyp7ns46xjt5P6Sdw",
+   "symbol": "Useful",
+   "whale_time": "2026-11-03T19:19:29",
+   "whale_type": "kol",
+   "whale_usd": 167.9381660583106,
+   "whale_mcap": 27851.197955897078,
+   "seen_after_s": 4.8,
+   "usd": 5.0,
+   "take_profit_pct": 40.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.8569817004608922e-05,
+   "glance": {
+    "above_5m_low_pct": 40.1,
+    "this_minute_pct": 40.1
+   },
+   "status": "limit buy FAILED: {\"error\": \"Moby tool error: Error executing tool create_order: Moby rejected the request: This token can't be traded right now \\u2014 there's no market for it. You won't be able to sell it or set orde",
+   "explore": "rule: whale buy too small",
+   "views": 25
   }
  ],
  "skipped": [
@@ -2558,6 +2607,27 @@
    "explore": "rule: whale buy too small",
    "views": 12,
    "skipped_at": "2026-11-03T18:14:53Z"
+  },
+  {
+   "token_address": "4EeQsw1MP8uBLQxLghk2rLdLLGsjX6aAKrJLqhrLpump",
+   "symbol": "NEARKAT",
+   "whale_time": "2026-11-03T19:21:33",
+   "whale_type": "kol",
+   "whale_usd": 138.5202141237785,
+   "whale_mcap": 9436.68419495225,
+   "seen_after_s": 1.5,
+   "usd": 5.0,
+   "take_profit_pct": 40.0,
+   "mode": "LIVE",
+   "price_when_seen": 9.43668419495225e-06,
+   "glance": {
+    "above_5m_low_pct": 77.0,
+    "this_minute_pct": 23.1
+   },
+   "status": "skipped: already pumped: +77% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 11,
+   "skipped_at": "2026-11-03T19:21:35Z"
   }
  ],
  "learning_log": [
@@ -6008,6 +6078,114 @@
    "t": 1793733340.0,
    "mcap": 7366.647182233873,
    "whale_usd": 273.46400043584777,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+   "symbol": "Kimchi",
+   "ts": "2026-11-03T19:16:01",
+   "t": 1793733361.0,
+   "mcap": 3046322.072301314,
+   "whale_usd": 465.9693140642829,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "D5ouydEMShtjStU4GcEKV1QkW67yN4gmtKgZK58gpump",
+   "symbol": "CI",
+   "ts": "2026-11-03T19:16:13",
+   "t": 1793733373.0,
+   "mcap": 7608.781743329018,
+   "whale_usd": 138.34782181702352,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BMTSuembiaLcrt1CUe5N7DjLQG8M3u9yXabkLcpQpump",
+   "symbol": "Trenchoor",
+   "ts": "2026-11-03T19:16:36",
+   "t": 1793733396.0,
+   "mcap": 18637.63463916257,
+   "whale_usd": 106.73897772264523,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "5gMmofmv9vU9Ya7pMLMRDYsPhoP2d5bHHHh3qeSd4CM1",
+   "symbol": "THICC",
+   "ts": "2026-11-03T19:17:38",
+   "t": 1793733458.0,
+   "mcap": 82873.51374747232,
+   "whale_usd": 463.79151601655036,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HL2bM3NK4bLf8w829A3PJgNgUvDFRRUKuRfukRZHpump",
+   "symbol": "INU",
+   "ts": "2026-11-03T19:17:41",
+   "t": 1793733461.0,
+   "mcap": 6465.676051448099,
+   "whale_usd": 405.16898011872695,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Ep7rtGuYaadWmBH8yVS2vvhaoWPVRo2rWjEaJaTDpump",
+   "symbol": "TLM",
+   "ts": "2026-11-03T19:17:49",
+   "t": 1793733469.0,
+   "mcap": 10338.920219510328,
+   "whale_usd": 294.68657743540666,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "CNrizfVfBpZipuaEPUg1XBBnMcZxvg7f8eC8aQBqpump",
+   "symbol": "Mag",
+   "ts": "2026-11-03T19:17:49",
+   "t": 1793733469.0,
+   "mcap": 5038.64021084155,
+   "whale_usd": 472.3098665673176,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Hu5Qdto25NKcUepDxZYRjkJigU1UX4vGrxDeomt2TYo5",
+   "symbol": "Satoshi",
+   "ts": "2026-11-03T19:18:55",
+   "t": 1793733535.0,
+   "mcap": 124603.30731944281,
+   "whale_usd": 932.258321377922,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "E5bmEfaFywopKcQDo7tZNpaXZ89cyp7ns46xjt5P6Sdw",
+   "symbol": "Useful",
+   "ts": "2026-11-03T19:19:27",
+   "t": 1793733567.0,
+   "mcap": 24755.163394729607,
+   "whale_usd": 276.68507110845684,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EH4bCJWryz6icbQAGJB51RKiD38XvSNumsdFKjFwpump",
+   "symbol": "long",
+   "ts": "2026-11-03T19:19:50",
+   "t": 1793733590.0,
+   "mcap": 6246.213393483959,
+   "whale_usd": 138.0701150260323,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3HvADMisEmrSNoSDYkK4dfxgTd7coPZr1BeRHsXKpump",
+   "symbol": "batman",
+   "ts": "2026-11-03T19:20:37",
+   "t": 1793733637.0,
+   "mcap": 22799.275029683486,
+   "whale_usd": 138.24456841719547,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4EeQsw1MP8uBLQxLghk2rLdLLGsjX6aAKrJLqhrLpump",
+   "symbol": "NEARKAT",
+   "ts": "2026-11-03T19:21:33",
+   "t": 1793733693.0,
+   "mcap": 9436.68419495225,
+   "whale_usd": 138.5202141237785,
    "whale_type": "kol"
   }
  ],
