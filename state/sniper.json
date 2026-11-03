@@ -1278,6 +1278,15 @@
    "mcap": 37753.62711166963,
    "whale_usd": 1354.485378,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "Ebih1KdijjpQBaM83gUfGhRtTCpHzDkBZhCZedZwpump",
+   "symbol": "Firecube",
+   "ts": "2026-11-03T06:18:01",
+   "t": 1793686681.0,
+   "mcap": 20044.426491949707,
+   "whale_usd": 154.7409973592469,
+   "whale_type": "kol"
   }
  ]
 }
