@@ -2251,6 +2251,23 @@
    },
    "expected_avg_pct": 13.7,
    "expected_trades_in_samples": 85.0
+  },
+  {
+   "at": "2026-11-03T09:25:43Z",
+   "new_samples": 4,
+   "live_samples": 41,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 15.9,
+   "expected_trades_in_samples": 91.0
   }
  ],
  "observed": [
@@ -3071,6 +3088,42 @@
    "t": 1793697450.0,
    "mcap": 134986.35615135878,
    "whale_usd": 552.621138776205,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AbJSsC2Q1MKD1SZXm3pogKgkaVKezsJKf51QiMBKpump",
+   "symbol": "suncat",
+   "ts": "2026-11-03T09:23:59",
+   "t": 1793697839.0,
+   "mcap": 10774.7504183,
+   "whale_usd": 276.2945597451018,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AUDTuHxz4LRJjmUw3E8UWzGHD3uABnCTYKLQyNBWV2PQ",
+   "symbol": "Cubs",
+   "ts": "2026-11-03T09:24:13",
+   "t": 1793697853.0,
+   "mcap": 11546.561159557832,
+   "whale_usd": 273.531614238828,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+   "symbol": "CHILLGUY",
+   "ts": "2026-11-03T09:24:20",
+   "t": 1793697860.0,
+   "mcap": 8486921.432490284,
+   "whale_usd": 999.9999999999999,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9W7Dyv9CV9UhwKfW9gCuYoPncAY8M3EScLiD8ZHemDAr",
+   "symbol": "GENESIS",
+   "ts": "2026-11-03T09:26:23",
+   "t": 1793697983.0,
+   "mcap": 5640.238669002429,
+   "whale_usd": 183.19860160374466,
    "whale_type": "kol"
   }
  ],
