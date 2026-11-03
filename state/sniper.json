@@ -817,6 +817,29 @@
    "limit_placed_at": "2026-11-03T05:46:10Z",
    "limit_expires": 1793684890.6079955,
    "views": 112
+  },
+  {
+   "token_address": "J1pZjNKh4BnbXBsroE4acJv3TYzCGxTn46VrZii6orEZ",
+   "symbol": "XDG",
+   "whale_time": "2026-11-03T05:46:53",
+   "whale_type": "kol",
+   "whale_usd": 388.60606,
+   "whale_mcap": 55409.65867112391,
+   "seen_after_s": 4.5,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 5.4634863772662356e-05,
+   "glance": {
+    "above_5m_low_pct": 160.5,
+    "this_minute_pct": 3.1
+   },
+   "status": "limit pending",
+   "limit_price": 5.736660696129548e-05,
+   "limit_order_id": "8a264080-94ce-4ae9-9a9c-420d9024cea4",
+   "limit_placed_at": "2026-11-03T05:47:03Z",
+   "limit_expires": 1793684943.7907078,
+   "views": 16
   }
  ],
  "skipped": [
