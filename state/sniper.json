@@ -1833,7 +1833,7 @@
     "above_5m_low_pct": 2.4,
     "this_minute_pct": -0.7
    },
-   "status": "bought, take-profit FAILED: cancelled mid-retarget when the bot was restarted",
+   "status": "holding, take-profit set",
    "limit_price": 2.002352812269237e-05,
    "limit_order_id": "b1dbb1c9-7684-4864-a2ee-762d442d872e",
    "limit_placed_at": "2026-11-03T08:23:37Z",
@@ -1847,9 +1847,9 @@
    "entry_vs_seen_pct": -4.5,
    "take_profit_price": 2.3900052944e-05,
    "tp_order": {
-    "order_id": "4f2b55df-a9f9-43f0-a0f8-50cff22a213c",
+    "order_id": "02ee80ad-1309-4b6d-9552-05e54e9918df",
     "order_ids": [
-     "4f2b55df-a9f9-43f0-a0f8-50cff22a213c"
+     "02ee80ad-1309-4b6d-9552-05e54e9918df"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1871,8 +1871,7 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   },
-   "closed": "take-profit cancelled"
+   }
   },
   {
    "token_address": "2z9eY5FgwswpZShRxY78PWaUXEy5uqdhLHTprJtfLoat",
@@ -6434,6 +6433,51 @@
    "t": 1793734172.0,
    "mcap": 72001.258530836,
    "whale_usd": 182.7240716548859,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CDTAv6Zym4At2pyJ4Bxbf8L5fsVGWpeVWY29r8mKpqrT",
+   "symbol": "ZOL",
+   "ts": "2026-11-03T19:30:01",
+   "t": 1793734201.0,
+   "mcap": 5483.493168867426,
+   "whale_usd": 128.71900743367794,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "J3c6JWsSx5dxtZoEHcex7UWJvgaXNARz6ru2Ue57VsxD",
+   "symbol": "ZOL",
+   "ts": "2026-11-03T19:30:14",
+   "t": 1793734214.0,
+   "mcap": 9047.57598618744,
+   "whale_usd": 184.54337983322998,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
+   "symbol": "OPOL",
+   "ts": "2026-11-03T19:31:04",
+   "t": 1793734264.0,
+   "mcap": 23282.171241589822,
+   "whale_usd": 495.64130042108275,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8eAjzUDZsxXZWFpidSvCFzZHjzzVEFkJypwmEfCSDWsm",
+   "symbol": "ZOL",
+   "ts": "2026-11-03T19:31:11",
+   "t": 1793734271.0,
+   "mcap": 5034.749847254716,
+   "whale_usd": 131.2181400969944,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4hFPbnzMNfMwntNennv9g58zJvgQNqwTq8fsULQvpump",
+   "symbol": "BRO",
+   "ts": "2026-11-03T19:31:13",
+   "t": 1793734273.0,
+   "mcap": 6231.929546629544,
+   "whale_usd": 279.44921144085026,
    "whale_type": "kol"
   }
  ],

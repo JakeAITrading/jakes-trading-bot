@@ -397,7 +397,9 @@ class Sniper:
                     log.info("%s: take-profit filled, profit $%.2f", rec["symbol"], rec["profit_usd"])
                     save(self.state)
                 else:
-                    rec["closed"] = f"take-profit {o.get('status')}"
+                    # Cancelled/expired but maybe still holding: fix_missing_tp re-places it (or closes at 0).
+                    rec["tp_lost"] = True
+                    rec["status"] = f"take-profit {o.get('status')}; re-placing"
             if not rec.get("rebuy_until"):
                 continue
             if _now() > rec["rebuy_until"] or (self.max_rebuys and rec.get("rebuys", 0) >= self.max_rebuys):

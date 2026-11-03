@@ -225,8 +225,8 @@ def maybe_learn(client, cfg: dict) -> dict | None:
     return p
 
 
-GO_LIVE_MIN_TRADES = 30      # qualifying samples under the learned settings
-GO_LIVE_MIN_AVG = 0.01       # expected +1% per trade after costs
+GO_LIVE_MIN_TRADES = 60      # qualifying samples under the learned settings (raised Nov 3: 44 was too thin)
+GO_LIVE_MIN_AVG = 0.03       # expected +3% per trade after costs
 
 
 def live_allowed() -> tuple[bool, str]:
