@@ -1307,6 +1307,90 @@
    "proceeds_usd": 5.338578,
    "profit_usd": 0.34,
    "rebuy_until": null
+  },
+  {
+   "token_address": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
+   "symbol": "PIRATE",
+   "whale_time": "2026-11-03T07:02:00",
+   "whale_type": "kol",
+   "whale_usd": 905.7773163506579,
+   "whale_mcap": 73192.46238366312,
+   "seen_after_s": 2.3,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 0.00010338330321246758,
+   "glance": {
+    "above_5m_low_pct": 35.6,
+    "this_minute_pct": 13.9
+   },
+   "status": "holding, take-profit set",
+   "limit_price": 0.00010338330321246758,
+   "limit_order_id": "5d56164a-e19e-4c5d-8f32-ac8beb3328d6",
+   "limit_placed_at": "2026-11-03T07:02:05Z",
+   "limit_expires": 1793689445.0725198,
+   "views": 212,
+   "entry_price": 9.90060546676e-05,
+   "spent_usd": 4.998219609260559,
+   "tokens": 50501.961893,
+   "bought_at": "2026-11-03 07:02:38",
+   "entry_vs_seen_pct": -4.2,
+   "take_profit_price": 0.00011088678122771202,
+   "tp_order": {
+    "order_id": "d7953cfd-8fcb-45e9-8265-30c2c7a6a69d",
+    "order_ids": [
+     "d7953cfd-8fcb-45e9-8265-30c2c7a6a69d"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
+    "amount": 50501.961893,
+    "input_token": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
+    "input_token_symbol": null,
+    "take_profit_price": 0.00011088678122771202,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   },
+   "closed": "take-profit filled at 0.00011135",
+   "sold_price": 0.0001113496345333,
+   "proceeds_usd": 5.623375,
+   "profit_usd": 0.63,
+   "rebuy_until": null
+  },
+  {
+   "token_address": "4ELARfpvMkrv9su1mbJsPt6wpetL8KLkFgWcpYQopump",
+   "symbol": "mem",
+   "whale_time": "2026-11-03T07:04:11",
+   "whale_type": "kol",
+   "whale_usd": 452.502659763,
+   "whale_mcap": 11190.24364015786,
+   "seen_after_s": 3.7,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.139064352173591e-05,
+   "glance": {
+    "above_5m_low_pct": 272.9,
+    "this_minute_pct": 1.4
+   },
+   "status": "limit pending",
+   "limit_price": 1.139064352173591e-05,
+   "limit_order_id": "b9fae40b-b5c6-4551-a471-746ca0336d41",
+   "limit_placed_at": "2026-11-03T07:04:20Z",
+   "limit_expires": 1793689580.9711518,
+   "explore": "rule: market cap out of range",
+   "views": 15
   }
  ],
  "skipped": [
@@ -1758,6 +1842,33 @@
    "mcap": 1269158.0858815878,
    "whale_usd": 411.39995324700226,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
+   "symbol": "PIRATE",
+   "ts": "2026-11-03T07:02:00",
+   "t": 1793689320.0,
+   "mcap": 73192.46238366312,
+   "whale_usd": 905.7773163506579,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FxQ5GbqCBxNHDpFTpiL9RDVHiP58ar5nMkR3eMwepump",
+   "symbol": "UNPOOLED",
+   "ts": "2026-11-03T07:03:34",
+   "t": 1793689414.0,
+   "mcap": 78491.37932392576,
+   "whale_usd": 364.8786229704782,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4ELARfpvMkrv9su1mbJsPt6wpetL8KLkFgWcpYQopump",
+   "symbol": "mem",
+   "ts": "2026-11-03T07:04:11",
+   "t": 1793689451.0,
+   "mcap": 11190.24364015786,
+   "whale_usd": 452.502659763,
+   "whale_type": "kol"
   }
  ]
 }
