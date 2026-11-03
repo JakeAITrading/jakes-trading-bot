@@ -8428,6 +8428,69 @@
    "mcap": 9399.08204600215,
    "whale_usd": 282.5364116905525,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "2umoaMqSn1o4UmpNtSozHycfrdUkoMVBRuZNbhKfLoat",
+   "symbol": "PAIRSCOPE",
+   "ts": "2026-11-03T21:18:37",
+   "t": 1793740717.0,
+   "mcap": 22184.804038261063,
+   "whale_usd": 185.600393049258,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3fxy8uZWgBPDxkFYmf8bJhf8667tNPHU4JoigcBSpump",
+   "symbol": "One",
+   "ts": "2026-11-03T21:19:18",
+   "t": 1793740758.0,
+   "mcap": 5244.174644758459,
+   "whale_usd": 374.3936241463031,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "C4TUme23PA5eqzw1Y8bAYUThnNShpDDXAxSdLmFppump",
+   "symbol": "DJT",
+   "ts": "2026-11-03T21:20:49",
+   "t": 1793740849.0,
+   "mcap": 6644.379936915357,
+   "whale_usd": 165.4235988179684,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "RNDMNrQ8i2hMosWa4mGvGEu2ussELhXXowbnaDmttYx",
+   "symbol": "RNDM",
+   "ts": "2026-11-03T21:20:52",
+   "t": 1793740852.0,
+   "mcap": 17481.212001762495,
+   "whale_usd": 187.154,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "H4PfRntmvem1jeZiSFGZThmzXoakHXCiSCCdV8ybpump",
+   "symbol": "MEMECOIN",
+   "ts": "2026-11-03T21:21:41",
+   "t": 1793740901.0,
+   "mcap": 41453.82406476545,
+   "whale_usd": 459.25170907519686,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-03T21:21:47",
+   "t": 1793740907.0,
+   "mcap": 6465.3149820514955,
+   "whale_usd": 287.9598995651917,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CG6cYHu548wJ5Rphxm6z1xNCe311ckiREToqrYdfpump",
+   "symbol": "BASKET",
+   "ts": "2026-11-03T21:22:21",
+   "t": 1793740941.0,
+   "mcap": 6571.8122641555965,
+   "whale_usd": 199.2,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
