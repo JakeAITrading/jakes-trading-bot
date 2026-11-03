@@ -8875,6 +8875,15 @@
    "mcap": 7727.042713269438,
    "whale_usd": 149.6639930898324,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "Gw3u7ewtAVk4jzDZFw4XDrWQdrCjoQiP21Ra8gTrpump",
+   "symbol": "Samsara",
+   "ts": "2026-11-03T21:41:45",
+   "t": 1793742105.0,
+   "mcap": 17372.614820487797,
+   "whale_usd": 145.93482999978258,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
