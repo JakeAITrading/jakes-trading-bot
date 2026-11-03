@@ -2882,6 +2882,30 @@
    "explore": "rule: market cap out of range",
    "status": "limit buy FAILED: {\"error\": \"Moby tool error: Error executing tool create_order: Moby rejected the request: This token can't be traded right now \\u2014 there's no market for it. You won't be able to sell it or set orde",
    "views": 16
+  },
+  {
+   "token_address": "ABSZ6rwFCcWSTB4QiGfDqNBEgeyUswQWZm5Vt5rVpump",
+   "symbol": "RINA",
+   "whale_time": "2026-11-03T23:02:08",
+   "whale_type": "whale",
+   "whale_usd": 448.587934,
+   "whale_mcap": 18889.73817592865,
+   "seen_after_s": 0.0,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.022237458731979e-05,
+   "glance": {
+    "above_5m_low_pct": 10.7,
+    "this_minute_pct": 10.0
+   },
+   "status": "limit pending",
+   "limit_price": 2.022237458731979e-05,
+   "limit_order_id": "b4aac1b8-a566-41e2-a402-b4b252288bfd",
+   "limit_placed_at": "2026-11-03T23:02:10Z",
+   "limit_expires": 1793747050.9479413,
+   "explore": "rule: market cap out of range",
+   "views": 195
   }
  ],
  "skipped": [
@@ -10997,6 +11021,33 @@
    "t": 1793746913.0,
    "mcap": 8289.488505397458,
    "whale_usd": 160.67763132199852,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "Bzi4ahj2BhA1H9MFJzdKc2Wt33oP56MLwED7XQDF5TuW",
+   "symbol": "AMD",
+   "ts": "2026-11-03T23:01:59",
+   "t": 1793746919.0,
+   "mcap": 6673.568350379355,
+   "whale_usd": 1119.1323190481833,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ABSZ6rwFCcWSTB4QiGfDqNBEgeyUswQWZm5Vt5rVpump",
+   "symbol": "RINA",
+   "ts": "2026-11-03T23:02:08",
+   "t": 1793746928.0,
+   "mcap": 18889.73817592865,
+   "whale_usd": 448.587934,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "EBS6MiRV1Y9LtSrrdWEMnyvuAELDcY9RZeYaxKLgpump",
+   "symbol": "LIBTARD",
+   "ts": "2026-11-03T23:02:13",
+   "t": 1793746933.0,
+   "mcap": 6698.088327539153,
+   "whale_usd": 158.0522480613752,
    "whale_type": "whale"
   }
  ],
