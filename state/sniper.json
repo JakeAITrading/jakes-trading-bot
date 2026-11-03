@@ -410,6 +410,65 @@
     "failed_leg_error": null
    },
    "status": "holding, take-profit set"
+  },
+  {
+   "token_address": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
+   "symbol": "BAWSAQS",
+   "whale_time": "2026-11-03T05:03:31",
+   "whale_type": "kol",
+   "whale_usd": 461.2694326985401,
+   "whale_mcap": 40223.52732135914,
+   "seen_after_s": 3.1,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 4.219968832330778e-05,
+   "glance": {
+    "above_5m_low_pct": 35.7,
+    "this_minute_pct": 10.7
+   },
+   "buy_response": {
+    "status": "Success",
+    "quote_id": "7965a2ed-233b-4b76-86cd-a603e126cfa1",
+    "transaction_signature": "5q7QZQpyGn1AvqtAARUWNyFyTNSWPikhZhtQP572r5gFAoD1L6dSwwBP2jrTpAyLzCSSAjAzgsUtfjyWcn5nBoqQ",
+    "blocked": null,
+    "reason": null
+   },
+   "bought_at": "2026-11-03T05:03:38Z",
+   "buy_after_whale_s": 7.9,
+   "tokens": 86988.872042,
+   "spent_usd": 5.0,
+   "entry_price": 5.7478616317566434e-05,
+   "entry_vs_seen_pct": 36.2,
+   "take_profit_price": 6.61004087652014e-05,
+   "tp_order": {
+    "order_id": "e3ad3455-7f55-45a8-b239-82be5983ffe2",
+    "order_ids": [
+     "e3ad3455-7f55-45a8-b239-82be5983ffe2"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
+    "amount": 86988.872042,
+    "input_token": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
+    "input_token_symbol": null,
+    "take_profit_price": 6.61004087652014e-05,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   },
+   "status": "holding, take-profit set",
+   "views": 59
   }
  ],
  "skipped": [
