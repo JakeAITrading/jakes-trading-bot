@@ -800,6 +800,26 @@
    "status": "skipped: already pumped: +206% above 5-min low",
    "views": 13,
    "skipped_at": "2026-11-03T05:14:33Z"
+  },
+  {
+   "token_address": "7zfaqkUtUKUYywDoj1R9zQZgwRj8EVZgKdp7TpqKuEQD",
+   "symbol": "HUSS",
+   "whale_time": "2026-11-03T05:27:46",
+   "whale_type": "kol",
+   "whale_usd": 499.05,
+   "whale_mcap": 24119.62848613519,
+   "seen_after_s": 2.8,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.561352084740065e-05,
+   "glance": {
+    "above_5m_low_pct": 22.1,
+    "this_minute_pct": 22.1
+   },
+   "status": "skipped: mid-spike: +22% this minute",
+   "views": 80,
+   "skipped_at": "2026-11-03T05:27:49Z"
   }
  ]
 }
