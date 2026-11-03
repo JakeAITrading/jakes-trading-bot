@@ -7001,6 +7001,33 @@
    "mcap": 5555.145889957203,
    "whale_usd": 276.61166704383305,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
+   "symbol": "Sexbot",
+   "ts": "2026-11-03T19:59:47",
+   "t": 1793735987.0,
+   "mcap": 11949.68444906408,
+   "whale_usd": 368.89766986406397,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7G4RVdSCfaKSJ2maJkJMrhyuSmFpEHzSgUWoPn6Vpump",
+   "symbol": "Pumpsalot",
+   "ts": "2026-11-03T20:00:03",
+   "t": 1793736003.0,
+   "mcap": 11612.06000688253,
+   "whale_usd": 121.64501663544965,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FMmFD2vxHBLmenNY8u5CUUfhTJnkcpXKj19QspNNpump",
+   "symbol": "GPU",
+   "ts": "2026-11-03T20:00:08",
+   "t": 1793736008.0,
+   "mcap": 37333.5242329631,
+   "whale_usd": 22218.14112932947,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
