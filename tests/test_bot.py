@@ -384,8 +384,15 @@ def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
     sniper.save({"trades": [{**t[0], "closed": None, "rebuy_until": None, "profit_usd": None}]})
     moby = M(green=False)
     s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.rebuy_always = False
     s.check_rebuys()
-    assert not any(n == "quick_buy" for n, _ in moby.calls)   # falling: take the profit, no re-buy
+    assert not any(n == "quick_buy" for n, _ in moby.calls)   # if-rising mode, falling: no re-buy
+
+    sniper.save({"trades": [{**t[0], "closed": None, "rebuy_until": None, "profit_usd": None}]})
+    moby = M(green=False)
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)          # default: always re-buy after a sale
+    s.check_rebuys()
+    assert [n for n, _ in moby.calls].count("quick_buy") == 1
 
 
 def test_sniper_own_limits(sniper_dir):

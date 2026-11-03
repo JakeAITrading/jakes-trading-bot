@@ -10,8 +10,8 @@ Watches Moby's whale feed every few seconds. A whale buy qualifies when it is:
   - seen within --max-age seconds of the trade, in a coin we haven't traded.
 Before buying it glances at the chart (--max-runup, --max-spike) and skips coins that already
 pumped. Then: quick_buy $usd, wait for the fill, place a take-profit order at entry * (1 + tp%).
-When a take-profit fills and the coin is still rising (price at or above the sale and the last
-1-minute candle green, checked for 10 minutes), it buys the same coin again with a fresh take-profit,
+When a take-profit fills it buys the same coin right back with a fresh take-profit (the profit is
+kept; --rebuy-if-rising only re-buys while the price is at/above the sale with a green last minute),
 once per sale (no cap on how many times a coin can cycle; --max-rebuys sets one). Re-buys don't
 count toward --trades.
 Every trade is written to state/sniper.json (the main bot leaves these coins alone).
@@ -73,6 +73,7 @@ class Sniper:
         self.max_rebuys, self.rebuy_window = 0, 600  # 0 = no cap per coin; look for 10 min after a sale
         self.max_open, self.cash_floor = 5, 10.0       # our own limits (Moby's are off)
         self.look_first, self.max_runup, self.max_spike = True, 1.0, 0.20
+        self.rebuy_always = True   # re-buy right after every +tp% sale (False = only if still rising)
 
     def call(self, tool: str, args: dict | None = None):
         for _ in range(4):
@@ -242,9 +243,12 @@ class Sniper:
                 rec["rebuy_until"] = None
                 save(self.state)
                 continue
-            rising, price = self._rising(rec["token_address"], rec["sold_price"])
-            if not rising:
-                continue
+            if self.rebuy_always:   # Jake: buy right back after each sale, keep the profit
+                price = float(self.call("get_token_price", {"token_address": rec["token_address"]}).get("price_usd") or 0)
+            else:
+                rising, price = self._rising(rec["token_address"], rec["sold_price"])
+                if not rising:
+                    continue
             why_not = self.can_buy()
             if why_not:
                 log.info("%s still rising but no re-buy: %s", rec["symbol"], why_not)
@@ -252,7 +256,7 @@ class Sniper:
             new = {"token_address": rec["token_address"], "symbol": rec["symbol"], "mode": "LIVE",
                    "rebuy_of": rec.get("bought_at"), "rebuys": rec.get("rebuys", 0) + 1,
                    "usd": self.usd, "take_profit_pct": self.tp * 100, "price_when_seen": price}
-            log.info("%s still rising (%.6g >= sold %.6g): buying again", rec["symbol"], price, rec["sold_price"])
+            log.info("%s sold at %.6g, now %.6g: buying again", rec["symbol"], rec["sold_price"], price)
             self._buy(new, rec["token_address"], rec["symbol"], _now(),
                       f"Re-buy: {rec['symbol']} still rising after +{self.tp*100:.0f}% take-profit.")
             log.info("re-buy: %s", json.dumps({k: v for k, v in new.items() if k not in ("tp_order", "sell")}, default=str))
@@ -368,6 +372,8 @@ def main() -> None:
     ap.add_argument("--max-open", type=int, default=5, help="most whale coins held at once")
     ap.add_argument("--max-rebuys", type=int, default=0, help="re-buy cycles per coin (0 = no cap)")
     ap.add_argument("--no-look", action="store_true", help="skip the chart check before buying")
+    ap.add_argument("--rebuy-if-rising", action="store_true",
+                    help="only re-buy after a sale if the coin is still rising (default: always re-buy)")
     ap.add_argument("--max-runup", type=float, default=100, help="skip if price is more than this %% above its 5-min low")
     ap.add_argument("--max-spike", type=float, default=20, help="skip if price is up more than this %% in the current minute")
     ap.add_argument("--cash-floor", type=float, default=10, help="never let USDC fall below this")
@@ -380,6 +386,7 @@ def main() -> None:
     s = Sniper(MobyClient(), a.usd, a.take_profit, a.max_age, a.dry_run)
     s.max_open, s.cash_floor, s.max_rebuys = a.max_open, a.cash_floor, a.max_rebuys
     s.look_first, s.max_runup, s.max_spike = not a.no_look, a.max_runup / 100, a.max_spike / 100
+    s.rebuy_always = not a.rebuy_if_rising
     if a.retarget and not a.dry_run:
         s.retarget()
     s.run(a.trades, a.poll, a.hours)
