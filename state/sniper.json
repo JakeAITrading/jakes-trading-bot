@@ -279,9 +279,9 @@
    "entry_vs_seen_pct": 24.9,
    "take_profit_price": 3.5303236821712255e-05,
    "tp_order": {
-    "order_id": "39329755-8b42-4f81-bdeb-3c034752f08e",
+    "order_id": "8c38f574-1528-4046-bab4-12c2698f72f3",
     "order_ids": [
-     "39329755-8b42-4f81-bdeb-3c034752f08e"
+     "8c38f574-1528-4046-bab4-12c2698f72f3"
     ],
     "network": "solana",
     "funding_network": null,
