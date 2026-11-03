@@ -1440,12 +1440,13 @@
     "above_5m_low_pct": 8.0,
     "this_minute_pct": 8.0
    },
-   "status": "limit pending",
+   "status": "limit buy not filled in time, cancelled",
    "limit_price": 0.0003124112554360181,
    "limit_order_id": "3f7556a3-8f8a-4a9a-909e-b53040b9916c",
    "limit_placed_at": "2026-11-03T07:09:55Z",
    "limit_expires": 1793689915.7601373,
-   "views": 489
+   "views": 489,
+   "closed": "limit buy not filled in time, cancelled"
   }
  ],
  "skipped": [
@@ -1950,6 +1951,33 @@
    "t": 1793689792.0,
    "mcap": 267663.94752127305,
    "whale_usd": 1347.3357309095154,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5DnWmSL9t3YqK5MeYq8ozJpna46VcdePWzHvyN8avg2g",
+   "symbol": "CAPY",
+   "ts": "2026-11-03T07:12:16",
+   "t": 1793689936.0,
+   "mcap": 235610.14415378973,
+   "whale_usd": 870.9331424945221,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "J1pZjNKh4BnbXBsroE4acJv3TYzCGxTn46VrZii6orEZ",
+   "symbol": "XDG",
+   "ts": "2026-11-03T07:12:49",
+   "t": 1793689969.0,
+   "mcap": 116540.51195364445,
+   "whale_usd": 1247.59375,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8raCuxKBffZ5pQHFaHhWHCUoubgnZ9AZZJu7ugGuswrm",
+   "symbol": "DRAC",
+   "ts": "2026-11-03T07:14:24",
+   "t": 1793690064.0,
+   "mcap": 10424.48820953723,
+   "whale_usd": 297.0,
    "whale_type": "kol"
   }
  ]
