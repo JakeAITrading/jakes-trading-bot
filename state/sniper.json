@@ -3125,6 +3125,33 @@
    "mcap": 5640.238669002429,
    "whale_usd": 183.19860160374466,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8DB8Fw5UiC1AzugQAfRyw3qL8omw772LJbdehNWhpump",
+   "symbol": "OMBRO",
+   "ts": "2026-11-03T09:28:37",
+   "t": 1793698117.0,
+   "mcap": 230674.29027612126,
+   "whale_usd": 231.26661901430032,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "82CfUnavgMwUzY1UkUnWpqKMRPqoBuSb15VnEjn1yx9a",
+   "symbol": "MONEKO",
+   "ts": "2026-11-03T09:31:01",
+   "t": 1793698261.0,
+   "mcap": 13713.878273318742,
+   "whale_usd": 149.05,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3qjBR3LfzEAKVS6QXuR2QZ1RFUsXzATWvmjbGB5Dpump",
+   "symbol": "Jason",
+   "ts": "2026-11-03T09:31:21",
+   "t": 1793698281.0,
+   "mcap": 102012.48650534857,
+   "whale_usd": 247.38038351244393,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
