@@ -2315,7 +2315,12 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "closed": "take-profit filled at 0.000131609",
+   "sold_price": 0.0001316091251781,
+   "proceeds_usd": 6.701815,
+   "profit_usd": 1.7,
+   "rebuy_until": null
   }
  ],
  "skipped": [
@@ -2722,6 +2727,27 @@
    "status": "skipped: already pumped: +120% above 5-min low",
    "views": 432,
    "skipped_at": "2026-11-03T19:23:58Z"
+  },
+  {
+   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
+   "symbol": "Sexbot",
+   "whale_time": "2026-11-03T20:01:38",
+   "whale_type": "kol",
+   "whale_usd": 636.4786231748241,
+   "whale_mcap": 11236.025784455705,
+   "seen_after_s": 6.8,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.2265777513675857e-05,
+   "glance": {
+    "above_5m_low_pct": 277.7,
+    "this_minute_pct": 29.1
+   },
+   "status": "skipped: already pumped: +278% above 5-min low",
+   "explore": "rule: market cap out of range",
+   "views": 17,
+   "skipped_at": "2026-11-03T20:01:47Z"
   }
  ],
  "learning_log": [
@@ -7037,6 +7063,42 @@
    "mcap": 2094355.8171085394,
    "whale_usd": 7473.859499564903,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "AxPzkSJKU3ACqZu7qpq8ov29g4BENZBM4SAZwUUUFo8M",
+   "symbol": "Mag",
+   "ts": "2026-11-03T20:01:02",
+   "t": 1793736062.0,
+   "mcap": 92278.69382462934,
+   "whale_usd": 110.448432,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GYG9ezuhhUzq4p68K4a2phhHW9qZqTXaPimgp8NWpump",
+   "symbol": "SEXBOT",
+   "ts": "2026-11-03T20:01:05",
+   "t": 1793736065.0,
+   "mcap": 16245.247024926357,
+   "whale_usd": 465.8713717423257,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6d9fD5SxvN4DAG4SHQD8pebm8TM6XeSbYezPDjdapump",
+   "symbol": "PINO",
+   "ts": "2026-11-03T20:01:11",
+   "t": 1793736071.0,
+   "mcap": 89474.01191404498,
+   "whale_usd": 1369.965662299251,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3jmqCea4NHBQRNipsZesvqXjs5CAb4chhyMJ1zmupump",
+   "symbol": "DESLOPPIFY",
+   "ts": "2026-11-03T20:02:02",
+   "t": 1793736122.0,
+   "mcap": 7198.725143098272,
+   "whale_usd": 184.437554455836,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
