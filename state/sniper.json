@@ -2183,6 +2183,23 @@
    },
    "expected_avg_pct": 10.3,
    "expected_trades_in_samples": 32.0
+  },
+  {
+   "at": "2026-11-03T08:45:25Z",
+   "new_samples": 2,
+   "live_samples": 22,
+   "settings": {
+    "take_profit": 0.2,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.1,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 10.3,
+   "expected_trades_in_samples": 32.0
   }
  ],
  "observed": [
@@ -2898,5 +2915,6 @@
    "whale_type": "kol"
   }
  ],
- "orders_blocked_until": 1793750423.6364045
+ "orders_blocked_until": 1793750423.6364045,
+ "last_retarget": 1793695525.5730286
 }
