@@ -2957,6 +2957,15 @@
    "mcap": 29732.25431954678,
    "whale_usd": 583.279107218835,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "F8Sc8HoZvJcMrTY6vBsetTqGPv6XQmM2XgVAZo1sSTNK",
+   "symbol": "MARINE",
+   "ts": "2026-11-03T09:02:45",
+   "t": 1793696565.0,
+   "mcap": 170380.2240226501,
+   "whale_usd": 200.03101440488192,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
