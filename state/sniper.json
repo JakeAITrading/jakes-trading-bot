@@ -907,12 +907,13 @@
     "above_5m_low_pct": 19.6,
     "this_minute_pct": 16.8
    },
-   "status": "limit pending",
+   "status": "limit buy not filled in time, cancelled",
    "limit_price": 2.320042040082626e-05,
    "limit_order_id": "950b4949-712e-4a16-af12-d7ac2953033a",
    "limit_placed_at": "2026-11-03T06:00:07Z",
    "limit_expires": 1793685727.1324706,
-   "views": 20
+   "views": 20,
+   "closed": "limit buy not filled in time, cancelled"
   }
  ],
  "skipped": [
@@ -1156,6 +1157,15 @@
    "t": 1793685617.0,
    "mcap": 921004.4747919451,
    "whale_usd": 269.94775451843157,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump",
+   "symbol": "WASTED",
+   "ts": "2026-11-03T06:01:49",
+   "t": 1793685709.0,
+   "mcap": 1543244.0367363808,
+   "whale_usd": 30699.04160991184,
    "whale_type": "whale"
   }
  ]
