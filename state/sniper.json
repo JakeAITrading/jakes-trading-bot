@@ -3686,6 +3686,27 @@
    "explore": "rule: market cap out of range",
    "views": 37,
    "skipped_at": "2026-11-03T23:20:36Z"
+  },
+  {
+   "token_address": "7q84L3BMeekj1eGpLYQRAshV4mMwuWgVMbYMmWAMpump",
+   "symbol": "hypha",
+   "whale_time": "2026-11-03T23:31:31",
+   "whale_type": "kol",
+   "whale_usd": 457.9070014506326,
+   "whale_mcap": 42345.62584315427,
+   "seen_after_s": 3.4,
+   "usd": 5.0,
+   "take_profit_pct": 40.0,
+   "mode": "LIVE",
+   "price_when_seen": 4.119934237678535e-05,
+   "glance": {
+    "above_5m_low_pct": 1049.4,
+    "this_minute_pct": 196.1
+   },
+   "status": "skipped: already pumped: +1049% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 19,
+   "skipped_at": "2026-11-03T23:31:35Z"
   }
  ],
  "learning_log": [
@@ -11768,6 +11789,87 @@
    "t": 1793748447.0,
    "mcap": 7157.438736710709,
    "whale_usd": 182.74053561629935,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8Zb8hiu9Wxkucfbnq4x3SwqjUPZughdeMWsnMYRrhZFx",
+   "symbol": "ASTEROID",
+   "ts": "2026-11-03T23:28:36",
+   "t": 1793748516.0,
+   "mcap": 20987.443349440582,
+   "whale_usd": 121.58342400000001,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EK5r9SSiJ43sBaTrGim7Vwne9naR81gqpCenbSHApump",
+   "symbol": "TWUMP",
+   "ts": "2026-11-03T23:29:23",
+   "t": 1793748563.0,
+   "mcap": 8365.957000933122,
+   "whale_usd": 185.04232806906,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3HBKiCiQZ4Uw1F4tk8YM3E3YNSQNo9PN5VvboTCFJhfs",
+   "symbol": "Hypha",
+   "ts": "2026-11-03T23:30:09",
+   "t": 1793748609.0,
+   "mcap": 6107.587523729308,
+   "whale_usd": 295.6392218622889,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GdRSd232jRtLNaabCQST3xP2AD5gyfZsPmY7ofxF6Rn9",
+   "symbol": "Hypha",
+   "ts": "2026-11-03T23:30:39",
+   "t": 1793748639.0,
+   "mcap": 13059.203411103226,
+   "whale_usd": 467.24439348305106,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7fVpTd3cf4oKYZuhbnuuXmvHdMo4FYEWnPh1gYiopump",
+   "symbol": "hypha",
+   "ts": "2026-11-03T23:30:52",
+   "t": 1793748652.0,
+   "mcap": 10251.51323119644,
+   "whale_usd": 151.910028559949,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7q84L3BMeekj1eGpLYQRAshV4mMwuWgVMbYMmWAMpump",
+   "symbol": "hypha",
+   "ts": "2026-11-03T23:31:01",
+   "t": 1793748661.0,
+   "mcap": 13939.09587932285,
+   "whale_usd": 160.3341467970173,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3p1XAKNnkTZ1iXcW5xy4xMSq6nb4Y3gsGZpjUqMCpump",
+   "symbol": "AMC",
+   "ts": "2026-11-03T23:31:34",
+   "t": 1793748694.0,
+   "mcap": 43652.99325125026,
+   "whale_usd": 934.6255959213663,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5ubruMYpgKqw9ip5J1qrXbVGmMdn2VCsMg421B4bpump",
+   "symbol": "onboard",
+   "ts": "2026-11-03T23:31:34",
+   "t": 1793748694.0,
+   "mcap": 43167.299033333875,
+   "whale_usd": 462.47693174842493,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5XvbZrTnfUCLhUBxABtPn3ShM5Q1TefuDtNtptwapump",
+   "symbol": "Hypha",
+   "ts": "2026-11-03T23:32:35",
+   "t": 1793748755.0,
+   "mcap": 12207.083273096941,
+   "whale_usd": 216.53583663676764,
    "whale_type": "kol"
   }
  ],
