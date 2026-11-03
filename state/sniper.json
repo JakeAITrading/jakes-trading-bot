@@ -7028,6 +7028,15 @@
    "mcap": 37333.5242329631,
    "whale_usd": 22218.14112932947,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "WXMRyRZhsa19ety5erZhHg4N3xj3EVN92u94422teJp",
+   "symbol": "XMR",
+   "ts": "2026-11-03T20:00:20",
+   "t": 1793736020.0,
+   "mcap": 2094355.8171085394,
+   "whale_usd": 7473.859499564903,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793732662.8700163
