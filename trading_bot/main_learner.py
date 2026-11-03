@@ -208,3 +208,20 @@ def maybe_learn(client, cfg: dict) -> dict | None:
                  history=hist[-100:], note=None)
     _save(PARAMS, state)
     return p
+
+
+GO_LIVE_MIN_TRADES = 30      # qualifying samples under the learned settings
+GO_LIVE_MIN_AVG = 0.01       # expected +1% per trade after costs
+
+
+def live_allowed() -> tuple[bool, str]:
+    """The main strategy trades real money only while its learned settings are expected to make money."""
+    st = _load(PARAMS, {})
+    exp = st.get("expected") or {}
+    if not st.get("params"):
+        return False, st.get("note") or "nothing learned yet"
+    if exp.get("trades", 0) < GO_LIVE_MIN_TRADES:
+        return False, f"only {exp.get('trades', 0)} qualifying samples (need {GO_LIVE_MIN_TRADES})"
+    if exp.get("avg", 0) < GO_LIVE_MIN_AVG:
+        return False, f"expected {exp.get('avg', 0) * 100:+.1f}% per trade (need +{GO_LIVE_MIN_AVG * 100:.0f}%)"
+    return True, f"expected {exp['avg'] * 100:+.1f}% per trade over {exp['trades']} samples"

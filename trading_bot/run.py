@@ -9,6 +9,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import logging
+import os
 import sys
 
 from trading_bot import main_learner, store
@@ -40,6 +41,11 @@ def main() -> int:
         write_last_run(reason)
         return 0
     cfg = main_learner.apply(load_config())   # learned settings override config.yaml
+    if os.environ.get("MAIN_MODE", "auto").lower() == "auto":
+        # Self-learning go/no-go: real money only while the learner expects a profit.
+        ok, why = main_learner.live_allowed()
+        cfg.setdefault("trading", {})["dry_run"] = not ok
+        log.info("main strategy %s: %s", "LIVE" if ok else "practice", why)
     try:
         client = MobyClient(url=cfg.get("moby", {}).get("mcp_url"))
         engine = TradingEngine(client, cfg, store.load_state())

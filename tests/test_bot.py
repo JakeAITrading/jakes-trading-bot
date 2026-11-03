@@ -726,3 +726,14 @@ def test_main_learner_observe_apply(tmp_path):
     ml._save(ml.PARAMS, {"params": {**ml.start_params(cfg), "take_profit_pct": 20, "min_liquidity_usd": 50_000}})
     out = ml.apply(cfg)
     assert out["risk"]["take_profit_pct"] == 20 and out["strategy"]["min_liquidity_usd"] == 50_000
+
+
+def test_main_goes_live_only_when_learner_expects_profit():
+    from trading_bot import main_learner as ml
+    assert ml.live_allowed()[0] is False                                    # nothing learned
+    ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": 0.03, "trades": 12}})
+    assert ml.live_allowed()[0] is False                                    # too little data
+    ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": -0.02, "trades": 80}})
+    assert ml.live_allowed()[0] is False                                    # losing
+    ml._save(ml.PARAMS, {"params": {"x": 1}, "expected": {"avg": 0.02, "trades": 80}})
+    assert ml.live_allowed()[0] is True
