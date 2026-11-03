@@ -295,5 +295,26 @@
    },
    "status": "holding, take-profit set"
   }
+ ],
+ "skipped": [
+  {
+   "token_address": "HQUk9fNaMUn3jPGsbBKdbmWBF2D1JCc3VaoP5GGhpump",
+   "symbol": "Graft",
+   "whale_time": "2026-11-03T04:42:54",
+   "whale_type": "kol",
+   "whale_usd": 645.7898642412,
+   "whale_mcap": 24191.411284846254,
+   "seen_after_s": 1.8,
+   "usd": 5.0,
+   "take_profit_pct": 20.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.874121673812624e-05,
+   "glance": {
+    "above_5m_low_pct": 258.2,
+    "this_minute_pct": 98.6
+   },
+   "status": "skipped: already pumped: +258% above 5-min low",
+   "skipped_at": "2026-11-03T04:42:56Z"
+  }
  ]
 }
