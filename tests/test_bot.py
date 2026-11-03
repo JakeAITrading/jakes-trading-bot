@@ -294,8 +294,9 @@ def test_sniper_filters(sniper_dir):
     assert s.qualifies(whale_row(), now) is None
     assert s.qualifies(whale_row(age_s=60), now).startswith("too old")
     assert s.qualifies(whale_row(action="add"), now) == "not an opening buy"
-    assert s.qualifies(whale_row(token_market_cap=5e6), now) == "market cap out of range"
-    assert s.qualifies(whale_row(amount_usd=50), now) == "whale buy too small"
+    assert s.qualifies(whale_row(token_market_cap=5e6), now) == "rule: market cap out of range"
+    assert s.qualifies(whale_row(amount_usd=200), now) == "rule: whale buy too small"
+    assert s.qualifies(whale_row(amount_usd=50), now) == "outside what we observe"
     red = whale_row(); red["token"] = {**red["token"], "safety_tier": "red"}
     assert s.qualifies(red, now) == "red safety"
 
@@ -617,46 +618,68 @@ def test_no_rebuy_takes_profit_and_stops(sniper_dir):
     assert not s._watching()
 
 
-def test_learner_scores_and_raises_target_when_coins_run():
+def test_learner_optimizer_follows_the_money():
     from trading_bot import learner
-    faders = [{"max_pct": 0.11, "end_pct": -0.5}] * 10            # pop ~11% then crash
-    assert learner.best_tp(faders)[0] == 0.10
-    runners = faders + [{"max_pct": 0.6, "end_pct": 0.4, "w": 3.0}] * 10   # live coins running past target
-    assert learner.best_tp(runners)[0] >= 0.40
+    fade = {"runup": 0.1, "spike": 0.0, "low3": 0.99, "high": 1.16, "end": 0.5, "mcap": 100_000, "whale_usd": 500,
+            "whale_type": "kol"}
+    run = {"runup": 0.1, "spike": 0.0, "low3": 0.99, "high": 1.8, "end": 1.5, "mcap": 100_000, "whale_usd": 500,
+           "whale_type": "whale"}
+    p, r = learner.optimize([fade] * 20)
+    assert p["take_profit"] == 0.15 and r["avg"] > 0             # pops to +16% then crashes: sell just under
+    p, r = learner.optimize([fade] * 5 + [run] * 30)
+    assert p["take_profit"] >= 0.40                               # mostly runners: raise the target
+    p, r = learner.optimize([{**fade, "high": 1.02}] * 20 + [run] * 20)
+    assert p["whale_type"] == "whale"                             # learns who to follow
+    late = {**run, "low3": 1.08}                                  # price only comes back to +8%
+    p, _ = learner.optimize([late] * 30)
+    assert p["limit_cushion"] >= 0.10                             # learns to bid higher to get filled
 
 
-def test_learner_collects_matured_samples(sniper_dir, monkeypatch):
-    import time, datetime as dt
+def test_learner_collects_observations(sniper_dir, monkeypatch):
+    import time
     from trading_bot import learner
-    old = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    new = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    t0 = dt.datetime.fromisoformat(old.replace("Z", "")).replace(tzinfo=dt.timezone.utc).timestamp()
+    t0 = time.time() - 3 * 3600
 
     class C:
         def call_tool(self, name, args=None):
-            return {"t": [int((t0 + 60) * 1000), int((t0 + 120) * 1000)], "h": [1.3, 1.1], "c": [1.2, 0.9]}
-    L = learner.Learner(C())
+            ts = [int((t0 - 120) * 1000), int(t0 * 1000) // 60000 * 60000, int((t0 + 120) * 1000)]
+            return {"t": ts, "o": [1.0, 1.0, 1.1], "h": [1.0, 1.1, 1.5], "l": [0.8, 0.95, 1.0], "c": [1.0, 1.0, 1.2]}
     monkeypatch.setattr(learner.time, "sleep", lambda s: None)
-    state = {"trades": [{"mode": "LIVE", "token_address": "A", "symbol": "A", "entry_price": 1.0, "bought_at": old},
-                        {"mode": "LIVE", "token_address": "B", "symbol": "B", "entry_price": 1.0, "bought_at": new}],
-             "skipped": []}
-    assert L.collect(state) == 1                     # only the trade that is 2h+ old
-    assert L.live[0]["max_pct"] == 0.3 and L.live[0]["end_pct"] == -0.1
-    assert L.collect(state) == 0                     # not counted twice
+    L = learner.Learner(C())
+    state = {"observed": [{"token_address": "A", "symbol": "A", "ts": "x", "t": t0, "mcap": 1e5,
+                           "whale_usd": 300, "whale_type": "kol"},
+                          {"token_address": "B", "symbol": "B", "ts": "y", "t": time.time(), "mcap": 1e5,
+                           "whale_usd": 300, "whale_type": "kol"}]}
+    assert L.collect(state) == 1                                  # only the 2h+ old one
+    s = L.live[0]
+    assert s["high"] == 1.5 and s["end"] == 1.2 and s["runup"] == 0.25 and s["whale_type"] == "kol"
+    assert L.collect(state) == 0
 
 
-def test_sniper_learn_moves_open_orders(sniper_dir, monkeypatch):
+def test_sniper_learn_applies_settings(sniper_dir, monkeypatch):
     s = sniper.Sniper(SniperMoby(), 5, 10, 20, dry_run=False)
 
     class FakeLearner:
-        live = []
+        live, params = [], {}
         def collect(self, state): return 0
-        def choose(self): return 0.2, {0.2: 0.01}
+        def choose(self):
+            return ({"take_profit": 0.2, "limit_cushion": 0.0, "max_runup": None, "max_spike": 0.4,
+                     "min_mcap": 50_000, "max_mcap": 500_000, "min_whale_usd": 500, "whale_type": "whale"},
+                    {"avg": 0.03, "trades": 20})
     s.learner = FakeLearner()
     moved = []
     monkeypatch.setattr(s, "retarget", lambda: moved.append(s.tp))
     s.learn()
-    assert s.tp == 0.2 and moved == [0.2]
+    assert s.tp == 0.2 and moved == [0.2] and s.whale_type == "whale" and s.max_runup is None
+    assert s.state["learning_log"][-1]["settings"]["min_mcap"] == 50_000
+
+
+def test_observe_logs_whale_buys(sniper_dir):
+    s = sniper.Sniper(SniperMoby(), 5, 10, 20, dry_run=False)
+    s.observe(whale_row())
+    s.observe(whale_row())                                        # same coin within 10 min: once
+    s.observe(whale_row(amount_usd=50))                           # too small to learn from
+    assert len(s.state["observed"]) == 1 and s.state["observed"][0]["whale_type"] == "whale"
 
 
 def test_sells_now_when_moby_says_target_below_price(sniper_dir):

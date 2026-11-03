@@ -25,12 +25,16 @@ Stops when --trades buys are done, or immediately if a STOP / REMOTE_STOP file e
 from __future__ import annotations
 
 import argparse
+import random
 import datetime as dt
 import json
 import logging
 import time
 
 from trading_bot.learner import Learner
+
+OBSERVE_MCAP = (5_000, 10_000_000)   # whale buys logged for learning (wider than what we trade)
+OBSERVE_MIN_USD = 100
 from trading_bot.moby_client import MobyClient, MobyError
 from trading_bot.settings import ROOT, load_env
 from trading_bot.store import _path
@@ -82,7 +86,8 @@ class Sniper:
         self.rebuy_always = True
         self.rebuy_enabled = True   # --no-rebuy: take the profit and keep the cash for the next whale signal
         self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min
-        self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning take-profit   # re-buy right after every +tp% sale (False = only if still rising)
+        self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning settings
+        self.whale_type, self.explore = "any", 0.2   # explore: share of rule-failing signals traded anyway
 
     def call(self, tool: str, args: dict | None = None):
         for _ in range(4):
@@ -95,14 +100,11 @@ class Sniper:
         raise MobyError(f"{tool}: still rate limited")
 
     def qualifies(self, row: dict, now: float) -> str | None:
+        """None = trade. Reasons starting with "rule:" come from learned settings; exploration may
+        override those. Other reasons are hard limits."""
         tok = row.get("token") or {}
         if row.get("transaction_type") != "buy" or row.get("action") != "first_buy":
             return "not an opening buy"
-        if (row.get("amount_usd") or 0) < self.min_whale_usd:
-            return "whale buy too small"
-        mcap = row.get("token_market_cap") or 0
-        if not (self.min_mcap <= mcap <= self.max_mcap):
-            return "market cap out of range"
         if tok.get("safety_tier") == "red":
             return "red safety"
         if tok.get("token_address") in sniper_tokens():
@@ -110,7 +112,31 @@ class Sniper:
         age = now - dt.datetime.fromisoformat(row["timestamp"]).replace(tzinfo=dt.timezone.utc).timestamp()
         if age > self.max_age:
             return f"too old ({age:.0f}s)"
+        mcap = row.get("token_market_cap") or 0
+        if not (OBSERVE_MCAP[0] <= mcap <= OBSERVE_MCAP[1]) or (row.get("amount_usd") or 0) < OBSERVE_MIN_USD:
+            return "outside what we observe"
+        if (row.get("amount_usd") or 0) < self.min_whale_usd:
+            return "rule: whale buy too small"
+        if not (self.min_mcap <= mcap <= self.max_mcap):
+            return "rule: market cap out of range"
+        if self.whale_type != "any" and row.get("wallet_list_type") != self.whale_type:
+            return f"rule: not a {self.whale_type} buy"
         return None
+
+    def observe(self, row: dict) -> None:
+        """Log every whale opening buy we can see, traded or not, so the learner can study it later."""
+        tok = row.get("token") or {}
+        mcap = row.get("token_market_cap") or 0
+        if (row.get("transaction_type") != "buy" or row.get("action") != "first_buy" or tok.get("safety_tier") == "red"
+                or not (OBSERVE_MCAP[0] <= mcap <= OBSERVE_MCAP[1]) or (row.get("amount_usd") or 0) < OBSERVE_MIN_USD):
+            return
+        t = dt.datetime.fromisoformat(row["timestamp"]).replace(tzinfo=dt.timezone.utc).timestamp()
+        obs = self.state.setdefault("observed", [])
+        if any(o["token_address"] == tok.get("token_address") and abs(o["t"] - t) < 600 for o in obs[-200:]):
+            return  # one sample per coin per 10 minutes
+        obs.append({"token_address": tok.get("token_address"), "symbol": tok.get("symbol"), "ts": row["timestamp"],
+                    "t": t, "mcap": mcap, "whale_usd": row.get("amount_usd"), "whale_type": row.get("wallet_list_type")})
+        self.state["observed"] = obs[-3000:]
 
     def glance(self, token: str) -> tuple[str | None, dict]:
         """Quick look at the chart before buying (one call, ~0.2s). Returns (reason to skip, numbers).
@@ -124,9 +150,9 @@ class Sniper:
         low5 = min(c["l"])
         info = {"above_5m_low_pct": round((price / low5 - 1) * 100, 1) if low5 else None,
                 "this_minute_pct": round((price / cur_open - 1) * 100, 1) if cur_open else None}
-        if low5 and price / low5 - 1 > self.max_runup:
+        if self.max_runup is not None and low5 and price / low5 - 1 > self.max_runup:
             return f"already pumped: +{info['above_5m_low_pct']:.0f}% above 5-min low", info
-        if cur_open and price / cur_open - 1 > self.max_spike:
+        if self.max_spike is not None and cur_open and price / cur_open - 1 > self.max_spike:
             return f"mid-spike: +{info['this_minute_pct']:.0f}% this minute", info
         return None, info
 
@@ -161,6 +187,8 @@ class Sniper:
         price_seen = self.call("get_token_price", {"token_address": token}).get("price_usd")
         rec["price_when_seen"] = price_seen
         skip, rec["glance"] = self.glance(token) if self.look_first else (None, {})
+        if skip and random.random() < self.explore:
+            rec["explore"], skip = skip, None   # trade it anyway so the learner sees this kind of coin
         if skip:
             rec["status"] = f"skipped: {skip}"
             return rec
@@ -379,23 +407,31 @@ class Sniper:
             log.info("%s: %s", sym, rec["status"])
             save(self.state)
 
+    def apply(self, p: dict) -> None:
+        self.tp, self.limit_cushion = p["take_profit"], p["limit_cushion"]
+        self.max_runup, self.max_spike = p["max_runup"], p["max_spike"]
+        self.min_mcap, self.max_mcap = p["min_mcap"], p["max_mcap"]
+        self.min_whale_usd, self.whale_type = p["min_whale_usd"], p["whale_type"]
+
     def learn(self) -> None:
-        """Self-learning take-profit: learn from matured trades/skips, adopt the best-scoring target,
-        and move every open take-profit to it when it changes."""
+        """Self-learning: learn from matured observations, adopt the settings with the best expected
+        total profit, and move open take-profits when the target changes."""
         added = self.learner.collect(self.state)
-        tp, scores = self.learner.choose()
+        old_tp, old = self.tp, dict(self.learner.params)
+        p, exp = self.learner.choose()
+        self.apply(p)
         entry = {"at": _iso(_now()), "new_samples": added, "live_samples": len(self.learner.live),
-                 "chosen_tp_pct": round(tp * 100), "scores_pct": {f"{k*100:.0f}": round(v * 100, 1) for k, v in scores.items()}}
+                 "settings": p, "expected_avg_pct": round(exp.get("avg", 0) * 100, 1),
+                 "expected_trades_in_samples": round(exp.get("trades", 0), 1)}
         hist = self.state.setdefault("learning_log", [])
-        if not hist or hist[-1]["chosen_tp_pct"] != entry["chosen_tp_pct"] or added:
+        if not hist or hist[-1].get("settings") != p or added:
             hist.append(entry)
-            self.state["learning_log"] = hist[-200:]
+            self.state["learning_log"] = hist[-300:]
             save(self.state)
-        if abs(tp - self.tp) > 1e-9:
-            log.info("learned: take-profit %+.0f%% -> %+.0f%% (%d live samples)", self.tp * 100, tp * 100, len(self.learner.live))
-            self.tp = tp
-            if not self.dry_run:
-                self.retarget()
+        if p != old:
+            log.info("learned settings: %s (expected %+.1f%% per trade)", p, exp.get("avg", 0) * 100)
+        if abs(self.tp - old_tp) > 1e-9 and not self.dry_run:
+            self.retarget()
 
     def _watching(self) -> bool:
         """Keep running while a live position could still sell and be re-bought."""
@@ -443,7 +479,10 @@ class Sniper:
             for r in rows:
                 self.seen.add(r["id"])
             for r in sorted(rows, key=lambda r: r["timestamp"]):
-                if self.qualifies(r, now) is None and done < trades:
+                self.observe(r)
+                why = self.qualifies(r, now)
+                explore = bool(why and why.startswith("rule:") and random.random() < self.explore)
+                if (why is None or explore) and done < trades:
                     why_not = self.can_buy()
                     if why_not:
                         log.info("skip whale buy in %s: %s", r["token"].get("symbol"), why_not)
@@ -451,6 +490,8 @@ class Sniper:
                     log.info("whale %s opened $%.0f in %s (mcap $%.0f): buying", r.get("wallet_list_type"),
                              r.get("amount_usd", 0), r["token"].get("symbol"), r.get("token_market_cap", 0))
                     rec = self.trade(r, now)
+                    if explore:
+                        rec["explore"] = why
                     rec["views"] = self.views(rec["token_address"])
                     if rec.get("status", "").startswith("skipped"):
                         log.info("skip %s: %s", rec["symbol"], rec["status"])
@@ -462,6 +503,8 @@ class Sniper:
                     save(self.state)
                     log.info("trade: %s", json.dumps({k: v for k, v in rec.items() if k not in ("tp_order", "sell")}, default=str))
                     done += 1
+            if rows:
+                save(self.state)
             after = _iso(now - 30)
             time.sleep(poll)
         log.info("finished: %d trades", done)
@@ -481,7 +524,8 @@ def main() -> None:
     ap.add_argument("--market-buy", action="store_true", help="whale buys at market instead of a limit order")
     ap.add_argument("--limit-cushion", type=float, default=5, help="limit price = price seen + this %%")
     ap.add_argument("--limit-wait", type=float, default=120, help="cancel an unfilled limit buy after this many seconds")
-    ap.add_argument("--no-learn", action="store_true", help="fixed --take-profit instead of the self-learning target")
+    ap.add_argument("--no-learn", action="store_true", help="fixed settings instead of self-learning")
+    ap.add_argument("--explore", type=float, default=20, help="%% of signals failing learned rules traded anyway")
     ap.add_argument("--no-rebuy", action="store_true",
                     help="never buy back after a take-profit (history: lost less at every target)")
     ap.add_argument("--rebuy-if-rising", action="store_true",
@@ -500,8 +544,9 @@ def main() -> None:
     s.look_first, s.max_runup, s.max_spike = not a.no_look, a.max_runup / 100, a.max_spike / 100
     s.rebuy_always = not a.rebuy_if_rising
     s.rebuy_enabled = not a.no_rebuy
+    s.explore = a.explore / 100
     if not a.no_learn:
-        s.learner = Learner(s.c)   # starts from --take-profit, then adopts the learned target
+        s.learner = Learner(s.c)   # every setting is learned; command-line values are only the start
     s.limit_cushion = None if a.market_buy else a.limit_cushion / 100
     s.limit_wait = a.limit_wait
     if a.retarget and not a.dry_run:
