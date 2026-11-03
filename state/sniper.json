@@ -165,7 +165,12 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "holding, take-profit moved to +12%",
+   "closed": "take-profit filled at 0.00023804",
+   "sold_price": 0.0002380399632585,
+   "proceeds_usd": 5.721146,
+   "profit_usd": 0.72,
+   "rebuy_until": null
   },
   {
    "token_address": "GKrbz5JYG6o36T8NRxxPp7Dsn6DEtkD7gsnLc1sNpump",
@@ -1288,6 +1293,33 @@
    "mcap": 20044.426491949707,
    "whale_usd": 154.7409973592469,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "E7ayy5Se6gjwCNtw9NP629AucnTgqab4SSmSxDpUpump",
+   "symbol": "WIF",
+   "ts": "2026-11-03T06:19:40",
+   "t": 1793686780.0,
+   "mcap": 185891.53011997326,
+   "whale_usd": 180.07866816498407,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "5Zke3gk1ByYGwAjiFpqYT65WG5fTdSQ1ErwWo5JApump",
+   "symbol": "WarPup",
+   "ts": "2026-11-03T06:20:58",
+   "t": 1793686858.0,
+   "mcap": 5445.40080227307,
+   "whale_usd": 136.388439685781,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HcfnJxLov6tY8i1dq9uYRRZKCvxADPpovcfkyXzdpump",
+   "symbol": "Chonketha",
+   "ts": "2026-11-03T06:21:36",
+   "t": 1793686896.0,
+   "mcap": 1432195.8478235742,
+   "whale_usd": 4370.171815104086,
+   "whale_type": "whale"
   }
  ]
 }
