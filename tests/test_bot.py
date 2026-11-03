@@ -264,6 +264,7 @@ class SniperMoby:
                           "filled_input_amount_ui": 5.0},
             "get_my_token_balance": {"balance_token_amount": 3990.0},
             "get_my_balances": {"usd_token": {"quantity": 50.0}},
+            "get_token_ohlcv": {"o": [1.0, 1.0], "c": [1.05, 1.0], "l": [1.0, 0.95], "h": [1.06, 1.0]},
             "create_order": self.tp_reply,
             "quick_sell": {"status": "ok"},
         }[name]
@@ -302,8 +303,8 @@ def test_sniper_buys_5_and_sets_take_profit_25(sniper_dir):
     import time
     moby = SniperMoby()
     rec = sniper.Sniper(moby, 5, 25, 20, dry_run=False).trade(whale_row(), time.time())
-    assert ("quick_buy", {"output_token": "TOK", "amount_usd": 5,
-                          "rationale": moby.calls[1][1]["rationale"]}) in moby.calls
+    buy = [a for n, a in moby.calls if n == "quick_buy"]
+    assert len(buy) == 1 and buy[0]["output_token"] == "TOK" and buy[0]["amount_usd"] == 5
     order = [a for n, a in moby.calls if n == "create_order"][0]
     assert order["order_type"] == "tp_only" and order["amount"] == 3990.0
     assert order["take_profit_price"] == pytest.approx(5 / 4000 * 1.25)
@@ -409,3 +410,25 @@ def test_sniper_own_limits(sniper_dir):
 def test_sniper_rebuy_has_no_cap_by_default(sniper_dir):
     s = sniper.Sniper(SniperMoby(), 5, 20, 20, dry_run=False)
     assert s.max_rebuys == 0
+
+
+def test_sniper_glance_skips_pumped_and_spiking(sniper_dir):
+    class M(SniperMoby):
+        def __init__(self, candles):
+            super().__init__()
+            self.candles = candles
+
+        def call_tool(self, name, args=None):
+            if name == "get_token_ohlcv":
+                return self.candles
+            return super().call_tool(name, args)
+    calm = {"o": [1.0, 0.98], "c": [1.05, 1.0], "l": [0.97, 0.95]}
+    pumped = {"o": [2.4, 2.0], "c": [2.5, 2.4], "l": [2.3, 1.0]}     # +150% above the 5-min low
+    spiking = {"o": [1.0, 0.98], "c": [1.3, 1.0], "l": [0.97, 0.95]}  # +30% this minute
+    import time
+    assert sniper.Sniper(M(calm), 5, 20, 20, dry_run=False).glance("T")[0] is None
+    assert sniper.Sniper(M(pumped), 5, 20, 20, dry_run=False).glance("T")[0].startswith("already pumped")
+    assert sniper.Sniper(M(spiking), 5, 20, 20, dry_run=False).glance("T")[0].startswith("mid-spike")
+    moby = M(pumped)
+    rec = sniper.Sniper(moby, 5, 20, 20, dry_run=False).trade(whale_row(), time.time())
+    assert rec["status"].startswith("skipped") and not any(n == "quick_buy" for n, _ in moby.calls)
