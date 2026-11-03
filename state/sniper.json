@@ -1740,6 +1740,24 @@
    "mcap": 9940.028576238547,
    "whale_usd": 249.05,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "CJBjiBstjUoPwuVVeQZPUWr59feYBqKF3tdBmLVypump",
+   "symbol": "OWL",
+   "ts": "2026-11-03T06:56:05",
+   "t": 1793688965.0,
+   "mcap": 12506.77178177284,
+   "whale_usd": 249.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8J69rbLTzWWgUJziFY8jeu5tDwEPBwUz4pKBMr5rpump",
+   "symbol": "WOJAK",
+   "ts": "2026-11-03T06:56:26",
+   "t": 1793688986.0,
+   "mcap": 1269158.0858815878,
+   "whale_usd": 411.39995324700226,
+   "whale_type": "whale"
   }
  ]
 }
