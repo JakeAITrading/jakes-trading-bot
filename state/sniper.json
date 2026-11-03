@@ -604,6 +604,30 @@
     "failed_leg": null,
     "failed_leg_error": null
    }
+  },
+  {
+   "token_address": "9DwPa8v7DTCgPWEgXbCLeg7F5FpruHHTHCsNnjR9pump",
+   "symbol": "WORKER",
+   "whale_time": "2026-11-03T05:15:27",
+   "whale_type": "whale",
+   "whale_usd": 450.6618064448763,
+   "whale_mcap": 42795.077789291245,
+   "seen_after_s": 2.8,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 4.4659856939688325e-05,
+   "glance": {
+    "above_5m_low_pct": 97.5,
+    "this_minute_pct": 5.4
+   },
+   "status": "limit buy not filled in time, cancelled",
+   "limit_price": 4.689284978667274e-05,
+   "limit_order_id": "23ab6d6a-54b6-4ab4-bbca-0226d0b4e385",
+   "limit_placed_at": "2026-11-03T05:15:40Z",
+   "limit_expires": 1793683060.1928837,
+   "views": 55,
+   "closed": "limit buy not filled in time, cancelled"
   }
  ],
  "skipped": [
