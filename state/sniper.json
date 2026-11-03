@@ -2421,6 +2421,15 @@
    "mcap": 715738.8767367421,
    "whale_usd": 978.30225,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
+   "symbol": "RATIO",
+   "ts": "2026-11-03T08:07:23",
+   "t": 1793693243.0,
+   "mcap": 47443.309546546494,
+   "whale_usd": 450.14840579824573,
+   "whale_type": "kol"
   }
  ]
 }
