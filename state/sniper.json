@@ -2421,6 +2421,23 @@
    },
    "expected_avg_pct": 8.8,
    "expected_trades_in_samples": 163.0
+  },
+  {
+   "at": "2026-11-03T11:12:38Z",
+   "new_samples": 5,
+   "live_samples": 87,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 8.2,
+   "expected_trades_in_samples": 172.0
   }
  ],
  "observed": [
