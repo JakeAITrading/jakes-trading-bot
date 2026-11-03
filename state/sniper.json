@@ -2992,6 +2992,33 @@
    "mcap": 7319.268206629204,
    "whale_usd": 103.876503,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "DjCbGtTx4jPidEaC2XY6WyNsa2o1j3ZLtPvEeNjesxmr",
+   "symbol": "OMBROCAT",
+   "ts": "2026-11-03T09:08:57",
+   "t": 1793696937.0,
+   "mcap": 5468.626113724895,
+   "whale_usd": 186.35061996614527,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FxQ5GbqCBxNHDpFTpiL9RDVHiP58ar5nMkR3eMwepump",
+   "symbol": "UNPOOLED",
+   "ts": "2026-11-03T09:09:59",
+   "t": 1793696999.0,
+   "mcap": 56154.87333555221,
+   "whale_usd": 454.33380594868777,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3sKZuSZF7onqPYFrWu3bH4Lh141duydt9MAmSd46jaLJ",
+   "symbol": "ZILLIONS",
+   "ts": "2026-11-03T09:10:30",
+   "t": 1793697030.0,
+   "mcap": 62053.87838153129,
+   "whale_usd": 760.0,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
