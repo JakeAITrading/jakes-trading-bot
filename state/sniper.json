@@ -1447,6 +1447,29 @@
    "limit_expires": 1793689915.7601373,
    "views": 489,
    "closed": "limit buy not filled in time, cancelled"
+  },
+  {
+   "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
+   "symbol": "RATIO",
+   "whale_time": "2026-11-03T07:24:29",
+   "whale_type": "kol",
+   "whale_usd": 900.1067530623565,
+   "whale_mcap": 43613.599791849476,
+   "seen_after_s": 1.8,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 4.421490302775055e-05,
+   "glance": {
+    "above_5m_low_pct": 130.6,
+    "this_minute_pct": 16.2
+   },
+   "status": "limit pending",
+   "limit_price": 4.421490302775055e-05,
+   "limit_order_id": "df5744da-f348-42e5-948c-8fbc38ca3dec",
+   "limit_placed_at": "2026-11-03T07:24:37Z",
+   "limit_expires": 1793690797.3349206,
+   "views": 28
   }
  ],
  "skipped": [
@@ -1996,6 +2019,33 @@
    "t": 1793690310.0,
    "mcap": 16933.18336037919,
    "whale_usd": 349.05000000000007,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9X5UwHT7gWSPtAH5yeEzrLHqv3Nedmhy3HyZN3Yspump",
+   "symbol": "PumpFun",
+   "ts": "2026-11-03T07:23:38",
+   "t": 1793690618.0,
+   "mcap": 48146.80442761125,
+   "whale_usd": 742.96695,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
+   "symbol": "RATIO",
+   "ts": "2026-11-03T07:24:23",
+   "t": 1793690663.0,
+   "mcap": 41845.175631016966,
+   "whale_usd": 180.0213505757404,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DRT1qMpU1aCiPL5vvkPvhRvyaq944KDaJbPNNBu4pump",
+   "symbol": "WALXE",
+   "ts": "2026-11-03T07:25:25",
+   "t": 1793690725.0,
+   "mcap": 5261.995283944998,
+   "whale_usd": 125.28343700000005,
    "whale_type": "kol"
   }
  ]
