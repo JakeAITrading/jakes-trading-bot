@@ -8714,6 +8714,69 @@
    "mcap": 15791.200708445504,
    "whale_usd": 463.9549558362564,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "5LGzqBduhJegynd2ey146ZhYPa5mtvfDC2txyckYpump",
+   "symbol": "FOMO",
+   "ts": "2026-11-03T21:37:12",
+   "t": 1793741832.0,
+   "mcap": 9305.75424717972,
+   "whale_usd": 139.1164285280715,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9Biau19dgxK7JZ2Ytj5eSgFSxXM8AKhNLkPEbfuEpump",
+   "symbol": "FGC",
+   "ts": "2026-11-03T21:37:46",
+   "t": 1793741866.0,
+   "mcap": 8577.222615713254,
+   "whale_usd": 130.7565604438212,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2yn94CZ3Qe3iwaEgfABYE9uAN18FAWNTKDuFXR6qpump",
+   "symbol": "3",
+   "ts": "2026-11-03T21:38:27",
+   "t": 1793741907.0,
+   "mcap": 6356.927315209759,
+   "whale_usd": 407.6101015374664,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7wV64ekzJzhz48oR35LrN2tZr82Uumd3MGiTdsmMpump",
+   "symbol": "ICOIN",
+   "ts": "2026-11-03T21:38:48",
+   "t": 1793741928.0,
+   "mcap": 5443.159807327902,
+   "whale_usd": 284.1234220333428,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DbS6v8rR4v29w2yHR7tST4rSzxB1jz7Kbhxtkbpkpump",
+   "symbol": "HANS",
+   "ts": "2026-11-03T21:38:49",
+   "t": 1793741929.0,
+   "mcap": 6026.769369782414,
+   "whale_usd": 140.68187252703603,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9SVmVqEqs4h11UsNSEf5Ab7nojk3necu5Maa85eUpump",
+   "symbol": "AMD",
+   "ts": "2026-11-03T21:39:26",
+   "t": 1793741966.0,
+   "mcap": 5432.2072173818015,
+   "whale_usd": 125.16130236348154,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "B7h7XLtQMTWMNTzrt35TnRVixsi93vCpDuGLK4Rzcash",
+   "symbol": "ZDOG",
+   "ts": "2026-11-03T21:40:03",
+   "t": 1793742003.0,
+   "mcap": 8276.429735673131,
+   "whale_usd": 366.05000000000007,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793740440.6549516
