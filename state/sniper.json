@@ -1301,7 +1301,12 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "closed": "take-profit filled at 1.9527e-05",
+   "sold_price": 1.95269662999e-05,
+   "proceeds_usd": 5.338578,
+   "profit_usd": 0.34,
+   "rebuy_until": null
   }
  ],
  "skipped": [
@@ -1707,6 +1712,15 @@
    "t": 1793688284.0,
    "mcap": 225994.56506813862,
    "whale_usd": 2269.82185481871,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AcmQaFzhiy8JGfg1D95Fc1BULBDJqTMJC4U1gf9ZACSK",
+   "symbol": "MANIFEST",
+   "ts": "2026-11-03T06:48:29",
+   "t": 1793688509.0,
+   "mcap": 22312.39341199398,
+   "whale_usd": 112.9192509039829,
    "whale_type": "kol"
   }
  ]
