@@ -1476,7 +1476,12 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "take_profit_price": 0.0003358166804411737
+   "take_profit_price": 0.0003358166804411737,
+   "closed": "take-profit filled at 0.000334138",
+   "sold_price": 0.0003341380453461,
+   "proceeds_usd": 0.45674,
+   "profit_usd": 0.03,
+   "rebuy_until": null
   },
   {
    "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
