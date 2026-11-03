@@ -1022,12 +1022,53 @@
     "this_minute_pct": 89.5
    },
    "explore": "rule: market cap out of range",
-   "status": "limit pending",
+   "status": "sold immediately (already past take-profit)",
    "limit_price": 1.2707662790489849e-05,
    "limit_order_id": "152ad14a-d4be-4b98-9916-444d18b9812c",
    "limit_placed_at": "2026-11-03T06:24:26Z",
    "limit_expires": 1793687186.1995208,
-   "views": 17
+   "views": 17,
+   "entry_price": 1.24037064178e-05,
+   "spent_usd": 4.998502433300018,
+   "tokens": 403105.316393,
+   "bought_at": "2026-11-03 06:25:31",
+   "entry_vs_seen_pct": -2.4,
+   "take_profit_price": 1.3892151187936001e-05,
+   "sell": {
+    "simulated": false,
+    "network": "solana",
+    "funding_network": "solana",
+    "output_token": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "amount_usd": null,
+    "amount_in": null,
+    "input_token": "5Zke3gk1ByYGwAjiFpqYT65WG5fTdSQ1ErwWo5JApump",
+    "input_token_symbol": "WarPup",
+    "input_amount": 403105.316393,
+    "quote_id": "628bc4ca-7fcd-4e83-9c17-edd5e6272f4e",
+    "status": "Success",
+    "transaction_signature": "2y8btwgYSb24ju3ejbwZCRyuqNw9VK1ExcDvWXqY1V2Jg445b7U47iqhc38MSeB1e6bJxQbR5Y2CykDpLwmUzqKM",
+    "explorer_url": "https://solscan.io/tx/2y8btwgYSb24ju3ejbwZCRyuqNw9VK1ExcDvWXqY1V2Jg445b7U47iqhc38MSeB1e6bJxQbR5Y2CykDpLwmUzqKM",
+    "output_decimals": 6,
+    "quoted_output_amount": 5774882.0,
+    "quoted_output_amount_ui": 5.774882,
+    "minimum_output_amount": 4619906.0,
+    "minimum_output_amount_ui": 4.619906,
+    "filled_input_amount": null,
+    "filled_input_amount_ui": null,
+    "filled_output_amount": null,
+    "filled_output_amount_ui": null,
+    "effective_slippage_bps": null,
+    "fill_pending": true,
+    "slippage_bps": 2000,
+    "fee_bps": 1446,
+    "next_step": null,
+    "sold_amount": 403105.316393,
+    "pct": 100.0,
+    "cancelled_order_ids": [],
+    "cancel_failed_order_ids": [],
+    "cancel_pending_order_ids": [],
+    "cancel_note": null
+   }
   }
  ],
  "skipped": [
@@ -1344,6 +1385,15 @@
    "mcap": 1432195.8478235742,
    "whale_usd": 4370.171815104086,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "48twaXGRQFUmDXpm23LZD2KYur4qDTXj2xjwGvi9SEVB",
+   "symbol": "SC",
+   "ts": "2026-11-03T06:24:50",
+   "t": 1793687090.0,
+   "mcap": 23348.144168267027,
+   "whale_usd": 135.305374,
+   "whale_type": "kol"
   }
  ]
 }
