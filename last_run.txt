@@ -1,1 +1,1 @@
-2026-11-03T11:53:37Z FAILED: Moby tool error: Error executing tool get_my_guardrails: Moby's rate limit for this API key has been hit. STOP calling Moby tools for about 726 minutes (43582 seconds), then try again. Retrying sooner will just fail again and may extend the limit.
+2026-11-03T11:58:43Z FAILED: Moby tool error: Error executing tool get_my_guardrails: Moby's rate limit for this API key has been hit. STOP calling Moby tools for about 721 minutes (43276 seconds), then try again. Retrying sooner will just fail again and may extend the limit.
