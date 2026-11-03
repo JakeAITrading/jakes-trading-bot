@@ -262,7 +262,7 @@
    "rebuy_of": "2026-11-03T04:22:23Z",
    "rebuys": 1,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "price_when_seen": 2.5229284801753238e-05,
    "buy_response": {
     "status": "Success",
@@ -277,11 +277,11 @@
    "spent_usd": 5.0,
    "entry_price": 3.152074716224308e-05,
    "entry_vs_seen_pct": 24.9,
-   "take_profit_price": 4.4129046027140314e-05,
+   "take_profit_price": 4.7281120743364624e-05,
    "tp_order": {
-    "order_id": "d8ecd0a0-2962-4bcf-8677-2db83428fbb1",
+    "order_id": "8fdc12e8-2df1-46bb-81ba-b5879649ab78",
     "order_ids": [
-     "d8ecd0a0-2962-4bcf-8677-2db83428fbb1"
+     "8fdc12e8-2df1-46bb-81ba-b5879649ab78"
     ],
     "network": "solana",
     "funding_network": null,
@@ -290,7 +290,7 @@
     "amount": 158625.6815,
     "input_token": "GKrbz5JYG6o36T8NRxxPp7Dsn6DEtkD7gsnLc1sNpump",
     "input_token_symbol": null,
-    "take_profit_price": 4.4129046027140314e-05,
+    "take_profit_price": 4.7281120743364624e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -304,7 +304,7 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "note": "too small to sell (fees exceed proceeds); left with its take-profit order"
   },
   {
@@ -316,7 +316,7 @@
    "whale_mcap": 25176.55287435142,
    "seen_after_s": 5.2,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 2.4957464120234363e-05,
    "glance": {
@@ -336,11 +336,11 @@
    "spent_usd": 5.0,
    "entry_price": 3.566174103129802e-05,
    "entry_vs_seen_pct": 42.9,
-   "take_profit_price": 4.992643744381722e-05,
+   "take_profit_price": 5.349261154694703e-05,
    "tp_order": {
-    "order_id": "a00d098b-f174-47ff-9c16-0feafdc01dca",
+    "order_id": "da8e0393-75ef-445e-86cd-e6592ab7e411",
     "order_ids": [
-     "a00d098b-f174-47ff-9c16-0feafdc01dca"
+     "da8e0393-75ef-445e-86cd-e6592ab7e411"
     ],
     "network": "solana",
     "funding_network": null,
@@ -349,7 +349,7 @@
     "amount": 140206.278645,
     "input_token": "7uHBhrdN1UNf1vggnvoZMHVA6Du4NQe2USP2oMnYpump",
     "input_token_symbol": null,
-    "take_profit_price": 4.992643744381722e-05,
+    "take_profit_price": 5.349261154694703e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -363,7 +363,7 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "note": "too small to sell (fees exceed proceeds); left with its take-profit order"
   },
   {
@@ -559,7 +559,7 @@
    "rebuy_of": "2026-11-03T05:03:38Z",
    "rebuys": 1,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "price_when_seen": 6.759756797691807e-05,
    "buy_response": {
     "status": "Success",
@@ -574,11 +574,11 @@
    "spent_usd": 5.0,
    "entry_price": 8.607073806952261e-05,
    "entry_vs_seen_pct": 27.3,
-   "take_profit_price": 0.00012049903329733165,
+   "take_profit_price": 0.00012910610710428392,
    "tp_order": {
-    "order_id": "836082cd-d104-4036-80a2-3aa0ef49da7e",
+    "order_id": "4effb7cd-d089-4b5a-a44a-21c50a511769",
     "order_ids": [
-     "836082cd-d104-4036-80a2-3aa0ef49da7e"
+     "4effb7cd-d089-4b5a-a44a-21c50a511769"
     ],
     "network": "solana",
     "funding_network": null,
@@ -587,7 +587,7 @@
     "amount": 58091.752344,
     "input_token": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
     "input_token_symbol": null,
-    "take_profit_price": 0.00012049903329733165,
+    "take_profit_price": 0.00012910610710428392,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -601,7 +601,7 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "note": "too small to sell (fees exceed proceeds); left with its take-profit order"
   },
   {
@@ -613,14 +613,14 @@
    "whale_mcap": 393527.8390681707,
    "seen_after_s": 1.1,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 0.0003912688698619604,
    "glance": {
     "above_5m_low_pct": 6.5,
     "this_minute_pct": 2.9
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 0.00041083231335505845,
    "limit_order_id": "b256fdaf-3e5f-4411-b02c-69ecda0a540a",
    "limit_placed_at": "2026-11-03T05:11:33Z",
@@ -631,11 +631,11 @@
    "tokens": 12378.911929,
    "bought_at": "2026-11-03 05:11:33",
    "entry_vs_seen_pct": 3.2,
-   "take_profit_price": 0.00056547780937046,
+   "take_profit_price": 0.00060586908146835,
    "tp_order": {
-    "order_id": "a93b0c56-553a-4e6c-af91-38bacf5ddddb",
+    "order_id": "37747089-e47f-4770-8da5-12c39059bbe1",
     "order_ids": [
-     "a93b0c56-553a-4e6c-af91-38bacf5ddddb"
+     "37747089-e47f-4770-8da5-12c39059bbe1"
     ],
     "network": "solana",
     "funding_network": null,
@@ -644,7 +644,7 @@
     "amount": 12378.911929,
     "input_token": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
     "input_token_symbol": null,
-    "take_profit_price": 0.00056547780937046,
+    "take_profit_price": 0.00060586908146835,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -1377,14 +1377,14 @@
    "whale_mcap": 11190.24364015786,
    "seen_after_s": 3.7,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 1.139064352173591e-05,
    "glance": {
     "above_5m_low_pct": 272.9,
     "this_minute_pct": 1.4
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 1.139064352173591e-05,
    "limit_order_id": "b9fae40b-b5c6-4551-a471-746ca0336d41",
    "limit_placed_at": "2026-11-03T07:04:20Z",
@@ -1396,11 +1396,11 @@
    "tokens": 508076.416988,
    "bought_at": "2026-11-03 07:05:03",
    "entry_vs_seen_pct": -13.6,
-   "take_profit_price": 1.3777455055839998e-05,
+   "take_profit_price": 1.47615589884e-05,
    "tp_order": {
-    "order_id": "e246fd0c-e128-46e0-a763-8f586fde301b",
+    "order_id": "8bc33975-75de-45eb-b138-a44574195659",
     "order_ids": [
-     "e246fd0c-e128-46e0-a763-8f586fde301b"
+     "8bc33975-75de-45eb-b138-a44574195659"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1409,7 +1409,7 @@
     "amount": 508076.416988,
     "input_token": "4ELARfpvMkrv9su1mbJsPt6wpetL8KLkFgWcpYQopump",
     "input_token_symbol": null,
-    "take_profit_price": 1.3777455055839998e-05,
+    "take_profit_price": 1.47615589884e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -1624,14 +1624,14 @@
    "whale_mcap": 49405.57061028478,
    "seen_after_s": 3.1,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 5.011248867958784e-05,
    "glance": {
     "above_5m_low_pct": 70.1,
     "this_minute_pct": -4.8
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 5.011248867958784e-05,
    "limit_order_id": "f16a896f-a6ce-45f4-a0e1-06b6521f86f7",
    "limit_placed_at": "2026-11-03T08:15:35Z",
@@ -1643,11 +1643,11 @@
    "partial_fill": true,
    "bought_at": "2026-11-03T08:17:36Z",
    "entry_vs_seen_pct": 0.0,
-   "take_profit_price": 7.015748415142297e-05,
+   "take_profit_price": 7.516873301938176e-05,
    "tp_order": {
-    "order_id": "e894b86c-a3f0-4091-83aa-79488966ec1b",
+    "order_id": "d0d6fd2f-2521-4948-9d50-6c6187950deb",
     "order_ids": [
-     "e894b86c-a3f0-4091-83aa-79488966ec1b"
+     "d0d6fd2f-2521-4948-9d50-6c6187950deb"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1656,7 +1656,7 @@
     "amount": 6879.448404,
     "input_token": "3rLbP63g74ugwqpwqTpwsELmRkQR9wnR2fv5mhtGHNZi",
     "input_token_symbol": null,
-    "take_profit_price": 7.015748415142297e-05,
+    "take_profit_price": 7.516873301938176e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -1826,14 +1826,14 @@
    "whale_mcap": 19821.953173959628,
    "seen_after_s": 10.0,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 2.002352812269237e-05,
    "glance": {
     "above_5m_low_pct": 2.4,
     "this_minute_pct": -0.7
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 2.002352812269237e-05,
    "limit_order_id": "b1dbb1c9-7684-4864-a2ee-762d442d872e",
    "limit_placed_at": "2026-11-03T08:23:37Z",
@@ -1845,11 +1845,11 @@
    "tokens": 261505.696856,
    "bought_at": "2026-11-03 08:23:40",
    "entry_vs_seen_pct": -4.5,
-   "take_profit_price": 2.6768059297279996e-05,
+   "take_profit_price": 2.8680063532799996e-05,
    "tp_order": {
-    "order_id": "14884c0c-7f9c-42d8-854c-940f60dea1fc",
+    "order_id": "ff1c70cc-6f78-4803-9bd4-990f26364d37",
     "order_ids": [
-     "14884c0c-7f9c-42d8-854c-940f60dea1fc"
+     "ff1c70cc-6f78-4803-9bd4-990f26364d37"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1858,7 +1858,7 @@
     "amount": 261505.696856,
     "input_token": "6CkN2n9DyzF7aYi8zdGVTQ8i686UzfnUkFs9DSY1jEnw",
     "input_token_symbol": null,
-    "take_profit_price": 2.6768059297279996e-05,
+    "take_profit_price": 2.8680063532799996e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -1882,14 +1882,14 @@
    "whale_mcap": 20027.389837196097,
    "seen_after_s": 14.0,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 2.2252268536249176e-05,
    "glance": {
     "above_5m_low_pct": 21.8,
     "this_minute_pct": 21.8
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 2.2252268536249176e-05,
    "limit_order_id": "25e61797-88bd-422c-8f52-e80cf1d6ab35",
    "limit_placed_at": "2026-11-03T18:06:41Z",
@@ -1900,11 +1900,11 @@
    "tokens": 229097.009445,
    "bought_at": "2026-11-03 18:06:45",
    "entry_vs_seen_pct": -1.9,
-   "take_profit_price": 3.055474192764e-05,
+   "take_profit_price": 3.27372234939e-05,
    "tp_order": {
-    "order_id": "ef564beb-9df3-455c-96bb-b30953371171",
+    "order_id": "12018bf7-6486-41bc-b260-935551e86539",
     "order_ids": [
-     "ef564beb-9df3-455c-96bb-b30953371171"
+     "12018bf7-6486-41bc-b260-935551e86539"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1913,7 +1913,7 @@
     "amount": 229097.009445,
     "input_token": "2z9eY5FgwswpZShRxY78PWaUXEy5uqdhLHTprJtfLoat",
     "input_token_symbol": null,
-    "take_profit_price": 3.055474192764e-05,
+    "take_profit_price": 3.27372234939e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -1957,14 +1957,14 @@
    "whale_mcap": 22385.500415111892,
    "seen_after_s": 14.5,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 2.6301659090677276e-05,
    "glance": {
     "above_5m_low_pct": 27.4,
     "this_minute_pct": 1.3
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 2.6301659090677276e-05,
    "limit_order_id": "58e4dacc-afb8-4d1d-8eef-9e9ca734ba73",
    "limit_placed_at": "2026-11-03T18:09:17Z",
@@ -1975,11 +1975,11 @@
    "tokens": 227590.134454,
    "bought_at": "2026-11-03 18:09:39",
    "entry_vs_seen_pct": -16.5,
-   "take_profit_price": 3.075704496942e-05,
+   "take_profit_price": 3.295397675295e-05,
    "tp_order": {
-    "order_id": "021463bc-6d2f-4371-8cef-0787df989678",
+    "order_id": "457dc85f-6a25-469f-a1ed-21e489bd1a1a",
     "order_ids": [
-     "021463bc-6d2f-4371-8cef-0787df989678"
+     "457dc85f-6a25-469f-a1ed-21e489bd1a1a"
     ],
     "network": "solana",
     "funding_network": null,
@@ -1988,7 +1988,7 @@
     "amount": 227590.134454,
     "input_token": "DzS7e3YHRtWF4BGNfWqsgabx6zehqq2erTzrgSg8iht5",
     "input_token_symbol": null,
-    "take_profit_price": 3.075704496942e-05,
+    "take_profit_price": 3.295397675295e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -2115,7 +2115,7 @@
    "whale_mcap": 9412.082777717766,
    "seen_after_s": 19.9,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 1.594802233739756e-05,
    "glance": {
@@ -2123,7 +2123,7 @@
     "this_minute_pct": 96.6
    },
    "explore": "rule: whale buy too small",
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 1.594802233739756e-05,
    "limit_order_id": "b1e1e575-9e5f-4d09-a4f1-447166ee35b5",
    "limit_placed_at": "2026-11-03T18:13:24Z",
@@ -2134,11 +2134,11 @@
    "tokens": 317142.394608,
    "bought_at": "2026-11-03 18:13:25",
    "entry_vs_seen_pct": -1.1,
-   "take_profit_price": 2.207210426302e-05,
+   "take_profit_price": 2.3648683138949998e-05,
    "tp_order": {
-    "order_id": "60c4d12f-0b47-4c30-95fb-7b06a2f97641",
+    "order_id": "72141040-3f10-4f37-a4f5-0d68474cccb4",
     "order_ids": [
-     "60c4d12f-0b47-4c30-95fb-7b06a2f97641"
+     "72141040-3f10-4f37-a4f5-0d68474cccb4"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2147,7 +2147,7 @@
     "amount": 317142.394608,
     "input_token": "6mKrM1kb4jcZeBCo5596nWkM4JrERxkWsj7i157kpump",
     "input_token_symbol": null,
-    "take_profit_price": 2.207210426302e-05,
+    "take_profit_price": 2.3648683138949998e-05,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -2171,14 +2171,14 @@
    "whale_mcap": 5364.882781577762,
    "seen_after_s": 14.5,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 3.587817673178506e-06,
    "glance": {
     "above_5m_low_pct": 2.1,
     "this_minute_pct": 0.7
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 3.587817673178506e-06,
    "limit_order_id": "fbb9e707-1253-45fe-9536-d48ce110db52",
    "limit_placed_at": "2026-11-03T18:14:33Z",
@@ -2190,11 +2190,11 @@
    "tokens": 1690921.513641,
    "bought_at": "2026-11-03 18:15:07",
    "entry_vs_seen_pct": -17.6,
-   "take_profit_price": 4.13975453234e-06,
+   "take_profit_price": 4.43545128465e-06,
    "tp_order": {
-    "order_id": "7f66bb82-c918-4dee-8779-d8697b4bdcd6",
+    "order_id": "de9968d1-079a-45c8-849c-a0508e8d38ea",
     "order_ids": [
-     "7f66bb82-c918-4dee-8779-d8697b4bdcd6"
+     "de9968d1-079a-45c8-849c-a0508e8d38ea"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2203,7 +2203,7 @@
     "amount": 1690921.513641,
     "input_token": "12whn4ouYPyv6zgv8rv6G5FUEMHLJAtUwsk8Zrtapump",
     "input_token_symbol": null,
-    "take_profit_price": 4.13975453234e-06,
+    "take_profit_price": 4.43545128465e-06,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -2331,14 +2331,14 @@
    "whale_mcap": 4233367.187040788,
    "seen_after_s": 1.1,
    "usd": 5.0,
-   "take_profit_pct": 40.0,
+   "take_profit_pct": 50.0,
    "mode": "LIVE",
    "price_when_seen": 0.004281802102923393,
    "glance": {
     "above_5m_low_pct": 3.4,
     "this_minute_pct": 1.2
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit moved to +50%",
    "limit_price": 0.004281802102923393,
    "limit_order_id": "d2738a1c-2633-4d86-b35f-acc186694ce7",
    "limit_placed_at": "2026-11-03T20:07:02Z",
@@ -2350,11 +2350,11 @@
    "tokens": 1166.492563,
    "bought_at": "2026-11-03 20:07:02",
    "entry_vs_seen_pct": 0.1,
-   "take_profit_price": 0.006000895523926239,
+   "take_profit_price": 0.0064295309184923995,
    "tp_order": {
-    "order_id": "7e4d4ebb-0c36-47a8-8299-eda20a938c75",
+    "order_id": "937bf112-859d-4692-a197-146dfc79796b",
     "order_ids": [
-     "7e4d4ebb-0c36-47a8-8299-eda20a938c75"
+     "937bf112-859d-4692-a197-146dfc79796b"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2363,7 +2363,7 @@
     "amount": 1166.492563,
     "input_token": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
     "input_token_symbol": null,
-    "take_profit_price": 0.006000895523926239,
+    "take_profit_price": 0.0064295309184923995,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -3438,6 +3438,23 @@
    "at": "2026-11-03T21:03:46Z",
    "new_samples": 16,
    "live_samples": 300,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 15.0,
+   "expected_trades_in_samples": 103.0
+  },
+  {
+   "at": "2026-11-03T21:14:00Z",
+   "new_samples": 25,
+   "live_samples": 325,
    "settings": {
     "take_profit": 0.5,
     "limit_cushion": 0.0,
@@ -8330,7 +8347,88 @@
    "mcap": 8674.271157360636,
    "whale_usd": 277.832160288441,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "DAwrsRuQbQoCMvo9YsFyVAo2STRzhiEMZ6R9Kqppump",
+   "symbol": "Kiro",
+   "ts": "2026-11-03T21:13:02",
+   "t": 1793740382.0,
+   "mcap": 5241.9904932321515,
+   "whale_usd": 138.9208116188475,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BjpkrJEtbDLJUpFcXEKqKE5atQTXqH1VoVgFUKWPpump",
+   "symbol": "ANSEM",
+   "ts": "2026-11-03T21:13:07",
+   "t": 1793740387.0,
+   "mcap": 8673.222509969492,
+   "whale_usd": 199.2,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "33AGKzTeV1NvhuMVMWiTja4xZYqwdi5aUo4JwurfLoat",
+   "symbol": "Apu",
+   "ts": "2026-11-03T21:13:56",
+   "t": 1793740436.0,
+   "mcap": 24073.808162938803,
+   "whale_usd": 370.48880284218,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
+   "symbol": "Sexbot",
+   "ts": "2026-11-03T21:15:12",
+   "t": 1793740512.0,
+   "mcap": 74457.91127969639,
+   "whale_usd": 249.1,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+   "symbol": "CHOO",
+   "ts": "2026-11-03T21:15:22",
+   "t": 1793740522.0,
+   "mcap": 4225456.70047631,
+   "whale_usd": 8159.289282,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "BLnKKgYY7kgr1YZs6MSeo53cRSrkJuwK5dJ8NfptkPeA",
+   "symbol": "SPHERE",
+   "ts": "2026-11-03T21:15:33",
+   "t": 1793740533.0,
+   "mcap": 8472.815352433827,
+   "whale_usd": 277.7578981389429,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray",
+   "symbol": "PEAK",
+   "ts": "2026-11-03T21:15:47",
+   "t": 1793740547.0,
+   "mcap": 285958.8303182952,
+   "whale_usd": 934.7425400297521,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "HYcoBKAYgvVKuQ7bhYv8VyKrQz1AZHdwueLruAcdpump",
+   "symbol": "Duckie",
+   "ts": "2026-11-03T21:16:43",
+   "t": 1793740603.0,
+   "mcap": 5912.897904636338,
+   "whale_usd": 139.07356498777503,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "35m1cyCN7yjF83ev3SeXBhQar4L4ab274FsMJ7tfpump",
+   "symbol": "X",
+   "ts": "2026-11-03T21:17:09",
+   "t": 1793740629.0,
+   "mcap": 9399.08204600215,
+   "whale_usd": 282.5364116905525,
+   "whale_type": "kol"
   }
  ],
- "last_retarget": 1793736823.872862
+ "last_retarget": 1793740440.6549516
 }
