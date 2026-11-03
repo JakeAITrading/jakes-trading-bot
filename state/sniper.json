@@ -1979,6 +1979,24 @@
    "mcap": 10424.48820953723,
    "whale_usd": 297.0,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "CFinmLMXKEbyW3qo6qLB5rjssAGSQEq1VBh6pgPtpump",
+   "symbol": "SI",
+   "ts": "2026-11-03T07:17:39",
+   "t": 1793690259.0,
+   "mcap": 13557.57012788672,
+   "whale_usd": 459.6569674683787,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DZ9xSfkgrafsf7sDeDBu4prZCmQiTaaNPZTUMgsxUG8U",
+   "symbol": "StonkClaim",
+   "ts": "2026-11-03T07:18:30",
+   "t": 1793690310.0,
+   "mcap": 16933.18336037919,
+   "whale_usd": 349.05000000000007,
+   "whale_type": "kol"
   }
  ]
 }
