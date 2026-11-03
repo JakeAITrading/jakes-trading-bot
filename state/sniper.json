@@ -6587,6 +6587,33 @@
    "mcap": 6103.696705395123,
    "whale_usd": 200.14610100000004,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8JfJiJZqfVfAeNfqJh22T8h16Sq7utmPQxrgsimHpump",
+   "symbol": "HUMAN",
+   "ts": "2026-11-03T19:36:19",
+   "t": 1793734579.0,
+   "mcap": 10435.924195917323,
+   "whale_usd": 276.48856595517304,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HdRKt9kYL1Y9zqyD211pBo1QBVyLmM2Be7sXKdNjxofs",
+   "symbol": "UNI",
+   "ts": "2026-11-03T19:38:25",
+   "t": 1793734705.0,
+   "mcap": 5236.241122474894,
+   "whale_usd": 138.27142955973602,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EdBnk7Gc4aZ4d2T2Uos2JHDhkzZbvBfyVDLLDnj3pump",
+   "symbol": "iClaw",
+   "ts": "2026-11-03T19:40:03",
+   "t": 1793734803.0,
+   "mcap": 21342.67742803786,
+   "whale_usd": 315.241887,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
