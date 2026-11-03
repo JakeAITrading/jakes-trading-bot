@@ -2826,6 +2826,24 @@
    "mcap": 27802.024037110463,
    "whale_usd": 140.41450267556132,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8DB8Fw5UiC1AzugQAfRyw3qL8omw772LJbdehNWhpump",
+   "symbol": "OMBRO",
+   "ts": "2026-11-03T08:27:51",
+   "t": 1793694471.0,
+   "mcap": 59697.943927175715,
+   "whale_usd": 1099.029225102054,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FtHCpYdjVx8WR6vc4zqe6iXqHydZcKhNnmSNF2NXKfy1",
+   "symbol": "LUCIA",
+   "ts": "2026-11-03T08:31:34",
+   "t": 1793694694.0,
+   "mcap": 105943.60697287848,
+   "whale_usd": 144.63499072590355,
+   "whale_type": "whale"
   }
  ]
 }
