@@ -2370,6 +2370,23 @@
    },
    "expected_avg_pct": 8.5,
    "expected_trades_in_samples": 145.0
+  },
+  {
+   "at": "2026-11-03T10:35:58Z",
+   "new_samples": 4,
+   "live_samples": 78,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 8.7,
+   "expected_trades_in_samples": 154.0
   }
  ],
  "observed": [
@@ -3433,6 +3450,33 @@
    "t": 1793701989.0,
    "mcap": 81081.7738347241,
    "whale_usd": 182.83125690636626,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8",
+   "symbol": "ALLINU",
+   "ts": "2026-11-03T10:36:25",
+   "t": 1793702185.0,
+   "mcap": 2098909.2671851143,
+   "whale_usd": 100.1469242843014,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "27VhwDG8JwLyJSVsmKUQtfMJkdrANQnCRETfEwKQpump",
+   "symbol": "Miguel",
+   "ts": "2026-11-03T10:39:31",
+   "t": 1793702371.0,
+   "mcap": 14639.572327723727,
+   "whale_usd": 217.45430508020257,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DLWQGvd5LQHvt2AtF65Mnu8FeELgsbfvbLKTaDgMpump",
+   "symbol": "zkSHARK",
+   "ts": "2026-11-03T10:39:35",
+   "t": 1793702375.0,
+   "mcap": 9719.6548026573,
+   "whale_usd": 184.6348195708826,
    "whale_type": "kol"
   }
  ],
