@@ -12506,6 +12506,96 @@
    "mcap": 6992.151611484587,
    "whale_usd": 186.77554440767238,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "GEpFiJe4UZHBYH7tVFN1fgih3xmf2mMAQE6p66SMX3QJ",
+   "symbol": "Lisa",
+   "ts": "2026-11-03T23:49:43",
+   "t": 1793749783.0,
+   "mcap": 12012.728802801576,
+   "whale_usd": 153.60361070592572,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "H3nGS6MqVXybfg2XwmBZaP76tsfgKPbqqeEid5Bopump",
+   "symbol": "BET",
+   "ts": "2026-11-03T23:50:17",
+   "t": 1793749817.0,
+   "mcap": 6070.40192335262,
+   "whale_usd": 185.5104538591512,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Ez7eEs53hQiXgCGmcbhdX5i1jgg2gC3F6MoeosuVpump",
+   "symbol": "LUKE",
+   "ts": "2026-11-03T23:50:39",
+   "t": 1793749839.0,
+   "mcap": 126510.3296304409,
+   "whale_usd": 204.87640917058965,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "7zRKnyYGpKvPtEGv4aW3E9c1ZhHvKdnkk94Y3xHfpump",
+   "symbol": "Bee",
+   "ts": "2026-11-03T23:51:12",
+   "t": 1793749872.0,
+   "mcap": 6154.921265988378,
+   "whale_usd": 231.873570945825,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "wDSAqt4tEZpDAwB9XY6ejkZvMFuT1zUMjUh67txeYhf",
+   "symbol": "HEDGE",
+   "ts": "2026-11-03T23:51:17",
+   "t": 1793749877.0,
+   "mcap": 26402.484975249034,
+   "whale_usd": 980.39,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2fDnqXcjUfg8DS2pH2hqkow7oWvpG1CdWXTcLAnXpump",
+   "symbol": "nothing",
+   "ts": "2026-11-03T23:51:45",
+   "t": 1793749905.0,
+   "mcap": 9464.285540161654,
+   "whale_usd": 368.67017519283604,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4uaVggSDPjvDQUcUMw5K4Po8ZoAC6XEqwwYvzFZmpump",
+   "symbol": "PREDICTOOR",
+   "ts": "2026-11-03T23:52:00",
+   "t": 1793749920.0,
+   "mcap": 10944.540917989798,
+   "whale_usd": 186.19705808510145,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
+   "symbol": "Sexbot",
+   "ts": "2026-11-03T23:52:20",
+   "t": 1793749940.0,
+   "mcap": 43295.72342823509,
+   "whale_usd": 368.6091040284943,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "G4TtPoUgMuAgp1FH5e4kgDo7Runo841tnD4yGqxHpump",
+   "symbol": "LeverZebra",
+   "ts": "2026-11-03T23:52:32",
+   "t": 1793749952.0,
+   "mcap": 10404.129170638043,
+   "whale_usd": 276.451364616372,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6LyqzNGPAihTp2Ad9iwrZLCPVShVfz6Kx9AXYp1Npump",
+   "symbol": "YES",
+   "ts": "2026-11-03T23:53:14",
+   "t": 1793749994.0,
+   "mcap": 8953.166798164602,
+   "whale_usd": 100.28639200000003,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793748307.1641624
