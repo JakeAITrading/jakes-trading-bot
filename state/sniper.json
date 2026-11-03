@@ -5208,6 +5208,87 @@
    "mcap": 48836.92963630892,
    "whale_usd": 882.668875,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "crgTf7zikDydbQqagxgKS4aeJKKeL9MescP7wbhErN3",
+   "symbol": "ELON",
+   "ts": "2026-11-03T18:34:52",
+   "t": 1793730892.0,
+   "mcap": 33252.29408801533,
+   "whale_usd": 278.189624526759,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AbkZJK4cNfkH5bmPPdSR7GhFAZEtWpwkLT3RTH2Hpump",
+   "symbol": "HYPE",
+   "ts": "2026-11-03T18:37:01",
+   "t": 1793731021.0,
+   "mcap": 23605.760361533612,
+   "whale_usd": 100.14604199999985,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9mLLT8pLPmStzbEAby8JzzWmuvAnsgyELN82BP7p1vPU",
+   "symbol": "ORGANIC",
+   "ts": "2026-11-03T18:37:14",
+   "t": 1793731034.0,
+   "mcap": 28394.495529937558,
+   "whale_usd": 927.3974379981299,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BGjbSYzcxnJnuW2i56uP9qZHmh4EmcmQpVSzQG1Npump",
+   "symbol": "MARTIN",
+   "ts": "2026-11-03T18:38:27",
+   "t": 1793731107.0,
+   "mcap": 5299.988970364211,
+   "whale_usd": 277.86614657937304,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BbykkXnw4Krt3NTRzUN7VZ64ST1xqXK1sW7FkP2oHdZc",
+   "symbol": "MARTIN",
+   "ts": "2026-11-03T18:38:48",
+   "t": 1793731128.0,
+   "mcap": 6220.497198228259,
+   "whale_usd": 277.78876127125204,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AR3W1y2pXRLPb36qwmqtR2RUwGYLtCc23KTUZ6uM9FRV",
+   "symbol": "ALON",
+   "ts": "2026-11-03T18:39:01",
+   "t": 1793731141.0,
+   "mcap": 22939.586415304802,
+   "whale_usd": 110.15315611596995,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2wjjne2Z4VYX4AV7oWvK1gL83FLMHKtUpLN2FexEpump",
+   "symbol": "PIKA",
+   "ts": "2026-11-03T18:39:10",
+   "t": 1793731150.0,
+   "mcap": 17413.443856639788,
+   "whale_usd": 185.1466600000001,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "repsqhXfZpsuopPm2sorxNskRKd1XhKB4UGsJ9AqJrx",
+   "symbol": "reps",
+   "ts": "2026-11-03T18:39:26",
+   "t": 1793731166.0,
+   "mcap": 9403.849617228843,
+   "whale_usd": 295.9942948121852,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4f9i6rzSg7gMhVV8EceEpj3cEKQgxXeNBfXXsCd2vVUi",
+   "symbol": "CAPY",
+   "ts": "2026-11-03T18:39:58",
+   "t": 1793731198.0,
+   "mcap": 53760.98852138966,
+   "whale_usd": 1585.8320843436677,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793728894.6423943
