@@ -6623,6 +6623,15 @@
    "mcap": 10287.819350196514,
    "whale_usd": 276.637197693087,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "GiEKec8xbxQPXRWYvsFu68wzojNj85peoXNqMaLd2MKC",
+   "symbol": "SEX6900",
+   "ts": "2026-11-03T19:40:47",
+   "t": 1793734847.0,
+   "mcap": 5345.214503904572,
+   "whale_usd": 128.57217112084646,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
