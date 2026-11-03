@@ -28,7 +28,9 @@ class MobyError(RuntimeError):
 def _parse_sse(text: str) -> list[dict]:
     """Extract JSON-RPC messages from a text/event-stream body."""
     messages, data_lines = [], []
-    for line in text.splitlines() + [""]:
+    # Split on "\n" only: str.splitlines() also breaks on Unicode separators (U+0085,
+    # U+2028...) that appear inside JSON strings such as token names.
+    for line in text.replace("\r\n", "\n").split("\n") + [""]:
         if line.startswith("data:"):
             data_lines.append(line[5:].lstrip())
         elif line == "" and data_lines:
@@ -96,7 +98,8 @@ class MobyClient:
         req_id = next(self._ids)
         resp = self._post({"jsonrpc": "2.0", "id": req_id, "method": method, "params": params or {}})
         ctype = resp.headers.get("Content-Type", "")
-        messages = _parse_sse(resp.text) if "text/event-stream" in ctype else [resp.json()]
+        body = resp.content.decode("utf-8", errors="replace")  # event streams carry no charset; MCP is UTF-8
+        messages = _parse_sse(body) if "text/event-stream" in ctype else [json.loads(body)]
         for msg in messages:
             if msg.get("id") == req_id:
                 if "error" in msg:

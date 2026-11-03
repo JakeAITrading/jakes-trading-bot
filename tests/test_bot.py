@@ -192,6 +192,7 @@ class FakeResp:
         self.headers = {"Content-Type": "application/json", **(headers or {})}
         self._payload = payload
         self.text = json.dumps(payload) if payload is not None else ""
+        self.content = self.text.encode()
 
     def json(self):
         return self._payload
@@ -212,6 +213,12 @@ class FakeHTTP:
             return FakeResp({"jsonrpc": "2.0", "id": json["id"], "result": {"tools": [{"name": "get_wallet"}]}})
         return FakeResp({"jsonrpc": "2.0", "id": json["id"],
                          "result": {"content": [{"type": "text", "text": '{"usd": 10}'}]}})
+
+
+def test_sse_with_unicode_token_names():
+    payload = {"jsonrpc": "2.0", "id": 1, "result": {"name": "\u2028 ቬ\x85 coin"}}
+    body = "event: message\ndata: " + json.dumps(payload, ensure_ascii=False) + "\n\n"
+    assert _parse_sse(body) == [payload]
 
 
 def test_client_handshake_session_and_auth():
