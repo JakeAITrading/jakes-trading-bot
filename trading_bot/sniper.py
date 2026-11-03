@@ -9,6 +9,9 @@ Watches Moby's whale feed every few seconds. A whale buy qualifies when it is:
   - in a coin with market cap $20k-$1M that Moby does not rate red,
   - seen within --max-age seconds of the trade, in a coin we haven't traded.
 Then: quick_buy $usd, wait for the fill, place a take-profit order at entry * (1 + tp%).
+When a take-profit fills and the coin is still rising (price at or above the sale and the last
+1-minute candle green, checked for 10 minutes), it buys the same coin again with a fresh take-profit,
+up to 3 re-buys per coin. Re-buys don't count toward --trades.
 Every trade is written to state/sniper.json (the main bot leaves these coins alone).
 Stops when --trades buys are done, or immediately if a STOP / REMOTE_STOP file exists.
 """
@@ -65,6 +68,7 @@ class Sniper:
         self.min_whale_usd, self.min_mcap, self.max_mcap = min_whale_usd, min_mcap, max_mcap
         self.state = load()
         self.seen: set[str] = set()
+        self.max_rebuys, self.rebuy_window = 3, 600  # per coin chain; look for 10 min after a sale
 
     def call(self, tool: str, args: dict | None = None):
         for _ in range(4):
@@ -119,9 +123,14 @@ class Sniper:
         if self.dry_run:
             rec.update(status="simulated", entry_price=price_seen, bought_at=_iso(_now()))
             return rec
-        buy = self.call("quick_buy", {"output_token": token, "amount_usd": self.usd,
-                                      "rationale": f"Whale-pop experiment: {row.get('wallet_list_type')} opened "
-                                                   f"${row.get('amount_usd', 0):,.0f} in {sym}; sell at +{self.tp*100:.0f}%."})
+        return self._buy(rec, token, sym, whale_ts,
+                         f"Whale-pop experiment: {row.get('wallet_list_type')} opened "
+                         f"${row.get('amount_usd', 0):,.0f} in {sym}; sell at +{self.tp*100:.0f}%.")
+
+    def _buy(self, rec: dict, token: str, sym: str, t_ref: float, rationale: str) -> dict:
+        """Buy $usd of token, wait for the fill, and place the take-profit. Fills in rec."""
+        price_seen = rec.get("price_when_seen")
+        buy = self.call("quick_buy", {"output_token": token, "amount_usd": self.usd, "rationale": rationale})
         rec["buy_response"] = {k: buy.get(k) for k in ("status", "quote_id", "transaction_signature", "blocked", "reason")}
         if buy.get("blocked"):
             rec["status"] = f"blocked: {buy.get('reason')}"
@@ -130,7 +139,7 @@ class Sniper:
         got = float(fill.get("filled_output_amount_ui") or 0)
         spent = float(fill.get("filled_input_amount_ui") or self.usd)
         rec["bought_at"] = _iso(_now())
-        rec["buy_after_whale_s"] = round(_now() - whale_ts, 1)
+        rec["buy_after_whale_s"] = round(_now() - t_ref, 1)
         if got <= 0:
             rec["status"] = f"buy not confirmed ({fill.get('status')})"
             return rec
@@ -156,6 +165,54 @@ class Sniper:
             else:
                 rec["status"] = f"bought, take-profit FAILED: {e}"
         return rec
+
+    def _rising(self, token: str, sold_price: float) -> tuple[bool, float]:
+        """Still going up: price at or above where we sold AND the last closed 1-minute candle is green."""
+        price = float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0)
+        c = self.call("get_token_ohlcv", {"token_address": token, "interval": "1m", "limit": 2})
+        green = bool(c.get("c")) and c["c"][0] > c["o"][0]  # newest first
+        return price >= sold_price and green, price
+
+    def check_rebuys(self) -> None:
+        """Find take-profits that filled; if the coin is still rising, buy it again (same size, new +tp%)."""
+        live = [r for r in self.state["trades"] if r.get("mode") == "LIVE" and r.get("entry_price")]
+        if not any(not r.get("closed") or r.get("rebuy_until") for r in live):
+            return
+        open_ids = {o["id"] for o in (self.call("get_my_orders").get("orders") or [])}
+        done = {o["id"]: o for o in (self.call("get_my_orders", {"status": "terminal"}).get("orders") or [])}
+        for rec in live:
+            oid = (rec.get("tp_order") or {}).get("order_id")
+            if not rec.get("closed") and oid and oid not in open_ids and oid in done:
+                o = done[oid]
+                if str(o.get("status", "")).startswith("filled"):
+                    sold = float(o.get("filled_price") or rec["take_profit_price"])
+                    rec.update(closed=f"take-profit filled at {sold:.6g}", sold_price=sold,
+                               proceeds_usd=o.get("filled_output_amount"),
+                               profit_usd=round(float(o.get("filled_output_amount") or 0) - rec.get("spent_usd", self.usd), 2),
+                               rebuy_until=_now() + self.rebuy_window)
+                    log.info("%s: take-profit filled, profit $%.2f", rec["symbol"], rec["profit_usd"])
+                    save(self.state)
+                else:
+                    rec["closed"] = f"take-profit {o.get('status')}"
+            if not rec.get("rebuy_until"):
+                continue
+            if _now() > rec["rebuy_until"] or rec.get("rebuys", 0) >= self.max_rebuys:
+                rec["rebuy_until"] = None
+                save(self.state)
+                continue
+            rising, price = self._rising(rec["token_address"], rec["sold_price"])
+            if not rising:
+                continue
+            rec["rebuy_until"] = None  # one re-buy per sale; the new trade can re-buy again when it sells
+            new = {"token_address": rec["token_address"], "symbol": rec["symbol"], "mode": "LIVE",
+                   "rebuy_of": rec.get("bought_at"), "rebuys": rec.get("rebuys", 0) + 1,
+                   "usd": self.usd, "take_profit_pct": self.tp * 100, "price_when_seen": price}
+            log.info("%s still rising (%.6g >= sold %.6g): buying again", rec["symbol"], price, rec["sold_price"])
+            self._buy(new, rec["token_address"], rec["symbol"], _now(),
+                      f"Re-buy: {rec['symbol']} still rising after +{self.tp*100:.0f}% take-profit.")
+            self.state["trades"].append(new)
+            log.info("re-buy: %s", json.dumps({k: v for k, v in new.items() if k not in ("tp_order", "sell")}, default=str))
+            save(self.state)
 
     def retarget(self) -> None:
         """Move every open take-profit from this experiment to the current --take-profit level.
@@ -188,15 +245,32 @@ class Sniper:
             log.info("%s: %s", sym, rec["status"])
             save(self.state)
 
+    def _watching(self) -> bool:
+        """Keep running while a live position could still sell and be re-bought."""
+        return not self.dry_run and any(r.get("mode") == "LIVE" and r.get("entry_price")
+                                        and (not r.get("closed") or r.get("rebuy_until"))
+                                        for r in self.state["trades"])
+
     def run(self, trades: int, poll: float, hours: float) -> None:
-        done = sum(1 for t in self.state["trades"] if t.get("mode") == ("practice" if self.dry_run else "LIVE"))
+        done = sum(1 for t in self.state["trades"]
+                   if t.get("mode") == ("practice" if self.dry_run else "LIVE") and not t.get("rebuy_of"))
         deadline = _now() + hours * 3600
         after = _iso(_now() - 60)
         log.info("watching whale feed: %d/%d trades done", done, trades)
-        while done < trades and _now() < deadline:
+        last_exit_check = 0.0
+        while _now() < deadline and (done < trades or self._watching()):
             if stopped():
                 log.info("STOP file present: exiting")
                 return
+            if not self.dry_run and _now() - last_exit_check > 15:
+                last_exit_check = _now()
+                try:
+                    self.check_rebuys()
+                except Exception as e:
+                    log.warning("re-buy check error: %s", e)
+            if done >= trades:
+                time.sleep(poll)
+                continue
             try:
                 feed = self.call("get_whalewatch_feed_window", {"after_timestamp": after, "transaction_types": ["buy"],
                                                                  "limit": 100})

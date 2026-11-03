@@ -347,3 +347,40 @@ def test_sniper_retarget_moves_take_profit_or_sells(sniper_dir):
     new_tp = [a for n, a in moby.calls if n == "create_order"]
     assert len(new_tp) == 1 and new_tp[0]["take_profit_price"] == pytest.approx(1.2)   # A: price 0.001 < 1.2
     assert ("quick_sell", {"token_address": "B", "pct": 100}) in moby.calls              # B: 0.001 >= 0.0006
+
+
+def test_sniper_rebuys_after_take_profit_if_still_rising(sniper_dir):
+    sniper.save({"trades": [{"mode": "LIVE", "token_address": "T", "symbol": "T", "entry_price": 0.001,
+                             "spent_usd": 5.0, "take_profit_price": 0.0012, "bought_at": "x",
+                             "tp_order": {"order_id": "tp1"}}]})
+
+    class M(SniperMoby):
+        def __init__(self, green):
+            super().__init__(tp_reply={"order_id": "tp2"})
+            self.green = green
+
+        def call_tool(self, name, args=None):
+            if name == "get_my_orders":
+                self.calls.append((name, args))
+                if (args or {}).get("status") == "terminal":
+                    return {"orders": [{"id": "tp1", "status": "filled_tp", "filled_price": 0.0012,
+                                        "filled_output_amount": 6.0}]}
+                return {"orders": []}
+            if name == "get_token_price":
+                return {"price_usd": 0.0013}
+            if name == "get_token_ohlcv":
+                return {"o": [1.0, 1.0], "c": [1.1 if self.green else 0.9, 1.0]}
+            return super().call_tool(name, args)
+
+    moby = M(green=True)
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.check_rebuys()
+    t = s.state["trades"]
+    assert t[0]["profit_usd"] == 1.0 and len(t) == 2 and t[1]["rebuys"] == 1
+    assert [n for n, _ in moby.calls].count("quick_buy") == 1
+
+    sniper.save({"trades": [{**t[0], "closed": None, "rebuy_until": None, "profit_usd": None}]})
+    moby = M(green=False)
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.check_rebuys()
+    assert not any(n == "quick_buy" for n, _ in moby.calls)   # falling: take the profit, no re-buy
