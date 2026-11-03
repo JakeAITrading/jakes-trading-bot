@@ -6920,6 +6920,33 @@
    "mcap": 25078.95442249719,
    "whale_usd": 454.77225965043067,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
+   "symbol": "OPOL",
+   "ts": "2026-11-03T19:53:45",
+   "t": 1793735625.0,
+   "mcap": 32174.24819013104,
+   "whale_usd": 922.48004670624,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5WVKYP9rp5EbZ6V6byE5aBLMnQzF2fe4wMJDid8gpump",
+   "symbol": "GPU",
+   "ts": "2026-11-03T19:53:48",
+   "t": 1793735628.0,
+   "mcap": 44042.41553856991,
+   "whale_usd": 21272.948521925762,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6xegAhjwU4uo2oxTy4ovnXbFbDGzjg1wK7H3rWG9pump",
+   "symbol": "Aped",
+   "ts": "2026-11-03T19:53:48",
+   "t": 1793735628.0,
+   "mcap": 43476.31452650731,
+   "whale_usd": 538.8172936411657,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793732662.8700163
