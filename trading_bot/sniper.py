@@ -528,7 +528,7 @@ class Sniper:
                 time.sleep(min(60.0, blocked_until() - _now()))
                 continue
             pending = any(r.get("status") == "limit pending" for r in self.state["trades"])
-            if not self.dry_run and _now() - last_exit_check > (15 if pending else 60):
+            if not self.dry_run and _now() - last_exit_check > (5 if pending else 20):
                 last_exit_check = _now()
                 try:
                     self.check_pending()
@@ -594,7 +594,7 @@ def main() -> None:
     ap.add_argument("--usd", type=float, default=5)
     ap.add_argument("--take-profit", type=float, default=25)
     ap.add_argument("--max-age", type=float, default=20, help="ignore whale buys older than this many seconds")
-    ap.add_argument("--poll", type=float, default=15)
+    ap.add_argument("--poll", type=float, default=4)
     ap.add_argument("--hours", type=float, default=20)
     ap.add_argument("--max-open", type=int, default=5, help="most whale coins held at once")
     ap.add_argument("--max-rebuys", type=int, default=0, help="re-buy cycles per coin (0 = no cap)")
