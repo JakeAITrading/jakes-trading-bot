@@ -1178,12 +1178,13 @@
     "above_5m_low_pct": 6.7,
     "this_minute_pct": 6.7
    },
-   "status": "limit pending",
+   "status": "limit buy not filled in time, cancelled",
    "limit_price": 0.0002673726121429354,
    "limit_order_id": "b6c05729-d7e7-487d-8305-e74583e23226",
    "limit_placed_at": "2026-11-03T06:29:55Z",
    "limit_expires": 1793687515.406412,
-   "views": 97
+   "views": 97,
+   "closed": "limit buy not filled in time, cancelled"
   }
  ],
  "skipped": [
