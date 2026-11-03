@@ -1802,13 +1802,14 @@
     "above_5m_low_pct": 5.3,
     "this_minute_pct": 5.3
    },
-   "status": "limit pending",
+   "status": "limit buy not filled in time, cancelled",
    "limit_price": 1.1393884051358327e-05,
    "limit_order_id": "b3990c78-47f6-42eb-8343-188a91ad3d0f",
    "limit_placed_at": "2026-11-03T08:23:30Z",
    "limit_expires": 1793694330.3098304,
    "explore": "rule: market cap out of range",
-   "views": 20
+   "views": 20,
+   "closed": "limit buy not filled in time, cancelled"
   },
   {
    "token_address": "6CkN2n9DyzF7aYi8zdGVTQ8i686UzfnUkFs9DSY1jEnw",
@@ -1826,7 +1827,7 @@
     "above_5m_low_pct": 2.4,
     "this_minute_pct": -0.7
    },
-   "status": "bought, take-profit FAILED: create_order: still rate limited",
+   "status": "holding, take-profit set",
    "limit_price": 2.002352812269237e-05,
    "limit_order_id": "b1dbb1c9-7684-4864-a2ee-762d442d872e",
    "limit_placed_at": "2026-11-03T08:23:37Z",
@@ -1838,7 +1839,33 @@
    "tokens": 261505.696856,
    "bought_at": "2026-11-03 08:23:40",
    "entry_vs_seen_pct": -4.5,
-   "take_profit_price": 2.294405082624e-05
+   "take_profit_price": 2.3900052944e-05,
+   "tp_order": {
+    "order_id": "4f2b55df-a9f9-43f0-a0f8-50cff22a213c",
+    "order_ids": [
+     "4f2b55df-a9f9-43f0-a0f8-50cff22a213c"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "6CkN2n9DyzF7aYi8zdGVTQ8i686UzfnUkFs9DSY1jEnw",
+    "amount": 261505.696856,
+    "input_token": "6CkN2n9DyzF7aYi8zdGVTQ8i686UzfnUkFs9DSY1jEnw",
+    "input_token_symbol": null,
+    "take_profit_price": 2.3900052944e-05,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   }
   }
  ],
  "skipped": [
