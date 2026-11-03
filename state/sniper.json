@@ -2748,6 +2748,89 @@
    "explore": "rule: market cap out of range",
    "views": 17,
    "skipped_at": "2026-11-03T20:01:47Z"
+  },
+  {
+   "token_address": "JcPLcB4WN61b2i6cZctiXW2R9AYCAKCQo6tqFVNpump",
+   "symbol": "Pog",
+   "whale_time": "2026-11-03T20:02:42",
+   "whale_type": "whale",
+   "whale_usd": 273.958267964627,
+   "whale_mcap": 89744.06576631416,
+   "seen_after_s": 6.0,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 7.59084869059734e-05,
+   "glance": {
+    "above_5m_low_pct": 180.6,
+    "this_minute_pct": -17.8
+   },
+   "status": "skipped: already pumped: +181% above 5-min low",
+   "views": 217,
+   "skipped_at": "2026-11-03T20:02:50Z"
+  },
+  {
+   "token_address": "2XMbinFuHixTQoUEQuXJHqGoyuWLHNwVk6Qg2dbhpump",
+   "symbol": "Mag",
+   "whale_time": "2026-11-03T20:03:14",
+   "whale_type": "kol",
+   "whale_usd": 184.547462883696,
+   "whale_mcap": 12234.280802658759,
+   "seen_after_s": 2.2,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.3529732314054854e-05,
+   "glance": {
+    "above_5m_low_pct": 264.1,
+    "this_minute_pct": 264.1
+   },
+   "status": "skipped: already pumped: +264% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 20,
+   "skipped_at": "2026-11-03T20:03:18Z"
+  },
+  {
+   "token_address": "2XMbinFuHixTQoUEQuXJHqGoyuWLHNwVk6Qg2dbhpump",
+   "symbol": "Mag",
+   "whale_time": "2026-11-03T20:04:58",
+   "whale_type": "kol",
+   "whale_usd": 230.64072442713908,
+   "whale_mcap": 12991.65433010785,
+   "seen_after_s": 4.6,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.4708875823998824e-05,
+   "glance": {
+    "above_5m_low_pct": 300.0,
+    "this_minute_pct": -6.9
+   },
+   "status": "skipped: already pumped: +300% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 20,
+   "skipped_at": "2026-11-03T20:05:04Z"
+  },
+  {
+   "token_address": "EpVe56oGut5wNCVaHtHjsyiU95BvQC3pfdYB248mpump",
+   "symbol": "Mag",
+   "whale_time": "2026-11-03T20:05:10",
+   "whale_type": "kol",
+   "whale_usd": 276.99957223953305,
+   "whale_mcap": 10178.751836065194,
+   "seen_after_s": 3.6,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 1.2056478226440959e-05,
+   "glance": {
+    "above_5m_low_pct": 259.2,
+    "this_minute_pct": 6.2
+   },
+   "status": "skipped: already pumped: +259% above 5-min low",
+   "explore": "rule: market cap out of range",
+   "views": 13,
+   "skipped_at": "2026-11-03T20:05:15Z"
   }
  ],
  "learning_log": [
@@ -7098,6 +7181,60 @@
    "t": 1793736122.0,
    "mcap": 7198.725143098272,
    "whale_usd": 184.437554455836,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "SCGBBnSwnekytGFHgyeHHxPMiN7xDxsWFGg9JgFSTNK",
+   "symbol": "MAMESUKE",
+   "ts": "2026-11-03T20:02:25",
+   "t": 1793736145.0,
+   "mcap": 2220359.831945892,
+   "whale_usd": 7351.615413318912,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "JcPLcB4WN61b2i6cZctiXW2R9AYCAKCQo6tqFVNpump",
+   "symbol": "Pog",
+   "ts": "2026-11-03T20:02:42",
+   "t": 1793736162.0,
+   "mcap": 89744.06576631416,
+   "whale_usd": 273.958267964627,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2XMbinFuHixTQoUEQuXJHqGoyuWLHNwVk6Qg2dbhpump",
+   "symbol": "Mag",
+   "ts": "2026-11-03T20:03:03",
+   "t": 1793736183.0,
+   "mcap": 6444.0864662174135,
+   "whale_usd": 279.6173679123942,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EpVe56oGut5wNCVaHtHjsyiU95BvQC3pfdYB248mpump",
+   "symbol": "Mag",
+   "ts": "2026-11-03T20:05:10",
+   "t": 1793736310.0,
+   "mcap": 10178.751836065194,
+   "whale_usd": 276.99957223953305,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7GWBnuU5ps1ZduiAsuKaYCehspfWWKZw69NF2E1xrZAA",
+   "symbol": "AGAIN",
+   "ts": "2026-11-03T20:05:16",
+   "t": 1793736316.0,
+   "mcap": 366204.1834799724,
+   "whale_usd": 778.150714,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "22r9JGoWRBYc4Z1pkSFw8p2tdjefS2ZZshw1vr8bBC2K",
+   "symbol": "STONKS",
+   "ts": "2026-11-03T20:06:15",
+   "t": 1793736375.0,
+   "mcap": 948320.0051467574,
+   "whale_usd": 607.56,
    "whale_type": "kol"
   }
  ],
