@@ -1185,6 +1185,30 @@
    "limit_expires": 1793687515.406412,
    "views": 97,
    "closed": "limit buy not filled in time, cancelled"
+  },
+  {
+   "token_address": "FxQ5GbqCBxNHDpFTpiL9RDVHiP58ar5nMkR3eMwepump",
+   "symbol": "UNPOOLED",
+   "whale_time": "2026-11-03T06:40:09",
+   "whale_type": "whale",
+   "whale_usd": 248.95457933916083,
+   "whale_mcap": 34664.29916443303,
+   "seen_after_s": 1.2,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 3.523531631799415e-05,
+   "glance": {
+    "above_5m_low_pct": 76.5,
+    "this_minute_pct": 3.4
+   },
+   "status": "limit pending",
+   "limit_price": 3.523531631799415e-05,
+   "limit_order_id": "e9633ba1-b52e-435c-8c24-31197703d2c7",
+   "limit_placed_at": "2026-11-03T06:40:16Z",
+   "limit_expires": 1793688136.73584,
+   "explore": "rule: whale buy too small",
+   "views": 44
   }
  ],
  "skipped": [
@@ -1554,6 +1578,15 @@
    "t": 1793687778.0,
    "mcap": 2948097.687019801,
    "whale_usd": 5001.649437428002,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "FxQ5GbqCBxNHDpFTpiL9RDVHiP58ar5nMkR3eMwepump",
+   "symbol": "UNPOOLED",
+   "ts": "2026-11-03T06:40:09",
+   "t": 1793688009.0,
+   "mcap": 34664.29916443303,
+   "whale_usd": 248.95457933916083,
    "whale_type": "whale"
   }
  ]
