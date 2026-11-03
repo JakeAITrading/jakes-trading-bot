@@ -101,10 +101,14 @@ class TradingEngine:
     # -- holdings --------------------------------------------------------
     def holdings(self) -> tuple[float, list[dict]]:
         """(USDC cash, real non-cash, non-SOL positions) from the chain via Moby."""
+        from trading_bot.sniper import sniper_tokens
+        skip = sniper_tokens()  # coins owned by the whale-pop experiment
         bal = self._read("get_my_balances")
         cash = _num((bal.get("usd_token") or {}).get("quantity"))
         positions = []
         for t in bal.get("tokens") or []:
+            if t.get("token_address") in skip:
+                continue
             if t.get("is_quote") or t.get("is_cash"):
                 cash = _num(t.get("quantity"), cash)
             elif not (t.get("is_native") or t.get("is_dust")) and _num(t.get("quantity")) > 0:

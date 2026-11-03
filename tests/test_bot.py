@@ -4,7 +4,7 @@ import pytest
 
 from trading_bot.engine import MONEY_TOOLS, TradingEngine
 from trading_bot.moby_client import MobyClient, MobyError, _parse_sse, decode_tool_result
-from trading_bot import run, store
+from trading_bot import run, sniper, store
 from trading_bot.settings import load_config
 
 
@@ -230,3 +230,76 @@ def test_client_handshake_session_and_auth():
     assert methods == ["initialize", "notifications/initialized", "tools/list", "tools/call"]
     assert http.sent[0][1]["Authorization"] == "Bearer moby_agent_test"
     assert http.sent[-1][1]["Mcp-Session-Id"] == "s1"
+
+
+class SniperMoby:
+    def __init__(self, tp_reply=None):
+        self.calls = []
+        self.tp_reply = tp_reply or {"order_id": "o1"}
+
+    def call_tool(self, name, args=None):
+        self.calls.append((name, args))
+        return {
+            "get_token_price": {"price_usd": 0.001},
+            "quick_buy": {"quote_id": "q1", "fill_pending": False, "filled_output_amount_ui": 4000.0,
+                          "filled_input_amount_ui": 5.0},
+            "get_my_token_balance": {"balance_token_amount": 3990.0},
+            "create_order": self.tp_reply,
+            "quick_sell": {"status": "ok"},
+        }[name]
+
+
+def whale_row(age_s=3, **kw):
+    import datetime as dt
+    ts = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(seconds=age_s)).strftime("%Y-%m-%dT%H:%M:%S")
+    row = {"id": "w1", "timestamp": ts, "transaction_type": "buy", "action": "first_buy", "amount_usd": 900,
+           "token_market_cap": 300_000, "wallet_list_type": "whale",
+           "token": {"token_address": "TOK", "symbol": "TOK", "safety_tier": "grey"}}
+    row.update(kw)
+    return row
+
+
+@pytest.fixture
+def sniper_dir(tmp_path, monkeypatch):
+    monkeypatch.setenv("BOT_STATE_DIR", str(tmp_path))
+    return tmp_path
+
+
+def test_sniper_filters(sniper_dir):
+    import time
+    s = sniper.Sniper(SniperMoby(), 5, 25, 20, dry_run=False)
+    now = time.time()
+    assert s.qualifies(whale_row(), now) is None
+    assert s.qualifies(whale_row(age_s=60), now).startswith("too old")
+    assert s.qualifies(whale_row(action="add"), now) == "not an opening buy"
+    assert s.qualifies(whale_row(token_market_cap=5e6), now) == "market cap out of range"
+    assert s.qualifies(whale_row(amount_usd=50), now) == "whale buy too small"
+    red = whale_row(); red["token"] = {**red["token"], "safety_tier": "red"}
+    assert s.qualifies(red, now) == "red safety"
+
+
+def test_sniper_buys_5_and_sets_take_profit_25(sniper_dir):
+    import time
+    moby = SniperMoby()
+    rec = sniper.Sniper(moby, 5, 25, 20, dry_run=False).trade(whale_row(), time.time())
+    assert ("quick_buy", {"output_token": "TOK", "amount_usd": 5,
+                          "rationale": moby.calls[1][1]["rationale"]}) in moby.calls
+    order = [a for n, a in moby.calls if n == "create_order"][0]
+    assert order["order_type"] == "tp_only" and order["amount"] == 3990.0
+    assert order["take_profit_price"] == pytest.approx(5 / 4000 * 1.25)
+    assert not any(n == "quick_sell" for n, _ in moby.calls)  # no stop-loss, no early sell
+    assert rec["status"] == "holding, take-profit set"
+
+
+def test_sniper_sells_now_if_already_past_target(sniper_dir):
+    import time
+    moby = SniperMoby(tp_reply={"error": "tp_below_market"})
+    rec = sniper.Sniper(moby, 5, 25, 20, dry_run=False).trade(whale_row(), time.time())
+    assert rec["status"].startswith("sold immediately")
+
+
+def test_main_bot_ignores_sniper_coins(sniper_dir):
+    sniper.save({"trades": [{"token_address": "X"}]})
+    moby = FakeMoby(rows=[], tokens=[{"token_address": "X", "symbol": "X", "quantity": 50}])
+    report = TradingEngine(moby, cfg()).run_cycle()
+    assert moby.money_calls() == [] and report["positions"] == []
