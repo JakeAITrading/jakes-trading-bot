@@ -219,7 +219,12 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit set"
+   "status": "holding, take-profit set",
+   "closed": "take-profit filled at 4.22393e-05",
+   "sold_price": 4.2239255514e-05,
+   "proceeds_usd": 6.219875,
+   "profit_usd": 1.22,
+   "rebuy_until": 1793680987.122241
   },
   {
    "token_address": "DUUxG3Qa23MNfHjnKVdzjrtFvzMUcB9AuNNvRvpdpump",
