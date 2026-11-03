@@ -2285,6 +2285,23 @@
    },
    "expected_avg_pct": 15.6,
    "expected_trades_in_samples": 97.0
+  },
+  {
+   "at": "2026-11-03T09:45:49Z",
+   "new_samples": 7,
+   "live_samples": 54,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 13.8,
+   "expected_trades_in_samples": 109.0
   }
  ],
  "observed": [
@@ -3205,8 +3222,26 @@
    "mcap": 36034.44170096073,
    "whale_usd": 455.00747205955304,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "AuJzVHjNbWkPhnJUbrQa4yXb379rPb3LXS24cJXApump",
+   "symbol": "YoJong",
+   "ts": "2026-11-03T09:44:02",
+   "t": 1793699042.0,
+   "mcap": 5168.125881027663,
+   "whale_usd": 182.477670925374,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BxLudQYvasgD8yZPzhHvgZEnf4S5TPY7KkYnRzj2pump",
+   "symbol": "LOVE",
+   "ts": "2026-11-03T09:47:20",
+   "t": 1793699240.0,
+   "mcap": 6423.428076159929,
+   "whale_usd": 136.914698547297,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
- "last_retarget": 1793695525.5730286
+ "last_retarget": 1793699149.301121
 }
