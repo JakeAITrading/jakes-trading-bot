@@ -111,7 +111,13 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "sold (cleared old-rule position)",
+   "sell": {
+    "status": "Success (sold in the first attempt)"
+   },
+   "closed": "sold by hand: clearing old-rule positions",
+   "proceeds_usd": 0.98,
+   "profit_usd": -4.02
   },
   {
    "token_address": "5DnWmSL9t3YqK5MeYq8ozJpna46VcdePWzHvyN8avg2g",
@@ -298,7 +304,8 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "holding, take-profit moved to +12%",
+   "note": "too small to sell (fees exceed proceeds); left with its take-profit order"
   },
   {
    "token_address": "7uHBhrdN1UNf1vggnvoZMHVA6Du4NQe2USP2oMnYpump",
@@ -331,9 +338,9 @@
    "entry_vs_seen_pct": 42.9,
    "take_profit_price": 3.994114995505379e-05,
    "tp_order": {
-    "order_id": "4f6bb768-dffd-4854-93d3-86e089bd83b9",
+    "order_id": "877b308f-f379-4242-9334-ec5fb074124a",
     "order_ids": [
-     "4f6bb768-dffd-4854-93d3-86e089bd83b9"
+     "877b308f-f379-4242-9334-ec5fb074124a"
     ],
     "network": "solana",
     "funding_network": null,
@@ -356,7 +363,8 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "holding, take-profit moved to +12%",
+   "note": "too small to sell (fees exceed proceeds); left with its take-profit order"
   },
   {
    "token_address": "DBPTU2oKLDHXQjAEJ3rZi8bUGmt2uxUbipgg6xmXoMqr",
@@ -389,9 +397,9 @@
    "entry_vs_seen_pct": 22.0,
    "take_profit_price": 0.0011067097249976986,
    "tp_order": {
-    "order_id": "9d91ab6f-de0b-404f-938e-bacc17a715d3",
+    "order_id": "ed421361-cfd6-4088-953a-6ac9ad676953",
     "order_ids": [
-     "9d91ab6f-de0b-404f-938e-bacc17a715d3"
+     "ed421361-cfd6-4088-953a-6ac9ad676953"
     ],
     "network": "solana",
     "funding_network": null,
@@ -414,7 +422,47 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "sold (cleared old-rule position)",
+   "sell": {
+    "simulated": false,
+    "network": "solana",
+    "funding_network": "solana",
+    "output_token": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "amount_usd": null,
+    "amount_in": null,
+    "input_token": "DBPTU2oKLDHXQjAEJ3rZi8bUGmt2uxUbipgg6xmXoMqr",
+    "input_token_symbol": "CAPY",
+    "input_amount": 5060.044087,
+    "quote_id": "swap:2308b021-79a9-4b0a-9ea6-01d9643e0510:0",
+    "status": "Success",
+    "transaction_signature": "4zsJtYci1yv9kvyXjRKSMpagWrm36eQWyibeMYKjVP97iWu3jd4SvxsMmrCtfuCRntkgWt9N5BjU5dRTPtZHmPQN",
+    "explorer_url": "https://solscan.io/tx/4zsJtYci1yv9kvyXjRKSMpagWrm36eQWyibeMYKjVP97iWu3jd4SvxsMmrCtfuCRntkgWt9N5BjU5dRTPtZHmPQN",
+    "output_decimals": 6,
+    "quoted_output_amount": 2940596.0,
+    "quoted_output_amount_ui": 2.940596,
+    "minimum_output_amount": 2352476.0,
+    "minimum_output_amount_ui": 2.352476,
+    "filled_input_amount": null,
+    "filled_input_amount_ui": null,
+    "filled_output_amount": null,
+    "filled_output_amount_ui": null,
+    "effective_slippage_bps": null,
+    "fill_pending": true,
+    "slippage_bps": 2000,
+    "fee_bps": 2311,
+    "next_step": null,
+    "sold_amount": 5060.044087,
+    "pct": 100.0,
+    "cancelled_order_ids": [
+     "ed421361-cfd6-4088-953a-6ac9ad676953"
+    ],
+    "cancel_failed_order_ids": [],
+    "cancel_pending_order_ids": [],
+    "cancel_note": null
+   },
+   "closed": "sold by hand: clearing old-rule positions",
+   "proceeds_usd": 2.940596,
+   "profit_usd": -2.06
   },
   {
    "token_address": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
@@ -528,9 +576,9 @@
    "entry_vs_seen_pct": 27.3,
    "take_profit_price": 9.639922663786533e-05,
    "tp_order": {
-    "order_id": "b86ee78e-db28-435c-918c-4c515e8d8afd",
+    "order_id": "ea688909-a65f-4fce-9348-3d4ec9cb3ea6",
     "order_ids": [
-     "b86ee78e-db28-435c-918c-4c515e8d8afd"
+     "ea688909-a65f-4fce-9348-3d4ec9cb3ea6"
     ],
     "network": "solana",
     "funding_network": null,
@@ -553,7 +601,8 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "holding, take-profit moved to +12%",
+   "note": "too small to sell (fees exceed proceeds); left with its take-profit order"
   },
   {
    "token_address": "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
@@ -743,7 +792,47 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "status": "holding, take-profit moved to +12%"
+   "status": "sold (cleared old-rule position)",
+   "sell": {
+    "simulated": false,
+    "network": "solana",
+    "funding_network": "solana",
+    "output_token": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "amount_usd": null,
+    "amount_in": null,
+    "input_token": "CcDxdWZknjKxucq6SgQtHSc5w1amottoBkheaaePpump",
+    "input_token_symbol": "ANON",
+    "input_amount": 38517.94506,
+    "quote_id": "d607142f-ff22-4ba5-ab09-92c6b9d1bb94",
+    "status": "Success",
+    "transaction_signature": "3TFUmKo65SL9dDvwxsXM4vcXeJq6hEBjub2Y25WPYnHSVQBEAvJ3rfEG67TM8ZMgyfSCZcuDHkESDcDMJiPxSLj5",
+    "explorer_url": "https://solscan.io/tx/3TFUmKo65SL9dDvwxsXM4vcXeJq6hEBjub2Y25WPYnHSVQBEAvJ3rfEG67TM8ZMgyfSCZcuDHkESDcDMJiPxSLj5",
+    "output_decimals": 6,
+    "quoted_output_amount": 3317302.0,
+    "quoted_output_amount_ui": 3.317302,
+    "minimum_output_amount": 2653842.0,
+    "minimum_output_amount_ui": 2.653842,
+    "filled_input_amount": null,
+    "filled_input_amount_ui": null,
+    "filled_output_amount": null,
+    "filled_output_amount_ui": null,
+    "effective_slippage_bps": null,
+    "fill_pending": true,
+    "slippage_bps": 2000,
+    "fee_bps": 2127,
+    "next_step": null,
+    "sold_amount": 38517.94506,
+    "pct": 100.0,
+    "cancelled_order_ids": [
+     "4b5547a0-701e-40bd-9d91-5b5e50ac1c8c"
+    ],
+    "cancel_failed_order_ids": [],
+    "cancel_pending_order_ids": [],
+    "cancel_note": null
+   },
+   "closed": "sold by hand: clearing old-rule positions",
+   "proceeds_usd": 3.317302,
+   "profit_usd": -1.68
   },
   {
    "token_address": "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump",
