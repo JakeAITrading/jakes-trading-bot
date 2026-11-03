@@ -3381,6 +3381,33 @@
    "mcap": 21841.09573922107,
    "whale_usd": 479.05,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "BJB2Tr5USGxx1oizzKXvYFdPhe6xrz7HLLAmc3p4gwQv",
+   "symbol": "zANT",
+   "ts": "2026-11-03T10:22:09",
+   "t": 1793701329.0,
+   "mcap": 21072.341041872278,
+   "whale_usd": 368.93315098816674,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "81D4ws8vvEs37Tv4TvjWaUXv7kJn98BGdaK59d8Apump",
+   "symbol": "zANT",
+   "ts": "2026-11-03T10:22:53",
+   "t": 1793701373.0,
+   "mcap": 9000.380487123039,
+   "whale_usd": 276.68165984567275,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8ozpQfvuPzxaLiKnX6cqTDbqs8HMzqduHUe1J15mpump",
+   "symbol": "AI",
+   "ts": "2026-11-03T10:22:55",
+   "t": 1793701375.0,
+   "mcap": 21548.25415345838,
+   "whale_usd": 250.284532,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
