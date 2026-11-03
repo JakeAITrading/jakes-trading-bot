@@ -2319,6 +2319,23 @@
    },
    "expected_avg_pct": 13.8,
    "expected_trades_in_samples": 109.0
+  },
+  {
+   "at": "2026-11-03T10:05:50Z",
+   "new_samples": 4,
+   "live_samples": 61,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 11.7,
+   "expected_trades_in_samples": 118.0
   }
  ],
  "observed": [
@@ -3301,6 +3318,51 @@
    "t": 1793700191.0,
    "mcap": 9040.986697073095,
    "whale_usd": 276.48030135,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+   "symbol": "CLAUDIA",
+   "ts": "2026-11-03T10:04:31",
+   "t": 1793700271.0,
+   "mcap": 2702228.9903808828,
+   "whale_usd": 999.3000000000001,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "5i4gadhLpd5gLn1grvnHraXZFDyafyPTeiAXXYa9GD88",
+   "symbol": "GECAT",
+   "ts": "2026-11-03T10:04:37",
+   "t": 1793700277.0,
+   "mcap": 7644.651304872241,
+   "whale_usd": 183.50800457800574,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9W7Dyv9CV9UhwKfW9gCuYoPncAY8M3EScLiD8ZHemDAr",
+   "symbol": "GENESIS",
+   "ts": "2026-11-03T10:04:45",
+   "t": 1793700285.0,
+   "mcap": 45788.61098277375,
+   "whale_usd": 650.0,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "BZXh2LcnNNyypxsdfVeFzXawqmoGoSShC5i4NEQQpump",
+   "symbol": "underdog",
+   "ts": "2026-11-03T10:08:09",
+   "t": 1793700489.0,
+   "mcap": 5188.105660636211,
+   "whale_usd": 374.22679486329145,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2aEFMMGa6emADiboQB8PidxRCstKjYHGUUNoqcdLpump",
+   "symbol": "PerpScape",
+   "ts": "2026-11-03T10:09:03",
+   "t": 1793700543.0,
+   "mcap": 21841.09573922107,
+   "whale_usd": 479.05,
    "whale_type": "kol"
   }
  ],
