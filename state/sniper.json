@@ -7498,6 +7498,33 @@
    "mcap": 11729.492143786047,
    "whale_usd": 300.29414099999985,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "Eivrb57YUp8DTWSghZhLtfh95qHtVDEk79GV2nsrQRRt",
+   "symbol": "MERGE",
+   "ts": "2026-11-03T20:18:48",
+   "t": 1793737128.0,
+   "mcap": 42519.85956216231,
+   "whale_usd": 166.01229503334693,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BHzH8z58Vx2WiKBR2AGCNfYm54s1YnqHr8Z1YxS3pump",
+   "symbol": "MAIN",
+   "ts": "2026-11-03T20:19:36",
+   "t": 1793737176.0,
+   "mcap": 29867.293453732716,
+   "whale_usd": 364.68070340941296,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
+   "symbol": "Anakin",
+   "ts": "2026-11-03T20:20:01",
+   "t": 1793737201.0,
+   "mcap": 731925.5924477876,
+   "whale_usd": 125.60013016824819,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793736823.872862
