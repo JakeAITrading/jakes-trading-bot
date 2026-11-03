@@ -7569,6 +7569,24 @@
    "mcap": 54256.86600739389,
    "whale_usd": 500.0,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "HUSUgBv4wrfhMRqmmgebjbvXEtRbnUNnrUgu7EGUpump",
+   "symbol": "RANMARU",
+   "ts": "2026-11-03T20:25:50",
+   "t": 1793737550.0,
+   "mcap": 5738.49229112966,
+   "whale_usd": 482.8368045945131,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "79hQSeQtMsVLFH8vCT8LysFnJDqiwSxQyTA7cMVgyaHB",
+   "symbol": "MEMEMAN",
+   "ts": "2026-11-03T20:25:59",
+   "t": 1793737559.0,
+   "mcap": 118877.29146432987,
+   "whale_usd": 1040.0,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793736823.872862
