@@ -3718,6 +3718,78 @@
    "mcap": 5877.474904991686,
    "whale_usd": 229.0571794419975,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "EWDXwrxtV9QprCna1BVwsDpMwQ7hncvsrHR9771tXmt6",
+   "symbol": "GG",
+   "ts": "2026-11-03T11:12:45",
+   "t": 1793704365.0,
+   "mcap": 22147.127310745418,
+   "whale_usd": 598.5029119752253,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "J8PSdNP3QewKq2Z1JJJFDMaqF7KcaiJhR7gbr5KZpump",
+   "symbol": "TripleT",
+   "ts": "2026-11-03T11:13:08",
+   "t": 1793704388.0,
+   "mcap": 3081254.3438572283,
+   "whale_usd": 349.65,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+   "symbol": "baton",
+   "ts": "2026-11-03T11:15:47",
+   "t": 1793704547.0,
+   "mcap": 3077838.355120737,
+   "whale_usd": 2000.1481159999996,
+   "whale_type": "trader"
+  },
+  {
+   "token_address": "BoD7KZinSqZtjwNMj1n6Zq2AvCqm3CaiWPkay83upump",
+   "symbol": "SI",
+   "ts": "2026-11-03T11:15:49",
+   "t": 1793704549.0,
+   "mcap": 5904.129466216546,
+   "whale_usd": 187.72667765463814,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3cbUeHYjpMYerTFgghGNee4JFV2PWjJqVtDjZmZxpump",
+   "symbol": "SI",
+   "ts": "2026-11-03T11:16:00",
+   "t": 1793704560.0,
+   "mcap": 8455.563147435896,
+   "whale_usd": 280.74618992812907,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2CFptnkFuvhuWPLxDEyLj6wKzSLpY5x7ooRPqYSJpump",
+   "symbol": "SI",
+   "ts": "2026-11-03T11:16:38",
+   "t": 1793704598.0,
+   "mcap": 12259.950381121598,
+   "whale_usd": 347.9428405233524,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2qa2RsyhhoUhF5CyoMMvnWWQ6WrM7NQFu39pJdEY61vz",
+   "symbol": "STEALTH",
+   "ts": "2026-11-03T11:17:27",
+   "t": 1793704647.0,
+   "mcap": 8705.384061545798,
+   "whale_usd": 248.7388393117911,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "81rkaKKZrkZ6UE3AA6Zy1dKVVo1GdZS61vov7wktpump",
+   "symbol": "SI",
+   "ts": "2026-11-03T11:17:30",
+   "t": 1793704650.0,
+   "mcap": 7339.327112276806,
+   "whale_usd": 186.59953067336642,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
