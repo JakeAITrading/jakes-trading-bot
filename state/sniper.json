@@ -932,12 +932,44 @@
     "this_minute_pct": 165.3
    },
    "explore": "rule: whale buy too small",
-   "status": "limit pending",
+   "status": "holding, take-profit set",
    "limit_price": 9.565595064486843e-06,
    "limit_order_id": "6d5d1176-9ea4-45a1-83e2-de5cd355b0b4",
    "limit_placed_at": "2026-11-03T06:12:53Z",
    "limit_expires": 1793686493.0616264,
-   "views": 11
+   "views": 11,
+   "entry_price": 9.38509383e-06,
+   "spent_usd": 4.998076260089874,
+   "tokens": 532759.724148,
+   "bought_at": "2026-11-03 06:12:56",
+   "entry_vs_seen_pct": -1.9,
+   "take_profit_price": 1.05113050896e-05,
+   "tp_order": {
+    "order_id": "9f622830-f056-4ac0-9c88-a64cb944e634",
+    "order_ids": [
+     "9f622830-f056-4ac0-9c88-a64cb944e634"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "5Zn8AUV1QSVYYSzfQ5sY7i7AaxQRvsZK4JEb5p8Tpump",
+    "amount": 532759.724148,
+    "input_token": "5Zn8AUV1QSVYYSzfQ5sY7i7AaxQRvsZK4JEb5p8Tpump",
+    "input_token_symbol": null,
+    "take_profit_price": 1.05113050896e-05,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   }
   }
  ],
  "skipped": [
