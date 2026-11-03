@@ -6947,6 +6947,60 @@
    "mcap": 43476.31452650731,
    "whale_usd": 538.8172936411657,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "6pegJVnTpoZ6oyfBNwfWD3E2brkExn5HCmsnkzofpump",
+   "symbol": "CursorCat",
+   "ts": "2026-11-03T19:54:14",
+   "t": 1793735654.0,
+   "mcap": 7997.476556096534,
+   "whale_usd": 185.5130390905594,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ts": "2026-11-03T19:57:06",
+   "t": 1793735826.0,
+   "mcap": 9754908.655795252,
+   "whale_usd": 114.290103,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "D7V3Z3Q51pSHMZ9Sp12AmT8jh3zGwGf5yWq4bbMypump",
+   "symbol": "CRYPTO",
+   "ts": "2026-11-03T19:57:15",
+   "t": 1793735835.0,
+   "mcap": 6917.2588155197445,
+   "whale_usd": 279.33652018758784,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2SeWvLaHYHQPpjXZukCiQWvDxu53BfYmeo1ZUZkqpump",
+   "symbol": "GPU",
+   "ts": "2026-11-03T19:58:32",
+   "t": 1793735912.0,
+   "mcap": 42972.9261668399,
+   "whale_usd": 26222.675420434094,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8Jxupq2skov3TM1TnGxKJgBzfrGi3cbpis57LCftpump",
+   "symbol": "BCC",
+   "ts": "2026-11-03T19:58:44",
+   "t": 1793735924.0,
+   "mcap": 5397.172117227456,
+   "whale_usd": 172.53563530328526,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7q9PYJqJABNUB6k4MKZPfiAJzmZQVFrGor8An93rpump",
+   "symbol": "TREAD",
+   "ts": "2026-11-03T19:59:11",
+   "t": 1793735951.0,
+   "mcap": 5555.145889957203,
+   "whale_usd": 276.61166704383305,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
