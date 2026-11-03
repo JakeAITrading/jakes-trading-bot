@@ -7587,6 +7587,87 @@
    "mcap": 118877.29146432987,
    "whale_usd": 1040.0,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ts": "2026-11-03T20:26:24",
+   "t": 1793737584.0,
+   "mcap": 9878481.98737369,
+   "whale_usd": 2500.001666680476,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GHz8honKq9AErWwX25CF9wbxC2kf6FvXxrHugJkjauuU",
+   "symbol": "Reset",
+   "ts": "2026-11-03T20:26:46",
+   "t": 1793737606.0,
+   "mcap": 5365.186552808154,
+   "whale_usd": 399.8880431138458,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "E9uYgiNNbSCneoXWnpts6ej6Ufy3nEE7uYMiLdFCDyLN",
+   "symbol": "Beta",
+   "ts": "2026-11-03T20:27:45",
+   "t": 1793737665.0,
+   "mcap": 8447.666914435104,
+   "whale_usd": 276.939430514697,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9KcHDm8S9Vir2PTMQGPvwYdFiEFizqM1zQYShTQKpump",
+   "symbol": "MACHACA",
+   "ts": "2026-11-03T20:27:56",
+   "t": 1793737676.0,
+   "mcap": 6196.043159434339,
+   "whale_usd": 277.077900241989,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "32wRT79XJAtqWobEtCzFQ4ddBezcohLV53zRJwEfLoat",
+   "symbol": "Micro",
+   "ts": "2026-11-03T20:29:18",
+   "t": 1793737758.0,
+   "mcap": 31975.49085598439,
+   "whale_usd": 454.42258184902704,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "241uewYxA7LEkDYuuGJEMKZtWdHArM6yTQTKMJ25pump",
+   "symbol": "SENSITIVE",
+   "ts": "2026-11-03T20:29:54",
+   "t": 1793737794.0,
+   "mcap": 6708.347882522503,
+   "whale_usd": 399.77372644794275,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3A1BsNi7hPcsHiFVMhBZy6iHyrPZCpZzNrSrDqp4pump",
+   "symbol": "ANSEM",
+   "ts": "2026-11-03T20:30:52",
+   "t": 1793737852.0,
+   "mcap": 8527.725185558666,
+   "whale_usd": 103.87825205723081,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8KRHPDGx8xQeLTBiyRkUYV4f8dWWvn2jgNVd5mD4pump",
+   "symbol": "HENTAI",
+   "ts": "2026-11-03T20:30:53",
+   "t": 1793737853.0,
+   "mcap": 5732.2695283801295,
+   "whale_usd": 114.2046800837424,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2cdMGe4NAUYKzKwJAVtPj8iPod7nJHj2V2DCmnUEpump",
+   "symbol": "ANSEM",
+   "ts": "2026-11-03T20:31:10",
+   "t": 1793737870.0,
+   "mcap": 7718.291271885391,
+   "whale_usd": 110.8696056457917,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793736823.872862
