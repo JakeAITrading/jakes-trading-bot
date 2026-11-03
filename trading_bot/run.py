@@ -11,7 +11,7 @@ import json
 import logging
 import sys
 
-from trading_bot import store
+from trading_bot import main_learner, store
 from trading_bot.engine import TradingEngine
 from trading_bot.moby_client import MobyClient
 from trading_bot.settings import ROOT, load_config, load_env
@@ -39,7 +39,7 @@ def main() -> int:
     if reason:
         write_last_run(reason)
         return 0
-    cfg = load_config()
+    cfg = main_learner.apply(load_config())   # learned settings override config.yaml
     try:
         client = MobyClient(url=cfg.get("moby", {}).get("mcp_url"))
         engine = TradingEngine(client, cfg, store.load_state())
@@ -49,6 +49,10 @@ def main() -> int:
         write_last_run(f"FAILED: {exc}")
         return 1
     store.save_state(engine.state)
+    try:
+        main_learner.maybe_learn(client, load_config())
+    except Exception as exc:
+        log.warning("main learning failed: %s", exc)
     mode = "practice" if report["dry_run"] else "LIVE"
     for action in report["actions"]:
         store.append("trades.jsonl", {"mode": mode, **action})

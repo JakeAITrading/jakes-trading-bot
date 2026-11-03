@@ -199,7 +199,7 @@ class TradingEngine:
         h1, h24 = _num(row.get("price_change_pct_h1")), _num(row.get("price_change_pct_h24"))
         whale = row.get("whale") or {}
         w1, w4 = whale.get("h1") or {}, whale.get("h4") or {}
-        if row.get("safety_tier") != "green":
+        if row.get("safety_tier") == "red" or (s.get("green_only", True) and row.get("safety_tier") != "green"):
             return f"safety {row.get('safety_tier')}"
         if not (_num(s.get("min_market_cap_usd")) <= mc <= _num(s.get("max_market_cap_usd"), 1e18)):
             return "market cap out of range"
@@ -236,6 +236,11 @@ class TradingEngine:
         lb = self._read("get_screener_leaderboard", {
             "limit": int(self.s.get("leaderboard_size", 30)), "whale_windows": ["h1", "h4"]})
         rows = lb.get("entries", []) if isinstance(lb, dict) else []
+        try:
+            from trading_bot import main_learner
+            main_learner.observe(rows)   # every row, traded or not, becomes a learning sample later
+        except Exception as e:
+            log.warning("could not log leaderboard for learning: %s", e)
         blocked = set(self.r.get("blocked_tokens") or [])
         picks = []
         for row in rows:

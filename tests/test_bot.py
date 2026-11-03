@@ -281,6 +281,12 @@ def whale_row(age_s=3, **kw):
     return row
 
 
+@pytest.fixture(autouse=True)
+def _isolated_state(tmp_path, monkeypatch):
+    """No test may touch the real state/ folder (live trade log and learning data)."""
+    monkeypatch.setenv("BOT_STATE_DIR", str(tmp_path / "state"))
+
+
 @pytest.fixture
 def sniper_dir(tmp_path, monkeypatch):
     monkeypatch.setenv("BOT_STATE_DIR", str(tmp_path))
@@ -695,3 +701,28 @@ def test_sells_now_when_moby_says_target_below_price(sniper_dir):
     s.limit_cushion = None
     rec = s.trade(whale_row(), time.time())
     assert rec["status"].startswith("sold immediately")
+
+
+def test_main_learner_learns_stops_and_targets():
+    from trading_bot import main_learner as ml
+    base = {"mcap": 5e6, "liq": 3e5, "h1": 3, "h24": 20, "wf1": 2000, "wf4": 8000, "wb4": 4, "safety": "green"}
+    dip_then_run = {**base, "path": [[1.02, 0.85], [1.3, 0.95], [1.6, 1.2]], "end": 1.5}
+    p0 = ml.start_params({})
+    p, r = ml.optimize([dip_then_run] * 20, {**p0, "stop_loss_pct": 10})
+    assert p["stop_loss_pct"] >= 25 and r["avg"] > 0              # learns a wider stop survives the dip
+    crash = {**base, "path": [[1.12, 0.98], [1.0, 0.5]], "end": 0.4}
+    p, r = ml.optimize([crash] * 20, p0)
+    assert p["take_profit_pct"] <= 10 or p["stop_loss_pct"] <= 15  # take the pop or cut fast
+
+
+def test_main_learner_observe_apply(tmp_path):
+    from trading_bot import main_learner as ml
+    rows = [{"token_address": "A", "symbol": "A", "price_usd": 1.0, "market_cap_usd": 5e6, "liquidity_usd": 3e5,
+             "price_change_pct_h1": 2, "price_change_pct_h24": 10, "safety_tier": "green",
+             "whale": {"h1": {"whale_net_flow_usd": 100}, "h4": {"whale_net_flow_usd": 900, "whale_buyers_count": 2}}}]
+    assert ml.observe(rows) == 1 and ml.observe(rows) == 0       # once per coin per 30 min
+    cfg = {"strategy": {"min_liquidity_usd": 200_000}, "risk": {"take_profit_pct": 50}}
+    assert ml.apply(cfg)["risk"]["take_profit_pct"] == 50         # nothing learned yet
+    ml._save(ml.PARAMS, {"params": {**ml.start_params(cfg), "take_profit_pct": 20, "min_liquidity_usd": 50_000}})
+    out = ml.apply(cfg)
+    assert out["risk"]["take_profit_pct"] == 20 and out["strategy"]["min_liquidity_usd"] == 50_000
