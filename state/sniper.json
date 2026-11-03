@@ -491,12 +491,13 @@
     "above_5m_low_pct": 8.4,
     "this_minute_pct": -8.7
    },
-   "status": "limit pending",
+   "status": "limit buy not filled in time, cancelled",
    "limit_price": 2.3150611650635255e-05,
    "limit_order_id": "828902d8-89a2-4b5e-9d32-6081472dd9e1",
    "limit_placed_at": "2026-11-03T05:08:21Z",
    "limit_expires": 1793682621.602626,
-   "views": 10
+   "views": 10,
+   "closed": "limit buy not filled in time, cancelled"
   },
   {
    "token_address": "4MNdQw5iYUZfuCT7pRq99YtAXLXbpu2xTXsfT7pFpump",
@@ -569,6 +570,26 @@
    },
    "status": "skipped: already pumped: +258% above 5-min low",
    "skipped_at": "2026-11-03T04:42:56Z"
+  },
+  {
+   "token_address": "9DwPa8v7DTCgPWEgXbCLeg7F5FpruHHTHCsNnjR9pump",
+   "symbol": "WORKER",
+   "whale_time": "2026-11-03T05:10:18",
+   "whale_type": "kol",
+   "whale_usd": 636.9953496893909,
+   "whale_mcap": 27867.95266729314,
+   "seen_after_s": 5.0,
+   "usd": 5.0,
+   "take_profit_pct": 15.0,
+   "mode": "LIVE",
+   "price_when_seen": 3.56024902430363e-05,
+   "glance": {
+    "above_5m_low_pct": 658.6,
+    "this_minute_pct": 46.7
+   },
+   "status": "skipped: already pumped: +659% above 5-min low",
+   "views": 13,
+   "skipped_at": "2026-11-03T05:10:23Z"
   }
  ]
 }
