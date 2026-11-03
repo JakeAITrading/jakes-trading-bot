@@ -7668,6 +7668,15 @@
    "mcap": 7718.291271885391,
    "whale_usd": 110.8696056457917,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "D9rrHZQQq6Jvp8zkGUQKrto72DC4Qcs4zv9tksBhpump",
+   "symbol": "ANSEM",
+   "ts": "2026-11-03T20:32:11",
+   "t": 1793737931.0,
+   "mcap": 17657.677744864486,
+   "whale_usd": 467.89604918279906,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793736823.872862
