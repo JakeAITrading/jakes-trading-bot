@@ -3550,6 +3550,15 @@
    "mcap": 6685.965217911871,
    "whale_usd": 182.716634580678,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "DAemPFNc3RtibBDKkUA4eL2Ns11q9VRdbpptmqm8DGqN",
+   "symbol": "CAKE",
+   "ts": "2026-11-03T10:51:24",
+   "t": 1793703084.0,
+   "mcap": 102558.95306609815,
+   "whale_usd": 230.76472438445032,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,

@@ -10,6 +10,7 @@ import datetime as dt
 import json
 import logging
 import os
+import time
 import sys
 
 from trading_bot import main_learner, store
@@ -44,6 +45,15 @@ def main() -> int:
     if os.environ.get("MAIN_MODE", "auto").lower() == "auto":
         # Self-learning go/no-go: real money only while the learner expects a profit.
         ok, why = main_learner.live_allowed()
+        # Moby can rate-limit order tools for hours; the whale trader records that pause. Don't place
+        # orders during it (retrying extends it).
+        try:
+            from trading_bot.sniper import load as _sniper_state
+            blocked = float(_sniper_state().get("orders_blocked_until") or 0)
+        except Exception:
+            blocked = 0.0
+        if ok and time.time() < blocked:
+            ok, why = False, f"Moby order limit: paused until {time.strftime('%H:%M UTC', time.gmtime(blocked))}"
         cfg.setdefault("trading", {})["dry_run"] = not ok
         log.info("main strategy %s: %s", "LIVE" if ok else "practice", why)
     try:
