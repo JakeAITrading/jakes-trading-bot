@@ -121,6 +121,14 @@ class Sniper:
             return f"mid-spike: +{info['this_minute_pct']:.0f}% this minute", info
         return None, info
 
+    def views(self, token: str) -> int | None:
+        """Moby's view count for the coin (people looking at it in the app). Logged only, after the
+        buy/skip decision, so it never slows a buy; compared against outcomes later."""
+        try:
+            return (self.call("get_token_overview", {"token_address": token}).get("overview") or {}).get("view_count")
+        except Exception:
+            return None
+
     def wait_fill(self, buy: dict) -> dict:
         """Poll until the buy is confirmed; return the swap status (or the buy itself if already filled)."""
         if buy.get("filled_output_amount_ui") and not buy.get("fill_pending"):
@@ -346,6 +354,7 @@ class Sniper:
                     log.info("whale %s opened $%.0f in %s (mcap $%.0f): buying", r.get("wallet_list_type"),
                              r.get("amount_usd", 0), r["token"].get("symbol"), r.get("token_market_cap", 0))
                     rec = self.trade(r, now)
+                    rec["views"] = self.views(rec["token_address"])
                     if rec.get("status", "").startswith("skipped"):
                         log.info("skip %s: %s", rec["symbol"], rec["status"])
                         self.state.setdefault("skipped", []).append({**rec, "skipped_at": _iso(_now())})

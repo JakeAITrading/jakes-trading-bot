@@ -265,6 +265,7 @@ class SniperMoby:
             "get_my_token_balance": {"balance_token_amount": 3990.0},
             "get_my_balances": {"usd_token": {"quantity": 50.0}},
             "get_token_ohlcv": {"o": [1.0, 1.0], "c": [1.05, 1.0], "l": [1.0, 0.95], "h": [1.06, 1.0]},
+            "get_token_overview": {"overview": {"view_count": 275}},
             "create_order": self.tp_reply,
             "quick_sell": {"status": "ok"},
         }[name]
@@ -471,3 +472,7 @@ def test_sniper_blocked_rebuy_retries_within_window(sniper_dir):
     moby.blocked = False
     s.check_rebuys()
     assert len(s.state["trades"]) == 2 and s.state["trades"][1]["rebuys"] == 1   # retried and bought
+
+
+def test_sniper_views(sniper_dir):
+    assert sniper.Sniper(SniperMoby(), 5, 15, 20, dry_run=False).views("T") == 275
