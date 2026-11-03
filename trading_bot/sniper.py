@@ -1,15 +1,17 @@
 """Whale-pop experiment: buy right after a tracked whale opens a position in a small coin,
 then sell at a fixed gain. No stop-loss (Jake's call: these coins can dip and recover in seconds).
 
-  python -m trading_bot.sniper --trades 4 --usd 5 --take-profit 25          # LIVE (real money)
-  python -m trading_bot.sniper --trades 4 --usd 5 --take-profit 25 --dry-run
+  python -m trading_bot.sniper --trades 4 --usd 5 --take-profit 15          # LIVE (real money)
+  python -m trading_bot.sniper --trades 4 --usd 5 --take-profit 15 --dry-run
 
 Watches Moby's whale feed every few seconds. A whale buy qualifies when it is:
   - a tracked wallet OPENING a position (action first_buy), at least $250,
   - in a coin with market cap $20k-$1M that Moby does not rate red,
   - seen within --max-age seconds of the trade, in a coin we haven't traded.
 Before buying it glances at the chart (--max-runup, --max-spike) and skips coins that already
-pumped. Then: quick_buy $usd, wait for the fill, place a take-profit order at entry * (1 + tp%).
+pumped. Then: a LIMIT buy at the price seen +5% (cancelled after 2 min if not filled), so it never
+pays for the spike (--market-buy uses quick_buy instead). Once filled, place a take-profit order at
+entry * (1 + tp%).
 When a take-profit fills it buys the same coin right back with a fresh take-profit (the profit is
 kept; --rebuy-if-rising only re-buys while the price is at/above the sale with a green last minute),
 once per sale (no cap on how many times a coin can cycle; --max-rebuys sets one). Re-buys don't
@@ -73,7 +75,8 @@ class Sniper:
         self.max_rebuys, self.rebuy_window = 0, 600  # 0 = no cap per coin; look for 10 min after a sale
         self.max_open, self.cash_floor = 5, 10.0       # our own limits (Moby's are off)
         self.look_first, self.max_runup, self.max_spike = True, 1.0, 0.20
-        self.rebuy_always = True   # re-buy right after every +tp% sale (False = only if still rising)
+        self.rebuy_always = True
+        self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min   # re-buy right after every +tp% sale (False = only if still rising)
 
     def call(self, tool: str, args: dict | None = None):
         for _ in range(4):
@@ -158,9 +161,60 @@ class Sniper:
         if self.dry_run:
             rec.update(status="simulated", entry_price=price_seen, bought_at=_iso(_now()))
             return rec
-        return self._buy(rec, token, sym, whale_ts,
-                         f"Whale-pop experiment: {row.get('wallet_list_type')} opened "
-                         f"${row.get('amount_usd', 0):,.0f} in {sym}; sell at +{self.tp*100:.0f}%.")
+        rationale = (f"Whale-pop experiment: {row.get('wallet_list_type')} opened "
+                     f"${row.get('amount_usd', 0):,.0f} in {sym}; sell at +{self.tp*100:.0f}%.")
+        if self.limit_cushion is not None and price_seen:
+            return self._limit_buy(rec, token, float(price_seen), rationale)
+        return self._buy(rec, token, sym, whale_ts, rationale)
+
+    def _limit_buy(self, rec: dict, token: str, price_seen: float, rationale: str) -> dict:
+        """Buy only at or below the price we saw + cushion, so we never chase the spike. The order
+        rests on Moby; check_pending() places the take-profit when it fills, or cancels it after
+        limit_wait seconds."""
+        limit = price_seen * (1 + self.limit_cushion)
+        try:
+            order = self.call("create_order", {"order_type": "limit_buy", "token_address": token, "amount": self.usd,
+                                               "limit_price": limit, "rationale": rationale})
+        except MobyError as e:
+            order = {"error": str(e)}
+        oid = order.get("order_id") if isinstance(order, dict) else None
+        if not oid and "above_market" in json.dumps(order):
+            # Price is already at/below our limit, so Moby won't rest the order: that price is fine, buy now.
+            rec["limit_note"] = "price already under limit; bought at market"
+            return self._buy(rec, token, rec.get("symbol"), _now(), rationale)
+        if not oid:
+            rec["status"] = f"limit buy FAILED: {json.dumps(order)[:200]}"
+            return rec
+        rec.update(status="limit pending", limit_price=limit, limit_order_id=oid,
+                   limit_placed_at=_iso(_now()), limit_expires=_now() + self.limit_wait)
+        return rec
+
+    def check_pending(self) -> None:
+        """Limit buys: on fill, record entry and place the take-profit; past the wait, cancel."""
+        pending = [r for r in self.state["trades"] if r.get("status") == "limit pending"]
+        if not pending:
+            return
+        live = {o["id"]: o for o in (self.call("get_my_orders").get("orders") or [])}
+        done = {o["id"]: o for o in (self.call("get_my_orders", {"status": "terminal"}).get("orders") or [])}
+        for rec in pending:
+            oid, token = rec["limit_order_id"], rec["token_address"]
+            o = done.get(oid)
+            if o and str(o.get("status", "")).startswith("filled"):
+                held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+                entry = float(o.get("filled_price") or rec["limit_price"])
+                spent = float(o.get("input_amount_usd") or self.usd)
+                rec.update(entry_price=entry, spent_usd=spent, tokens=held, bought_at=o.get("filled_at") or _iso(_now()),
+                           entry_vs_seen_pct=round((entry / rec["price_when_seen"] - 1) * 100, 1))
+                self._place_tp(rec, token, entry, held)
+                log.info("%s: limit buy filled at %+.1f%% vs seen; %s", rec["symbol"], rec["entry_vs_seen_pct"], rec["status"])
+            elif o:
+                rec["status"] = f"limit buy {o.get('status')} ({o.get('cancel_reason')})"
+                rec["closed"] = rec["status"]
+            elif oid in live and _now() > rec["limit_expires"]:
+                self.call("cancel_order", {"order_id": oid})
+                rec["status"] = rec["closed"] = "limit buy not filled in time, cancelled"
+                log.info("%s: %s", rec["symbol"], rec["status"])
+            save(self.state)
 
     def _buy(self, rec: dict, token: str, sym: str, t_ref: float, rationale: str) -> dict:
         """Buy $usd of token, wait for the fill, and place the take-profit. Fills in rec."""
@@ -182,6 +236,9 @@ class Sniper:
         rec.update(tokens=got, spent_usd=spent, entry_price=entry,
                    entry_vs_seen_pct=round((entry / price_seen - 1) * 100, 1) if price_seen else None)
         held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or got)
+        return self._place_tp(rec, token, entry, held)
+
+    def _place_tp(self, rec: dict, token: str, entry: float, held: float) -> dict:
         tp_price = entry * (1 + self.tp)
         rec["take_profit_price"] = tp_price
         try:
@@ -203,7 +260,8 @@ class Sniper:
 
     def open_count(self) -> int:
         return sum(1 for r in self.state["trades"]
-                   if r.get("mode") == "LIVE" and r.get("entry_price") and not r.get("closed"))
+                   if r.get("mode") == "LIVE" and (r.get("entry_price") or r.get("status") == "limit pending")
+                   and not r.get("closed"))
 
     def can_buy(self) -> str | None:
         """Our own safeguards. None = OK to buy, else the reason not to."""
@@ -310,7 +368,7 @@ class Sniper:
 
     def _watching(self) -> bool:
         """Keep running while a live position could still sell and be re-bought."""
-        return not self.dry_run and any(r.get("mode") == "LIVE" and r.get("entry_price")
+        return not self.dry_run and any(r.get("mode") == "LIVE" and (r.get("entry_price") or r.get("status") == "limit pending")
                                         and (not r.get("closed") or r.get("rebuy_until"))
                                         for r in self.state["trades"])
 
@@ -325,12 +383,14 @@ class Sniper:
             if stopped():
                 log.info("STOP file present: exiting")
                 return
-            if not self.dry_run and _now() - last_exit_check > 15:
+            pending = any(r.get("status") == "limit pending" for r in self.state["trades"])
+            if not self.dry_run and _now() - last_exit_check > (5 if pending else 15):
                 last_exit_check = _now()
                 try:
+                    self.check_pending()
                     self.check_rebuys()
                 except Exception as e:
-                    log.warning("re-buy check error: %s", e)
+                    log.warning("pending/re-buy check error: %s", e)
             if done >= trades:
                 time.sleep(poll)
                 continue
@@ -381,6 +441,9 @@ def main() -> None:
     ap.add_argument("--max-open", type=int, default=5, help="most whale coins held at once")
     ap.add_argument("--max-rebuys", type=int, default=0, help="re-buy cycles per coin (0 = no cap)")
     ap.add_argument("--no-look", action="store_true", help="skip the chart check before buying")
+    ap.add_argument("--market-buy", action="store_true", help="whale buys at market instead of a limit order")
+    ap.add_argument("--limit-cushion", type=float, default=5, help="limit price = price seen + this %%")
+    ap.add_argument("--limit-wait", type=float, default=120, help="cancel an unfilled limit buy after this many seconds")
     ap.add_argument("--rebuy-if-rising", action="store_true",
                     help="only re-buy after a sale if the coin is still rising (default: always re-buy)")
     ap.add_argument("--max-runup", type=float, default=100, help="skip if price is more than this %% above its 5-min low")
@@ -396,6 +459,8 @@ def main() -> None:
     s.max_open, s.cash_floor, s.max_rebuys = a.max_open, a.cash_floor, a.max_rebuys
     s.look_first, s.max_runup, s.max_spike = not a.no_look, a.max_runup / 100, a.max_spike / 100
     s.rebuy_always = not a.rebuy_if_rising
+    s.limit_cushion = None if a.market_buy else a.limit_cushion / 100
+    s.limit_wait = a.limit_wait
     if a.retarget and not a.dry_run:
         s.retarget()
     s.run(a.trades, a.poll, a.hours)

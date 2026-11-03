@@ -303,7 +303,9 @@ def test_sniper_filters(sniper_dir):
 def test_sniper_buys_5_and_sets_take_profit_25(sniper_dir):
     import time
     moby = SniperMoby()
-    rec = sniper.Sniper(moby, 5, 25, 20, dry_run=False).trade(whale_row(), time.time())
+    s = sniper.Sniper(moby, 5, 25, 20, dry_run=False)
+    s.limit_cushion = None   # market-buy mode
+    rec = s.trade(whale_row(), time.time())
     buy = [a for n, a in moby.calls if n == "quick_buy"]
     assert len(buy) == 1 and buy[0]["output_token"] == "TOK" and buy[0]["amount_usd"] == 5
     order = [a for n, a in moby.calls if n == "create_order"][0]
@@ -316,7 +318,9 @@ def test_sniper_buys_5_and_sets_take_profit_25(sniper_dir):
 def test_sniper_sells_now_if_already_past_target(sniper_dir):
     import time
     moby = SniperMoby(tp_reply={"error": "tp_below_market"})
-    rec = sniper.Sniper(moby, 5, 25, 20, dry_run=False).trade(whale_row(), time.time())
+    s = sniper.Sniper(moby, 5, 25, 20, dry_run=False)
+    s.limit_cushion = None
+    rec = s.trade(whale_row(), time.time())
     assert rec["status"].startswith("sold immediately")
 
 
@@ -476,3 +480,72 @@ def test_sniper_blocked_rebuy_retries_within_window(sniper_dir):
 
 def test_sniper_views(sniper_dir):
     assert sniper.Sniper(SniperMoby(), 5, 15, 20, dry_run=False).views("T") == 275
+
+
+class LimitMoby(SniperMoby):
+    """Fake Moby with a resting limit buy that is open, then filled or left to expire."""
+    def __init__(self):
+        super().__init__()
+        self.state = "open"
+
+    def call_tool(self, name, args=None):
+        if name == "create_order" and args["order_type"] == "limit_buy":
+            self.calls.append((name, args))
+            return {"order_id": "L1"}
+        if name == "get_my_orders":
+            terminal = (args or {}).get("status") == "terminal"
+            if self.state == "open":
+                return {"orders": [] if terminal else [{"id": "L1"}]}
+            if self.state == "filled":
+                return {"orders": [{"id": "L1", "status": "filled", "filled_price": 0.00104,
+                                    "input_amount_usd": 5.0, "filled_at": "t"}] if terminal else []}
+        if name == "cancel_order":
+            self.calls.append((name, args))
+            self.state = "cancelled"
+            return {"status": "cancelled"}
+        return super().call_tool(name, args)
+
+
+def test_limit_buy_fills_then_take_profit(sniper_dir):
+    import time
+    moby = LimitMoby()
+    s = sniper.Sniper(moby, 5, 15, 20, dry_run=False)
+    rec = s.trade(whale_row(), time.time())
+    assert rec["status"] == "limit pending" and rec["limit_price"] == pytest.approx(0.001 * 1.05)
+    lim = [a for n, a in moby.calls if n == "create_order"][0]
+    assert lim["order_type"] == "limit_buy" and lim["amount"] == 5
+    assert not any(n == "quick_buy" for n, _ in moby.calls)
+    s.state["trades"].append(rec)
+    assert s.open_count() == 1                     # a pending order counts as a held coin
+    moby.state = "filled"
+    s.check_pending()
+    assert rec["entry_price"] == 0.00104 and rec["entry_vs_seen_pct"] == 4.0
+    tp = [a for n, a in moby.calls if n == "create_order" and a["order_type"] == "tp_only"][0]
+    assert tp["take_profit_price"] == pytest.approx(0.00104 * 1.15)
+
+
+def test_limit_buy_cancelled_if_not_filled(sniper_dir):
+    import time
+    moby = LimitMoby()
+    s = sniper.Sniper(moby, 5, 15, 20, dry_run=False)
+    rec = s.trade(whale_row(), time.time())
+    s.state["trades"].append(rec)
+    s.check_pending()
+    assert rec["status"] == "limit pending"         # still within the 2 minutes
+    rec["limit_expires"] = time.time() - 1
+    s.check_pending()
+    assert ("cancel_order", {"order_id": "L1"}) in moby.calls and rec["closed"]
+    assert s.open_count() == 0
+
+
+def test_limit_refused_because_price_already_lower_buys_at_market(sniper_dir):
+    import time
+
+    class M(SniperMoby):
+        def call_tool(self, name, args=None):
+            if name == "create_order" and args["order_type"] == "limit_buy":
+                raise sniper.MobyError("Moby tool error: limit_above_market")
+            return super().call_tool(name, args)
+    moby = M()
+    rec = sniper.Sniper(moby, 5, 15, 20, dry_run=False).trade(whale_row(), time.time())
+    assert any(n == "quick_buy" for n, _ in moby.calls) and rec["status"] == "holding, take-profit set"
