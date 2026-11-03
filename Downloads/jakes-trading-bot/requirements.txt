@@ -1,1 +1,5 @@
-# Placeholder for requirements.txt
+flask==3.0.3
+gunicorn==22.0.0
+requests==2.32.3
+PyYAML==6.0.2
+pytest==8.3.3

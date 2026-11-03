@@ -1,1 +1,39 @@
-# Placeholder for config.yaml
+# Jake's Trading Bot - Moby automation
+#
+# Secrets are NEVER stored in this file. Set them as environment variables
+# (on Cloud Run, map them from Google Secret Manager):
+#   MOBY_API_KEY   - the moby_agent_... key from Moby > Agent settings
+#   RUN_TOKEN      - shared secret required to call POST /run on the web app
+#   ALERT_EMAIL_TO, SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD - optional trade summaries
+
+moby:
+  mcp_url: https://mcp.moby.win/mcp
+  # Names of the Moby MCP tools the bot uses. Run
+  #   python -m trading_bot.moby_client tools
+  # to see what Moby exposes, then fill these in. Leave a tool blank to disable it.
+  tools:
+    wallet: ""      # read-only: balances / positions
+    signals: ""     # read-only: trade ideas / signals Moby produces
+    trade: ""       # PLACES ORDERS - only called when dry_run is false
+  # Arguments sent to the trade tool. {symbol}, {side} and {amount_usd} are filled in.
+  trade_arguments:
+    symbol: "{symbol}"
+    side: "{side}"
+    amount_usd: "{amount_usd}"
+
+trading:
+  # true = log what the bot WOULD trade, send nothing. Flip to false only after
+  # you've checked the logs and the tool names above.
+  dry_run: true
+
+risk:
+  amount_usd_per_trade: 25
+  max_trades_per_day: 3
+  # If non-empty, only these symbols are ever traded.
+  allowed_symbols: []
+  blocked_symbols: []
+
+schedule:
+  # Seconds between automatic cycles inside the container (0 = only on POST /run,
+  # e.g. from Cloud Scheduler).
+  interval_seconds: 0
