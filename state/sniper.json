@@ -3594,6 +3594,42 @@
    "mcap": 1442572.57423919,
    "whale_usd": 2987.175,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "G4mA7CfB4BRLxfmPSAdkz8gsh232XAV1q5D4T49Rpump",
+   "symbol": "Downald",
+   "ts": "2026-11-03T10:58:17",
+   "t": 1793703497.0,
+   "mcap": 6812.161700509023,
+   "whale_usd": 137.70262887532178,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DTVcrMAEMwpSSBvu6W7P3BLZsRhFZb6bSzARFDqobfCT",
+   "symbol": "MOVEMBER",
+   "ts": "2026-11-03T10:58:22",
+   "t": 1793703502.0,
+   "mcap": 198710.2745413279,
+   "whale_usd": 1018.5770531666506,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "D1DPJq6g1oXqPkyujxMHsPEW24zaRUmUAjy6b3Vxpump",
+   "symbol": "zkSNARK",
+   "ts": "2026-11-03T10:58:58",
+   "t": 1793703538.0,
+   "mcap": 13572.687504070616,
+   "whale_usd": 123.72826614257998,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7VENy6wCjBChAMGpjPQCPYJDeYJGFr5NZUxk7uQ7bonk",
+   "symbol": "CAPY",
+   "ts": "2026-11-03T10:59:05",
+   "t": 1793703545.0,
+   "mcap": 188590.1828788628,
+   "whale_usd": 201.21384860595938,
+   "whale_type": "trader"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
