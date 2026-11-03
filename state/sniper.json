@@ -2969,6 +2969,50 @@
     "failed_leg": null,
     "failed_leg_error": null
    }
+  },
+  {
+   "token_address": "CvdPD6VsdBRT2N2YtZg5DQaRunrLVGp2uB95KxY7D1WF",
+   "symbol": "TCM",
+   "whale_time": "2026-11-03T23:19:07",
+   "whale_type": "kol",
+   "whale_usd": 132.66205557127162,
+   "whale_mcap": 6928.123184479773,
+   "seen_after_s": 3.3,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 6.346087502606679e-06,
+   "glance": {
+    "above_5m_low_pct": 91.7,
+    "this_minute_pct": -44.6
+   },
+   "status": "limit buy FAILED: {\"error\": \"Moby tool error: Error executing tool create_order: Moby rejected the request: Failed to get quote: the exchange rejected it (error 502). Please prepare the order again. NOTHING was placed ",
+   "explore": "rule: whale buy too small",
+   "views": 13
+  },
+  {
+   "token_address": "7Uxr5x4yXHACuScZ7iSWtEm89yYrzZdrwQpoX2yqpump",
+   "symbol": "Everett",
+   "whale_time": "2026-11-03T23:22:35",
+   "whale_type": "kol",
+   "whale_usd": 183.56034951054914,
+   "whale_mcap": 17560.003470862284,
+   "seen_after_s": 0.6,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 2.6200270440313034e-05,
+   "glance": {
+    "above_5m_low_pct": 782.6,
+    "this_minute_pct": 94.8
+   },
+   "explore": "rule: whale buy too small",
+   "status": "limit pending",
+   "limit_price": 2.6200270440313034e-05,
+   "limit_order_id": "92ce9ada-5981-448c-bb65-d877ac819665",
+   "limit_placed_at": "2026-11-03T23:22:42Z",
+   "limit_expires": 1793748282.0881505,
+   "views": 20
   }
  ],
  "skipped": [
@@ -3542,6 +3586,69 @@
    "explore": "rule: whale buy too small",
    "views": 17,
    "skipped_at": "2026-11-03T23:16:58Z"
+  },
+  {
+   "token_address": "CmVUuhJiJfDzu69K1B54U5WVfDvyigzx2kQjvZEKpump",
+   "symbol": "FCM",
+   "whale_time": "2026-11-03T23:18:12",
+   "whale_type": "whale",
+   "whale_usd": 186.75786966282107,
+   "whale_mcap": 33844.331483123824,
+   "seen_after_s": -0.1,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 3.291894245194271e-05,
+   "glance": {
+    "above_5m_low_pct": 936.4,
+    "this_minute_pct": 7.1
+   },
+   "status": "skipped: already pumped: +936% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 23,
+   "skipped_at": "2026-11-03T23:18:12Z"
+  },
+  {
+   "token_address": "GLDuJMVEatQ5hnmXAtb6CSwZjVdXz2Xi5foSxvSs6pg1",
+   "symbol": "FCM",
+   "whale_time": "2026-11-03T23:19:35",
+   "whale_type": "kol",
+   "whale_usd": 129.428740709037,
+   "whale_mcap": 5390.098067437066,
+   "seen_after_s": 7.5,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 7.484381512767868e-06,
+   "glance": {
+    "above_5m_low_pct": 181.2,
+    "this_minute_pct": 59.4
+   },
+   "status": "skipped: already pumped: +181% above 5-min low",
+   "explore": "rule: whale buy too small",
+   "views": 11,
+   "skipped_at": "2026-11-03T23:19:43Z"
+  },
+  {
+   "token_address": "CmVUuhJiJfDzu69K1B54U5WVfDvyigzx2kQjvZEKpump",
+   "symbol": "FCM",
+   "whale_time": "2026-11-03T23:20:32",
+   "whale_type": "kol",
+   "whale_usd": 1095.913324745555,
+   "whale_mcap": 40063.33102078056,
+   "seen_after_s": 4.3,
+   "usd": 5.0,
+   "take_profit_pct": 25.0,
+   "mode": "LIVE",
+   "price_when_seen": 5.042799602961168e-05,
+   "glance": {
+    "above_5m_low_pct": 1503.5,
+    "this_minute_pct": 18.0
+   },
+   "status": "skipped: already pumped: +1504% above 5-min low",
+   "explore": "rule: market cap out of range",
+   "views": 37,
+   "skipped_at": "2026-11-03T23:20:36Z"
   }
  ],
  "learning_log": [
@@ -11455,6 +11562,69 @@
    "mcap": 7111.293143680086,
    "whale_usd": 184.918487314572,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "CvdPD6VsdBRT2N2YtZg5DQaRunrLVGp2uB95KxY7D1WF",
+   "symbol": "TCM",
+   "ts": "2026-11-03T23:18:42",
+   "t": 1793747922.0,
+   "mcap": 5441.665507532889,
+   "whale_usd": 112.08844578430991,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Ad64jrLkQAMfZ8mP6ukzvMLNfXmdbcMBN5fpKGXFpump",
+   "symbol": "CokeMonkey",
+   "ts": "2026-11-03T23:18:46",
+   "t": 1793747926.0,
+   "mcap": 10237.673450319562,
+   "whale_usd": 139.29973721684078,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GLDuJMVEatQ5hnmXAtb6CSwZjVdXz2Xi5foSxvSs6pg1",
+   "symbol": "FCM",
+   "ts": "2026-11-03T23:19:35",
+   "t": 1793747975.0,
+   "mcap": 5390.098067437066,
+   "whale_usd": 129.428740709037,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-03T23:19:36",
+   "t": 1793747976.0,
+   "mcap": 2836410.9764856524,
+   "whale_usd": 3716.6406062190995,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2wNeU5NtbMhYD1Tzn26Hwv546t8wjNyfRWmn3a7Upump",
+   "symbol": "TCM",
+   "ts": "2026-11-03T23:20:36",
+   "t": 1793748036.0,
+   "mcap": 9781.189874047413,
+   "whale_usd": 146.06558294665393,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7Uxr5x4yXHACuScZ7iSWtEm89yYrzZdrwQpoX2yqpump",
+   "symbol": "Everett",
+   "ts": "2026-11-03T23:21:57",
+   "t": 1793748117.0,
+   "mcap": 12436.198630894069,
+   "whale_usd": 103.97338991828663,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "697qJWKHWoAmPWioDEQvJ4P4C9UjuWYLvYK5nA5Mpump",
+   "symbol": "VALOR",
+   "ts": "2026-11-03T23:22:22",
+   "t": 1793748142.0,
+   "mcap": 7980.667676798298,
+   "whale_usd": 199.05,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793744448.034351
