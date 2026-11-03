@@ -34,10 +34,10 @@ strategy:
   cooldown_hours: 24
 
 risk:
-  usd_per_trade: 20
-  max_open_positions: 3
+  usd_per_trade: 10
+  max_open_positions: 1
   max_buys_per_cycle: 1
-  max_daily_buy_usd: 40
+  max_daily_buy_usd: 10
   # Keep this much USDC untouched.
   min_cash_reserve_usd: 5
   # Exits placed on Moby right after every buy (Moby adds none by itself).

@@ -53,6 +53,8 @@ class FakeMoby:
 def cfg(dry_run=False, **risk):
     c = load_config()
     c["trading"]["dry_run"] = dry_run
+    c["risk"].update({"usd_per_trade": 20, "max_open_positions": 3, "max_buys_per_cycle": 1,
+                      "max_daily_buy_usd": 40, "min_cash_reserve_usd": 5})
     c["risk"].update(risk)
     return c
 
@@ -168,6 +170,7 @@ def test_state_survives_restart_cooldown(tmp_path, monkeypatch):
 
 
 def test_run_respects_stop_files(tmp_path, monkeypatch):
+    monkeypatch.setattr(run, "load_env", lambda: None)
     monkeypatch.setattr(run, "ROOT", tmp_path)
     (tmp_path / "REMOTE_STOP").write_text("")
     monkeypatch.setattr(run, "MobyClient", lambda **k: (_ for _ in ()).throw(AssertionError("must not connect")))
