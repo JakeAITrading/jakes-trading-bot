@@ -354,6 +354,9 @@ class Sniper:
         if not self.hold_hours:
             return
         for rec in self.state["trades"]:
+            if (rec.get("mode") == "LIVE" and rec.get("entry_price") and not rec.get("closed")
+                    and str(rec.get("time_exit", "")).startswith("20") and not rec.get("time_exit_market")):
+                self._time_exit_fallback(rec)
             if (rec.get("mode") != "LIVE" or not rec.get("entry_price") or rec.get("closed")
                     or rec.get("keep_tp") or rec.get("time_exit")):
                 continue
@@ -393,6 +396,43 @@ class Sniper:
                            status=f"time exit after {h:.1f}h: sold at market")
             log.info("%s: %s", sym, rec["status"])
             save(self.state)
+
+    def _time_exit_fallback(self, rec: dict) -> None:
+        """A time-exit bracket only fills if the price moves 1%; coins that stopped trading never do.
+        After 15 minutes, sell at market if that still returns at least $2 (Moby's fee is ~$0.90)."""
+        try:
+            t = dt.datetime.fromisoformat(rec["time_exit"].replace("Z", "")).replace(tzinfo=dt.timezone.utc).timestamp()
+        except (ValueError, KeyError):
+            return
+        if _now() - t < 900:
+            return
+        token, sym = rec["token_address"], rec.get("symbol")
+        held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+        if held <= 0:
+            return                      # the bracket filled; check_rebuys records it
+        rec["time_exit_market"] = _iso(_now())
+        try:
+            q = self.call("get_swap_quote", {"input_token": token, "amount": held,
+                                             "output_token": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"})
+            out = float(q.get("output_amount_ui") or 0)
+        except MobyError:
+            out = 0.0
+        if out < 2.0:
+            rec["status"] = f"time exit: market sell would return ${out:.2f}; left with its bracket"
+            save(self.state)
+            return
+        for oid in (rec.get("tp_order") or {}).get("order_ids") or []:
+            try:
+                self.call("cancel_order", {"order_id": oid})
+            except MobyError:
+                pass
+        sell = self.call("quick_sell", {"token_address": token, "pct": 100})
+        got = float(sell.get("filled_output_amount_ui") or sell.get("quoted_output_amount_ui") or out)
+        rec.update(sell=sell, closed="time exit at market (bracket never filled)", proceeds_usd=got,
+                   profit_usd=round(got - rec.get("spent_usd", self.usd), 2),
+                   status=f"time exit: sold at market for ${got:.2f}")
+        log.info("%s: %s", sym, rec["status"])
+        save(self.state)
 
     def fix_missing_tp(self) -> None:
         """Retry the take-profit for coins we hold whose take-profit order failed (e.g. rate limited)."""

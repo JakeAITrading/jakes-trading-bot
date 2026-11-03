@@ -12114,6 +12114,15 @@
    "mcap": 13228.055960909698,
    "whale_usd": 279.9628695458329,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7BmXNtvVvA9AqZpeHzZBLjT9mYKNZNVEVHU68Z8Npump",
+   "symbol": "BOTUS",
+   "ts": "2026-11-03T23:39:15",
+   "t": 1793749155.0,
+   "mcap": 7378.898772003595,
+   "whale_usd": 105.44725940205853,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
