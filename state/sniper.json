@@ -1747,7 +1747,7 @@
     "above_5m_low_pct": 0.9,
     "this_minute_pct": 0.9
    },
-   "status": "holding, take-profit moved to +20%",
+   "status": "holding, take-profit set just above market on all tokens (token count grew ~44%)",
    "limit_price": 33.17038345336914,
    "limit_order_id": "d47c0458-892e-431e-99b0-33280456281c",
    "limit_placed_at": "2026-11-03T08:23:16Z",
@@ -1755,23 +1755,23 @@
    "views": 23,
    "entry_price": 33.506449991623384,
    "spent_usd": 4.998323619365692,
-   "tokens": 0.149225,
+   "tokens": 0.214449,
    "bought_at": "2026-11-03 08:23:30",
    "entry_vs_seen_pct": 1.0,
-   "take_profit_price": 40.20773998994806,
+   "take_profit_price": 33.2361346756063,
    "tp_order": {
-    "order_id": "31adeaac-99b7-4795-8ca2-3fd0f95fa6c1",
+    "order_id": "26411c89-7ef0-4be6-9c36-933beaa81229",
     "order_ids": [
-     "31adeaac-99b7-4795-8ca2-3fd0f95fa6c1"
+     "26411c89-7ef0-4be6-9c36-933beaa81229"
     ],
     "network": "solana",
     "funding_network": null,
     "order_type": "tp_only",
     "token_address": "URARfsinxCRw4JpvQhuT4CxavdZXZEMjv9ZwWmWpwag",
-    "amount": 0.149225,
+    "amount": 0.214449,
     "input_token": "URARfsinxCRw4JpvQhuT4CxavdZXZEMjv9ZwWmWpwag",
     "input_token_symbol": null,
-    "take_profit_price": 40.20773998994806,
+    "take_profit_price": 33.2361346756063,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -3943,6 +3943,5 @@
    "whale_type": "whale"
   }
  ],
- "orders_blocked_until": 1793750459.0799003,
  "last_retarget": 1793703149.284569
 }
