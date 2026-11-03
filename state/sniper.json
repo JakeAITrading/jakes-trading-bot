@@ -5883,6 +5883,123 @@
    "mcap": 7880.371413193643,
    "whale_usd": 200.14538399999992,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "96K3UQytcLQyAE5vfdBvjyUPSDXS8xRHaB5HxefFqFrH",
+   "symbol": "Aeon",
+   "ts": "2026-11-03T19:10:20",
+   "t": 1793733020.0,
+   "mcap": 25158.049538731575,
+   "whale_usd": 923.0310811777099,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9xjoQY9VkT2iGYnLwHsmawpa9quJ3dhJykiZNHVnEsFC",
+   "symbol": "Napoleon",
+   "ts": "2026-11-03T19:10:42",
+   "t": 1793733042.0,
+   "mcap": 5945.435077592265,
+   "whale_usd": 113.68607188302629,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "56pUdC5GgEBa3zU9UdBBYy5kQneYg1LrbXVWoNFMpump",
+   "symbol": "WORTHLESS",
+   "ts": "2026-11-03T19:10:43",
+   "t": 1793733043.0,
+   "mcap": 5143.83918925887,
+   "whale_usd": 220.35873613097712,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AEYwFBdR8RyHjbPF1y6kGrZLhRnTHUFfZpqo7vTHpump",
+   "symbol": "MAG",
+   "ts": "2026-11-03T19:11:10",
+   "t": 1793733070.0,
+   "mcap": 6466.157174145337,
+   "whale_usd": 141.73114429738857,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "Gv6jKrrjJW9NLZujVZdxj6D9xL21qcLbHso8LYFMpump",
+   "symbol": "BOUNCER",
+   "ts": "2026-11-03T19:11:40",
+   "t": 1793733100.0,
+   "mcap": 158207.55351561867,
+   "whale_usd": 467.07556602178386,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "4wCv3QsFcnEsGv5C6u3rvzAQV4UpnPa6MD3oN5H8pump",
+   "symbol": "Tula-Tu",
+   "ts": "2026-11-03T19:12:11",
+   "t": 1793733131.0,
+   "mcap": 6058.080543880351,
+   "whale_usd": 115.70672811022511,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GoUCXtVdkAzcCYtGYU5CuHCPbUMp2eCrtiePFkaXpump",
+   "symbol": "Coin",
+   "ts": "2026-11-03T19:12:14",
+   "t": 1793733134.0,
+   "mcap": 7776.4598245266825,
+   "whale_usd": 374.78039989502935,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8CKyacSsh8x32Ey6i1syvDCyGYRKeKZzxgPMWwmb67JN",
+   "symbol": "Mag",
+   "ts": "2026-11-03T19:12:52",
+   "t": 1793733172.0,
+   "mcap": 24415.317966486327,
+   "whale_usd": 111.4719895150112,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
+   "symbol": "OPOL",
+   "ts": "2026-11-03T19:13:58",
+   "t": 1793733238.0,
+   "mcap": 17812.963051255792,
+   "whale_usd": 200.00000000000003,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "4fQgbneSa6g1od1HHZeYcQ1Y9W7L3QMvgAL2rva5pump",
+   "symbol": "COINY",
+   "ts": "2026-11-03T19:14:06",
+   "t": 1793733246.0,
+   "mcap": 13211.149962444324,
+   "whale_usd": 134.29680152547581,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AzCN5Se3Ttyb7q1zzyUNvP2i9v9pUrfyageFmKt1BCBM",
+   "symbol": "MAG",
+   "ts": "2026-11-03T19:14:21",
+   "t": 1793733261.0,
+   "mcap": 25841.63121355232,
+   "whale_usd": 238.63971342194978,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8QtbrC9d3BezyCwzBFUQbNsWJGte7ckrZ7HWcn81pump",
+   "symbol": "DICKBUTTIFIER",
+   "ts": "2026-11-03T19:14:30",
+   "t": 1793733270.0,
+   "mcap": 88617.95712212911,
+   "whale_usd": 1199.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "F4s2d3tCwMg7Mar432fiSuWTD2sRyrgg5wH8N6kLgGEg",
+   "symbol": "PEN",
+   "ts": "2026-11-03T19:15:10",
+   "t": 1793733310.0,
+   "mcap": 27536.701963981614,
+   "whale_usd": 184.54768745797756,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793732662.8700163
