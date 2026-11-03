@@ -8142,6 +8142,78 @@
    "mcap": 490171.400394298,
    "whale_usd": 156.77278845075367,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "3GxEG9Sdf84jNDgQZnzcbExQkZ3opxASrEsKCheUpump",
+   "symbol": "GENNY",
+   "ts": "2026-11-03T20:56:46",
+   "t": 1793739406.0,
+   "mcap": 5519.175829249434,
+   "whale_usd": 145.85448451743414,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AGs64kp86Yh4E71yWCKoAtHwx3nx3Gq9rv3UvVCmpump",
+   "symbol": "Trey",
+   "ts": "2026-11-03T20:56:50",
+   "t": 1793739410.0,
+   "mcap": 5895.42651141528,
+   "whale_usd": 350.9781189786885,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2amHtDZjEks45qhFYJL5TaTGzGXn9RTHpVFzzCnHfxJo",
+   "symbol": "MUSK",
+   "ts": "2026-11-03T20:58:05",
+   "t": 1793739485.0,
+   "mcap": 12834.147128160112,
+   "whale_usd": 370.38162643772404,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8mQqTLmfAX4yZEP5rp7rjKEgTftz7cRgd29Qn2sQpump",
+   "symbol": "DUMOCRATS",
+   "ts": "2026-11-03T20:59:45",
+   "t": 1793739585.0,
+   "mcap": 9298.065378970932,
+   "whale_usd": 406.49018264991,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "21sLaTZeDqZJ41ss14MZ7SmrvWgdH2x3xRgV7ZS2B5FP",
+   "symbol": "meganfox",
+   "ts": "2026-11-03T20:59:47",
+   "t": 1793739587.0,
+   "mcap": 63455.13975247741,
+   "whale_usd": 500.23479856907664,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "G3CfpU4qq5nrQLeT7bCNkc1qdgWkmmBLJbcE5YKFDQti",
+   "symbol": "dumocrats",
+   "ts": "2026-11-03T21:00:16",
+   "t": 1793739616.0,
+   "mcap": 26377.87917464811,
+   "whale_usd": 274.29553777160675,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ChatbxK32pGJ3Gm6ga36aHzXiJ1w2EmhJ3m8jA5UCoiN",
+   "symbol": "CHATCOIN",
+   "ts": "2026-11-03T21:00:37",
+   "t": 1793739637.0,
+   "mcap": 89629.0799768868,
+   "whale_usd": 1193.7278630919282,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "5Q9ZuSyEDFVdbvp1Z5gZ5HQbp2nU2jB1ZR25JHHBUtKW",
+   "symbol": "HOPE",
+   "ts": "2026-11-03T21:01:00",
+   "t": 1793739660.0,
+   "mcap": 6310.186563496245,
+   "whale_usd": 400.6644748183598,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793736823.872862
