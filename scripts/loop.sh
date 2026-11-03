@@ -31,7 +31,7 @@ main() {
     fi
     bash scripts/cycle.sh
     save
-    [ "$i" -lt "$COUNT" ] && sleep "$INTERVAL"
+    if [ "$i" -lt "$COUNT" ]; then sleep "$INTERVAL"; fi
   done
 }
 main "$@"
