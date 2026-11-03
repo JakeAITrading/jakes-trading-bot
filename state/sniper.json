@@ -9843,6 +9843,24 @@
    "mcap": 7157.408617786132,
    "whale_usd": 400.36959396850284,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
+   "symbol": "Sexbot",
+   "ts": "2026-11-03T22:26:33",
+   "t": 1793744793.0,
+   "mcap": 146073.5778163076,
+   "whale_usd": 458.7129048480841,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4wmT5vPBJ3iiFRmNhciCZ67yasiXSjzz3g9VukXrpump",
+   "symbol": "HOPE",
+   "ts": "2026-11-03T22:26:57",
+   "t": 1793744817.0,
+   "mcap": 71393.38319786015,
+   "whale_usd": 299.05,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793744448.034351
