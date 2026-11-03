@@ -257,7 +257,8 @@ class Sniper:
                 raise MobyError(json.dumps(order)[:300])
             rec["status"] = "holding, take-profit set"
         except MobyError as e:
-            if "tp_below_market" in str(e):  # already above the target: take it now
+            # Moby words this two ways: a "tp_below_market" code, or "must be above current price".
+            if "tp_below_market" in str(e) or "must be above current price" in str(e):  # past target: take it now
                 rec["sell"] = self.call("quick_sell", {"token_address": token, "pct": 100})
                 rec["status"] = "sold immediately (already past take-profit)"
             else:

@@ -657,3 +657,18 @@ def test_sniper_learn_moves_open_orders(sniper_dir, monkeypatch):
     monkeypatch.setattr(s, "retarget", lambda: moved.append(s.tp))
     s.learn()
     assert s.tp == 0.2 and moved == [0.2]
+
+
+def test_sells_now_when_moby_says_target_below_price(sniper_dir):
+    import time
+
+    class M(SniperMoby):
+        def call_tool(self, name, args=None):
+            if name == "create_order" and args.get("order_type") == "tp_only":
+                raise sniper.MobyError("Take profit price ($6.29e-05) must be above current price ($8.0e-05)")
+            return super().call_tool(name, args)
+    moby = M()
+    s = sniper.Sniper(moby, 5, 10, 20, dry_run=False)
+    s.limit_cushion = None
+    rec = s.trade(whale_row(), time.time())
+    assert rec["status"].startswith("sold immediately")
