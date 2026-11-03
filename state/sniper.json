@@ -2387,6 +2387,23 @@
    },
    "expected_avg_pct": 8.7,
    "expected_trades_in_samples": 154.0
+  },
+  {
+   "at": "2026-11-03T10:52:29Z",
+   "new_samples": 1,
+   "live_samples": 79,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 8.7,
+   "expected_trades_in_samples": 154.0
   }
  ],
  "observed": [
@@ -3559,8 +3576,26 @@
    "mcap": 102558.95306609815,
    "whale_usd": 230.76472438445032,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "8Q8wXm71gihCR2ZLhkLb5Ag9YLokMdU8JtXkcXcTpump",
+   "symbol": "JubJub",
+   "ts": "2026-11-03T10:54:12",
+   "t": 1793703252.0,
+   "mcap": 7699.36104916269,
+   "whale_usd": 186.17381538342374,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "SCGBBnSwnekytGFHgyeHHxPMiN7xDxsWFGg9JgFSTNK",
+   "symbol": "MAMESUKE",
+   "ts": "2026-11-03T10:55:24",
+   "t": 1793703324.0,
+   "mcap": 1442572.57423919,
+   "whale_usd": 2987.175,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
- "last_retarget": 1793699149.301121
+ "last_retarget": 1793703149.284569
 }
