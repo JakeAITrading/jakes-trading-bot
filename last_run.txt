@@ -1,1 +1,1 @@
-2026-11-03T19:35:44Z practice: protect STONK: stop-loss 0.0719741, take-profit 0.155944 [simulated] | max open positions reached
+2026-11-03T19:41:56Z practice: protect STONK: stop-loss 0.0718881, take-profit 0.155757 [simulated] | max open positions reached
