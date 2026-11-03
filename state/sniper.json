@@ -3501,6 +3501,23 @@
    },
    "expected_avg_pct": 15.1,
    "expected_trades_in_samples": 85.0
+  },
+  {
+   "at": "2026-11-03T21:40:41Z",
+   "new_samples": 20,
+   "live_samples": 380,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 16.6,
+   "expected_trades_in_samples": 118.0
   }
  ],
  "observed": [
@@ -8777,6 +8794,42 @@
    "mcap": 8276.429735673131,
    "whale_usd": 366.05000000000007,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "6gnB2H2hbTVvKUWCzNuqjWY8Rod6EVBmfHi7YxZpTWa7",
+   "symbol": "MEOWNERO",
+   "ts": "2026-11-03T21:40:15",
+   "t": 1793742015.0,
+   "mcap": 260126.28181786707,
+   "whale_usd": 668.731262,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "C6khzrPfHGnrY1uFXq1D61T243zbjNRijkWNBTbYpump",
+   "symbol": "SAMSARA",
+   "ts": "2026-11-03T21:40:23",
+   "t": 1793742023.0,
+   "mcap": 6814.0539042360615,
+   "whale_usd": 101.88655669069684,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "MRVLSjkR2ceUBukujaD3xCyHP1H3B2SzpsNTZF546jo",
+   "symbol": "MRVL",
+   "ts": "2026-11-03T21:40:55",
+   "t": 1793742055.0,
+   "mcap": 180487.30709964945,
+   "whale_usd": 587.9040803775846,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "GrGCEeQU7FGA9Xky9ogpinxoMfexUbMTL27zhJ82pump",
+   "symbol": "River",
+   "ts": "2026-11-03T21:41:00",
+   "t": 1793742060.0,
+   "mcap": 53981.12238845534,
+   "whale_usd": 500.0,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793740440.6549516
