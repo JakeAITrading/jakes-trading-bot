@@ -1871,7 +1871,8 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "closed": "take-profit cancelled"
   },
   {
    "token_address": "2z9eY5FgwswpZShRxY78PWaUXEy5uqdhLHTprJtfLoat",
@@ -2278,12 +2279,44 @@
     "above_5m_low_pct": 46.9,
     "this_minute_pct": 7.7
    },
-   "status": "limit pending",
+   "status": "holding, take-profit set",
    "limit_price": 9.926355414791033e-05,
    "limit_order_id": "773573bf-4f9e-4f5d-a6ae-4cd560cb867b",
    "limit_placed_at": "2026-11-03T19:25:23Z",
    "limit_expires": 1793734043.3506856,
-   "views": 357
+   "views": 357,
+   "entry_price": 9.81891660529e-05,
+   "spent_usd": 4.998897314071655,
+   "tokens": 50922.114944,
+   "bought_at": "2026-11-03 19:25:45",
+   "entry_vs_seen_pct": -1.1,
+   "take_profit_price": 0.00012273645756612502,
+   "tp_order": {
+    "order_id": "8d18af4b-2e86-44ad-9e3c-e4e836177ed8",
+    "order_ids": [
+     "8d18af4b-2e86-44ad-9e3c-e4e836177ed8"
+    ],
+    "network": "solana",
+    "funding_network": null,
+    "order_type": "tp_only",
+    "token_address": "AxPzkSJKU3ACqZu7qpq8ov29g4BENZBM4SAZwUUUFo8M",
+    "amount": 50922.114944,
+    "input_token": "AxPzkSJKU3ACqZu7qpq8ov29g4BENZBM4SAZwUUUFo8M",
+    "input_token_symbol": null,
+    "take_profit_price": 0.00012273645756612502,
+    "stop_loss_price": null,
+    "limit_price": null,
+    "interval_seconds": null,
+    "order_count": null,
+    "status": "active",
+    "fee_bps": null,
+    "schedule_id": null,
+    "partial_placement_warning": null,
+    "take_profit_order_id": null,
+    "stop_loss_order_id": null,
+    "failed_leg": null,
+    "failed_leg_error": null
+   }
   }
  ],
  "skipped": [
@@ -6329,6 +6362,60 @@
    "t": 1793733902.0,
    "mcap": 98811.87093891,
    "whale_usd": 1000.0,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BUSPRPFnDVjTRVZFZXRUUh6RzYqudZLBB3e2gfZyaHa3",
+   "symbol": "DCYC",
+   "ts": "2026-11-03T19:26:31",
+   "t": 1793733991.0,
+   "mcap": 5457.749466586392,
+   "whale_usd": 180.69702160625357,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3sr6UZYGjAVYqE1KwEU6ZdpB6aQWQ134RxUm7USspump",
+   "symbol": "AgenC",
+   "ts": "2026-11-03T19:26:55",
+   "t": 1793734015.0,
+   "mcap": 9162.79979418502,
+   "whale_usd": 123.06314720882297,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "Dn3nrftrLQToycT5ZvLbbaRJSL6jMXHHNDffKzpQVfF4",
+   "symbol": "Zolana",
+   "ts": "2026-11-03T19:27:17",
+   "t": 1793734037.0,
+   "mcap": 9019.075150717981,
+   "whale_usd": 470.6998571172702,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "97Qm1mRTDvWQUfB4qyFDsuWPV4httVfoBaGMDQPjfQxb",
+   "symbol": "zLOOOOONG",
+   "ts": "2026-11-03T19:28:04",
+   "t": 1793734084.0,
+   "mcap": 13042.222235526424,
+   "whale_usd": 128.72446188305716,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HuWrWRfatNZYcwh1jau2c8aDgHti3VLNJJoKKURopump",
+   "symbol": "GIVE",
+   "ts": "2026-11-03T19:28:11",
+   "t": 1793734091.0,
+   "mcap": 19184.00448630564,
+   "whale_usd": 152.44992899999988,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "46gMMX6N3tAyZ9fMUwaaGK97u7kgJ8W9ArHZ2vsMpump",
+   "symbol": "GTA$",
+   "ts": "2026-11-03T19:28:51",
+   "t": 1793734131.0,
+   "mcap": 6968.60161042423,
+   "whale_usd": 124.50755697755079,
    "whale_type": "kol"
   }
  ],
