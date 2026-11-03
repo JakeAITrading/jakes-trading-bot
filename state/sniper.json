@@ -5316,6 +5316,132 @@
    "mcap": 24045.912141446024,
    "whale_usd": 179.10072,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "22r9JGoWRBYc4Z1pkSFw8p2tdjefS2ZZshw1vr8bBC2K",
+   "symbol": "STONKS",
+   "ts": "2026-11-03T18:42:16",
+   "t": 1793731336.0,
+   "mcap": 1101125.997987471,
+   "whale_usd": 5998.500000000001,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AyuVdyxijSQxTNk1PDoUTrfbbv9zwkeSh5TETw1opump",
+   "symbol": "sink",
+   "ts": "2026-11-03T18:42:21",
+   "t": 1793731341.0,
+   "mcap": 5388.330919231521,
+   "whale_usd": 576.6409688882599,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "EH4bCJWryz6icbQAGJB51RKiD38XvSNumsdFKjFwpump",
+   "symbol": "long",
+   "ts": "2026-11-03T18:42:21",
+   "t": 1793731341.0,
+   "mcap": 14946.032024454325,
+   "whale_usd": 141.9132300803893,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DFvyMSi7iJWRypAUzs276Sv3xkHvxuVU12sMQp1UALbM",
+   "symbol": "casino",
+   "ts": "2026-11-03T18:42:53",
+   "t": 1793731373.0,
+   "mcap": 5241.919097898062,
+   "whale_usd": 185.01446848658398,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9qAaguGyPkLogkSZP1nZjM3eLPh4gMKhcJX6xzgcVwsb",
+   "symbol": "LCAT",
+   "ts": "2026-11-03T18:43:09",
+   "t": 1793731389.0,
+   "mcap": 25304.60369598586,
+   "whale_usd": 377.2395876281603,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "HGhyN6kgRMS9FG5cUkRzBgxF9Ye9xpuBXC1HzZ6QnG82",
+   "symbol": "Cramer",
+   "ts": "2026-11-03T18:43:10",
+   "t": 1793731390.0,
+   "mcap": 22342.912416206673,
+   "whale_usd": 185.31149351754186,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4THCS2ytfro8BPeXiqtnE83d6Q85W3FsxCZbJyh7XNxD",
+   "symbol": "hope",
+   "ts": "2026-11-03T18:43:45",
+   "t": 1793731425.0,
+   "mcap": 29205.604732851498,
+   "whale_usd": 737.6426942953634,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "A74Mf7x6q6BJmoVR7hLXedPeYwY5eB8NnrtMQezCvCsH",
+   "symbol": "Bingus",
+   "ts": "2026-11-03T18:44:03",
+   "t": 1793731443.0,
+   "mcap": 41718.65293756127,
+   "whale_usd": 497.5,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8DB8Fw5UiC1AzugQAfRyw3qL8omw772LJbdehNWhpump",
+   "symbol": "OMBRO",
+   "ts": "2026-11-03T18:44:05",
+   "t": 1793731445.0,
+   "mcap": 31846.34268023038,
+   "whale_usd": 499.99999999999994,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9SB5yGiX4dKVuYs4y2cXGjoojuqCfAuNZ1DeYczdpump",
+   "symbol": "sink",
+   "ts": "2026-11-03T18:45:15",
+   "t": 1793731515.0,
+   "mcap": 5564.0261962253135,
+   "whale_usd": 150.0062182482605,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6gnB2H2hbTVvKUWCzNuqjWY8Rod6EVBmfHi7YxZpTWa7",
+   "symbol": "MEOWNERO",
+   "ts": "2026-11-03T18:45:16",
+   "t": 1793731516.0,
+   "mcap": 213597.62467909604,
+   "whale_usd": 3495.8,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FqBVbBeoxJfLi5corNFsrDG54SFfBfFwjqtjgZK8pump",
+   "symbol": "ENTRY",
+   "ts": "2026-11-03T18:45:50",
+   "t": 1793731550.0,
+   "mcap": 26973.819331033155,
+   "whale_usd": 490.0,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "5gMmofmv9vU9Ya7pMLMRDYsPhoP2d5bHHHh3qeSd4CM1",
+   "symbol": "THICC",
+   "ts": "2026-11-03T18:45:57",
+   "t": 1793731557.0,
+   "mcap": 60189.089708728716,
+   "whale_usd": 180.89814001635798,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "FLK5Cp8U3hTZS4y7uAUULyFCy2REkjzSKfSWSqKvqQWq",
+   "symbol": "FATCOIN",
+   "ts": "2026-11-03T18:46:24",
+   "t": 1793731584.0,
+   "mcap": 54279.61150417104,
+   "whale_usd": 275.883849,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793728894.6423943
