@@ -2455,6 +2455,23 @@
    },
    "expected_avg_pct": 10.0,
    "expected_trades_in_samples": 146.0
+  },
+  {
+   "at": "2026-11-03T11:32:42Z",
+   "new_samples": 7,
+   "live_samples": 98,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 250000,
+    "min_whale_usd": 250,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 18.1,
+   "expected_trades_in_samples": 80.0
   }
  ],
  "observed": [
@@ -3852,6 +3869,24 @@
    "mcap": 14851.472769805696,
    "whale_usd": 347.53197745432396,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7tV2crbPtBob9MK85EySjUhJmNiUsAYdSQjd52jApump",
+   "symbol": "BELLA",
+   "ts": "2026-11-03T11:28:01",
+   "t": 1793705281.0,
+   "mcap": 15729.87821418792,
+   "whale_usd": 350.28731800000014,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3WTzS79DcyKqk7tS574qpXAQQYvx62onyundiF6wGY4p",
+   "symbol": "Rico",
+   "ts": "2026-11-03T11:31:01",
+   "t": 1793705461.0,
+   "mcap": 82109.32675251801,
+   "whale_usd": 1200.14489,
+   "whale_type": "whale"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
