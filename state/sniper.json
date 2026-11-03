@@ -1722,6 +1722,24 @@
    "mcap": 22312.39341199398,
    "whale_usd": 112.9192509039829,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "FxQ5GbqCBxNHDpFTpiL9RDVHiP58ar5nMkR3eMwepump",
+   "symbol": "UNPOOLED",
+   "ts": "2026-11-03T06:50:42",
+   "t": 1793688642.0,
+   "mcap": 74449.08683794743,
+   "whale_usd": 1356.3809379756535,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
+   "symbol": "RATIO",
+   "ts": "2026-11-03T06:52:34",
+   "t": 1793688754.0,
+   "mcap": 9940.028576238547,
+   "whale_usd": 249.05,
+   "whale_type": "kol"
   }
  ]
 }
