@@ -340,12 +340,13 @@ class Sniper:
         """Retry the take-profit for coins we hold whose take-profit order failed (e.g. rate limited)."""
         for rec in self.state["trades"]:
             if (rec.get("mode") == "LIVE" and rec.get("entry_price") and not rec.get("closed")
-                    and "take-profit FAILED" in (rec.get("status") or "")):
+                    and ("take-profit FAILED" in (rec.get("status") or "") or rec.get("tp_lost"))):
                 token = rec["token_address"]
                 held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
                 if held <= 0:
                     rec["closed"] = "no tokens left"
                 else:
+                    rec.pop("tp_lost", None)
                     self._place_tp(rec, token, rec["entry_price"], held)
                 log.info("%s: retried take-profit: %s", rec.get("symbol"), rec.get("status"))
                 save(self.state)
@@ -445,7 +446,13 @@ class Sniper:
             token, sym = rec["token_address"], rec.get("symbol")
             old_id = (rec.get("tp_order") or {}).get("order_id")
             if old_id and old_id not in orders:
-                rec["closed"] = "take-profit no longer open (filled or cancelled)"
+                # Filled -> closed. But a take-profit can also vanish (cancelled mid-retarget when the bot
+                # was stopped): if we still hold the coin, flag it so fix_missing_tp re-places it.
+                held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
+                if held > 0 and held * float(self.call("get_token_price", {"token_address": token}).get("price_usd") or 0) > 0.5:
+                    rec["tp_lost"] = True
+                else:
+                    rec["closed"] = "take-profit no longer open (filled or cancelled)"
                 continue
             held = float(self.call("get_my_token_balance", {"token_address": token}).get("balance_token_amount") or 0)
             if held <= 0:
