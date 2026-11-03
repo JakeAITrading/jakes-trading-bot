@@ -1488,12 +1488,13 @@
     "above_5m_low_pct": 8.9,
     "this_minute_pct": 6.5
    },
-   "status": "limit pending",
+   "status": "limit buy not filled in time, cancelled",
    "limit_price": 8.552030340069905e-05,
    "limit_order_id": "2b8a0f96-625a-49ae-9463-4ee5a026ba3c",
    "limit_placed_at": "2026-11-03T07:35:52Z",
    "limit_expires": 1793691472.5194707,
-   "views": 29
+   "views": 29,
+   "closed": "limit buy not filled in time, cancelled"
   }
  ],
  "skipped": [
@@ -1696,6 +1697,27 @@
    "explore": "rule: whale buy too small",
    "views": 17,
    "skipped_at": "2026-11-03T07:31:05Z"
+  },
+  {
+   "token_address": "7NQ2jztMnDFnuZKEQVfdqNaJRTaRRMnBA9QJ1s5spump",
+   "symbol": "Watio",
+   "whale_time": "2026-11-03T07:40:13",
+   "whale_type": "kol",
+   "whale_usd": 273.018069463689,
+   "whale_mcap": 5651.308583765058,
+   "seen_after_s": -0.0,
+   "usd": 5.0,
+   "take_profit_pct": 12.0,
+   "mode": "LIVE",
+   "price_when_seen": 6.962048701097956e-06,
+   "glance": {
+    "above_5m_low_pct": 98.9,
+    "this_minute_pct": 30.5
+   },
+   "status": "skipped: mid-spike: +30% this minute",
+   "explore": "rule: market cap out of range",
+   "views": 34,
+   "skipped_at": "2026-11-03T07:40:13Z"
   }
  ],
  "learning_log": [
@@ -2165,6 +2187,33 @@
    "t": 1793691346.0,
    "mcap": 85483.4682502054,
    "whale_usd": 863.0160908114333,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "7xxL8Sr45wRTX2tbCoX6BfWJB7vnaGwEXC8EU452pump",
+   "symbol": "Ollybee",
+   "ts": "2026-11-03T07:38:14",
+   "t": 1793691494.0,
+   "mcap": 5416.602562036132,
+   "whale_usd": 182.05029503793,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7NQ2jztMnDFnuZKEQVfdqNaJRTaRRMnBA9QJ1s5spump",
+   "symbol": "Watio",
+   "ts": "2026-11-03T07:40:13",
+   "t": 1793691613.0,
+   "mcap": 5651.308583765058,
+   "whale_usd": 273.018069463689,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5DnWmSL9t3YqK5MeYq8ozJpna46VcdePWzHvyN8avg2g",
+   "symbol": "CAPY",
+   "ts": "2026-11-03T07:40:29",
+   "t": 1793691629.0,
+   "mcap": 405201.84763469355,
+   "whale_usd": 451.4259167249622,
    "whale_type": "whale"
   }
  ]
