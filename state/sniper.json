@@ -2234,6 +2234,23 @@
    },
    "expected_avg_pct": 10.8,
    "expected_trades_in_samples": 73.0
+  },
+  {
+   "at": "2026-11-03T09:15:43Z",
+   "new_samples": 6,
+   "live_samples": 37,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 13.7,
+   "expected_trades_in_samples": 85.0
   }
  ],
  "observed": [
@@ -3019,6 +3036,42 @@
    "mcap": 62053.87838153129,
    "whale_usd": 760.0,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "7gKKy2p1SaMkRFPX7caF96YpfuMMpDj82ZpjaffuvaU5",
+   "symbol": "PARK",
+   "ts": "2026-11-03T09:13:23",
+   "t": 1793697203.0,
+   "mcap": 392109.46808383736,
+   "whale_usd": 559.7478495592723,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "7ZpKoVqzcP3i3kKJzRTiXFPKnnodkAYfAhXBywXDpump",
+   "symbol": "BEES",
+   "ts": "2026-11-03T09:13:57",
+   "t": 1793697237.0,
+   "mcap": 48303.92936128192,
+   "whale_usd": 541.6056984816184,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FGkCj28xhabWTYg9QyzACvs4NsN6LUyesP6EwiHepump",
+   "symbol": "UHI",
+   "ts": "2026-11-03T09:16:00",
+   "t": 1793697360.0,
+   "mcap": 25419.330856286662,
+   "whale_usd": 449.96948964772514,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8DB8Fw5UiC1AzugQAfRyw3qL8omw772LJbdehNWhpump",
+   "symbol": "OMBRO",
+   "ts": "2026-11-03T09:17:30",
+   "t": 1793697450.0,
+   "mcap": 134986.35615135878,
+   "whale_usd": 552.621138776205,
+   "whale_type": "kol"
   }
  ],
  "orders_blocked_until": 1793750423.6364045,
