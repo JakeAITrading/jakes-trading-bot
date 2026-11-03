@@ -795,3 +795,21 @@ def test_main_learner_escapes_settings_that_match_nothing():
     assert ml.evaluate([win] * 20, start)["trades"] == 0
     p, r = ml.optimize([win] * 20, start)
     assert r["trades"] == 20 and r["avg"] > 0
+
+
+def test_key_wide_moby_lock_stops_all_calls(monkeypatch):
+    import trading_bot.moby_client as mc
+    c = mc.MobyClient(api_key="k", url="http://x")
+    sent = []
+
+    def fake_request(method, params=None):
+        sent.append(params["name"])
+        return {"isError": True, "content": [{"type": "text", "text": "Moby's rate limit for this API key has been "
+                "hit. STOP calling Moby tools for about 680 minutes (40827 seconds), then try again."}]}
+    monkeypatch.setattr(c, "_request", fake_request)
+    monkeypatch.setattr(c, "_ensure_initialized", lambda: None)
+    with pytest.raises(MobyError):
+        c.call_tool("get_my_guardrails")
+    with pytest.raises(MobyError, match="paused until"):
+        c.call_tool("get_token_price", {})
+    assert sent == ["get_my_guardrails"]          # the second call never reached Moby

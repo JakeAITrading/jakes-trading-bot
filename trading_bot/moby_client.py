@@ -12,7 +12,9 @@ from __future__ import annotations
 import itertools
 import json
 import os
+import re
 import sys
+import time
 from typing import Any
 
 import requests
@@ -130,8 +132,34 @@ class MobyClient:
                 return tools
 
     def call_tool(self, name: str, arguments: dict | None = None) -> Any:
+        # Moby can lock the whole API key for hours ("STOP calling Moby tools for about N minutes
+        # (S seconds)"), and calling during the lock may extend it. Every bot shares this pause file.
+        until = blocked_until()
+        if until > time.time():
+            raise MobyError(f"Moby rate limit: all calls paused until "
+                            f"{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime(until))}")
         self._ensure_initialized()
-        return decode_tool_result(self._request("tools/call", {"name": name, "arguments": arguments or {}}))
+        try:
+            return decode_tool_result(self._request("tools/call", {"name": name, "arguments": arguments or {}}))
+        except MobyError as e:
+            m = re.search(r"STOP calling Moby tools.*?\((\d+) seconds\)", str(e))
+            if m and int(m.group(1)) > 60:
+                _block_path().parent.mkdir(parents=True, exist_ok=True)
+                _block_path().write_text(json.dumps({"until": time.time() + int(m.group(1)) + 60}) + "\n")
+            raise
+
+
+def _block_path():
+    from trading_bot.store import _path
+    return _path("moby_blocked_until.json")
+
+
+def blocked_until() -> float:
+    """Unix time until which Moby has told us to stop calling (0 if not blocked)."""
+    try:
+        return float(json.loads(_block_path().read_text()).get("until") or 0)
+    except Exception:
+        return 0.0
 
 
 def _main(argv: list[str]) -> int:

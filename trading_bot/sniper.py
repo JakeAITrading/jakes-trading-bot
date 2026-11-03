@@ -36,7 +36,7 @@ from trading_bot.learner import Learner
 
 OBSERVE_MCAP = (5_000, 10_000_000)   # whale buys logged for learning (wider than what we trade)
 OBSERVE_MIN_USD = 100
-from trading_bot.moby_client import MobyClient, MobyError
+from trading_bot.moby_client import blocked_until, MobyClient, MobyError
 from trading_bot.settings import ROOT, load_env
 from trading_bot.store import _path
 
@@ -515,6 +515,9 @@ class Sniper:
             if stopped():
                 log.info("STOP file present: exiting")
                 return
+            if blocked_until() > _now():      # Moby locked the key: make no calls at all until then
+                time.sleep(min(60.0, blocked_until() - _now()))
+                continue
             pending = any(r.get("status") == "limit pending" for r in self.state["trades"])
             if not self.dry_run and _now() - last_exit_check > (5 if pending else 15):
                 last_exit_check = _now()
