@@ -6417,6 +6417,24 @@
    "mcap": 6968.60161042423,
    "whale_usd": 124.50755697755079,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7iDwpPERd26fJAfMCftHz1kQdJAqdxTp9ng6WMF8pump",
+   "symbol": "ZOL",
+   "ts": "2026-11-03T19:29:00",
+   "t": 1793734140.0,
+   "mcap": 5791.020157630555,
+   "whale_usd": 161.66210412654576,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "E7ayy5Se6gjwCNtw9NP629AucnTgqab4SSmSxDpUpump",
+   "symbol": "WIF",
+   "ts": "2026-11-03T19:29:32",
+   "t": 1793734172.0,
+   "mcap": 72001.258530836,
+   "whale_usd": 182.7240716548859,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793732662.8700163
