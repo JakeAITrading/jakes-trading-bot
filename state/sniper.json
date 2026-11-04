@@ -19633,6 +19633,20 @@
    "significance": "noise",
    "pct_port": 0.0014815643626852311,
    "views": 10
+  },
+  {
+   "token_address": "6fxue81EmbLBeUFe4dnNYdqPgZQeGY2Q4Bi52m3Upump",
+   "symbol": "COIN",
+   "ts": "2026-11-04T06:03:37",
+   "t": 1793772217.0,
+   "mcap": 5537.60946785943,
+   "whale_usd": 229.58639576556752,
+   "whale_type": "kol",
+   "wallet": "6g2iHTk-DXpQ5Jvyy8T6YQu0TX3dahn6XNYBLd0Lmke0YLCyc9msNbCv8A-qLrFBoKbptxJyZDzn0khYepgjA6KxETwUjLpd",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.058457837711291996,
+   "views": 16
   }
  ],
  "last_retarget": 1793772058.246944
