@@ -3264,7 +3264,7 @@
     "above_5m_low_pct": 47.9,
     "this_minute_pct": 44.0
    },
-   "status": "holding, take-profit moved to +40%",
+   "status": "holding, take-profit set",
    "limit_price": 5.167648396309232e-06,
    "limit_order_id": "e0eaf814-5e06-42ed-b8b6-a9807c289895",
    "limit_placed_at": "2026-11-03T23:38:03Z",
@@ -3276,11 +3276,11 @@
    "tokens": 1081764.098101,
    "bought_at": "2026-11-03 23:39:44",
    "entry_vs_seen_pct": -10.6,
-   "take_profit_price": 6.47091173792e-06,
+   "take_profit_price": 5.777599766e-06,
    "tp_order": {
-    "order_id": "483d857f-8f68-463f-9256-9b6f6008aeb5",
+    "order_id": "249b132d-5087-44a6-b0c4-9c3218e5f847",
     "order_ids": [
-     "483d857f-8f68-463f-9256-9b6f6008aeb5"
+     "249b132d-5087-44a6-b0c4-9c3218e5f847"
     ],
     "network": "solana",
     "funding_network": null,
@@ -3289,7 +3289,7 @@
     "amount": 1081764.098101,
     "input_token": "96T5upHiyHZcfB6wvb3Nv2n4QF7raQGB6vQ1Jd5Hpump",
     "input_token_symbol": null,
-    "take_profit_price": 6.47091173792e-06,
+    "take_profit_price": 5.777599766e-06,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -3302,7 +3302,8 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "time_exit": "2026-11-04T01:39:57Z"
   },
   {
    "token_address": "ADvbwD9pgBeHHQBmBaiUir4zjC946FW2mDJbSejmpump",
@@ -14221,6 +14222,51 @@
    "mcap": 10298.808774678037,
    "whale_usd": 2756.988121267105,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "3psH1Mj1f7yUfaD5gh6Zj7epE8hhrMkMETgv5TshQA4o",
+   "symbol": "boden",
+   "ts": "2026-11-04T01:35:56",
+   "t": 1793756156.0,
+   "mcap": 832516.0700713174,
+   "whale_usd": 1818.31330516572,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "JBXg4WbSzhck3gkD15rGa1efAJR1H1ya6HMCcCTipump",
+   "symbol": "POP",
+   "ts": "2026-11-04T01:37:33",
+   "t": 1793756253.0,
+   "mcap": 14773.990187677555,
+   "whale_usd": 272.732488435044,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6i3oFRo48Xbnu7B9YH5DgypHRvsr47GagoJhSvs4pump",
+   "symbol": "Other",
+   "ts": "2026-11-04T01:38:12",
+   "t": 1793756292.0,
+   "mcap": 152895.32795803185,
+   "whale_usd": 920.0037910164232,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HTNmyZJbWuKWbudd4BeB1nLKNui9Ebvq4xZpwp5Wpump",
+   "symbol": "TS",
+   "ts": "2026-11-04T01:38:38",
+   "t": 1793756318.0,
+   "mcap": 7594.126600452,
+   "whale_usd": 170.196157,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "6gnB2H2hbTVvKUWCzNuqjWY8Rod6EVBmfHi7YxZpTWa7",
+   "symbol": "MEOWNERO",
+   "ts": "2026-11-04T01:40:16",
+   "t": 1793756416.0,
+   "mcap": 399526.6384739428,
+   "whale_usd": 865.145545577551,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793751994.693163
