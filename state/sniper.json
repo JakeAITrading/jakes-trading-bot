@@ -24050,6 +24050,20 @@
    "significance": "major",
    "pct_port": 0.684074154481596,
    "views": 13
+  },
+  {
+   "token_address": "CacWN4fnWHUMH82ekMFQyYFB7hu9DUhDmhvNpavHpump",
+   "symbol": "Chihuahua",
+   "ts": "2026-11-04T12:46:44",
+   "t": 1793796404.0,
+   "mcap": 11507.402632560115,
+   "whale_usd": 250.28588999999994,
+   "whale_type": "whale",
+   "wallet": "Fuo6s5IKsSMtjwKYbUKzhXlvbU0Rid53vak8dUEW47REio3LRUiqCDLYYwZ7AJmEZqOwL1G9ptS-7zf4iK5hS4ZgU2ku4e_B",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0007626493773291659,
+   "views": 12
   }
  ],
  "last_retarget": 1793790926.581706
