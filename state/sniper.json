@@ -19374,6 +19374,34 @@
    "significance": "notable",
    "pct_port": 0.04061790974161554,
    "views": 1088
+  },
+  {
+   "token_address": "F1LQvm5biTdEXPrHokxhkR7sDwQcBnA8VTEmD5Gdpump",
+   "symbol": "SLINGTOSHI",
+   "ts": "2026-11-04T05:37:55",
+   "t": 1793770675.0,
+   "mcap": 303161.4690405496,
+   "whale_usd": 276.90673344634,
+   "whale_type": "kol",
+   "wallet": "zYzjAmB2SBf5U4XpRmgUrI8v2aXLQ5CHYEMbud5wHM7w6PaQWi-YFbHKwYa2Aa5PVeNVHfgYPLyNmKvr2UMjfkIYd2KOIZnN",
+   "n_wallets30": 5,
+   "significance": "noise",
+   "pct_port": 0.02440141212499202,
+   "views": 289
+  },
+  {
+   "token_address": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
+   "symbol": "LMAO!",
+   "ts": "2026-11-04T05:40:11",
+   "t": 1793770811.0,
+   "mcap": 1881521.0822658448,
+   "whale_usd": 999.1418,
+   "whale_type": "whale",
+   "wallet": "RK15FtaPR81OcSCyTLBikziohFjgORt-yxqsmA2NWaytVVUhQ5LojzJhIe1_P_4Kb2Louv_xfmTwGcReAiDDV3kfgXsBMp7P",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.03941573272040925,
+   "views": 229
   }
  ],
  "last_retarget": 1793768033.3653324
