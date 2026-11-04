@@ -5023,6 +5023,23 @@
    },
    "expected_avg_pct": 12.0,
    "expected_trades_in_samples": 122.0
+  },
+  {
+   "at": "2026-11-04T01:26:47Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 12.3,
+   "expected_trades_in_samples": 125.0
   }
  ],
  "observed": [
@@ -14070,6 +14087,42 @@
    "mcap": 45950.63954830595,
    "whale_usd": 322.66704913894495,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "HkwBX3oLaki3HDUenaEBccR5xSbiWzd41xxiDDUfpump",
+   "symbol": "MEW",
+   "ts": "2026-11-04T01:24:33",
+   "t": 1793755473.0,
+   "mcap": 5084.94024422,
+   "whale_usd": 113.52166487536306,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "27WuvB4nUMQmqUd3GyPS6tGTTMb6LdNwbsNAtHwspump",
+   "symbol": "popcat",
+   "ts": "2026-11-04T01:25:11",
+   "t": 1793755511.0,
+   "mcap": 8452.828296867665,
+   "whale_usd": 223.3064131440219,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "B3UB8mFHBgKCHbf1bHsW4QorUR9bvuVXcZNaX8V4pump",
+   "symbol": "Thesis",
+   "ts": "2026-11-04T01:25:59",
+   "t": 1793755559.0,
+   "mcap": 5139.4945330685005,
+   "whale_usd": 125.46343635763186,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FZnSMd1hPu5MVgttmtfDZUPN5gcuexvrh3CB67UuQshb",
+   "symbol": "HELIA",
+   "ts": "2026-11-04T01:26:32",
+   "t": 1793755592.0,
+   "mcap": 24047.67077856551,
+   "whale_usd": 298.65,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793751994.693163
