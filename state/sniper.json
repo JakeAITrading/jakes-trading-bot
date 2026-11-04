@@ -12721,6 +12721,78 @@
    "mcap": 49376.05626764707,
    "whale_usd": 243.6544935437625,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "3w2TvVmTrtq4kSkoFVrTFQgz6MX7ThzDVrx9r5c3pump",
+   "symbol": "HI",
+   "ts": "2026-11-03T23:59:55",
+   "t": 1793750395.0,
+   "mcap": 171390.04220738134,
+   "whale_usd": 494.05775500000004,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3nVzwo8WVyNGveRsRY72Pvo2zENAUUi2XkYgbdDBpump",
+   "symbol": "Atsuko",
+   "ts": "2026-11-04T00:00:04",
+   "t": 1793750404.0,
+   "mcap": 5762.518867413746,
+   "whale_usd": 403.256869724004,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DX51xEuEckZ3Jc6x333fTFUVz2pYQriNQ2cUb1Cupump",
+   "symbol": "PREDICTOOR",
+   "ts": "2026-11-04T00:00:20",
+   "t": 1793750420.0,
+   "mcap": 36528.937926050276,
+   "whale_usd": 630.7274970434362,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DN1uL1CcWkY8w9WqDvxJP1J6WgdLbNZoZKhiQqDKpump",
+   "symbol": "MEOW",
+   "ts": "2026-11-04T00:00:44",
+   "t": 1793750444.0,
+   "mcap": 14229.533007892314,
+   "whale_usd": 275.5162060654883,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2kYcukBmfGbAfjo2eqHAqpnyBvpQVpjn2zqcTWB7pump",
+   "symbol": "TDD",
+   "ts": "2026-11-04T00:00:52",
+   "t": 1793750452.0,
+   "mcap": 6447.726264013909,
+   "whale_usd": 114.71813992819654,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "HHsTom1ycUjVVKMz2oMt3hTajT5DFHhmsp3k2Dinpump",
+   "symbol": "Predih",
+   "ts": "2026-11-04T00:02:57",
+   "t": 1793750577.0,
+   "mcap": 6109.369223850081,
+   "whale_usd": 397.78468868371164,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "AMD8XwJXgQ9WV45Wyj9yFLejxzf2J6VM1PJY8bJEjeES",
+   "symbol": "AMD",
+   "ts": "2026-11-04T00:03:16",
+   "t": 1793750596.0,
+   "mcap": 752551.8699194092,
+   "whale_usd": 102.95320974131725,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9NYARwcxuf41oph31mDrjbwpcq4w96cVyvCqdDCJpump",
+   "symbol": "REP",
+   "ts": "2026-11-04T00:03:26",
+   "t": 1793750606.0,
+   "mcap": 33280.22213582566,
+   "whale_usd": 499.99999999999994,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
