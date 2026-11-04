@@ -5075,6 +5075,23 @@
    },
    "expected_avg_pct": 13.6,
    "expected_trades_in_samples": 119.0
+  },
+  {
+   "at": "2026-11-04T01:51:39Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 14.4,
+   "expected_trades_in_samples": 116.0
   }
  ],
  "observed": [
@@ -14337,6 +14354,51 @@
    "t": 1793756745.0,
    "mcap": 375681.2788672254,
    "whale_usd": 997.25,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "CqtohE9UjVtVgt58PYHUTK3T2jtynKo23TUesSRupump",
+   "symbol": "slop",
+   "ts": "2026-11-04T01:49:09",
+   "t": 1793756949.0,
+   "mcap": 8833.210813463666,
+   "whale_usd": 363.378831568632,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5uY4RXyTkkHBkhatNzCmTphAhBS3LU6yaLd9b9uAhQAb",
+   "symbol": "DELUSIONAL",
+   "ts": "2026-11-04T01:50:12",
+   "t": 1793757012.0,
+   "mcap": 35933.335311710835,
+   "whale_usd": 249.05000000000004,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9juAXKoPwH9MVWS5haMPfgFZorEdqyZMNMZnNBL7urue",
+   "symbol": "Pooliticians",
+   "ts": "2026-11-04T01:51:08",
+   "t": 1793757068.0,
+   "mcap": 71852.37143017194,
+   "whale_usd": 272.83666,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "FHN2EE5BNapS33RPchtA5AGDGRZiH6YdcQN3KAUpump",
+   "symbol": "TSUNAMI",
+   "ts": "2026-11-04T01:51:15",
+   "t": 1793757075.0,
+   "mcap": 5547.732143895701,
+   "whale_usd": 139.22381846272876,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-04T01:52:22",
+   "t": 1793757142.0,
+   "mcap": 1931057.7930617935,
+   "whale_usd": 212.96830881898995,
    "whale_type": "whale"
   }
  ],
