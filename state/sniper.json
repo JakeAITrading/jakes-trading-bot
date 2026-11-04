@@ -13177,6 +13177,51 @@
    "mcap": 333201.41309745517,
    "whale_usd": 997.2499999999999,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "4QXhchExxEjFxkFvvadByUBXvFc175VQr363vXB3pump",
+   "symbol": "Victor",
+   "ts": "2026-11-04T00:33:10",
+   "t": 1793752390.0,
+   "mcap": 50038.43762096949,
+   "whale_usd": 331.94693395992704,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8usHJxuwfrKmxBgkQUA5LhSgc7o8mDsXLXBZRHpcpump",
+   "symbol": "MI450",
+   "ts": "2026-11-04T00:33:22",
+   "t": 1793752402.0,
+   "mcap": 9279.423466068693,
+   "whale_usd": 225.35290586866802,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8asNnzWi7GbirVWuppyksDadUDQqacGbG7ytvyS5pump",
+   "symbol": "X",
+   "ts": "2026-11-04T00:33:41",
+   "t": 1793752421.0,
+   "mcap": 48681.90080742352,
+   "whale_usd": 453.8366559445768,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "55Vr2VpSwxsDkB6uGGHAvRv86K6zax2Zb4TT8ivwDEzW",
+   "symbol": "slopcannon",
+   "ts": "2026-11-04T00:34:06",
+   "t": 1793752446.0,
+   "mcap": 22003.749233276605,
+   "whale_usd": 366.0665054468677,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "6Gh8csyYp1oyR3PS91xrhUv9Epcubo68QQmY841Cpump",
+   "symbol": "GOYSTICKER",
+   "ts": "2026-11-04T00:34:09",
+   "t": 1793752449.0,
+   "mcap": 7568.777164124185,
+   "whale_usd": 139.3386524614406,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793751994.693163
