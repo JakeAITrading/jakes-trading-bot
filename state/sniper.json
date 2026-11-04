@@ -6244,6 +6244,27 @@
    },
    "expected_avg_pct": 12.7,
    "expected_trades_in_samples": 93.0
+  },
+  {
+   "at": "2026-11-04T10:55:24Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.4,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 14.4,
+   "expected_trades_in_samples": 81.0
   }
  ],
  "observed": [
@@ -22846,6 +22867,20 @@
    "significance": "major",
    "pct_port": 0.998525911389402,
    "views": 92
+  },
+  {
+   "token_address": "AopEmtfyHaaye2TcZs3eFBLwZppJnEZ8rJa35Aggpump",
+   "symbol": "Slopbeast",
+   "ts": "2026-11-04T10:53:51",
+   "t": 1793789631.0,
+   "mcap": 7203.343557193875,
+   "whale_usd": 138.71658626722407,
+   "whale_type": "kol",
+   "wallet": "EtmAUZWjIn2VcnKQCY1lQLKxSy_M4V-7mNT1K42WKKQCe-P5Kz1m-zD47MFoJO1pE4j_A_z-v83lXrIlGsNLLvh9VZ2oLnr8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.004102415150333933,
+   "views": 33
   }
  ],
  "last_retarget": 1793786115.5725179
