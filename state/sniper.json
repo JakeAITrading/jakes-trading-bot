@@ -22174,6 +22174,20 @@
    "significance": "notable",
    "pct_port": 0.06388588063551723,
    "views": 16
+  },
+  {
+   "token_address": "HdH5uyAUQcrnt4tcYxjfwaxgNpJznquSKxLvRatfpump",
+   "symbol": "Moonman",
+   "ts": "2026-11-04T09:28:58",
+   "t": 1793784538.0,
+   "mcap": 8939.379767980417,
+   "whale_usd": 100.275666,
+   "whale_type": "kol",
+   "wallet": "xDHn1DL5BtIh41oFYpg_-YrLxZhhR9HPMBXkYfyzLt6jPZ4_4ArIhwwIRyfmRDm9UJxeRYj7aA2kilnBJP0xon50BlXrPrdm",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.002593334663777901,
+   "views": 19
   }
  ],
  "last_retarget": 1793780285.7230966
