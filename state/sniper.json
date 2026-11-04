@@ -35355,6 +35355,20 @@
    "significance": "noise",
    "pct_port": 0.006559813555561038,
    "views": 10
+  },
+  {
+   "token_address": "AgBt1b6b7eNVLMrswXFRhVJ9ckbZdfzArohFjnfmpump",
+   "symbol": "HOLLY",
+   "ts": "2026-11-04T20:21:29",
+   "t": 1793823689.0,
+   "mcap": 5067.279744253028,
+   "whale_usd": 474.3871815264784,
+   "whale_type": "kol",
+   "wallet": "xCvaiubz0pQh4OoDEGdKelo_hTl_FRhQD4Kx_gT9FPuoDhPV2pQTVoJR8k3WRnIT9O_5asOWbzhz-L6Fq8FQdUEf3xZsoC4e",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.013363157234619684,
+   "views": 13
   }
  ],
  "last_retarget": 1793821860.1562994
