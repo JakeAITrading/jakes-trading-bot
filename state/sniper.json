@@ -28460,6 +28460,20 @@
    "significance": "noise",
    "pct_port": 0.006282263334710036,
    "views": 14
+  },
+  {
+   "token_address": "31HzUsjzTt7FBCGnDy68cBnELayVsnd3zYEBtsXXpump",
+   "symbol": "TrumpWars",
+   "ts": "2026-11-04T16:23:49",
+   "t": 1793809429.0,
+   "mcap": 228227.64090389674,
+   "whale_usd": 500.0,
+   "whale_type": "kol",
+   "wallet": "62nyzcFG3F31U6gNjq_L1We9vhRvnvWGoCDbQ_kUkCFpR1e_Rrn5t0huRc0gG6MgT5yQyoYyzgVbrZiqJ--GYl9Cik4S2ZGA",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.006753525265276982,
+   "views": 110
   }
  ],
  "last_retarget": 1793806182.440615
