@@ -15090,6 +15090,51 @@
    "mcap": 11868.539331771899,
    "whale_usd": 200.0,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-04T02:38:02",
+   "t": 1793759882.0,
+   "mcap": 1459615.4367161354,
+   "whale_usd": 408.0856594543461,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "HdC6WeZQ1qD3F268bGBDqF6tNdbxtuUNY65QDRTypump",
+   "symbol": "MEMEGENDER",
+   "ts": "2026-11-04T02:38:53",
+   "t": 1793759933.0,
+   "mcap": 11100.594747404102,
+   "whale_usd": 289.0931719580375,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Hor8JzD8hURZ678JtUKofBNDY32Pdt4insUDAqXcpump",
+   "symbol": "Rainbow",
+   "ts": "2026-11-04T02:39:30",
+   "t": 1793759970.0,
+   "mcap": 5049.108949606307,
+   "whale_usd": 137.34743699984847,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3XBgK7Y9Frdp4xytn4d5bT4oDye1p1afUSFhWNvPEEUk",
+   "symbol": "MAGA",
+   "ts": "2026-11-04T02:39:33",
+   "t": 1793759973.0,
+   "mcap": 6344.332177832257,
+   "whale_usd": 119.14776163111874,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ACFxQnpzxSX3svUfwEKGG37cumW6A3bwVTjTZ1Prpump",
+   "symbol": "LGBTQ",
+   "ts": "2026-11-04T02:40:06",
+   "t": 1793760006.0,
+   "mcap": 5406.017407949548,
+   "whale_usd": 135.05926372529586,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793756573.7115717
