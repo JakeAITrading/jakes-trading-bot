@@ -19024,6 +19024,20 @@
    "significance": "noise",
    "pct_port": 0.001140993734081541,
    "views": 18
+  },
+  {
+   "token_address": "CwvvHAr5qzP8Wwkg98PKwksM4yRST43xWQU9g5njpump",
+   "symbol": "nigga",
+   "ts": "2026-11-04T05:17:07",
+   "t": 1793769427.0,
+   "mcap": 8644.11958900746,
+   "whale_usd": 2305.131612189893,
+   "whale_type": "kol",
+   "wallet": "PRI5H1bCd_j6rBCcf41UIwoaSFNwdg8p8K1Qxn36YTmJQp-UNDFft8-LlJwVkj1BKaxZGdVpGhfTy_pWCzgimSWm3QL6dkLN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 9.384410718018104e-08,
+   "views": 11
   }
  ],
  "last_retarget": 1793768033.3653324
