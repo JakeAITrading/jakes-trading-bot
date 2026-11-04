@@ -2649,9 +2649,9 @@
    "entry_vs_seen_pct": -0.4,
    "take_profit_price": 9.790810180759999e-05,
    "tp_order": {
-    "order_id": "2863d346-9d52-442a-a39d-3c4295780b5e",
+    "order_id": "396e0f4f-2716-4aed-9951-9a11e1df7fbc",
     "order_ids": [
-     "2863d346-9d52-442a-a39d-3c4295780b5e"
+     "396e0f4f-2716-4aed-9951-9a11e1df7fbc"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2784,9 +2784,9 @@
    "entry_vs_seen_pct": -6.5,
    "take_profit_price": 0.00021200185203988,
    "tp_order": {
-    "order_id": "a69b9cfe-d5f3-44a8-90ab-a5747feb267d",
+    "order_id": "643a53ba-71b3-42d5-9be7-4874dfa89b67",
     "order_ids": [
-     "a69b9cfe-d5f3-44a8-90ab-a5747feb267d"
+     "643a53ba-71b3-42d5-9be7-4874dfa89b67"
     ],
     "network": "solana",
     "funding_network": null,
@@ -2840,9 +2840,9 @@
    "entry_vs_seen_pct": -35.3,
    "take_profit_price": 8.300076342179999e-06,
    "tp_order": {
-    "order_id": "e4d3a0ed-d3a9-4dc9-b175-10c093dda36c",
+    "order_id": "b26df81f-3d8b-44f0-abed-b49939882f30",
     "order_ids": [
-     "e4d3a0ed-d3a9-4dc9-b175-10c093dda36c"
+     "b26df81f-3d8b-44f0-abed-b49939882f30"
     ],
     "network": "solana",
     "funding_network": null,
@@ -3063,9 +3063,9 @@
    "entry_vs_seen_pct": 0.0,
    "take_profit_price": 0.00396098610945046,
    "tp_order": {
-    "order_id": "a70e3c69-e2b2-453b-8ff9-c525eb6311f7",
+    "order_id": "6ad1d245-8ca4-4bb8-8b15-c028e2e2c063",
     "order_ids": [
-     "a70e3c69-e2b2-453b-8ff9-c525eb6311f7"
+     "6ad1d245-8ca4-4bb8-8b15-c028e2e2c063"
     ],
     "network": "solana",
     "funding_network": null,
@@ -3230,7 +3230,7 @@
     "above_5m_low_pct": 47.9,
     "this_minute_pct": 44.0
    },
-   "status": "holding, take-profit set just above market (already past target)",
+   "status": "holding, take-profit moved to +40%",
    "limit_price": 5.167648396309232e-06,
    "limit_order_id": "e0eaf814-5e06-42ed-b8b6-a9807c289895",
    "limit_placed_at": "2026-11-03T23:38:03Z",
@@ -3242,11 +3242,11 @@
    "tokens": 1081764.098101,
    "bought_at": "2026-11-03 23:39:44",
    "entry_vs_seen_pct": -10.6,
-   "take_profit_price": 7.7442552355933e-06,
+   "take_profit_price": 6.47091173792e-06,
    "tp_order": {
-    "order_id": "e3711204-ad51-4aea-a573-b85e5d107327",
+    "order_id": "483d857f-8f68-463f-9256-9b6f6008aeb5",
     "order_ids": [
-     "e3711204-ad51-4aea-a573-b85e5d107327"
+     "483d857f-8f68-463f-9256-9b6f6008aeb5"
     ],
     "network": "solana",
     "funding_network": null,
@@ -3255,7 +3255,7 @@
     "amount": 1081764.098101,
     "input_token": "96T5upHiyHZcfB6wvb3Nv2n4QF7raQGB6vQ1Jd5Hpump",
     "input_token_symbol": null,
-    "take_profit_price": 7.7442552355933e-06,
+    "take_profit_price": 6.47091173792e-06,
     "stop_loss_price": null,
     "limit_price": null,
     "interval_seconds": null,
@@ -4887,6 +4887,23 @@
    },
    "expected_avg_pct": 15.4,
    "expected_trades_in_samples": 107.0
+  },
+  {
+   "at": "2026-11-04T00:26:34Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 13.3,
+   "expected_trades_in_samples": 113.0
   }
  ],
  "observed": [
@@ -13061,7 +13078,106 @@
    "mcap": 330799.2877895097,
    "whale_usd": 324.0908870495588,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "D28v5NR4FLti3yFTXZkdHp3UBzbVH9XytiQfk4z9pump",
+   "symbol": "Polycat",
+   "ts": "2026-11-04T00:25:51",
+   "t": 1793751951.0,
+   "mcap": 41493.49479107106,
+   "whale_usd": 187.6107839443226,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-04T00:26:35",
+   "t": 1793751995.0,
+   "mcap": 1765690.457171972,
+   "whale_usd": 2776.005140730954,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "CPoGSmcjprCvzA2MFYLJMpQkGjmgVzKg4RVwMdrzpump",
+   "symbol": "BLUE",
+   "ts": "2026-11-04T00:27:45",
+   "t": 1793752065.0,
+   "mcap": 19474.486512509084,
+   "whale_usd": 179.93977868338618,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8SBSg2nKP2jrfpd8EubmXZiZ1sX8jcHULgTt3aeypump",
+   "symbol": "Bingling",
+   "ts": "2026-11-04T00:28:03",
+   "t": 1793752083.0,
+   "mcap": 5745.22300667013,
+   "whale_usd": 364.414815519084,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Fp8Aqc1KNXcRHMhSxqJf81G5QNDLFYFJMEqPMiXupump",
+   "symbol": "EVAL",
+   "ts": "2026-11-04T00:28:04",
+   "t": 1793752084.0,
+   "mcap": 17760.941773303784,
+   "whale_usd": 273.311111639313,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BARShnLDrwEmRV9FKK1fCRkm592eMQYDSJgFMvqg2Kwb",
+   "symbol": "BARS",
+   "ts": "2026-11-04T00:28:37",
+   "t": 1793752117.0,
+   "mcap": 9852.577932178974,
+   "whale_usd": 183.88912170545544,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "37gLowuHZZ6tF44gXqsnS6VBw9kGdfnqffxdTjmfLoat",
+   "symbol": "PAIR",
+   "ts": "2026-11-04T00:28:46",
+   "t": 1793752126.0,
+   "mcap": 22777.845515520312,
+   "whale_usd": 455.125576448565,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HV5dDHodf46zXunYAPbYpYs7THtrriiptqzczHKvpump",
+   "symbol": "dumocrats",
+   "ts": "2026-11-04T00:29:05",
+   "t": 1793752145.0,
+   "mcap": 5803.201474918751,
+   "whale_usd": 183.91310303284342,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
+   "symbol": "Anakin",
+   "ts": "2026-11-04T00:29:20",
+   "t": 1793752160.0,
+   "mcap": 576663.2978596305,
+   "whale_usd": 2000.0,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "JAFqCQSpy5YinrsmixWSMaD7jTn4MytJRkyWvYPnY6ea",
+   "symbol": "PANGEA",
+   "ts": "2026-11-04T00:29:29",
+   "t": 1793752169.0,
+   "mcap": 1400464.991522121,
+   "whale_usd": 457.4798802762649,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "EfRnwABuWZKxri55se639twy4jy3FRgYfri7wLJ5pump",
+   "symbol": "E",
+   "ts": "2026-11-04T00:30:15",
+   "t": 1793752215.0,
+   "mcap": 333201.41309745517,
+   "whale_usd": 997.2499999999999,
+   "whale_type": "whale"
   }
  ],
- "last_retarget": 1793748307.1641624
+ "last_retarget": 1793751994.693163
 }
