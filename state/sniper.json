@@ -5173,6 +5173,23 @@
    },
    "expected_avg_pct": 7.7,
    "expected_trades_in_samples": 216.0
+  },
+  {
+   "at": "2026-11-04T02:20:34Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.4,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 6.1,
+   "expected_trades_in_samples": 240.0
   }
  ],
  "observed": [
@@ -14795,6 +14812,24 @@
    "t": 1793758734.0,
    "mcap": 9131.344086199533,
    "whale_usd": 143.20786645039394,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Be3t487jJ2ziSJcBe3JBGzHTFzujjpQFu7nz3Pazpump",
+   "symbol": "WOKE2",
+   "ts": "2026-11-04T02:21:21",
+   "t": 1793758881.0,
+   "mcap": 12232.75285155978,
+   "whale_usd": 273.8246113103638,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "5uY4RXyTkkHBkhatNzCmTphAhBS3LU6yaLd9b9uAhQAb",
+   "symbol": "DELUSIONAL",
+   "ts": "2026-11-04T02:21:31",
+   "t": 1793758891.0,
+   "mcap": 82208.02539924347,
+   "whale_usd": 177.55549700000003,
    "whale_type": "kol"
   }
  ],
