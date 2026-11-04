@@ -17448,6 +17448,26 @@
    "whale_usd": 224.6854206561525,
    "whale_type": "kol",
    "wallet": "6g2iHTk-DXpQ5Jvyy8T6YQu0TX3dahn6XNYBLd0Lmke0YLCyc9msNbCv8A-qLrFBoKbptxJyZDzn0khYepgjA6KxETwUjLpd"
+  },
+  {
+   "token_address": "ce7uZiHe1JenuPPqr2PXawKKsCCE8aNv4jScywTpump",
+   "symbol": "Ossoff",
+   "ts": "2026-11-04T03:56:16",
+   "t": 1793764576.0,
+   "mcap": 5152.405265107518,
+   "whale_usd": 389.58632602203596,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf"
+  },
+  {
+   "token_address": "CFANio5we11ffBeRincvzbuhhAgPpbPVZcA1AaTapump",
+   "symbol": "Hymet",
+   "ts": "2026-11-04T03:56:55",
+   "t": 1793764615.0,
+   "mcap": 5948.218586127041,
+   "whale_usd": 625.3056854601924,
+   "whale_type": "kol",
+   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI="
   }
  ],
  "last_retarget": 1793764325.0780935
