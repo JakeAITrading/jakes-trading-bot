@@ -37658,6 +37658,62 @@
    "significance": "notable",
    "pct_port": 0.04158203288226818,
    "views": 19
+  },
+  {
+   "token_address": "EjAvrinzCVfxp91cMRxLZcEqgNRvqw9zxovgpVtLJmq1",
+   "symbol": "MORTGAGE",
+   "ts": "2026-11-04T21:34:28",
+   "t": 1793828068.0,
+   "mcap": 7325.551905523753,
+   "whale_usd": 363.52751474709555,
+   "whale_type": "kol",
+   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.008183748530069822,
+   "views": 13
+  },
+  {
+   "token_address": "6ZXySbfVYAciEzZzNao4LJisKMmpZBHSyHNri9r7pump",
+   "symbol": "ALOW",
+   "ts": "2026-11-04T21:34:41",
+   "t": 1793828081.0,
+   "mcap": 11256.909601797815,
+   "whale_usd": 374.218410815568,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0030114132689267577,
+   "views": 13
+  },
+  {
+   "token_address": "8LYoyHaaTWugsRBJ2FXJ3fr7FoLEwcpGE8gmZPXhpump",
+   "symbol": "LOBBY",
+   "ts": "2026-11-04T21:35:19",
+   "t": 1793828119.0,
+   "mcap": 8171.967193805575,
+   "whale_usd": 332.2199866632027,
+   "whale_type": "whale",
+   "wallet": "4lAEcYaq-wBS3sgzIWIqTrJlV-T_LphnZGA3G7v5jpwB_Gg33Aq2xUuYdp97pTWVVb34LyV4wN8d3Fl6jCnhNBZ0KnntxYQG",
+   "n_wallets30": 5,
+   "significance": "noise",
+   "pct_port": 0.01200339472235932,
+   "views": 26
+  },
+  {
+   "token_address": "6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump",
+   "symbol": "DAVID",
+   "ts": "2026-11-04T21:35:42",
+   "t": 1793828142.0,
+   "mcap": 1972963.8643220451,
+   "whale_usd": 464.966427412342,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.0062939312545835235,
+   "views": 89
   }
  ],
  "last_retarget": 1793826070.9712067
