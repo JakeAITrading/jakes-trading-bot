@@ -22755,6 +22755,20 @@
    "significance": "major",
    "pct_port": 0.1313766357142869,
    "views": 734
+  },
+  {
+   "token_address": "5StxnybovzoqP7pwt4rJf3PcGsmtH8BXk8AwSb4Cpump",
+   "symbol": "Ducknald",
+   "ts": "2026-11-04T10:41:17",
+   "t": 1793788877.0,
+   "mcap": 6000.036137265852,
+   "whale_usd": 186.6589775552705,
+   "whale_type": "kol",
+   "wallet": "Cgs4m7efROs_797VdLlSiD0b9A4FTOGkuDF_Nfd_YUU7uHXzrtL6tgr25FM_5we8JcbixvWf3weAf1JU34_KcFV_V5Rb25bx",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.021703921971389258,
+   "views": 16
   }
  ],
  "last_retarget": 1793786115.5725179
