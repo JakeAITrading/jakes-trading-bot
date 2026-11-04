@@ -14715,6 +14715,87 @@
    "mcap": 5820.412752655102,
    "whale_usd": 175.7874727356581,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "DMgry6A9C6U6jopS7bAawukAvAcgpUvWfJULcbnfpump",
+   "symbol": "POLY",
+   "ts": "2026-11-04T02:16:19",
+   "t": 1793758579.0,
+   "mcap": 47188.967088444006,
+   "whale_usd": 898.4838033205822,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "t2TGpqDS81fNNXCST8hxNrRsfVPxJdw41Cct4yLpump",
+   "symbol": "Suica",
+   "ts": "2026-11-04T02:16:36",
+   "t": 1793758596.0,
+   "mcap": 35500.15753717158,
+   "whale_usd": 600.1522589999986,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FvFU2Pj32JtBhUY4NLQFg3Ru3Yk4CL3jeJHJij44pump",
+   "symbol": "TITO",
+   "ts": "2026-11-04T02:16:49",
+   "t": 1793758609.0,
+   "mcap": 18938.548237201758,
+   "whale_usd": 768.7641733477041,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DCqcUjfmKAFUTG1tvVm8hMfUEcnRjDzQtnLDPZ1d4SjM",
+   "symbol": "TITO",
+   "ts": "2026-11-04T02:17:49",
+   "t": 1793758669.0,
+   "mcap": 5980.512014502892,
+   "whale_usd": 274.93453348245515,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "13BVXoycc9LMxhHGpYdBkMDiY1vgFNifpRJ8koQANLXF",
+   "symbol": "TITO",
+   "ts": "2026-11-04T02:17:53",
+   "t": 1793758673.0,
+   "mcap": 7580.017154396046,
+   "whale_usd": 308.40792768900184,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FPVTSyvs8tLQr39oEaxbw1gqaVHV9AxK2mhGdVWTpump",
+   "symbol": "Polycat",
+   "ts": "2026-11-04T02:17:57",
+   "t": 1793758677.0,
+   "mcap": 34485.035877015376,
+   "whale_usd": 249.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "22r9JGoWRBYc4Z1pkSFw8p2tdjefS2ZZshw1vr8bBC2K",
+   "symbol": "STONKS",
+   "ts": "2026-11-04T02:18:03",
+   "t": 1793758683.0,
+   "mcap": 939737.8411333389,
+   "whale_usd": 176.991209,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "4xWRsdRkre5ibf3ZyS2eje6sUY8wGnmtSHx7gkGtpump",
+   "symbol": "VETO",
+   "ts": "2026-11-04T02:18:06",
+   "t": 1793758686.0,
+   "mcap": 71217.03358046198,
+   "whale_usd": 221.10814352320236,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "G4mA7CfB4BRLxfmPSAdkz8gsh232XAV1q5D4T49Rpump",
+   "symbol": "Downald",
+   "ts": "2026-11-04T02:18:54",
+   "t": 1793758734.0,
+   "mcap": 9131.344086199533,
+   "whale_usd": 143.20786645039394,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793756573.7115717
