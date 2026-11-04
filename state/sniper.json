@@ -5845,6 +5845,27 @@
    },
    "expected_avg_pct": 17.3,
    "expected_trades_in_samples": 154.0
+  },
+  {
+   "at": "2026-11-04T07:51:22Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 250000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.3,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 7.5,
+   "expected_trades_in_samples": 203.0
   }
  ],
  "observed": [
@@ -21019,6 +21040,34 @@
    "significance": "noise",
    "pct_port": 0.025597663054397344,
    "views": 145
+  },
+  {
+   "token_address": "SCGBBnSwnekytGFHgyeHHxPMiN7xDxsWFGg9JgFSTNK",
+   "symbol": "MAMESUKE",
+   "ts": "2026-11-04T07:50:33",
+   "t": 1793778633.0,
+   "mcap": 1683810.809223556,
+   "whale_usd": 557.9436016166795,
+   "whale_type": "whale",
+   "wallet": "EfBJcZpAsJ0O0wZ3OtxbGrgemfcoyFC6GG75Ohj-WPyMoS_fY1Zh0c0A-M_gLd7We3d6UWOR-yR-OPnntFqSvoO4fsb0g8D9",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 19946
+  },
+  {
+   "token_address": "6VMScJ8VKeiKe4JcCXigEe1k3WycMhVaCoPKArQGpump",
+   "symbol": "Groyper",
+   "ts": "2026-11-04T07:52:53",
+   "t": 1793778773.0,
+   "mcap": 177952.2934654966,
+   "whale_usd": 920.4144070000038,
+   "whale_type": "whale",
+   "wallet": "mGmPISI4jLCCIi11J3RgrNVV61iSuOOp-vPtortpJvLrqfhuIryKeYGU74Ov4Lm8_NVBFyo9g9ks1Fi0J_9Wo0-hkXxUcw4-",
+   "n_wallets30": 2,
+   "significance": null,
+   "pct_port": null,
+   "views": 1627
   }
  ],
  "last_retarget": 1793772058.246944
