@@ -5224,6 +5224,23 @@
    },
    "expected_avg_pct": 13.4,
    "expected_trades_in_samples": 95.0
+  },
+  {
+   "at": "2026-11-04T02:43:45Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 15.7,
+   "expected_trades_in_samples": 104.0
   }
  ],
  "observed": [
@@ -15153,7 +15170,43 @@
    "mcap": 5743.54544369271,
    "whale_usd": 273.94690814418436,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "6JzG565xGV5NbsfLW564XvwSyTAq8xJ2o5df2cq2pump",
+   "symbol": "ANTIFROG",
+   "ts": "2026-11-04T02:43:47",
+   "t": 1793760227.0,
+   "mcap": 9576.883712725248,
+   "whale_usd": 149.5664021574596,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4xWRsdRkre5ibf3ZyS2eje6sUY8wGnmtSHx7gkGtpump",
+   "symbol": "VETO",
+   "ts": "2026-11-04T02:45:18",
+   "t": 1793760318.0,
+   "mcap": 68059.78288133354,
+   "whale_usd": 111.83511578252148,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "HBWXUEgQJgcefZfyqhzfkfK3qU7hG8kVUT4gCJuYpump",
+   "symbol": "gyrosexual",
+   "ts": "2026-11-04T02:45:51",
+   "t": 1793760351.0,
+   "mcap": 5347.91206519003,
+   "whale_usd": 281.56164858551574,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CCv5c2LVTQyDxyodV7rKQwYaZK5KkNJdQ7c6jsmgsnXz",
+   "symbol": "MAGATARD",
+   "ts": "2026-11-04T02:47:19",
+   "t": 1793760439.0,
+   "mcap": 14010.0596728303,
+   "whale_usd": 451.0210836338464,
+   "whale_type": "whale"
   }
  ],
- "last_retarget": 1793756573.7115717
+ "last_retarget": 1793760225.4617524
 }
