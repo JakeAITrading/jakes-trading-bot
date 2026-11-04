@@ -18443,6 +18443,20 @@
    "significance": "noise",
    "pct_port": 0.003306577047016016,
    "views": 15
+  },
+  {
+   "token_address": "4E9WHG1D9XVKc5rCR6bbKGa6oJJu3Ccbv51viB6Qpump",
+   "symbol": "FI",
+   "ts": "2026-11-04T04:45:38",
+   "t": 1793767538.0,
+   "mcap": 6411.074537027162,
+   "whale_usd": 453.69344855736,
+   "whale_type": "kol",
+   "wallet": "s112i534SlY2NglbqHcefLasQCnDxo97DlPQMzvLly540SgGFHzsOI1RP7zk9TKqILL4AObvVHgTrAqi_9_kWHhIoeOQQ9oc",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.07911859999379925,
+   "views": 19
   }
  ],
  "last_retarget": 1793764325.0780935
