@@ -6160,6 +6160,27 @@
    },
    "expected_avg_pct": 16.0,
    "expected_trades_in_samples": 93.0
+  },
+  {
+   "at": "2026-11-04T10:15:10Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.4,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 15.6,
+   "expected_trades_in_samples": 90.0
   }
  ],
  "observed": [
@@ -22496,6 +22517,20 @@
    "significance": "noise",
    "pct_port": 0.005297740614058594,
    "views": 20
+  },
+  {
+   "token_address": "EPSBBT6ncXpYonu2rb1AymGK8tJSpfZcMxMgfMmjpump",
+   "symbol": "RIPELON",
+   "ts": "2026-11-04T10:13:11",
+   "t": 1793787191.0,
+   "mcap": 15804.817311591027,
+   "whale_usd": 275.98095126475584,
+   "whale_type": "whale",
+   "wallet": "IZMwEGv1ea8DxXRcaiGw_dWE-UnTN4t7AtVv4y6OW4KnbFwbl6AH0USI-PrDYgCqGbExBC7ThLuEhqxbO5dOISEtEU1IGRj5",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.02260562076542141,
+   "views": 12
   }
  ],
  "last_retarget": 1793786115.5725179
