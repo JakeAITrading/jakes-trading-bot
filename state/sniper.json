@@ -19927,6 +19927,20 @@
    "significance": "notable",
    "pct_port": 0.044161549133938945,
    "views": 90
+  },
+  {
+   "token_address": "FhZUZusjTmQtXSBR8XX1njGCJpv7dtJ14BFLYy7xpump",
+   "symbol": "Bluenami",
+   "ts": "2026-11-04T06:24:36",
+   "t": 1793773476.0,
+   "mcap": 13271.725254784305,
+   "whale_usd": 124.85118110607732,
+   "whale_type": "kol",
+   "wallet": "Jgk6u8010Zl_T7MwB8ovNr6BiS5srLnACMAqu7ua1tKnNSI7d2_qANpdtbf8zdYpwGrSjJhbDqtCJSS65EWhvlDQNbZnaLTF",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.025634518365552496,
+   "views": 31
   }
  ],
  "last_retarget": 1793772058.246944
