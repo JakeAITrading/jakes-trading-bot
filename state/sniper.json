@@ -31421,6 +31421,20 @@
    "significance": "noise",
    "pct_port": 0.021709888084134994,
    "views": 20
+  },
+  {
+   "token_address": "Hf1Kcpqd652T6NqDp2xsZN4avatFcFgv9vHSjAYgpump",
+   "symbol": "WOKE",
+   "ts": "2026-11-04T18:04:42",
+   "t": 1793815482.0,
+   "mcap": 25165.087208733843,
+   "whale_usd": 958.965854012,
+   "whale_type": "kol",
+   "wallet": "RAeOuTcU_xWS09TwujXkaPh8ntUVyOYsEVSCAfWTBJLyTQniSzGuQluniShQmIXnaldaMdEPQCMB1M0Jnj4Jwvt-saSf-VmD",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010827774670257325,
+   "views": 19
   }
  ],
  "last_retarget": 1793813809.088653
