@@ -21068,6 +21068,20 @@
    "significance": null,
    "pct_port": null,
    "views": 1627
+  },
+  {
+   "token_address": "64M1Z76Qd4S2eW11uX15sNPp97KCvunR4bhFFMFbpump",
+   "symbol": "Twitter",
+   "ts": "2026-11-04T07:54:51",
+   "t": 1793778891.0,
+   "mcap": 10428.487257740926,
+   "whale_usd": 180.1630597453526,
+   "whale_type": "kol",
+   "wallet": "RHJgD-vilNSyGjE_1rKACAGl91JdFh25Ja1xrqx3CGl6jv9js8RDpbdZbx6VjzBhx49ujZoatRtFPN82UyuHOtVEvoEyuf_q",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.0638359426309175,
+   "views": 15
   }
  ],
  "last_retarget": 1793772058.246944
