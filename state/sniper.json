@@ -23014,6 +23014,20 @@
    "significance": "noise",
    "pct_port": 0.002309733364959428,
    "views": 30
+  },
+  {
+   "token_address": "CGEDT9QZDvvH5GmVkWJH2BXiMJqMJySC9ihWyr7Spump",
+   "symbol": "BURNIE",
+   "ts": "2026-11-04T11:09:47",
+   "t": 1793790587.0,
+   "mcap": 653960.3192448553,
+   "whale_usd": 450.1832578232894,
+   "whale_type": "whale",
+   "wallet": "8GzBYfkW1NpWSiwaQDFtEaWeeC9nbHvUuUDvi5le5BNQ532S_yFT5ogJErYPfGk649co9P3Avc5LZOj-LZiG4tf_dpHAy1lw",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.1545358463077746,
+   "views": 67
   }
  ],
  "last_retarget": 1793786115.5725179
