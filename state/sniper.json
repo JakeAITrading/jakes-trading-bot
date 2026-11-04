@@ -24512,6 +24512,62 @@
    "significance": "noise",
    "pct_port": 0.0016385110105003643,
    "views": 12
+  },
+  {
+   "token_address": "4eEDTyors4YReX5fBoRFBYNkKs6w66oyQ5CvPcckpump",
+   "symbol": "Dumocrats",
+   "ts": "2026-11-04T13:26:54",
+   "t": 1793798814.0,
+   "mcap": 21758.863629590174,
+   "whale_usd": 158.0841394972667,
+   "whale_type": "kol",
+   "wallet": "CWZpkyeufaHDxELsiQ2NTsx7p1eELQxUXPTu9evtwh09Jivh-XILlMUpgcolOiP5BTtRRQbyVftsYHfZq_lWDlDXxRTvJRw=",
+   "n_wallets30": 4,
+   "significance": "noise",
+   "pct_port": 0.013255711168290026,
+   "views": 78
+  },
+  {
+   "token_address": "GJoW1gwrtyX5SjGWGpUbjUuCC1pEP9eo92WhvjBDpump",
+   "symbol": "Reaper",
+   "ts": "2026-11-04T13:26:56",
+   "t": 1793798816.0,
+   "mcap": 6217.407189978985,
+   "whale_usd": 127.50863662910722,
+   "whale_type": "kol",
+   "wallet": "Lsh1Ls_XUbghavG-As6sLkiXfyOqxetwGjTT0vwt-Hd600MTQ4aSX588F9XB-zTN4bBatoxLLZbCidOvPIWxu4F0jRUBFVOa",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.008079505782304139,
+   "views": 20
+  },
+  {
+   "token_address": "E9mBmiKY3GvS5NmdayJ8GvDhaSDA4JQGcui2Kt7gpair",
+   "symbol": "PCAT",
+   "ts": "2026-11-04T13:28:25",
+   "t": 1793798905.0,
+   "mcap": 7555.207957921084,
+   "whale_usd": 277.3749910449708,
+   "whale_type": "kol",
+   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0037018637687828097,
+   "views": 19
+  },
+  {
+   "token_address": "F2xQeTCTqnczXxXQaBWAfDpUnpxn4wQHRPSqvUYJpump",
+   "symbol": "Impeach",
+   "ts": "2026-11-04T13:29:36",
+   "t": 1793798976.0,
+   "mcap": 111830.27643309093,
+   "whale_usd": 1000.0000000000001,
+   "whale_type": "kol",
+   "wallet": "mWDVQLbH1JbuJWCNK_Q7NhUDORoEqwnICmalFw3fw7BkjKVWYxabpAI1jB2as_SAkhJCQ8qiI302Ovp8xPQAzKqen4HTzG0=",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 2876
   }
  ],
  "last_retarget": 1793797969.6826289
