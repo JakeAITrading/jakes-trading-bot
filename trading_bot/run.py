@@ -52,7 +52,7 @@ def main() -> int:
             blocked = float(_sniper_state().get("orders_blocked_until") or 0)
         except Exception:
             blocked = 0.0
-        if ok and os.path.exists(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "NO_BUY")):
+        if ok and __import__("trading_bot.store", fromlist=["no_buy"]).no_buy():
             ok, why = False, "NO_BUY file present (buys paused)"
         if ok and time.time() < blocked:
             ok, why = False, f"Moby order limit: paused until {time.strftime('%H:%M UTC', time.gmtime(blocked))}"

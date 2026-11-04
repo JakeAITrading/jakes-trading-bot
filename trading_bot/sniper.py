@@ -459,7 +459,7 @@ class Sniper:
         """Our own safeguards. None = OK to buy, else the reason not to."""
         if stopped():
             return "STOP file present"
-        if os.path.exists(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "NO_BUY")):
+        if __import__("trading_bot.store", fromlist=["no_buy"]).no_buy():
             return "NO_BUY file present: managing open coins only"
         if _now() < float(self.state.get("orders_blocked_until") or 0):
             return f"Moby order limit: paused until {_iso(self.state['orders_blocked_until'])}"

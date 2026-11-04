@@ -45,3 +45,12 @@ def read_lines(name: str) -> list[dict]:
     if not p.exists():
         return []
     return [json.loads(line) for line in p.read_text().splitlines() if line.strip()]
+
+
+def no_buy() -> bool:
+    """True while a NO_BUY file pauses new buys (repo root; tests point BOT_STATE_DIR elsewhere)."""
+    import os
+    from pathlib import Path
+    d = os.environ.get("BOT_STATE_DIR")
+    root = Path(d) if d else Path(__file__).resolve().parent.parent
+    return (root / "NO_BUY").exists()
