@@ -35978,6 +35978,20 @@
    "significance": "noise",
    "pct_port": 0.00581778711616938,
    "views": 11
+  },
+  {
+   "token_address": "HS1vsv3THrW8JsTF2n9cL3Re97RD8v4eXeDUVzNepump",
+   "symbol": "TTWO",
+   "ts": "2026-11-04T20:37:00",
+   "t": 1793824620.0,
+   "mcap": 5730.09992876905,
+   "whale_usd": 475.798294088732,
+   "whale_type": "whale",
+   "wallet": "kOGX0UsJ-W5CtI7K82R1ne6c7zLQ0TIdlQH5jFRzGT8P9P5vrJ6v3iG76oTGsqNc9j2mtJBrR5SPwXseTJiiSJT9c5JIPh6f",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0076030318566073585,
+   "views": 15
   }
  ],
  "last_retarget": 1793821860.1562994
