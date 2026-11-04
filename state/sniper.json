@@ -40626,6 +40626,20 @@
    "significance": "noise",
    "pct_port": 0.006008875201442428,
    "views": 384
+  },
+  {
+   "token_address": "4dwhSYTTsNttG5jkuaj9a85bfSjwGRhfEmVqYGJsBAGS",
+   "symbol": "ELON",
+   "ts": "2026-11-04T23:13:23",
+   "t": 1793834003.0,
+   "mcap": 14642.705536971334,
+   "whale_usd": 197.49374770248403,
+   "whale_type": "kol",
+   "wallet": "DA_7ovzSmabTtEejMJITR2LpXjqNr5IIeUVASDvN3kGzHwZxdIBZ9VK_Q2CTm89MDsnIit0Urc2r9kFlCTNAN5edtjs-EP_d",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.12026640594337062,
+   "views": 12
   }
  ],
  "last_retarget": 1793830088.6453545
