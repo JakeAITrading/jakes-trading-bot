@@ -22895,6 +22895,48 @@
    "significance": "noise",
    "pct_port": 0.006370457577581788,
    "views": 20
+  },
+  {
+   "token_address": "2iSkCyezyS4dtkX2xQz5CjAvC2Bjq6Rxj8nic5CHpump",
+   "symbol": "SOLMAS",
+   "ts": "2026-11-04T10:57:28",
+   "t": 1793789848.0,
+   "mcap": 6760.179985576542,
+   "whale_usd": 257.4537289395317,
+   "whale_type": "kol",
+   "wallet": "kR_4Flit3amCWlMz2HQZJAQb00_0y5bMe2OsevaGpri5eHXlNAPGStM_UQbjxB8RQkOTXxAmUkcoe8CKhp0fqkqSrbVrfmk4",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.5153108568905782,
+   "views": 18
+  },
+  {
+   "token_address": "FipiavwhSRL25yiL7ibzyKpjFFtbwSurumJJ54E1pump",
+   "symbol": "CUBS",
+   "ts": "2026-11-04T11:00:44",
+   "t": 1793790044.0,
+   "mcap": 14478.670891548973,
+   "whale_usd": 116.79665050300001,
+   "whale_type": "kol",
+   "wallet": "5-oWM-8B7W5GTovIB9Ti2E3Bdw4UpG0S8wVMf1w6lRHKl-Iwiw3HvFfieCV7nWhig2h2qxDX1HBNvzOlp6WrvfgRAfyM2EzU",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.3913276388442422,
+   "views": 10
+  },
+  {
+   "token_address": "8kfp8MzuFuj3vrnmG3KBcYVctYmu2JYerdFhPnX4pump",
+   "symbol": "SAN",
+   "ts": "2026-11-04T11:02:01",
+   "t": 1793790121.0,
+   "mcap": 29557.664674939588,
+   "whale_usd": 233.7940649434508,
+   "whale_type": "trader",
+   "wallet": "SvDnqfsJc9Fh7Gls5-pyduCwjv8iGM40ambazPqVgEHN1wXA5FcqYjTzTfdiXcIVuq7YkKurcx4i-m3aAqFMWNbM5cXTq5g=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010647026060485322,
+   "views": 23
   }
  ],
  "last_retarget": 1793786115.5725179
