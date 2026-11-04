@@ -1,1 +1,1 @@
-2026-11-04T02:53:54Z practice: no trades | max open positions reached
+2026-11-04T02:59:00Z practice: paper exit CATE: smart money selling, P&L $-0.25 [simulated] | daily buy budget used up

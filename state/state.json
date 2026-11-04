@@ -4,17 +4,22 @@
  "last_traded": {
   "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-03T05:28:18.334758+00:00",
   "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "2026-11-03T22:41:29.717004+00:00",
-  "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T01:57:39.742000+00:00"
+  "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T02:59:00.283087+00:00"
  },
- "paper": {
-  "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": {
+ "paper": {},
+ "paper_closed": [
+  {
+   "closed_at": "2026-11-04T02:59:00.283059+00:00",
    "entry_price": 0.0382327176630497,
+   "exit_price": 0.037291936576366425,
+   "exit_reason": "smart money selling",
    "opened_at": "2026-11-04T01:57:39.742013+00:00",
+   "pnl_usd": -0.2461,
    "stop_loss": 0.01529308706521988,
    "symbol": "CATE",
    "take_profit": 0.0764654353260994,
+   "token_address": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
    "usd": 10.0
   }
- },
- "paper_closed": []
+ ]
 }
