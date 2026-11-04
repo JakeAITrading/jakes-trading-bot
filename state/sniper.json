@@ -18807,6 +18807,20 @@
    "significance": "noise",
    "pct_port": 2.2835735278978017e-05,
    "views": 17
+  },
+  {
+   "token_address": "xv1HqWLczzbLEygub1T45WRJXaz43YmykZWv6AXpump",
+   "symbol": "RAM",
+   "ts": "2026-11-04T05:06:29",
+   "t": 1793768789.0,
+   "mcap": 7627.855211467249,
+   "whale_usd": 125.10587116252326,
+   "whale_type": "kol",
+   "wallet": "zAoA2A0yj8Z__wcjkeEDZq_qH0cNxPXz_qtc9SLoaTIkqTrbHQtj_9gKun6prbvCAf1ISJxWM2tcym9P7xOQssp3zGNnWSEI",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0033642021331547443,
+   "views": 13
   }
  ],
  "last_retarget": 1793768033.3653324
