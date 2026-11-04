@@ -23182,6 +23182,20 @@
    "significance": "noise",
    "pct_port": 0.004393071145175829,
    "views": 20
+  },
+  {
+   "token_address": "HzQ39WnGiKTPT6X19CuRsBUdihETKK4edzbm4vQkpump",
+   "symbol": "Dumocrat",
+   "ts": "2026-11-04T11:32:40",
+   "t": 1793791960.0,
+   "mcap": 14509.447282762267,
+   "whale_usd": 146.00594598772096,
+   "whale_type": "trader",
+   "wallet": "SvDnqfsJc9Fh7Gls5-pyduCwjv8iGM40ambazPqVgEHN1wXA5FcqYjTzTfdiXcIVuq7YkKurcx4i-m3aAqFMWNbM5cXTq5g=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.006995645031763779,
+   "views": 16
   }
  ],
  "last_retarget": 1793790926.581706
