@@ -31995,6 +31995,20 @@
    "significance": null,
    "pct_port": null,
    "views": 373
+  },
+  {
+   "token_address": "Afj1y9hbr1SrqFMaRkwVkX8FVAvUoTRzSWb6qqHrY4dv",
+   "symbol": "ACT2",
+   "ts": "2026-11-04T18:30:32",
+   "t": 1793817032.0,
+   "mcap": 5623.021479550516,
+   "whale_usd": 410.27723668876325,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0031978636867241975,
+   "views": 10
   }
  ],
  "last_retarget": 1793813809.088653
