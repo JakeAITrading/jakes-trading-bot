@@ -7924,6 +7924,27 @@
    },
    "expected_avg_pct": 11.5,
    "expected_trades_in_samples": 87.0
+  },
+  {
+   "at": "2026-11-04T23:49:47Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": null,
+    "min_mcap": 50000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 8.7,
+   "expected_trades_in_samples": 205.0
   }
  ],
  "observed": [
@@ -41942,7 +41963,105 @@
    "significance": "noise",
    "pct_port": 0.003890432405022748,
    "views": 10
+  },
+  {
+   "token_address": "5mgz3qm68ZVbKKvRXjV2VsEnKRd8fMnb7BccfzrBpump",
+   "symbol": "Tesla",
+   "ts": "2026-11-04T23:49:05",
+   "t": 1793836145.0,
+   "mcap": 8163.800885085948,
+   "whale_usd": 104.23836387834278,
+   "whale_type": "kol",
+   "wallet": "dE9IQad3Y9410RPhBiC5LtX-LnQmokIrc8jKjO5XJcyk-poxrBTaPi1cRUz_KThDDBhdBiZfcakj62wELgTIBWoxBJemtT9D",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009704403991699362,
+   "views": 10
+  },
+  {
+   "token_address": "DpZvwWVZ7H2BbD1SbqVEz5h94wWnp21QZzFg6Ebypump",
+   "symbol": "Dobrick",
+   "ts": "2026-11-04T23:50:25",
+   "t": 1793836225.0,
+   "mcap": 5676.429282175377,
+   "whale_usd": 189.480001762656,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.002264010395013946,
+   "views": 17
+  },
+  {
+   "token_address": "2dfsCxDvCBiqnYawRoCDvxjF5TGeT1mnFmjG6PjXpump",
+   "symbol": "Peon",
+   "ts": "2026-11-04T23:50:57",
+   "t": 1793836257.0,
+   "mcap": 6261.183923056477,
+   "whale_usd": 191.059209061479,
+   "whale_type": "kol",
+   "wallet": "RhzwkvcWlh7IFPflb1scoah8f8hc84N7ELwILwQMueFSFpRUYNDBLD3gweaYlzwcmaHTjrLi-appJ64HLr-CG3i2oxA0J-CG",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.12643522005219593,
+   "views": 19
+  },
+  {
+   "token_address": "FRxPthUbNy37PnCLu3Q4QmVubCAk92XPEr98u1Xpump",
+   "symbol": "DOBRICK",
+   "ts": "2026-11-04T23:51:16",
+   "t": 1793836276.0,
+   "mcap": 6068.062248232309,
+   "whale_usd": 286.87568918587476,
+   "whale_type": "kol",
+   "wallet": "k5GZ9m9lTN8dz3SEJXWo1eSJeCddJopv3b3xS0ULr0F4nJhYB9BLOhq5sll5b3NWxfa46ip2o-SGf0_DBNKJrvfs8kmqVVt2",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 1.0139982798851448e-05,
+   "views": 11
+  },
+  {
+   "token_address": "DmN6dGTy79mv3JytQUNw6wn5sQfjo46Aijj19xCcpump",
+   "symbol": "TSLA",
+   "ts": "2026-11-04T23:51:18",
+   "t": 1793836278.0,
+   "mcap": 8555.812200938817,
+   "whale_usd": 148.7609061536929,
+   "whale_type": "whale",
+   "wallet": "V83iwm3t8f5C4ot5qJjyIHLCGIxcnP-uxpyjKT2ZSGWQ9SOGjbOpA9xnS2CQ4KMh8vvigvlwOGzn6WI5MT0On9zVYbc0lveo",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.004915846598217795,
+   "views": 13
+  },
+  {
+   "token_address": "GBu57ct9GTayF4oDETQ3LNm1KAZ9HKwhhyrp1Dwipump",
+   "symbol": "AAPL",
+   "ts": "2026-11-04T23:53:00",
+   "t": 1793836380.0,
+   "mcap": 6506.496447400423,
+   "whale_usd": 139.51095158028195,
+   "whale_type": "whale",
+   "wallet": "_HyCm_uPIp4NTjVKlKKaKIkZP2fIeMplm8Kqsuq2ZpBB2juRIQfkpNzZ9IA2WgQKallEcjginhmEg9xuPo1hhvjOvpCEq-wP",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.00465876783886611,
+   "views": 19
+  },
+  {
+   "token_address": "AjZ8JFAvMAdrRFG4yfuozGBnpEM4DKPg1JV5nuNqpump",
+   "symbol": "AI",
+   "ts": "2026-11-04T23:53:11",
+   "t": 1793836391.0,
+   "mcap": 82561.60513281854,
+   "whale_usd": 1230.3024443012557,
+   "whale_type": "kol",
+   "wallet": "JrL8CMIOLwRiYbmxFwiKoEazThbTL1rKG-65nZXhvQbsCw9LGuSWKS5C9HW_smRzJ3NMeXTRurujcbzzQZvlZXESqio2SZ-y",
+   "n_wallets30": 2,
+   "significance": "major",
+   "pct_port": 0.15917053817292023,
+   "views": 4406
   }
  ],
- "last_retarget": 1793830088.6453545
+ "last_retarget": 1793836187.6947646
 }
