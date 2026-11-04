@@ -24274,6 +24274,20 @@
    "significance": "noise",
    "pct_port": 0.010699358318101928,
    "views": 11
+  },
+  {
+   "token_address": "4zWnqvsqGDcUfyYtojq3CLgFRoCuspsDqyx9SYM8pump",
+   "symbol": "Slingmas",
+   "ts": "2026-11-04T13:04:17",
+   "t": 1793797457.0,
+   "mcap": 10086.072920787816,
+   "whale_usd": 239.73,
+   "whale_type": "whale",
+   "wallet": "g26iB1DhZQxZowoBats5I2VvdQrn7Yroyq4FKsFXsK2w5RK9Nj9pB0TdMANePZ7U3o_JgJkHlZuTagtQCAHM9b7AXKiim2YJ",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.06578944687168913,
+   "views": 70
   }
  ],
  "last_retarget": 1793790926.581706
