@@ -17428,6 +17428,26 @@
    "whale_usd": 228.2985374634624,
    "whale_type": "kol",
    "wallet": "6g2iHTk-DXpQ5Jvyy8T6YQu0TX3dahn6XNYBLd0Lmke0YLCyc9msNbCv8A-qLrFBoKbptxJyZDzn0khYepgjA6KxETwUjLpd"
+  },
+  {
+   "token_address": "9cA1nHMp5kyZcMsQT7tvcsBh4N3AS8Avibbuoc6Wpump",
+   "symbol": "UBIKISTAN",
+   "ts": "2026-11-04T03:54:32",
+   "t": 1793764472.0,
+   "mcap": 8982.576218841132,
+   "whale_usd": 287.22024593236637,
+   "whale_type": "kol",
+   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI="
+  },
+  {
+   "token_address": "4M5DceVdRSz6Cxjix5uU7PXFL6vuG2hJhQrydbk1pump",
+   "symbol": "assoff",
+   "ts": "2026-11-04T03:55:10",
+   "t": 1793764510.0,
+   "mcap": 8798.905582807492,
+   "whale_usd": 224.6854206561525,
+   "whale_type": "kol",
+   "wallet": "6g2iHTk-DXpQ5Jvyy8T6YQu0TX3dahn6XNYBLd0Lmke0YLCyc9msNbCv8A-qLrFBoKbptxJyZDzn0khYepgjA6KxETwUjLpd"
   }
  ],
  "last_retarget": 1793764325.0780935
