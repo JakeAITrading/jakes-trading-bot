@@ -82,6 +82,7 @@ class Sniper:
         self.min_whale_usd, self.min_mcap, self.max_mcap = min_whale_usd, min_mcap, max_mcap
         self.state = load()
         self.seen: set[str] = set()
+        self.recent_buys: list[tuple[float, str, str]] = []   # (time, token, wallet) for confluence
         self.max_rebuys, self.rebuy_window = 0, 600  # 0 = no cap per coin; look for 10 min after a sale
         self.max_open, self.cash_floor = 5, 10.0       # our own limits (Moby's are off)
         self.look_first, self.max_runup, self.max_spike = True, 1.0, 0.20
@@ -91,6 +92,7 @@ class Sniper:
         self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning settings
         self.whale_type, self.explore = "any", 0.2   # explore: share of rule-failing signals traded anyway
         self.require_known_wallet, self.min_wallet_win = False, 0.0   # whale track-record filter (learned)
+        self.max_wallets30, self.min_views = None, 0                   # confluence / attention (learned)
         self.hold_hours = 2.0   # sell what hasn't hit its target after this long (matches learner.WINDOW)
 
     WRITE_TOOLS = ("create_order", "cancel_order", "quick_buy", "quick_sell")
@@ -143,6 +145,13 @@ class Sniper:
     def observe(self, row: dict) -> None:
         """Log every whale opening buy we can see, traded or not, so the learner can study it later."""
         tok = row.get("token") or {}
+        if row.get("transaction_type") == "buy":
+            try:
+                tb = dt.datetime.fromisoformat(row["timestamp"]).replace(tzinfo=dt.timezone.utc).timestamp()
+                self.recent_buys.append((tb, tok.get("token_address"), row.get("wallet_address")))
+                self.recent_buys = [b for b in self.recent_buys if tb - b[0] < 3600]
+            except (KeyError, ValueError):
+                pass
         mcap = row.get("token_market_cap") or 0
         if (row.get("transaction_type") != "buy" or row.get("action") != "first_buy" or tok.get("safety_tier") == "red"
                 or not (OBSERVE_MCAP[0] <= mcap <= OBSERVE_MCAP[1]) or (row.get("amount_usd") or 0) < OBSERVE_MIN_USD):
@@ -153,8 +162,22 @@ class Sniper:
             return  # one sample per coin per 10 minutes
         obs.append({"token_address": tok.get("token_address"), "symbol": tok.get("symbol"), "ts": row["timestamp"],
                     "t": t, "mcap": mcap, "whale_usd": row.get("amount_usd"), "whale_type": row.get("wallet_list_type"),
-                    "wallet": row.get("wallet_address")})
+                    "wallet": row.get("wallet_address"),
+                    # attention / social clues for the learner to test (it adopts them only if they pay)
+                    "n_wallets30": len({w for tb, tk, w in self.recent_buys
+                                        if tk == tok.get("token_address") and t - 1800 <= tb <= t + 1}),
+                    "significance": row.get("significance"), "pct_port": row.get("pct_of_portfolio"),
+                    "views": self._views(tok.get("token_address"))})
         self.state["observed"] = obs[-3000:]
+
+    def _views(self, token: str | None):
+        """Moby page views for the coin (an attention signal). One cheap read; None if unavailable."""
+        if not token:
+            return None
+        try:
+            return (self.call("get_token_overview", {"token_address": token}).get("overview") or {}).get("view_count")
+        except Exception:
+            return None
 
     def glance(self, token: str) -> tuple[str | None, dict]:
         """Quick look at the chart before buying (one call, ~0.2s). Returns (reason to skip, numbers).
@@ -213,6 +236,16 @@ class Sniper:
                 skip = "rule: whale has no track record"
             elif self.min_wallet_win and ws.get("known") and (ws.get("win") or 0) < self.min_wallet_win:
                 skip = f"rule: whale wins only {(ws.get('win') or 0) * 100:.0f}% of trades"
+        if not skip and self.max_wallets30 is not None:
+            n = len({w for tb, tk, w in self.recent_buys if tk == token and whale_ts - 1800 <= tb <= whale_ts + 1})
+            rec["n_wallets30"] = n
+            if n > self.max_wallets30:
+                skip = f"rule: {n} tracked wallets already in"
+        if not skip and self.min_views:
+            v = self._views(token)
+            rec["views"] = v
+            if v is not None and v < self.min_views:
+                skip = f"rule: only {v} views"
         if skip and random.random() < self.explore:
             rec["explore"], skip = skip, None   # trade it anyway so the learner sees this kind of coin
         if skip:
@@ -596,6 +629,7 @@ class Sniper:
         self.min_whale_usd, self.whale_type = p["min_whale_usd"], p["whale_type"]
         self.require_known_wallet = p.get("require_known", False)
         self.min_wallet_win = p.get("min_wallet_win", 0.0)
+        self.max_wallets30, self.min_views = p.get("max_wallets30"), p.get("min_views", 0)
 
     def learn(self) -> None:
         """Self-learning: learn from matured observations, adopt the settings with the best expected

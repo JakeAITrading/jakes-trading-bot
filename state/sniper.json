@@ -17468,6 +17468,36 @@
    "whale_usd": 625.3056854601924,
    "whale_type": "kol",
    "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI="
+  },
+  {
+   "token_address": "AMZ2U7MHoaa8DhTNM12ZxMFN9P9VAVAafSEDrW3bpump",
+   "symbol": "ALTINU",
+   "ts": "2026-11-04T03:58:21",
+   "t": 1793764701.0,
+   "mcap": 5717.8344832209405,
+   "whale_usd": 1073.0107749254,
+   "whale_type": "kol",
+   "wallet": "CwJv4B8eeeEVEYeRWDtI64iSb533JcP9xtWbWtpTfaLmFw8IIsqgSdTNdeFb2_PEd5N5Sy_yd_A-XfLP0LCaTJSJHlM-JHY8"
+  },
+  {
+   "token_address": "2vkUt8pChB3VFG936unwGjpkjVAoW6ed4r21N72Spump",
+   "symbol": "BILLIONS",
+   "ts": "2026-11-04T03:59:42",
+   "t": 1793764782.0,
+   "mcap": 6150.676199467853,
+   "whale_usd": 910.4710468169449,
+   "whale_type": "kol",
+   "wallet": "xCvaiubz0pQh4OoDEGdKelo_hTl_FRhQD4Kx_gT9FPuoDhPV2pQTVoJR8k3WRnIT9O_5asOWbzhz-L6Fq8FQdUEf3xZsoC4e"
+  },
+  {
+   "token_address": "8SitXSYxCKU7ot3SWPYty3r7hnyzxzb4nxjQStc4pump",
+   "symbol": "p/float",
+   "ts": "2026-11-04T04:00:01",
+   "t": 1793764801.0,
+   "mcap": 18659.935449250042,
+   "whale_usd": 350.0,
+   "whale_type": "whale",
+   "wallet": "3i6jk39_HR4kRGsF2T3Cm6ef3MRaor9NsimxOx1-MnZk5i89ONrl2UjvjZp8MBbroEgxpJhB7baLIZvqIhmyzKDYcBVc26fT"
   }
  ],
  "last_retarget": 1793764325.0780935

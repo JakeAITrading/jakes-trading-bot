@@ -48,10 +48,12 @@ GRID = {
     "whale_type": ["any", "whale", "kol"],
     "require_known": [False, True],          # skip whales Moby has no track record for
     "min_wallet_win": [0.0, 0.3, 0.4, 0.5, 0.6],  # whale's 30-day win rate
+    "max_wallets30": [None, 1, 2, 3],        # tracked wallets that bought the coin in the last 30 min
+    "min_views": [0, 50, 100, 250, 500],     # Moby page views (attention)
 }
 DEFAULTS = {"take_profit": 0.10, "limit_cushion": 0.05, "max_runup": None, "max_spike": 0.20,
             "min_mcap": 20_000, "max_mcap": 1_000_000, "min_whale_usd": 250, "whale_type": "any",
-            "require_known": False, "min_wallet_win": 0.0}
+            "require_known": False, "min_wallet_win": 0.0, "max_wallets30": None, "min_views": 0}
 
 
 def _load(name: str):
@@ -139,6 +141,12 @@ def passes(s: dict, p: dict) -> bool:
     win = s.get("wallet_win")
     if p.get("min_wallet_win") and known is not None and (win is None or win < p["min_wallet_win"]):
         return False
+    n = s.get("n_wallets30")
+    if p.get("max_wallets30") is not None and n is not None and n > p["max_wallets30"]:
+        return False
+    v = s.get("views")
+    if p.get("min_views") and v is not None and v < p["min_views"]:
+        return False
     return True
 
 
@@ -174,7 +182,7 @@ def optimize(samples: list[dict], start: dict | None = None, rounds: int = 3) ->
             if ok(r) and r["total"] > best["total"] + 1e-9:
                 p, best, changed = q, r, True
         for key in ("max_runup", "max_spike", "min_mcap", "max_mcap", "min_whale_usd", "whale_type",
-                    "require_known", "min_wallet_win"):
+                    "require_known", "min_wallet_win", "max_wallets30", "min_views"):
             for v in GRID[key]:
                 q = {**p, key: v}
                 if q["min_mcap"] >= q["max_mcap"]:
@@ -221,6 +229,7 @@ class Learner:
                 self.live.append({"key": key, "symbol": o.get("symbol"), "mcap": o.get("mcap"),
                                   "whale_usd": o.get("whale_usd"), "whale_type": o.get("whale_type"),
                                   "wallet_known": ws.get("known"), "wallet_win": ws.get("win"),
+                                  "n_wallets30": o.get("n_wallets30"), "views": o.get("views"),
                                   **{k2: round(v, 4) for k2, v in s.items()}})
                 added += 1
             if added >= max_new:
