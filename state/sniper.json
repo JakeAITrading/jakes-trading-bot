@@ -40136,6 +40136,48 @@
    "significance": "noise",
    "pct_port": 0.0022076782989946544,
    "views": 19
+  },
+  {
+   "token_address": "9eSADsbK3VM6tE1J2hkQtXnxuVRWqq25uiQZdm2spump",
+   "symbol": "Wassup",
+   "ts": "2026-11-04T22:54:23",
+   "t": 1793832863.0,
+   "mcap": 5642.709531340233,
+   "whale_usd": 145.80474504480375,
+   "whale_type": "whale",
+   "wallet": "VJRKR70NWU0ebIwdyTvaP417wvpyl9g9xcwSNSqzcJmu3j0oE3ydqwBHeF22cmwyUHdjJLAHmnwsaDvcf5V6MiLcVhXM2AoT",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0003027910689713939,
+   "views": 20
+  },
+  {
+   "token_address": "4fFt6oq47LxMuGXQd1j5vRsxifQTKCEnBTcRX28mpump",
+   "symbol": "jail",
+   "ts": "2026-11-04T22:55:22",
+   "t": 1793832922.0,
+   "mcap": 26802.725187735632,
+   "whale_usd": 480.5726527100404,
+   "whale_type": "kol",
+   "wallet": "ImG9GRnAMAk3_QViHbYq1QBaGd6qg0xUB8UNrvsEMbyQHADhBisWYGlccgyVFAfZGu1eJRuuzMw1dDxse0VJCgJRwmx1fb-L",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.009218363877414577,
+   "views": 52
+  },
+  {
+   "token_address": "G9rQFfbKNZKzJTpZ8jGU3Q2M3885EoKNKSUp1GZgpump",
+   "symbol": "Maui",
+   "ts": "2026-11-04T22:56:09",
+   "t": 1793832969.0,
+   "mcap": 5510.361461347202,
+   "whale_usd": 187.13289134135172,
+   "whale_type": "kol",
+   "wallet": "iCQUVCtTczun8duYIDPDXNnFmFcWkTVjlxec_bYYQFAmX74ZcfBnxRs2DUBWLrjffrC1Er75MaWIOA_0s6hNKEsVoSotWP_1",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.012054778675359156,
+   "views": 20
   }
  ],
  "last_retarget": 1793830088.6453545
