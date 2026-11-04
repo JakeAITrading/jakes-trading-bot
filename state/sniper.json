@@ -23028,6 +23028,20 @@
    "significance": "major",
    "pct_port": 0.1545358463077746,
    "views": 67
+  },
+  {
+   "token_address": "5iuqZtGthqTYnFVZTBHxMkXNXX31mjLsKJYy5Y8TAR9V",
+   "symbol": "Creed",
+   "ts": "2026-11-04T11:13:42",
+   "t": 1793790822.0,
+   "mcap": 17756.83995219879,
+   "whale_usd": 550.4697572891339,
+   "whale_type": "kol",
+   "wallet": "e827RMl6AUSPHd3NYcMPFOMwwhWhsBRIe59doYvas2_kfSqh5zXewO5D1PURIbsrBjnkqy_54gMzXfyNjcWE7J1ohjCgVJgI",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.029054554578164544,
+   "views": 19
   }
  ],
  "last_retarget": 1793786115.5725179
