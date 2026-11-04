@@ -4870,6 +4870,23 @@
    },
    "expected_avg_pct": 12.5,
    "expected_trades_in_samples": 101.0
+  },
+  {
+   "at": "2026-11-04T00:16:31Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 15.4,
+   "expected_trades_in_samples": 107.0
   }
  ],
  "observed": [
@@ -12936,6 +12953,51 @@
    "mcap": 7626.499609614257,
    "whale_usd": 396.6514062472595,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "GxbnEYu8jfvSV6RhUmoCGAcC6SGb9PxYUQqDsqekaWFg",
+   "symbol": "IR",
+   "ts": "2026-11-04T00:15:47",
+   "t": 1793751347.0,
+   "mcap": 5857.597443537088,
+   "whale_usd": 185.06976032206512,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "BrB6ku826iyNwQpMEJ4X89GEeYpi7Zt5xa5uwxxSpump",
+   "symbol": "PREDICTNEKO",
+   "ts": "2026-11-04T00:16:07",
+   "t": 1793751367.0,
+   "mcap": 5859.493739990285,
+   "whale_usd": 150.14513299999817,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FGrJjaKYT2et7voESztVF1T4qFQhrVjusaV3dRxJpump",
+   "symbol": "ungone",
+   "ts": "2026-11-04T00:16:24",
+   "t": 1793751384.0,
+   "mcap": 19212.217011954635,
+   "whale_usd": 293.00040631179564,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9xU9DLJer45mJocspDuyhFfqvSuBTYf2bLcTKcFLpump",
+   "symbol": "ONE",
+   "ts": "2026-11-04T00:18:28",
+   "t": 1793751508.0,
+   "mcap": 49068.95174258763,
+   "whale_usd": 1990.0,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump",
+   "symbol": "LOOKSMAX",
+   "ts": "2026-11-04T00:19:45",
+   "t": 1793751585.0,
+   "mcap": 117903.25879360072,
+   "whale_usd": 1018.1807455268811,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793748307.1641624
