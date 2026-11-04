@@ -23119,6 +23119,20 @@
    "significance": "noise",
    "pct_port": 0.0009690763756958497,
    "views": 13
+  },
+  {
+   "token_address": "FPC7K9zqA8cPfWzTRgBHjGDQ4QoMZnbg7h4Qt7svpump",
+   "symbol": "FLOOR",
+   "ts": "2026-11-04T11:23:26",
+   "t": 1793791406.0,
+   "mcap": 17799.55164238345,
+   "whale_usd": 379.05,
+   "whale_type": "kol",
+   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.003367375762516045,
+   "views": 20
   }
  ],
  "last_retarget": 1793790926.581706
