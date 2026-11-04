@@ -15859,6 +15859,51 @@
    "mcap": 53016.75628288649,
    "whale_usd": 1092.7111745743598,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "8aAjr8aLt6hR3AgsAmxpf1KCvszmsYiJrZXFn3Vqpump",
+   "symbol": "DIP",
+   "ts": "2026-11-04T03:25:12",
+   "t": 1793762712.0,
+   "mcap": 100933.3075563407,
+   "whale_usd": 180.09975233245837,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Hg5N4C5S8sqtX4m6Ys6rwRwYffrGha59Fp9AmobPWTXv",
+   "symbol": "PRICEDIN",
+   "ts": "2026-11-04T03:27:17",
+   "t": 1793762837.0,
+   "mcap": 8212.80627860687,
+   "whale_usd": 225.217601798805,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "96EA4gsbxdC27nUWdkZ4mi94seD948CTqc3rZyt7Upbq",
+   "symbol": "vence",
+   "ts": "2026-11-04T03:28:10",
+   "t": 1793762890.0,
+   "mcap": 5506.134584720712,
+   "whale_usd": 269.98644365005504,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FCty2praQweB4XFhkpQLU48yMnVrLf5oTW7Kat2pump",
+   "symbol": "DDC",
+   "ts": "2026-11-04T03:29:27",
+   "t": 1793762967.0,
+   "mcap": 8917.356353776995,
+   "whale_usd": 208.2903351225898,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2BmNSGzNvZFPTu4wkqt6G9V82EhZSyaLgk1rjYfCpump",
+   "symbol": "OSSOFF",
+   "ts": "2026-11-04T03:29:58",
+   "t": 1793762998.0,
+   "mcap": 5249.949936114717,
+   "whale_usd": 272.9296272212234,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793760225.4617524
