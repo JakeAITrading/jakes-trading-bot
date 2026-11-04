@@ -12998,6 +12998,69 @@
    "mcap": 117903.25879360072,
    "whale_usd": 1018.1807455268811,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "CGQcDUGAwAz4FoZRWR9DDBubaj7nqbDhwnjh7TZJpump",
+   "symbol": "ASTEROID",
+   "ts": "2026-11-04T00:20:43",
+   "t": 1793751643.0,
+   "mcap": 6281.53928439,
+   "whale_usd": 140.8031350676407,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "EEf8qRxKGBvEHE7HmJFSWYdpJCTaoK4dzypGE925pump",
+   "symbol": "AI",
+   "ts": "2026-11-04T00:20:59",
+   "t": 1793751659.0,
+   "mcap": 14736.147932126187,
+   "whale_usd": 272.73811706525123,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2wMTr4ZttVr5tmS4wLStee59wi8f9QQfMtT2Hoispump",
+   "symbol": "GTA",
+   "ts": "2026-11-04T00:21:11",
+   "t": 1793751671.0,
+   "mcap": 356548.73600795516,
+   "whale_usd": 2066.6218199707687,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2ePWabfLpcResAiUktAdx5gvKxC1KuHbGMBvniFXpump",
+   "symbol": "NO",
+   "ts": "2026-11-04T00:22:23",
+   "t": 1793751743.0,
+   "mcap": 5988.5696828132495,
+   "whale_usd": 136.44263768760902,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CR5FFdcCWosfkpoa9oGJ9scF1AvQRtdgBpJ1bmTBpump",
+   "symbol": "PREDICTINU",
+   "ts": "2026-11-04T00:23:27",
+   "t": 1793751807.0,
+   "mcap": 90390.53044690202,
+   "whale_usd": 500.2957740000057,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "5rJjJgXoT7EghLKygaMJfveb6emqvGWLviKWEKEu4GLs",
+   "symbol": "Coup",
+   "ts": "2026-11-04T00:24:34",
+   "t": 1793751874.0,
+   "mcap": 10059.181477117818,
+   "whale_usd": 227.02966056812252,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6gnB2H2hbTVvKUWCzNuqjWY8Rod6EVBmfHi7YxZpTWa7",
+   "symbol": "MEOWNERO",
+   "ts": "2026-11-04T00:24:53",
+   "t": 1793751893.0,
+   "mcap": 330799.2877895097,
+   "whale_usd": 324.0908870495588,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793748307.1641624
