@@ -6664,6 +6664,27 @@
    },
    "expected_avg_pct": 13.8,
    "expected_trades_in_samples": 110.0
+  },
+  {
+   "at": "2026-11-04T14:09:27Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 9.5,
+   "expected_trades_in_samples": 146.0
   }
  ],
  "observed": [
@@ -25072,6 +25093,20 @@
    "significance": "major",
    "pct_port": 0.27068402271849434,
    "views": 1245
+  },
+  {
+   "token_address": "jtZqRoKXtukBnSknn6mhYrzX4Kn678aLA9AmJgkGhds",
+   "symbol": "GENIE",
+   "ts": "2026-11-04T14:09:47",
+   "t": 1793801387.0,
+   "mcap": 10886.529396766382,
+   "whale_usd": 275.314663748322,
+   "whale_type": "kol",
+   "wallet": "qdr8owy2zrm5m18sNxoPQHQpnKLv7678ckpohjEi5wmXIeseWBpIUkyxOQCLnUtNvO1n7gCLafUfgsgKCP2wRxpvYaFFVKtg",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.07124884837735589,
+   "views": 10
   }
  ],
  "last_retarget": 1793797969.6826289
