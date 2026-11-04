@@ -22741,6 +22741,20 @@
    "significance": "noise",
    "pct_port": 0.011502826261995037,
    "views": 17
+  },
+  {
+   "token_address": "BCdwQBAn8dYB5YjTsoB6TdHAWokxv28k2oZUodERpump",
+   "symbol": "MANIFEST",
+   "ts": "2026-11-04T10:41:09",
+   "t": 1793788869.0,
+   "mcap": 5456700.695713181,
+   "whale_usd": 3207.546390540996,
+   "whale_type": "whale",
+   "wallet": "mHjB_RncJdfxW_UWqToMc3of1sHDQZgTanpB3z4Jgmx2lKrP2mfHnJS8IslsRw1lFSx9cmAwiTZv40in4GtspVTaMJ4NCILZ",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.1313766357142869,
+   "views": 734
   }
  ],
  "last_retarget": 1793786115.5725179
