@@ -455,7 +455,9 @@ def test_sniper_glance_skips_pumped_and_spiking(sniper_dir):
     assert sniper.Sniper(M(pumped), 5, 20, 20, dry_run=False).glance("T")[0].startswith("already pumped")
     assert sniper.Sniper(M(spiking), 5, 20, 20, dry_run=False).glance("T")[0].startswith("mid-spike")
     moby = M(pumped)
-    rec = sniper.Sniper(moby, 5, 20, 20, dry_run=False).trade(whale_row(), time.time())
+    s = sniper.Sniper(moby, 5, 20, 20, dry_run=False)
+    s.explore = 0          # exploration would trade a skipped coin at random
+    rec = s.trade(whale_row(), time.time())
     assert rec["status"].startswith("skipped") and not any(n == "quick_buy" for n, _ in moby.calls)
 
 
@@ -828,3 +830,13 @@ def test_time_exit_brackets_coins_held_past_two_hours(sniper_dir):
     br = [a for n, a in moby.calls if n == "create_order" and a.get("order_type") == "sl_and_tp"]
     assert len(br) == 1 and br[0]["token_address"] == "OLD"
     assert s.state["trades"][0].get("time_exit") and not s.state["trades"][1].get("time_exit")
+
+
+def test_learner_wallet_filter():
+    from trading_bot import learner as L
+    p = {**L.DEFAULTS, "require_known": True, "min_wallet_win": 0.4}
+    base = {"runup": 0, "spike": 0, "mcap": 100_000, "whale_usd": 500, "whale_type": "kol"}
+    assert L.passes({**base, "wallet_known": True, "wallet_win": 0.5}, p)
+    assert not L.passes({**base, "wallet_known": True, "wallet_win": 0.3}, p)
+    assert not L.passes({**base, "wallet_known": False}, p)
+    assert L.passes(base, p)                       # old samples without wallet info still count

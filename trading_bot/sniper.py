@@ -90,6 +90,7 @@ class Sniper:
         self.limit_cushion, self.limit_wait = 0.05, 120  # whale buys: limit at seen +5%, cancel after 2 min
         self.learner, self.learn_every, self._last_learn = None, 600, 0.0   # self-learning settings
         self.whale_type, self.explore = "any", 0.2   # explore: share of rule-failing signals traded anyway
+        self.require_known_wallet, self.min_wallet_win = False, 0.0   # whale track-record filter (learned)
         self.hold_hours = 2.0   # sell what hasn't hit its target after this long (matches learner.WINDOW)
 
     WRITE_TOOLS = ("create_order", "cancel_order", "quick_buy", "quick_sell")
@@ -151,7 +152,8 @@ class Sniper:
         if any(o["token_address"] == tok.get("token_address") and abs(o["t"] - t) < 600 for o in obs[-200:]):
             return  # one sample per coin per 10 minutes
         obs.append({"token_address": tok.get("token_address"), "symbol": tok.get("symbol"), "ts": row["timestamp"],
-                    "t": t, "mcap": mcap, "whale_usd": row.get("amount_usd"), "whale_type": row.get("wallet_list_type")})
+                    "t": t, "mcap": mcap, "whale_usd": row.get("amount_usd"), "whale_type": row.get("wallet_list_type"),
+                    "wallet": row.get("wallet_address")})
         self.state["observed"] = obs[-3000:]
 
     def glance(self, token: str) -> tuple[str | None, dict]:
@@ -203,6 +205,14 @@ class Sniper:
         price_seen = self.call("get_token_price", {"token_address": token}).get("price_usd")
         rec["price_when_seen"] = price_seen
         skip, rec["glance"] = self.glance(token) if self.look_first else (None, {})
+        if not skip and (self.require_known_wallet or self.min_wallet_win):
+            from trading_bot.learner import wallet_stats
+            ws = wallet_stats(self.c, row.get("wallet_address"))
+            rec["wallet_win"], rec["wallet_known"] = ws.get("win"), ws.get("known")
+            if self.require_known_wallet and ws.get("known") is False:
+                skip = "rule: whale has no track record"
+            elif self.min_wallet_win and ws.get("known") and (ws.get("win") or 0) < self.min_wallet_win:
+                skip = f"rule: whale wins only {(ws.get('win') or 0) * 100:.0f}% of trades"
         if skip and random.random() < self.explore:
             rec["explore"], skip = skip, None   # trade it anyway so the learner sees this kind of coin
         if skip:
@@ -584,6 +594,8 @@ class Sniper:
         self.max_runup, self.max_spike = p["max_runup"], p["max_spike"]
         self.min_mcap, self.max_mcap = p["min_mcap"], p["max_mcap"]
         self.min_whale_usd, self.whale_type = p["min_whale_usd"], p["whale_type"]
+        self.require_known_wallet = p.get("require_known", False)
+        self.min_wallet_win = p.get("min_wallet_win", 0.0)
 
     def learn(self) -> None:
         """Self-learning: learn from matured observations, adopt the settings with the best expected

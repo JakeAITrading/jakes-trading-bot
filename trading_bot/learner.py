@@ -46,9 +46,12 @@ GRID = {
     "max_mcap": [250_000, 500_000, 1_000_000, 10_000_000],
     "min_whale_usd": [100, 250, 500, 1000, 2500],
     "whale_type": ["any", "whale", "kol"],
+    "require_known": [False, True],          # skip whales Moby has no track record for
+    "min_wallet_win": [0.0, 0.3, 0.4, 0.5, 0.6],  # whale's 30-day win rate
 }
 DEFAULTS = {"take_profit": 0.10, "limit_cushion": 0.05, "max_runup": None, "max_spike": 0.20,
-            "min_mcap": 20_000, "max_mcap": 1_000_000, "min_whale_usd": 250, "whale_type": "any"}
+            "min_mcap": 20_000, "max_mcap": 1_000_000, "min_whale_usd": 250, "whale_type": "any",
+            "require_known": False, "min_wallet_win": 0.0}
 
 
 def _load(name: str):
@@ -64,6 +67,28 @@ def _save(name: str, rows) -> None:
 
 def _ts(s: str) -> float:
     return dt.datetime.fromisoformat(s.replace("Z", "").split(".")[0]).replace(tzinfo=dt.timezone.utc).timestamp()
+
+
+# ---------------------------------------------------------------- whale wallet records
+_WALLETS: dict = {}
+
+
+def wallet_stats(client, wallet: str | None, max_age: float = 6 * 3600) -> dict:
+    """30-day record of the whale's wallet from Moby (cached). known=False when Moby has none."""
+    if not wallet:
+        return {}
+    hit = _WALLETS.get(wallet)
+    if hit and time.time() - hit["at"] < max_age:
+        return hit
+    try:
+        r = client.call_tool("get_whale_wallet_track_record", {"wallet_address": wallet})
+        d30 = ((r.get("profile") or {}).get("stats") or {}).get("d30") or {}
+        out = {"known": bool(d30), "win": d30.get("win_rate"), "roi": d30.get("roi_pct"), "at": time.time()}
+    except Exception as e:
+        log.warning("wallet record failed: %s", e)
+        return {}
+    _WALLETS[wallet] = out
+    return out
 
 
 # ---------------------------------------------------------------- samples
@@ -108,6 +133,12 @@ def passes(s: dict, p: dict) -> bool:
         return False
     if p["whale_type"] != "any" and s.get("whale_type") not in (None, p["whale_type"]):
         return False
+    known = s.get("wallet_known")            # None = sample from before wallet records were logged
+    if p.get("require_known") and known is False:
+        return False
+    win = s.get("wallet_win")
+    if p.get("min_wallet_win") and known is not None and (win is None or win < p["min_wallet_win"]):
+        return False
     return True
 
 
@@ -142,7 +173,8 @@ def optimize(samples: list[dict], start: dict | None = None, rounds: int = 3) ->
             r = evaluate(samples, q)
             if ok(r) and r["total"] > best["total"] + 1e-9:
                 p, best, changed = q, r, True
-        for key in ("max_runup", "max_spike", "min_mcap", "max_mcap", "min_whale_usd", "whale_type"):
+        for key in ("max_runup", "max_spike", "min_mcap", "max_mcap", "min_whale_usd", "whale_type",
+                    "require_known", "min_wallet_win"):
             for v in GRID[key]:
                 q = {**p, key: v}
                 if q["min_mcap"] >= q["max_mcap"]:
@@ -185,8 +217,10 @@ class Learner:
             s = sample_from_candles(candles, o["t"])
             done.add(key)
             if s:
+                ws = wallet_stats(self.c, o.get("wallet")) if o.get("wallet") else {}
                 self.live.append({"key": key, "symbol": o.get("symbol"), "mcap": o.get("mcap"),
                                   "whale_usd": o.get("whale_usd"), "whale_type": o.get("whale_type"),
+                                  "wallet_known": ws.get("known"), "wallet_win": ws.get("win"),
                                   **{k2: round(v, 4) for k2, v in s.items()}})
                 added += 1
             if added >= max_new:
