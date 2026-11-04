@@ -20641,6 +20641,20 @@
    "significance": "noise",
    "pct_port": 0.008610282452607114,
    "views": 2593
+  },
+  {
+   "token_address": "6KZcYid8TQKz4FtR4nshPUioQtqaQzi4Z4jwUYakpump",
+   "symbol": "TI",
+   "ts": "2026-11-04T07:23:12",
+   "t": 1793776992.0,
+   "mcap": 15323.385014198675,
+   "whale_usd": 140.9881019624347,
+   "whale_type": "kol",
+   "wallet": "zYzjAmB2SBf5U4XpRmgUrI8v2aXLQ5CHYEMbud5wHM7w6PaQWi-YFbHKwYa2Aa5PVeNVHfgYPLyNmKvr2UMjfkIYd2KOIZnN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010727704434030696,
+   "views": 10
   }
  ],
  "last_retarget": 1793772058.246944
