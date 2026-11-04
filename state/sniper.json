@@ -2673,7 +2673,8 @@
     "stop_loss_order_id": null,
     "failed_leg": null,
     "failed_leg_error": null
-   }
+   },
+   "time_exit": "skipped: dust"
   },
   {
    "token_address": "GRT9MA94esNmGBWRyWm3A1WL2cYDqK5UvhfYybGRpump",
@@ -13274,6 +13275,24 @@
    "t": 1793752694.0,
    "mcap": 5966.361641185358,
    "whale_usd": 183.21505911239245,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "69GXjuoQGxNb75BgQ54qUf6j2aDgXHVSkAcefuiqe58u",
+   "symbol": "PUP",
+   "ts": "2026-11-04T00:41:12",
+   "t": 1793752872.0,
+   "mcap": 6893.385943840258,
+   "whale_usd": 183.66839890956578,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FqBVbBeoxJfLi5corNFsrDG54SFfBfFwjqtjgZK8pump",
+   "symbol": "ENTRY",
+   "ts": "2026-11-04T00:41:37",
+   "t": 1793752897.0,
+   "mcap": 16176.767530703388,
+   "whale_usd": 458.904248078,
    "whale_type": "kol"
   }
  ],
