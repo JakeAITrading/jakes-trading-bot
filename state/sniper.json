@@ -5292,6 +5292,23 @@
    },
    "expected_avg_pct": 12.1,
    "expected_trades_in_samples": 116.0
+  },
+  {
+   "at": "2026-11-04T03:23:51Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 500000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 15.9,
+   "expected_trades_in_samples": 92.0
   }
  ],
  "observed": [
@@ -15779,6 +15796,69 @@
    "mcap": 524031.0871954191,
    "whale_usd": 179.223217438122,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "KxwAdKe6GKv6BExpP3HAnBd5k22d2jbqNXebgD5pump",
+   "symbol": "WMV",
+   "ts": "2026-11-04T03:19:51",
+   "t": 1793762391.0,
+   "mcap": 13007.766028749757,
+   "whale_usd": 358.68310637504396,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3FHX2fuUED9epciDZi7f3cUrB6hbnfRp3REud38Tpump",
+   "symbol": "LibTard",
+   "ts": "2026-11-04T03:20:01",
+   "t": 1793762401.0,
+   "mcap": 9139.731446339283,
+   "whale_usd": 225.535589614611,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8DB8Fw5UiC1AzugQAfRyw3qL8omw772LJbdehNWhpump",
+   "symbol": "OMBRO",
+   "ts": "2026-11-04T03:20:17",
+   "t": 1793762417.0,
+   "mcap": 22273.467722873695,
+   "whale_usd": 273.10318542404696,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4f58X1oEtpADdCRaBc5ajKTFPm8bJL1mQkZ2iZAmpump",
+   "symbol": "flip",
+   "ts": "2026-11-04T03:20:55",
+   "t": 1793762455.0,
+   "mcap": 6502.589258161606,
+   "whale_usd": 268.851423368979,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "96i4iThgUK4FHGsg2epNEwtr6L42b1hFr7kCYvtzpump",
+   "symbol": "SPACECENTER",
+   "ts": "2026-11-04T03:22:20",
+   "t": 1793762540.0,
+   "mcap": 7100.348284438951,
+   "whale_usd": 179.422521440976,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "t2TGpqDS81fNNXCST8hxNrRsfVPxJdw41Cct4yLpump",
+   "symbol": "Suica",
+   "ts": "2026-11-04T03:22:35",
+   "t": 1793762555.0,
+   "mcap": 65163.24089700747,
+   "whale_usd": 299.05,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8ZSui6xyBJpu8gWny98cTM6JWKYo6jm69SeWWvYbpump",
+   "symbol": "Fuck",
+   "ts": "2026-11-04T03:24:37",
+   "t": 1793762677.0,
+   "mcap": 53016.75628288649,
+   "whale_usd": 1092.7111745743598,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793760225.4617524
