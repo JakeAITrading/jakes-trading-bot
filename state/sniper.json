@@ -27186,6 +27186,20 @@
    "significance": "noise",
    "pct_port": 0.007853496096138892,
    "views": 18
+  },
+  {
+   "token_address": "9ep42hEPYMudcTsK3ARxMp2x4SNgwjjDm4xE1dfMpump",
+   "symbol": "BLUEHOUSE",
+   "ts": "2026-11-04T15:40:20",
+   "t": 1793806820.0,
+   "mcap": 5007.834715797799,
+   "whale_usd": 191.561543605872,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.0038677039478752515,
+   "views": 37
   }
  ],
  "last_retarget": 1793806182.440615
