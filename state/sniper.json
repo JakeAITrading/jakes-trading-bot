@@ -35523,6 +35523,20 @@
    "significance": "notable",
    "pct_port": 0.04284559331352796,
    "views": 11
+  },
+  {
+   "token_address": "A72sK9mPWTvU4f5RQFy7upBCeJi9HZx3Q2Wgr7QBnuLL",
+   "symbol": "nuLL",
+   "ts": "2026-11-04T20:26:40",
+   "t": 1793824000.0,
+   "mcap": 188546.5664853192,
+   "whale_usd": 499.50005,
+   "whale_type": "whale",
+   "wallet": "dfFBz_c-HNzogNW43yPF2FIohJXl2FFPrA63KFXbxwHWzJlFtsAn8u74XbnJPO2RtHAbyIyorPDq0hDtyHUx-O8qAzlSHB8r",
+   "n_wallets30": 3,
+   "significance": "noise",
+   "pct_port": 0.01806630875536612,
+   "views": 187
   }
  ],
  "last_retarget": 1793821860.1562994
