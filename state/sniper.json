@@ -14478,6 +14478,15 @@
    "mcap": 27020.112611353397,
    "whale_usd": 290.7674870982082,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "3FSQRPQVhkNrtnr8VkwnY9T8fKgiX6JSWMTMJS9zpump",
+   "symbol": "KOGE",
+   "ts": "2026-11-04T01:58:17",
+   "t": 1793757497.0,
+   "mcap": 12148.194400639697,
+   "whale_usd": 393.6996002771439,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793756573.7115717
