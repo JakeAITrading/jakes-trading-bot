@@ -21649,6 +21649,48 @@
    "significance": "noise",
    "pct_port": 0.003142435292416195,
    "views": 555
+  },
+  {
+   "token_address": "Fu9n4TS5QkEKzMW66djz6T6fUspAbTuYsb7gcHSApump",
+   "symbol": "POOLS",
+   "ts": "2026-11-04T08:42:06",
+   "t": 1793781726.0,
+   "mcap": 64794.9412450758,
+   "whale_usd": 934.8836422369619,
+   "whale_type": "kol",
+   "wallet": "DA_7ovzSmabTtEejMJITR2LpXjqNr5IIeUVASDvN3kGzHwZxdIBZ9VK_Q2CTm89MDsnIit0Urc2r9kFlCTNAN5edtjs-EP_d",
+   "n_wallets30": 4,
+   "significance": "major",
+   "pct_port": 0.4388384845351619,
+   "views": 108
+  },
+  {
+   "token_address": "DJb6jwYTRTT4mtfMXoZmwvYuJ4Prd9t91LPxnEhiDUoq",
+   "symbol": "SPURDO",
+   "ts": "2026-11-04T08:45:44",
+   "t": 1793781944.0,
+   "mcap": 121817.08945225267,
+   "whale_usd": 147.68181928253438,
+   "whale_type": "trader",
+   "wallet": "xexjuiblvATruwjZuZE8Dq77y8IAknGmS7MNFhQXCwr3a_ez5Qzrn7xQyAma-YPU53tupnXrPcoYhXxeplis-WsN9FO97STT",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 123
+  },
+  {
+   "token_address": "BSZR7tCG2KefQNVzcJbcmdiLoqmsf5hdhwoL6W8tuEbZ",
+   "symbol": "XRP",
+   "ts": "2026-11-04T08:46:11",
+   "t": 1793781971.0,
+   "mcap": 13428.549575688654,
+   "whale_usd": 144.62467318291536,
+   "whale_type": "trader",
+   "wallet": "nyGCk8uEsoZuvqqUBZqtknQvZwpGSi07qnwvf4wY6BFWeLdEW7eQ580yCSFNmSYCg_SVOeODRk-ITluNzJ5ChcigUzJqDyt0",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.006637607120650875,
+   "views": 60
   }
  ],
  "last_retarget": 1793780285.7230966
