@@ -2897,7 +2897,12 @@
     "note": "Two orders: a stop loss and a take profit. When one fills, Moby cancels the other."
    },
    "time_exit": "2026-11-04T00:51:05Z",
-   "time_exit_market": "2026-11-04T01:06:49Z"
+   "time_exit_market": "2026-11-04T01:06:49Z",
+   "closed": "take-profit filled at 2.85518e-06",
+   "sold_price": 2.8551823899e-06,
+   "proceeds_usd": 2.407963,
+   "profit_usd": -2.59,
+   "rebuy_until": null
   },
   {
    "token_address": "HQc8gFfHX8f6XyKKetsAiXvkexR7jxXCHiVFFtVCpump",
@@ -5151,6 +5156,23 @@
    },
    "expected_avg_pct": 9.3,
    "expected_trades_in_samples": 213.0
+  },
+  {
+   "at": "2026-11-04T02:10:32Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": 0.4,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 7.7,
+   "expected_trades_in_samples": 216.0
   }
  ],
  "observed": [
@@ -14575,6 +14597,123 @@
    "t": 1793758111.0,
    "mcap": 5929.786766500911,
    "whale_usd": 129.36724845974143,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EP3Hb4S4pSNpWrRarPLdjHTJd66wnQH2nHLZDKhBpump",
+   "symbol": "Bear",
+   "ts": "2026-11-04T02:10:26",
+   "t": 1793758226.0,
+   "mcap": 7644.185643584933,
+   "whale_usd": 273.04830126743406,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "B3UB8mFHBgKCHbf1bHsW4QorUR9bvuVXcZNaX8V4pump",
+   "symbol": "Thesis",
+   "ts": "2026-11-04T02:10:40",
+   "t": 1793758240.0,
+   "mcap": 8263.748198689993,
+   "whale_usd": 139.62697251483513,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "FXeeouLGh7q8Fx15gy3yEvDXwMbpAPyeD5ohaj7rF15P",
+   "symbol": "fun",
+   "ts": "2026-11-04T02:11:08",
+   "t": 1793758268.0,
+   "mcap": 6126.4809119165875,
+   "whale_usd": 181.881878218128,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "ribmbWE15MZVbr2CzQPxLo1S1jQvbeiSRR3qY9QKzGv",
+   "symbol": "Ribbon",
+   "ts": "2026-11-04T02:11:29",
+   "t": 1793758289.0,
+   "mcap": 7599.546734127216,
+   "whale_usd": 110.91134843336705,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EiqNgtwFzHqTEa3UV57s2x4svjJF59URgBqnG3sCpump",
+   "symbol": "Downald",
+   "ts": "2026-11-04T02:11:44",
+   "t": 1793758304.0,
+   "mcap": 49874.64593674994,
+   "whale_usd": 458.8877717815,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "9nGfUi5yiSAjEofHZCPaGaUAPQ7HGVGpzvsWdHsNpump",
+   "symbol": "LameDuck",
+   "ts": "2026-11-04T02:12:42",
+   "t": 1793758362.0,
+   "mcap": 6915.292033227161,
+   "whale_usd": 398.82453826286,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8AGbdZvMGbygC7juHkazTz8SKJ2yiGFP27jjTQaApump",
+   "symbol": "LameDuck",
+   "ts": "2026-11-04T02:13:00",
+   "t": 1793758380.0,
+   "mcap": 23466.26206417568,
+   "whale_usd": 589.4662339952682,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4NfS75GSBHtvFCej5WPUtiMYRienBeRhZjWzmPSGD5uu",
+   "symbol": "TRUMP",
+   "ts": "2026-11-04T02:13:08",
+   "t": 1793758388.0,
+   "mcap": 12146.271728852298,
+   "whale_usd": 281.82484692369616,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "231EPqWpR5XYfD8vykgp3JCBKSSSr628Rg95QwSDSc9r",
+   "symbol": "TRUMP",
+   "ts": "2026-11-04T02:13:13",
+   "t": 1793758393.0,
+   "mcap": 8633.980542072095,
+   "whale_usd": 272.510063901603,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7ZVSQakcJgk5vZ4wj7pnBaUxJkzYAvb49xa17FRtpump",
+   "symbol": "LameDuck",
+   "ts": "2026-11-04T02:13:29",
+   "t": 1793758409.0,
+   "mcap": 8462.955520371906,
+   "whale_usd": 229.838654167839,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "3GW6Sb8CPu8B9dKJxLuxiuVyddzb34HiSnWVyD3UWCQ5",
+   "symbol": "WORTH",
+   "ts": "2026-11-04T02:13:50",
+   "t": 1793758430.0,
+   "mcap": 11674.992492771707,
+   "whale_usd": 271.9554181463775,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8X2EfAm87d4bwyUzdH6F6EQ1ionR4aT3GBeg4MXzpump",
+   "symbol": "TRUMP",
+   "ts": "2026-11-04T02:14:22",
+   "t": 1793758462.0,
+   "mcap": 6258.650955714984,
+   "whale_usd": 106.80837190975461,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CuF4sz2UFS9T3EVB8geLjgfza39BVEqC6dW9hxnZpump",
+   "symbol": "TRUMP",
+   "ts": "2026-11-04T02:14:29",
+   "t": 1793758469.0,
+   "mcap": 5820.412752655102,
+   "whale_usd": 175.7874727356581,
    "whale_type": "kol"
   }
  ],
