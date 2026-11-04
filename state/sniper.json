@@ -22881,6 +22881,20 @@
    "significance": "noise",
    "pct_port": 0.004102415150333933,
    "views": 33
+  },
+  {
+   "token_address": "8jbTmELtvvErq5Ej7xYCwrwk6nokKWzDgDhE4zfTpump",
+   "symbol": "GAS",
+   "ts": "2026-11-04T10:57:08",
+   "t": 1793789828.0,
+   "mcap": 5465.182312036632,
+   "whale_usd": 211.64395172685437,
+   "whale_type": "kol",
+   "wallet": "EtmAUZWjIn2VcnKQCY1lQLKxSy_M4V-7mNT1K42WKKQCe-P5Kz1m-zD47MFoJO1pE4j_A_z-v83lXrIlGsNLLvh9VZ2oLnr8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.006370457577581788,
+   "views": 20
   }
  ],
  "last_retarget": 1793786115.5725179
