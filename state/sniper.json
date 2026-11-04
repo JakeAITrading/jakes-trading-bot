@@ -5040,6 +5040,23 @@
    },
    "expected_avg_pct": 12.3,
    "expected_trades_in_samples": 125.0
+  },
+  {
+   "at": "2026-11-04T01:31:36Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.25,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 8.0,
+   "expected_trades_in_samples": 138.0
   }
  ],
  "observed": [
@@ -14141,6 +14158,69 @@
    "mcap": 8057.507329795044,
    "whale_usd": 407.108111,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "CR5FFdcCWosfkpoa9oGJ9scF1AvQRtdgBpJ1bmTBpump",
+   "symbol": "PREDICTINU",
+   "ts": "2026-11-04T01:30:39",
+   "t": 1793755839.0,
+   "mcap": 61820.06350587011,
+   "whale_usd": 459.0958536045128,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9PYArGN2cgtX7HoZMUPfMTHvwT3Vu187Thm6hdzfpump",
+   "symbol": "OTHER",
+   "ts": "2026-11-04T01:31:11",
+   "t": 1793755871.0,
+   "mcap": 7680.6845754617825,
+   "whale_usd": 100.28325200000108,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "6u7CWWu2trqBNzySaCqt8kaLb4Dh2LAdStiLciWJpump",
+   "symbol": "F.T",
+   "ts": "2026-11-04T01:32:19",
+   "t": 1793755939.0,
+   "mcap": 9242.587111657476,
+   "whale_usd": 275.4012239777996,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4ArNPRk8ATz6vVobaLgpvWxK2dQm6BeGi8TPDhCrfSPX",
+   "symbol": "AMD",
+   "ts": "2026-11-04T01:34:00",
+   "t": 1793756040.0,
+   "mcap": 10213.548073829354,
+   "whale_usd": 199.05,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "3ekWNf8QZuxbNnXPGUA4t8dcG7rqvRvDkyM6Mf9hpump",
+   "symbol": "DOC",
+   "ts": "2026-11-04T01:34:05",
+   "t": 1793756045.0,
+   "mcap": 8001.5588537207805,
+   "whale_usd": 162.95347406350012,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "FPVTSyvs8tLQr39oEaxbw1gqaVHV9AxK2mhGdVWTpump",
+   "symbol": "Polycat",
+   "ts": "2026-11-04T01:34:20",
+   "t": 1793756060.0,
+   "mcap": 5347.772457753308,
+   "whale_usd": 183.82395075679423,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "27WwJzH1iH8jdjaAKRgFLMNNaABRuQhj9VmVHZ6Kpump",
+   "symbol": "Scharo",
+   "ts": "2026-11-04T01:35:27",
+   "t": 1793756127.0,
+   "mcap": 10298.808774678037,
+   "whale_usd": 2756.988121267105,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793751994.693163
