@@ -7630,6 +7630,27 @@
    },
    "expected_avg_pct": 17.1,
    "expected_trades_in_samples": 86.0
+  },
+  {
+   "at": "2026-11-04T21:38:12Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.25,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 250,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 7.0,
+   "expected_trades_in_samples": 96.0
   }
  ],
  "observed": [
@@ -37714,6 +37735,62 @@
    "significance": "noise",
    "pct_port": 0.0062939312545835235,
    "views": 89
+  },
+  {
+   "token_address": "BU4FASzMf64REXHY526x11RnusvubZWa16GJBYghhigh",
+   "symbol": "Together",
+   "ts": "2026-11-04T21:36:18",
+   "t": 1793828178.0,
+   "mcap": 40820.15756747833,
+   "whale_usd": 141.90756358454573,
+   "whale_type": "whale",
+   "wallet": "pJDZYD3yCotM-NksyWONVRvt9eAttJzlfD3UT0gsd3jEIG_OYXIDf5N9ehtEreRnKhotsFuSIzpt6BXRv-wNTYfiFGALfXny",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.051170375718108625,
+   "views": 123
+  },
+  {
+   "token_address": "88JgZHVfWtdfhXqZbgb4ZniwSQ3UWnGh2Qv882mxmece",
+   "symbol": "FED",
+   "ts": "2026-11-04T21:36:55",
+   "t": 1793828215.0,
+   "mcap": 9730.40187091101,
+   "whale_usd": 199.05000000000004,
+   "whale_type": "kol",
+   "wallet": "1Zs6YGL9Z1NVQI_Vx_Y1kMEaUCKfo8mi-Em_BoiGPlZ5-Ifhl1wrDfC89E6oQn0KwU485xs2k3g0tP-miuj3sw5BQ6PAidYc",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.011994741261755981,
+   "views": 14
+  },
+  {
+   "token_address": "D7Q2ApyCUfAm9Vay3wC2g1tDBtrKdomYCLdiSPaNpump",
+   "symbol": "DOUGHBRIKS",
+   "ts": "2026-11-04T21:38:28",
+   "t": 1793828308.0,
+   "mcap": 52838.740776584455,
+   "whale_usd": 101.22159864122479,
+   "whale_type": "whale",
+   "wallet": "nGYLHJZqAFDJh5mpOwNwROA3-v21ZluJH8syS6Rl1QHqy2txB4rSxFK7pVNyZv3P-_4pz8xF0Zosmco3YdqiNQdBOzUx38WW",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.008820419756252723,
+   "views": 14
+  },
+  {
+   "token_address": "AEEyy1ZKS75Sz7nSVouGZqFuiheKeTEBsD1osQJVpump",
+   "symbol": "daycare",
+   "ts": "2026-11-04T21:38:51",
+   "t": 1793828331.0,
+   "mcap": 6041.023880243301,
+   "whale_usd": 280.850702485518,
+   "whale_type": "kol",
+   "wallet": "G7c880Bl3jFGvfAfR50ulmbRXvwTTq4uoOdUB_C7J4xkApNwwE1CsmP-LkaoiVnW-VSR22EblSM5uFWgDQjaqNveqtpguq32",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010109823461234922,
+   "views": 20
   }
  ],
  "last_retarget": 1793826070.9712067
