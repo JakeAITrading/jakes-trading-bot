@@ -18310,6 +18310,20 @@
    "significance": "notable",
    "pct_port": 0.0632126699080786,
    "views": 14
+  },
+  {
+   "token_address": "32gAe266hHvS5g76YPTqmBF11n9ptvB4ALGxkDqpLX1q",
+   "symbol": "VETO",
+   "ts": "2026-11-04T04:40:41",
+   "t": 1793767241.0,
+   "mcap": 5865.594175702427,
+   "whale_usd": 178.51523408891137,
+   "whale_type": "kol",
+   "wallet": "dE9IQad3Y9410RPhBiC5LtX-LnQmokIrc8jKjO5XJcyk-poxrBTaPi1cRUz_KThDDBhdBiZfcakj62wELgTIBWoxBJemtT9D",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.08335465930742576,
+   "views": 12
   }
  ],
  "last_retarget": 1793764325.0780935
