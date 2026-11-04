@@ -27459,6 +27459,20 @@
    "significance": "notable",
    "pct_port": 0.05451678376591024,
    "views": 26193
+  },
+  {
+   "token_address": "EwHV6XfuMmBirGSiDVSypVkHcw7jD7Mho1s5xGwjpump",
+   "symbol": "AIB",
+   "ts": "2026-11-04T15:46:43",
+   "t": 1793807203.0,
+   "mcap": 181889.93950615005,
+   "whale_usd": 707.1049943770437,
+   "whale_type": "whale",
+   "wallet": "17THi-EaT1BeuWmibrMx8wEFaJ0mNTzLEmWm_Ud0BnDZ6wdh0fYcyr50HHm1Y2y9Ops4BrH_z1OD6NsQNKyqDDNwRtRoSqwY",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.0068914071940552445,
+   "views": 195
   }
  ],
  "last_retarget": 1793806182.440615
