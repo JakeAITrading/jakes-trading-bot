@@ -33297,6 +33297,34 @@
    "significance": "noise",
    "pct_port": 0.0032298029373412445,
    "views": 15
+  },
+  {
+   "token_address": "8scmjESCwQmMbYsTFQ4VofU2rbQmDUh6nHza3XX2pump",
+   "symbol": "GINNAN",
+   "ts": "2026-11-04T19:12:19",
+   "t": 1793819539.0,
+   "mcap": 13301.636077530069,
+   "whale_usd": 250.0,
+   "whale_type": "whale",
+   "wallet": "iQ_d3jauLutI3RSVzxQUlWBchS2YC8jmSohTu7abnFbsL-bASUcV8k6rRsrQdk-8S2CuAIEhfBJsculGB3ETiLxo3sOjthM-",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009818443729325842,
+   "views": 11
+  },
+  {
+   "token_address": "ELj1RsRTb2EYNtkPeXpvZ6fGLVMQ5w1ehaZQXrA9pump",
+   "symbol": "HEART",
+   "ts": "2026-11-04T19:12:20",
+   "t": 1793819540.0,
+   "mcap": 15720.92151036486,
+   "whale_usd": 471.34434966498003,
+   "whale_type": "kol",
+   "wallet": "hMMjRCiQDwRVEZm-jXRmxaHO9OQPDV6cpgeoQzhZcw4avEHYPOr3GQ-Nm-BCqMUvLNWNo-6uwSIEFr-exw-so2eZ6B1FlGDB",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.012152211413622889,
+   "views": 11
   }
  ],
  "last_retarget": 1793817833.3556948
