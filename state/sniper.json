@@ -5258,6 +5258,23 @@
    },
    "expected_avg_pct": 14.1,
    "expected_trades_in_samples": 107.0
+  },
+  {
+   "at": "2026-11-04T03:03:45Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 13.7,
+   "expected_trades_in_samples": 113.0
   }
  ],
  "observed": [
@@ -15403,6 +15420,60 @@
    "mcap": 13422.569281829055,
    "whale_usd": 142.17881577179946,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "3UsgG3dmEJoDodd4RL7ma94nsTyChgaxYwzFCjiUHiTd",
+   "symbol": "BUBBLE",
+   "ts": "2026-11-04T03:00:21",
+   "t": 1793761221.0,
+   "mcap": 26419.526790657994,
+   "whale_usd": 636.0623838829312,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DBPTU2oKLDHXQjAEJ3rZi8bUGmt2uxUbipgg6xmXoMqr",
+   "symbol": "CAPY",
+   "ts": "2026-11-04T03:00:40",
+   "t": 1793761240.0,
+   "mcap": 600704.3152460782,
+   "whale_usd": 491.35013299999997,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8ZSui6xyBJpu8gWny98cTM6JWKYo6jm69SeWWvYbpump",
+   "symbol": "Fuck",
+   "ts": "2026-11-04T03:02:18",
+   "t": 1793761338.0,
+   "mcap": 5161.197350389557,
+   "whale_usd": 181.04318228387075,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "ADvbwD9pgBeHHQBmBaiUir4zjC946FW2mDJbSejmpump",
+   "symbol": "POLITICATS",
+   "ts": "2026-11-04T03:02:28",
+   "t": 1793761348.0,
+   "mcap": 36975.53776472114,
+   "whale_usd": 619.7892291179331,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "CqpUBhhSxHsXbq6AGPKnbxDpWgECUXAVy3BCrwhGpump",
+   "symbol": "ber",
+   "ts": "2026-11-04T03:02:44",
+   "t": 1793761364.0,
+   "mcap": 98085.43334866599,
+   "whale_usd": 880.229193752927,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "JrvC7qKnGVn163q1u11VDUno7JtJ4ME2euiJkaupump",
+   "symbol": "\u54aa\u54aa",
+   "ts": "2026-11-04T03:03:35",
+   "t": 1793761415.0,
+   "mcap": 10026.119945627022,
+   "whale_usd": 121.25315921747588,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793760225.4617524
