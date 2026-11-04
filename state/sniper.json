@@ -12793,6 +12793,15 @@
    "mcap": 33280.22213582566,
    "whale_usd": 499.99999999999994,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "7TiJFhg4Xf9FVtMYRaCUFyMGhooVjqPpqcAQNySgQB1G",
+   "symbol": "\u30da\u30f3\u30ae\u30f3",
+   "ts": "2026-11-04T00:04:37",
+   "t": 1793750677.0,
+   "mcap": 5662.604507961078,
+   "whale_usd": 140.89822668808125,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793748307.1641624
