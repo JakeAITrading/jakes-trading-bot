@@ -12882,6 +12882,60 @@
    "mcap": 180841.9701717042,
    "whale_usd": 440.40938537054524,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "EfRnwABuWZKxri55se639twy4jy3FRgYfri7wLJ5pump",
+   "symbol": "E",
+   "ts": "2026-11-04T00:10:26",
+   "t": 1793751026.0,
+   "mcap": 245446.07870462455,
+   "whale_usd": 199.05,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DX51xEuEckZ3Jc6x333fTFUVz2pYQriNQ2cUb1Cupump",
+   "symbol": "PREDICTOOR",
+   "ts": "2026-11-04T00:10:49",
+   "t": 1793751049.0,
+   "mcap": 96777.99402012542,
+   "whale_usd": 464.53404409466566,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2aEFMMGa6emADiboQB8PidxRCstKjYHGUUNoqcdLpump",
+   "symbol": "PerpScape",
+   "ts": "2026-11-04T00:12:21",
+   "t": 1793751141.0,
+   "mcap": 21014.35829878651,
+   "whale_usd": 900.0000000000001,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8RcybAevc7q5YfzjnhNJdCgRHGuNAes87okrSsUYpump",
+   "symbol": "SOL",
+   "ts": "2026-11-04T00:12:45",
+   "t": 1793751165.0,
+   "mcap": 8415.900083491579,
+   "whale_usd": 183.641215546998,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Pre8AREmFPtoJFT8mQSXQLh56cwJmM7CFDRuoGBZiUP",
+   "symbol": "POLYMARKET",
+   "ts": "2026-11-04T00:14:05",
+   "t": 1793751245.0,
+   "mcap": 694369.7973173186,
+   "whale_usd": 1110.864442576334,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4QXhchExxEjFxkFvvadByUBXvFc175VQr363vXB3pump",
+   "symbol": "Victor",
+   "ts": "2026-11-04T00:15:04",
+   "t": 1793751304.0,
+   "mcap": 7626.499609614257,
+   "whale_usd": 396.6514062472595,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793748307.1641624
