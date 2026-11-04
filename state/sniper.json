@@ -24379,6 +24379,20 @@
    "significance": "noise",
    "pct_port": 0.01131126079694418,
    "views": 25
+  },
+  {
+   "token_address": "GnY6RSduqXgJ3nas2CKTDkNbrm2FXYExFxP7BXYEpump",
+   "symbol": "PAUL",
+   "ts": "2026-11-04T13:14:19",
+   "t": 1793798059.0,
+   "mcap": 27640.023450868848,
+   "whale_usd": 400.00000000000006,
+   "whale_type": "whale",
+   "wallet": "4AYWojUg5Kw2VyRZOj0hzGqxtauGL9QKyNPsPWxOJIskQHN4b2goSP82kpxDVxK2QxXiYg5Y-IW0w1Fqpjup8_V-y1dDd9CH",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.021622609986656494,
+   "views": 23
   }
  ],
  "last_retarget": 1793797969.6826289
