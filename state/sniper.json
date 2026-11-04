@@ -38974,6 +38974,20 @@
    "significance": "noise",
    "pct_port": 0.0212385544384126,
    "views": 16
+  },
+  {
+   "token_address": "FiC8JaTfXiMCYuQmukmuRzzi9j7kCjkiiabnPwK3Vpkj",
+   "symbol": "TREMP",
+   "ts": "2026-11-04T22:10:35",
+   "t": 1793830235.0,
+   "mcap": 6290.091278060572,
+   "whale_usd": 282.38607281946605,
+   "whale_type": "kol",
+   "wallet": "PRI5H1bCd_j6rBCcf41UIwoaSFNwdg8p8K1Qxn36YTmJQp-UNDFft8-LlJwVkj1BKaxZGdVpGhfTy_pWCzgimSWm3QL6dkLN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0024612286874964463,
+   "views": 15
   }
  ],
  "last_retarget": 1793830088.6453545
