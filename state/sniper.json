@@ -24393,6 +24393,20 @@
    "significance": "noise",
    "pct_port": 0.021622609986656494,
    "views": 23
+  },
+  {
+   "token_address": "4eEDTyors4YReX5fBoRFBYNkKs6w66oyQ5CvPcckpump",
+   "symbol": "Dumocrats",
+   "ts": "2026-11-04T13:14:48",
+   "t": 1793798088.0,
+   "mcap": 6782.090167689603,
+   "whale_usd": 112.1057524504289,
+   "whale_type": "whale",
+   "wallet": "rAnbEOUmYYR5hAzArdfBFUEpOexBo29S21oebtEUIo0UGoafYIUooNhe-cYtNwtfc58ajuPH-wePSE9CTt7WPmiP-VRnyaJU",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.10648875114724135,
+   "views": 15
   }
  ],
  "last_retarget": 1793797969.6826289
