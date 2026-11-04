@@ -24036,6 +24036,20 @@
    "significance": "major",
    "pct_port": 0.6282778983225534,
    "views": 20
+  },
+  {
+   "token_address": "3sr8TELhp9gin5Toco7h2esUQH3Y3HGmULpwfUo5fmGg",
+   "symbol": "MYCURVE",
+   "ts": "2026-11-04T12:43:12",
+   "t": 1793796192.0,
+   "mcap": 7451.5323831292335,
+   "whale_usd": 276.943645275498,
+   "whale_type": "kol",
+   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.684074154481596,
+   "views": 13
   }
  ],
  "last_retarget": 1793790926.581706
