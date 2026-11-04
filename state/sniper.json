@@ -37791,6 +37791,20 @@
    "significance": "noise",
    "pct_port": 0.010109823461234922,
    "views": 20
+  },
+  {
+   "token_address": "92j5cWKjdVKDC7skBw1HjvYtrTU8nMM1zKjC4dqmpump",
+   "symbol": "SUPERBOWL",
+   "ts": "2026-11-04T21:39:57",
+   "t": 1793828397.0,
+   "mcap": 64366.19191783863,
+   "whale_usd": 120.89620099567445,
+   "whale_type": "whale",
+   "wallet": "ORIXQ1a8QHA_Ore8j0wZDJ76PGzRUTp1GKizVSDNZ4DTjXuq0tsV4Izg6O-pBf1WqEFvnnUg5MLR4zc0Sgx_RnHRZ8HcZy4u",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.013498282103657843,
+   "views": 506
   }
  ],
  "last_retarget": 1793826070.9712067
