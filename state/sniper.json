@@ -35992,6 +35992,20 @@
    "significance": "noise",
    "pct_port": 0.0076030318566073585,
    "views": 15
+  },
+  {
+   "token_address": "5ayUxsUM7PWYjZyUYKkF51V6tkaZYx8KfdqJuPwcpump",
+   "symbol": "Yume",
+   "ts": "2026-11-04T20:38:59",
+   "t": 1793824739.0,
+   "mcap": 8798.7555161817,
+   "whale_usd": 412.3783182144913,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0018347272260384859,
+   "views": 19
   }
  ],
  "last_retarget": 1793821860.1562994
