@@ -5006,6 +5006,23 @@
    },
    "expected_avg_pct": 12.6,
    "expected_trades_in_samples": 125.0
+  },
+  {
+   "at": "2026-11-04T01:16:46Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 12.0,
+   "expected_trades_in_samples": 122.0
   }
  ],
  "observed": [
@@ -13936,6 +13953,42 @@
    "mcap": 2487393.302594648,
    "whale_usd": 1238.140771,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "66auXVTRw9ZekMeB8h5jdJS9WhMRVz8zfMyzqeinpump",
+   "symbol": "AAPLCAT",
+   "ts": "2026-11-04T01:14:07",
+   "t": 1793754847.0,
+   "mcap": 17309.508034635845,
+   "whale_usd": 350.1829,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "8z7EwmU7HbX46u4FbSCwcuBQ8sByz6SVSenAyWUapump",
+   "symbol": "TALAFREAKO",
+   "ts": "2026-11-04T01:14:50",
+   "t": 1793754890.0,
+   "mcap": 5637.482900056057,
+   "whale_usd": 274.9424342317525,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4Yqp3dy34dDae5rYWbjfNfezzymdZGm55k912rPypump",
+   "symbol": "Gamble",
+   "ts": "2026-11-04T01:16:21",
+   "t": 1793754981.0,
+   "mcap": 9194.80407901574,
+   "whale_usd": 274.0258888441337,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7ZpKoVqzcP3i3kKJzRTiXFPKnnodkAYfAhXBywXDpump",
+   "symbol": "BEES",
+   "ts": "2026-11-04T01:17:10",
+   "t": 1793755030.0,
+   "mcap": 50696.67879513374,
+   "whale_usd": 726.7764981312718,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793751994.693163
