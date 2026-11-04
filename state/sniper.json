@@ -24407,6 +24407,62 @@
    "significance": "major",
    "pct_port": 0.10648875114724135,
    "views": 15
+  },
+  {
+   "token_address": "EQZHTZW2zgThAsTUqVczbkcqbgrLN11EoF6Jr5VVpump",
+   "symbol": "WOKEJAK",
+   "ts": "2026-11-04T13:15:59",
+   "t": 1793798159.0,
+   "mcap": 25743.30210336484,
+   "whale_usd": 489.2855089999939,
+   "whale_type": "kol",
+   "wallet": "HpCh5eHkPnnZfOWmM6ClNgRpKvMQNTW3Qm5qS_4vzLENuIb_qeqVSkiSoEASBqgG10nU_Z6z3GmekPt-LZuQJher8-gK6TUb",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.004145963587118752,
+   "views": 17
+  },
+  {
+   "token_address": "GkyPYa7NnCFbduLknCfBfP7p8564X1VZhwZYJ6CZpump",
+   "symbol": "CHILLHOUSE",
+   "ts": "2026-11-04T13:18:33",
+   "t": 1793798313.0,
+   "mcap": 756662.6107443591,
+   "whale_usd": 2380.4476711594457,
+   "whale_type": "whale",
+   "wallet": "IR0Q_tpwraKmj4F7fnHYhYJhrlCl526dYQ8psAELqOvYRMF_Tm9laT4xI9LXYgg1qyyrAjOvdFrv2YUCtefBn9CGYqtI3x_t",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.12073625631438498,
+   "views": 818
+  },
+  {
+   "token_address": "kaPePLkJ6g1YZqmHR4J3ptgkdxCUZ87QXZTkBjTpump",
+   "symbol": "Cryptocrats",
+   "ts": "2026-11-04T13:18:54",
+   "t": 1793798334.0,
+   "mcap": 6397.134256985737,
+   "whale_usd": 111.96026160956023,
+   "whale_type": "kol",
+   "wallet": "Lsh1Ls_XUbghavG-As6sLkiXfyOqxetwGjTT0vwt-Hd600MTQ4aSX588F9XB-zTN4bBatoxLLZbCidOvPIWxu4F0jRUBFVOa",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.00708901102820825,
+   "views": 19
+  },
+  {
+   "token_address": "ACv7iJ7xVfohvfXp3dt7AfAPcekL2dHsYCbJw8Vp1osr",
+   "symbol": "RETARD",
+   "ts": "2026-11-04T13:19:34",
+   "t": 1793798374.0,
+   "mcap": 435826.80632313626,
+   "whale_usd": 425.66604965523476,
+   "whale_type": "whale",
+   "wallet": "vN6fujqS6E3ItZociMXu-0PjDqsFVUZu8TFiWNXtFv19h3XkxbF5aG9doSZWpFeNhj_VQMHoEG4SID0mAQsBozX3GplEqIef",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.03600910421828257,
+   "views": 976
   }
  ],
  "last_retarget": 1793797969.6826289
