@@ -20137,6 +20137,20 @@
    "significance": "noise",
    "pct_port": 0.022252501941618923,
    "views": 936
+  },
+  {
+   "token_address": "GivBYVcRVyqPwP8fC8VUq7W36N9ukkay3LBGsHCHpump",
+   "symbol": "Duck",
+   "ts": "2026-11-04T06:41:19",
+   "t": 1793774479.0,
+   "mcap": 10702.919098548591,
+   "whale_usd": 117.45680090187479,
+   "whale_type": "kol",
+   "wallet": "5-oWM-8B7W5GTovIB9Ti2E3Bdw4UpG0S8wVMf1w6lRHKl-Iwiw3HvFfieCV7nWhig2h2qxDX1HBNvzOlp6WrvfgRAfyM2EzU",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.5716456351159993,
+   "views": 19
   }
  ],
  "last_retarget": 1793772058.246944
