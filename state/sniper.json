@@ -39877,6 +39877,20 @@
    "significance": "notable",
    "pct_port": 0.05146676479085836,
    "views": 12
+  },
+  {
+   "token_address": "GTeJKRoY4Ja5jZkYr7bfSSrofpsXQsuWUiiB2p66pump",
+   "symbol": "TRONKS",
+   "ts": "2026-11-04T22:42:28",
+   "t": 1793832148.0,
+   "mcap": 6730.6550590728875,
+   "whale_usd": 113.5582319598688,
+   "whale_type": "kol",
+   "wallet": "qsgqGm0ScPsQ7QYGc7hK1-fePWbvVBV5xNCoEMDEbqMZgixPVmkwYrVywW25V4zuBshdyy_HxDNrNywGQh4pzh8lxj5HzL4=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0039315677819741456,
+   "views": 13
   }
  ],
  "last_retarget": 1793830088.6453545
