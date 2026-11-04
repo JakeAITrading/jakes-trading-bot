@@ -22531,6 +22531,20 @@
    "significance": "noise",
    "pct_port": 0.02260562076542141,
    "views": 12
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-04T10:18:13",
+   "t": 1793787493.0,
+   "mcap": 1446388.6531235913,
+   "whale_usd": 2501.682952097733,
+   "whale_type": "whale",
+   "wallet": "ofpOu5tl7O0H8H3HHa1OCajlp5fDCc_kBquA7LmbRWwO3H1V0Z0UZpj6et7q5hYY17TgX1ez3YcE86yEdKhR30iYVtSXL1A-",
+   "n_wallets30": 2,
+   "significance": "notable",
+   "pct_port": 0.04719525602311912,
+   "views": 21594
   }
  ],
  "last_retarget": 1793786115.5725179
