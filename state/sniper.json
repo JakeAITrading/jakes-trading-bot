@@ -13791,6 +13791,15 @@
    "mcap": 5026.77994518308,
    "whale_usd": 274.97108531774296,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "12BSXZuV1dkZx3rqTRZbGkhhU5LGvUj2EkCjCagwpump",
+   "symbol": "SKIN",
+   "ts": "2026-11-04T01:08:35",
+   "t": 1793754515.0,
+   "mcap": 6930.412837391486,
+   "whale_usd": 100.28373300000021,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793751994.693163
