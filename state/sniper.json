@@ -14123,6 +14123,24 @@
    "mcap": 24047.67077856551,
    "whale_usd": 298.65,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "Eriox1MoMSRpS2rp5VoNWZcEZZ3zMfxMqmVCTfVBpump",
+   "symbol": "DJT",
+   "ts": "2026-11-04T01:29:23",
+   "t": 1793755763.0,
+   "mcap": 6904.15981807746,
+   "whale_usd": 131.82168449098353,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EWqNbDG5bkhz3GnvSaeF2dVQp39qNtwYGNheGVpypump",
+   "symbol": "POLYHOUSE",
+   "ts": "2026-11-04T01:30:04",
+   "t": 1793755804.0,
+   "mcap": 8057.507329795044,
+   "whale_usd": 407.108111,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793751994.693163
