@@ -32282,6 +32282,20 @@
    "significance": "noise",
    "pct_port": 0.004326518791296107,
    "views": 17
+  },
+  {
+   "token_address": "H3GB33iYLARKTouJoaS86NAFzrvAep6P6SKSiCPVBG9K",
+   "symbol": "going/up",
+   "ts": "2026-11-04T18:41:04",
+   "t": 1793817664.0,
+   "mcap": 8942.7521743346,
+   "whale_usd": 106.237625487543,
+   "whale_type": "kol",
+   "wallet": "qsgqGm0ScPsQ7QYGc7hK1-fePWbvVBV5xNCoEMDEbqMZgixPVmkwYrVywW25V4zuBshdyy_HxDNrNywGQh4pzh8lxj5HzL4=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.00417231866539468,
+   "views": 12
   }
  ],
  "last_retarget": 1793813809.088653
