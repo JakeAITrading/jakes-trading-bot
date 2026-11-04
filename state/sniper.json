@@ -14920,6 +14920,33 @@
    "mcap": 110937.1019655341,
    "whale_usd": 1000.0,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "BD999oH1m4i87r4Q2Sn1bQjV61Rh6cbnEQkk5ghnpump",
+   "symbol": "LiBERal",
+   "ts": "2026-11-04T02:29:13",
+   "t": 1793759353.0,
+   "mcap": 8930.453077482525,
+   "whale_usd": 174.35184892871595,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7L68DJDqKp1Lke23aiuFkFB5FdXVkHqbHvoGVibGpump",
+   "symbol": "DarkWoke",
+   "ts": "2026-11-04T02:30:05",
+   "t": 1793759405.0,
+   "mcap": 8942.683962231968,
+   "whale_usd": 138.84133131371448,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "GSQPsLunRYWpUVkLTeczKnZ3xxb2tgx572oD26qDpump",
+   "symbol": "TI",
+   "ts": "2026-11-04T02:32:21",
+   "t": 1793759541.0,
+   "mcap": 5392.286766436882,
+   "whale_usd": 144.72811592648642,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793756573.7115717
