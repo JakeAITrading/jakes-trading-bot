@@ -15135,6 +15135,24 @@
    "mcap": 5406.017407949548,
    "whale_usd": 135.05926372529586,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "HKfxaqce6D8UD2t3BbwesBAH82cbf2UJVLdTm3dJpump",
+   "symbol": "Groyper",
+   "ts": "2026-11-04T02:41:32",
+   "t": 1793760092.0,
+   "mcap": 7052.232376736356,
+   "whale_usd": 131.82280671005643,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "EwwUBT1wGJCdvfu95aGncgwYhk8nnTgByn3BkfdFpump",
+   "symbol": "homo",
+   "ts": "2026-11-04T02:41:58",
+   "t": 1793760118.0,
+   "mcap": 5743.54544369271,
+   "whale_usd": 273.94690814418436,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793756573.7115717
