@@ -13989,6 +13989,87 @@
    "mcap": 50696.67879513374,
    "whale_usd": 726.7764981312718,
    "whale_type": "kol"
+  },
+  {
+   "token_address": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
+   "symbol": "PIRATE",
+   "ts": "2026-11-04T01:19:33",
+   "t": 1793755173.0,
+   "mcap": 139305.3079791912,
+   "whale_usd": 999.0500000000001,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "6i3oFRo48Xbnu7B9YH5DgypHRvsr47GagoJhSvs4pump",
+   "symbol": "Other",
+   "ts": "2026-11-04T01:20:56",
+   "t": 1793755256.0,
+   "mcap": 102595.71884750441,
+   "whale_usd": 317.6024861349249,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "8VNh5MPTg5FJ5Fvo3KAH84vuXF1jozCN1mnZTX8Hpump",
+   "symbol": "HELIA",
+   "ts": "2026-11-04T01:20:59",
+   "t": 1793755259.0,
+   "mcap": 18683.109374251217,
+   "whale_usd": 735.3976126316419,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7Q3NgSm398AMJaeiKcRYjhNhAb3mRGdFc55LvV2Kpump",
+   "symbol": "fap",
+   "ts": "2026-11-04T01:21:51",
+   "t": 1793755311.0,
+   "mcap": 7348.407962126657,
+   "whale_usd": 183.45118992081538,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "2F6AELiCKAS19N2mpHCBg8QnLnkSvyUd5NTyCbNVpump",
+   "symbol": "CAT",
+   "ts": "2026-11-04T01:22:50",
+   "t": 1793755370.0,
+   "mcap": 5148.499894858105,
+   "whale_usd": 275.49072894746973,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "23NEps5znGGeRGxAUX3tfH8HEiAFpjNZyavLYceEpump",
+   "symbol": "HELIA",
+   "ts": "2026-11-04T01:22:50",
+   "t": 1793755370.0,
+   "mcap": 8824.728865874931,
+   "whale_usd": 275.9626777170318,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "2RsMCXnahKP7QMF7oCfLrogZyTgptwtX3YPQq3B5pump",
+   "symbol": "HELIA",
+   "ts": "2026-11-04T01:22:58",
+   "t": 1793755378.0,
+   "mcap": 9161.704838334117,
+   "whale_usd": 245.33987549971064,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-04T01:23:12",
+   "t": 1793755392.0,
+   "mcap": 1712491.7681025362,
+   "whale_usd": 434.449348,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "57vAaMsnAJXkvULtAz7fsi6gRn3bHRJFJsJV1okNpump",
+   "symbol": "OREN",
+   "ts": "2026-11-04T01:23:20",
+   "t": 1793755400.0,
+   "mcap": 45950.63954830595,
+   "whale_usd": 322.66704913894495,
+   "whale_type": "whale"
   }
  ],
  "last_retarget": 1793751994.693163
