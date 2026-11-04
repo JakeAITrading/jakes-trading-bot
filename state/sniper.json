@@ -6223,6 +6223,27 @@
    },
    "expected_avg_pct": 14.8,
    "expected_trades_in_samples": 84.0
+  },
+  {
+   "at": "2026-11-04T10:45:24Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.4,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 12.7,
+   "expected_trades_in_samples": 93.0
   }
  ],
  "observed": [
@@ -22769,6 +22790,20 @@
    "significance": "noise",
    "pct_port": 0.021703921971389258,
    "views": 16
+  },
+  {
+   "token_address": "2Srf6mhufzWJKZ5nniVXgwamLmDJWXPQBmddJ1MMpump",
+   "symbol": "CyberAxe",
+   "ts": "2026-11-04T10:44:02",
+   "t": 1793789042.0,
+   "mcap": 40027.21242220825,
+   "whale_usd": 149.29764317337538,
+   "whale_type": "kol",
+   "wallet": "--Rq1Do2VPldJYHa94pqYfzFIJh_BnF85G_QhgPacTH6tnOwSv1qMZTbXSpaLVFCua-H-6-c_EoaQhRx4ie7BVZFd-lSlLg=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.02743421143258707,
+   "views": 19
   }
  ],
  "last_retarget": 1793786115.5725179
