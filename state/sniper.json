@@ -24113,6 +24113,20 @@
    "significance": "major",
    "pct_port": 0.69640781388729,
    "views": 12
+  },
+  {
+   "token_address": "F7Pmt2xcC1u3v33zoUwuBTjnpSB94TDYRi65hdxVg17C",
+   "symbol": "Alhamdulillah",
+   "ts": "2026-11-04T12:54:12",
+   "t": 1793796852.0,
+   "mcap": 6562.465841852821,
+   "whale_usd": 276.31995032898,
+   "whale_type": "kol",
+   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.6924945401736534,
+   "views": 12
   }
  ],
  "last_retarget": 1793790926.581706
