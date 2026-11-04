@@ -2845,7 +2845,7 @@
     "above_5m_low_pct": 153.2,
     "this_minute_pct": 16.7
    },
-   "status": "time exit after 2.0h: tight bracket at $2.61",
+   "status": "time exit: market sell would return $1.58; left with its bracket",
    "limit_price": 9.157511158264242e-06,
    "limit_order_id": "f54aee24-4fec-4d11-9a34-b734452f9ca5",
    "limit_placed_at": "2026-11-03T22:50:38Z",
@@ -2896,7 +2896,8 @@
     ],
     "note": "Two orders: a stop loss and a take profit. When one fills, Moby cancels the other."
    },
-   "time_exit": "2026-11-04T00:51:05Z"
+   "time_exit": "2026-11-04T00:51:05Z",
+   "time_exit_market": "2026-11-04T01:06:49Z"
   },
   {
    "token_address": "HQc8gFfHX8f6XyKKetsAiXvkexR7jxXCHiVFFtVCpump",
@@ -4987,6 +4988,23 @@
    },
    "expected_avg_pct": 15.6,
    "expected_trades_in_samples": 95.0
+  },
+  {
+   "at": "2026-11-04T01:06:43Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any"
+   },
+   "expected_avg_pct": 12.6,
+   "expected_trades_in_samples": 125.0
   }
  ],
  "observed": [
@@ -13664,6 +13682,114 @@
    "t": 1793754175.0,
    "mcap": 13749.3965221,
    "whale_usd": 212.54251746573874,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7ZpKoVqzcP3i3kKJzRTiXFPKnnodkAYfAhXBywXDpump",
+   "symbol": "BEES",
+   "ts": "2026-11-04T01:03:50",
+   "t": 1793754230.0,
+   "mcap": 50475.60416442035,
+   "whale_usd": 616.359146,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "DJ7QLU6qvaacEUyuV7JPAd6227zZqBDoGzbzcfqPpump",
+   "symbol": "PFSCPI",
+   "ts": "2026-11-04T01:04:14",
+   "t": 1793754254.0,
+   "mcap": 18578.9753141,
+   "whale_usd": 372.57362117833503,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "F2xQeTCTqnczXxXQaBWAfDpUnpxn4wQHRPSqvUYJpump",
+   "symbol": "Impeach",
+   "ts": "2026-11-04T01:04:22",
+   "t": 1793754262.0,
+   "mcap": 11089.923941016288,
+   "whale_usd": 341.87527194366317,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+   "symbol": "Dacity",
+   "ts": "2026-11-04T01:04:50",
+   "t": 1793754290.0,
+   "mcap": 6650025.917861701,
+   "whale_usd": 930.9361361158319,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "FENKa3vhJnMfWGqsqyeucYwrQAFkVxS5rLWHD5LCpump",
+   "symbol": "Democrat",
+   "ts": "2026-11-04T01:06:29",
+   "t": 1793754389.0,
+   "mcap": 5818.078989250353,
+   "whale_usd": 393.05166918368866,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "9utLxmegHV4PV74abebYTzZ2ActyWtYD52CE52Q1seqX",
+   "symbol": "Democrat",
+   "ts": "2026-11-04T01:06:35",
+   "t": 1793754395.0,
+   "mcap": 8276.08528197743,
+   "whale_usd": 183.38193434910903,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "7eoWaiKRoJ5fPFg259W2tiP7HRYVETG5R8hvfQ4Cpump",
+   "symbol": "Democrat",
+   "ts": "2026-11-04T01:06:50",
+   "t": 1793754410.0,
+   "mcap": 5910.771960770944,
+   "whale_usd": 120.17176239133111,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "4QJBYfz8tReMxVRukECB8Be4Sf5LF7qfyNc61fFCpump",
+   "symbol": "Democrat",
+   "ts": "2026-11-04T01:06:54",
+   "t": 1793754414.0,
+   "mcap": 6799.0981733601075,
+   "whale_usd": 393.05166918368866,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "Gp9zRp652NGkY2NrLvP6w1CdqnsYfjmMVjv59hM262EG",
+   "symbol": "Jackass",
+   "ts": "2026-11-04T01:07:14",
+   "t": 1793754434.0,
+   "mcap": 5894.409241591347,
+   "whale_usd": 362.961832740408,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "H8WTvo3ZXSYHJAcYqzCforbG8coR1FDAX2kHFfqHBAGS",
+   "symbol": "BAGSPAY",
+   "ts": "2026-11-04T01:07:18",
+   "t": 1793754438.0,
+   "mcap": 518932.3191381558,
+   "whale_usd": 533.5538941283997,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "FrTBrf64pfCM1GBEM57ZKqzVvZKWpGVhx9bgyFH4xuBV",
+   "symbol": "Jackass",
+   "ts": "2026-11-04T01:07:19",
+   "t": 1793754439.0,
+   "mcap": 5236.714514467167,
+   "whale_usd": 122.79223801281489,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "F6ebn1ucvxyeb9jftWivARVhmw6BWoFLwY3NkpQupump",
+   "symbol": "Jackass",
+   "ts": "2026-11-04T01:07:28",
+   "t": 1793754448.0,
+   "mcap": 5026.77994518308,
+   "whale_usd": 274.97108531774296,
    "whale_type": "kol"
   }
  ],
