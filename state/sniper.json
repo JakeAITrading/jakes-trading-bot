@@ -28992,6 +28992,62 @@
    "significance": "notable",
    "pct_port": 0.03766899217053218,
    "views": 510
+  },
+  {
+   "token_address": "By8SZgtt4Fe4WQ8VDyKjUeSY5D6tQLRwnnq7gRPdpump",
+   "symbol": "CC",
+   "ts": "2026-11-04T16:41:45",
+   "t": 1793810505.0,
+   "mcap": 12655.30706172303,
+   "whale_usd": 185.26529264327056,
+   "whale_type": "kol",
+   "wallet": "I0wzeZYNUv1huzM6OCL09SaJJXSSlytOYOR_Z9rsdQ1dR0lF5BBreyB0GVlsV3a9ni40evX5jqOmHIo5QgJjuHUYruCdykYO",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.004982792884972654,
+   "views": 19
+  },
+  {
+   "token_address": "EWZU7qq3uLExqnrYe19vNL5UfAV3icCtb1Lsj6Hmpump",
+   "symbol": "Slurmit",
+   "ts": "2026-11-04T16:41:58",
+   "t": 1793810518.0,
+   "mcap": 8529.993465344887,
+   "whale_usd": 159.47585061684703,
+   "whale_type": "kol",
+   "wallet": "JZCVvPxZeab9uEvDqepQWZPLRoKJsP80IGiw0Hj4tYq9vIkJA1U-GqjfkEcM_qP_HDRG7oQW7Kxlh4wBDpt2dPFCeRGfDJwE",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009921381647146593,
+   "views": 16
+  },
+  {
+   "token_address": "BxsNVvPuvCmHJRE6LyzqFAVoiTNhdHUVAgKNZhvApump",
+   "symbol": "HIGH/ER",
+   "ts": "2026-11-04T16:42:52",
+   "t": 1793810572.0,
+   "mcap": 102105.7970571795,
+   "whale_usd": 699.05,
+   "whale_type": "kol",
+   "wallet": "aSMdHRfAFk-Y5STCqqp9PjrDJhJRFle9UnbDDcUg5FxUIzAf3FgFrezjVnrEAFz7Q3cq-Shggtpczeukm5Z33EZm1AIlA6Rk",
+   "n_wallets30": 8,
+   "significance": "notable",
+   "pct_port": 0.056575818622921825,
+   "views": 164
+  },
+  {
+   "token_address": "2pVkcP8pNAc8zD98Bq3V8WLRpWFWg93a6M1pL53Mpump",
+   "symbol": "WENDYS",
+   "ts": "2026-11-04T16:44:06",
+   "t": 1793810646.0,
+   "mcap": 5509.477432497079,
+   "whale_usd": 186.44400312074623,
+   "whale_type": "kol",
+   "wallet": "kFbl3Zs43mpeoQp0ZVKwji2tf12GomxG6thQQarapCxGwZraQLyoFq_mxeF73CEMnp8yjI18vfStJn0gXvy57iIqrISpBYD6",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.0025814374987303814,
+   "views": 14
   }
  ],
  "last_retarget": 1793806182.440615
