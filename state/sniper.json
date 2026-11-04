@@ -5656,6 +5656,27 @@
    },
    "expected_avg_pct": 13.6,
    "expected_trades_in_samples": 119.0
+  },
+  {
+   "at": "2026-11-04T06:21:23Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 12.8,
+   "expected_trades_in_samples": 125.0
   }
  ],
  "observed": [
@@ -19878,6 +19899,34 @@
    "significance": "major",
    "pct_port": 0.12403142962836615,
    "views": 12
+  },
+  {
+   "token_address": "Bd19WHmp2qGeTB8K1SqChqJPRHnj5qGbgmaiE8WKpump",
+   "symbol": "MILF",
+   "ts": "2026-11-04T06:19:53",
+   "t": 1793773193.0,
+   "mcap": 9136.568223766517,
+   "whale_usd": 100.14538199999879,
+   "whale_type": "kol",
+   "wallet": "pPvjMFMbgYswhC0K8wVsLD4uIQlxhbbWN-UJX_5F8qa4YkEei-tuFZNju3q5TQM_DYDkgdGRlb76u0Y8qvsP0e2esVksB0wz",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0010648054656245854,
+   "views": 20
+  },
+  {
+   "token_address": "CAQNN57u6t7Vph7BJaCznLhjYTwLePr4wqSuLHfrpump",
+   "symbol": "POLSIA",
+   "ts": "2026-11-04T06:20:52",
+   "t": 1793773252.0,
+   "mcap": 11733.814972103562,
+   "whale_usd": 164.62275,
+   "whale_type": "whale",
+   "wallet": "3i6jk39_HR4kRGsF2T3Cm6ef3MRaor9NsimxOx1-MnZk5i89ONrl2UjvjZp8MBbroEgxpJhB7baLIZvqIhmyzKDYcBVc26fT",
+   "n_wallets30": 3,
+   "significance": "notable",
+   "pct_port": 0.044161549133938945,
+   "views": 90
   }
  ],
  "last_retarget": 1793772058.246944
