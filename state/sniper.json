@@ -24001,6 +24001,20 @@
    "significance": "major",
    "pct_port": 0.6288123670783752,
    "views": 39
+  },
+  {
+   "token_address": "6RnbQBpEg163qgMgRCUvvteHdR9WwoW9VFwky9yXpump",
+   "symbol": "UAV",
+   "ts": "2026-11-04T12:38:39",
+   "t": 1793795919.0,
+   "mcap": 9402.544902724467,
+   "whale_usd": 276.886135592082,
+   "whale_type": "kol",
+   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.6282778983225534,
+   "views": 20
   }
  ],
  "last_retarget": 1793790926.581706
