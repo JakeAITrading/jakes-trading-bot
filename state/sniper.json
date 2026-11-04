@@ -19864,6 +19864,20 @@
    "significance": "noise",
    "pct_port": 0.0215459321849084,
    "views": 17
+  },
+  {
+   "token_address": "e6MU2nLnTRT7ds9X8AxpVGJuzCKAWdmcwMu64AGpump",
+   "symbol": "GOYBEAM",
+   "ts": "2026-11-04T06:14:03",
+   "t": 1793772843.0,
+   "mcap": 5090.125796414213,
+   "whale_usd": 233.04333574990264,
+   "whale_type": "kol",
+   "wallet": "6g2iHTk-DXpQ5Jvyy8T6YQu0TX3dahn6XNYBLd0Lmke0YLCyc9msNbCv8A-qLrFBoKbptxJyZDzn0khYepgjA6KxETwUjLpd",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.12403142962836615,
+   "views": 12
   }
  ],
  "last_retarget": 1793772058.246944
