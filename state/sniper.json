@@ -3264,7 +3264,7 @@
     "above_5m_low_pct": 47.9,
     "this_minute_pct": 44.0
    },
-   "status": "holding, take-profit set",
+   "status": "time exit: sold at market for $2.27",
    "limit_price": 5.167648396309232e-06,
    "limit_order_id": "e0eaf814-5e06-42ed-b8b6-a9807c289895",
    "limit_placed_at": "2026-11-03T23:38:03Z",
@@ -3303,7 +3303,49 @@
     "failed_leg": null,
     "failed_leg_error": null
    },
-   "time_exit": "2026-11-04T01:39:57Z"
+   "time_exit": "2026-11-04T01:39:57Z",
+   "time_exit_market": "2026-11-04T01:55:07Z",
+   "sell": {
+    "simulated": false,
+    "network": "solana",
+    "funding_network": "solana",
+    "output_token": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "amount_usd": null,
+    "amount_in": null,
+    "input_token": "96T5upHiyHZcfB6wvb3Nv2n4QF7raQGB6vQ1Jd5Hpump",
+    "input_token_symbol": "CHARLIE",
+    "input_amount": 1081764.098101,
+    "quote_id": "0d946dbb-a04b-4303-92b2-743714b8fad7",
+    "status": "Success",
+    "transaction_signature": "3vpbP3pWq98uWXw9JrtM4fZsyu4JxCdB2A51os3P5Bp2G1HsA8nhabcpff68k7Xyji1wLfYfRpzLuo5GUvEpJAZJ",
+    "explorer_url": "https://solscan.io/tx/3vpbP3pWq98uWXw9JrtM4fZsyu4JxCdB2A51os3P5Bp2G1HsA8nhabcpff68k7Xyji1wLfYfRpzLuo5GUvEpJAZJ",
+    "output_decimals": 6,
+    "quoted_output_amount": 2271997.0,
+    "quoted_output_amount_ui": 2.271997,
+    "minimum_output_amount": 1817598.0,
+    "minimum_output_amount_ui": 1.817598,
+    "filled_input_amount": null,
+    "filled_input_amount_ui": null,
+    "filled_output_amount": null,
+    "filled_output_amount_ui": null,
+    "effective_slippage_bps": null,
+    "fill_pending": true,
+    "slippage_bps": 2000,
+    "fee_bps": 2798,
+    "next_step": "The transaction is submitted but its fill is not booked yet, so the filled amounts are null. Call `get_swap_status` with this quote_id before telling the user what was received.",
+    "sold_amount": 1081764.098101,
+    "pct": 100.0,
+    "cancelled_order_ids": [
+     "fe0359b9-6121-4890-a962-b99d259f9584",
+     "02935577-f9d7-4ccc-854c-53af05f45a3e"
+    ],
+    "cancel_failed_order_ids": [],
+    "cancel_pending_order_ids": [],
+    "cancel_note": null
+   },
+   "closed": "time exit at market (bracket never filled)",
+   "proceeds_usd": 2.271997,
+   "profit_usd": -2.73
   },
   {
    "token_address": "ADvbwD9pgBeHHQBmBaiUir4zjC946FW2mDJbSejmpump",
@@ -14400,6 +14442,42 @@
    "mcap": 1931057.7930617935,
    "whale_usd": 212.96830881898995,
    "whale_type": "whale"
+  },
+  {
+   "token_address": "Fx8xXquQSfVGnfffbgZhP7NbCyUHSLTFDtasS94Spump",
+   "symbol": "HYPE",
+   "ts": "2026-11-04T01:52:34",
+   "t": 1793757154.0,
+   "mcap": 9740.257155499421,
+   "whale_usd": 229.93938902768932,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "A5MsBXyva4khW1n1RPfqAXs5DMW4ggiFPX9rvdc6pump",
+   "symbol": "SR",
+   "ts": "2026-11-04T01:54:29",
+   "t": 1793757269.0,
+   "mcap": 6742.074674548348,
+   "whale_usd": 130.482955,
+   "whale_type": "whale"
+  },
+  {
+   "token_address": "EiqNgtwFzHqTEa3UV57s2x4svjJF59URgBqnG3sCpump",
+   "symbol": "Downald",
+   "ts": "2026-11-04T01:56:14",
+   "t": 1793757374.0,
+   "mcap": 14185.62443490797,
+   "whale_usd": 264.46723743701773,
+   "whale_type": "kol"
+  },
+  {
+   "token_address": "DMgry6A9C6U6jopS7bAawukAvAcgpUvWfJULcbnfpump",
+   "symbol": "POLY",
+   "ts": "2026-11-04T01:57:15",
+   "t": 1793757435.0,
+   "mcap": 27020.112611353397,
+   "whale_usd": 290.7674870982082,
+   "whale_type": "kol"
   }
  ],
  "last_retarget": 1793756573.7115717
