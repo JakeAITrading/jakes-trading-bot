@@ -24778,6 +24778,20 @@
    "significance": "noise",
    "pct_port": 0.011616569232518137,
    "views": 1724
+  },
+  {
+   "token_address": "CttHJahfpRU3V1cAMKDCPcN3L8sNikgLWREWYg6Cpump",
+   "symbol": "TOLY",
+   "ts": "2026-11-04T13:45:55",
+   "t": 1793799955.0,
+   "mcap": 28921.332568216832,
+   "whale_usd": 112.36799639490603,
+   "whale_type": "kol",
+   "wallet": "--Rq1Do2VPldJYHa94pqYfzFIJh_BnF85G_QhgPacTH6tnOwSv1qMZTbXSpaLVFCua-H-6-c_EoaQhRx4ie7BVZFd-lSlLg=",
+   "n_wallets30": 4,
+   "significance": "noise",
+   "pct_port": 0.020469532627277905,
+   "views": 116
   }
  ],
  "last_retarget": 1793797969.6826289
