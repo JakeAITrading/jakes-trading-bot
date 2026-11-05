@@ -4053,23 +4053,6 @@
  ],
  "learning_log": [
   {
-   "at": "2026-11-03T22:40:51Z",
-   "new_samples": 18,
-   "live_samples": 490,
-   "settings": {
-    "take_profit": 0.5,
-    "limit_cushion": 0.0,
-    "max_runup": null,
-    "max_spike": null,
-    "min_mcap": 50000,
-    "max_mcap": 250000,
-    "min_whale_usd": 500,
-    "whale_type": "any"
-   },
-   "expected_avg_pct": 17.2,
-   "expected_trades_in_samples": 113.0
-  },
-  {
    "at": "2026-11-03T22:44:39Z",
    "new_samples": 3,
    "live_samples": 493,
@@ -10213,51 +10196,30 @@
    },
    "expected_avg_pct": 6.8,
    "expected_trades_in_samples": 115.0
+  },
+  {
+   "at": "2026-11-05T23:06:56Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.4,
+    "min_mcap": 20000,
+    "max_mcap": 10000000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.4,
+    "max_wallets30": 2,
+    "min_views": 100
+   },
+   "expected_avg_pct": 5.7,
+   "expected_trades_in_samples": 103.0
   }
  ],
  "observed": [
-  {
-   "token_address": "23TUxpM25XJkGUhkFtadYsJ2bp8Mw5PJQ5FC8kijpump",
-   "symbol": "WMV",
-   "ts": "2026-11-04T07:34:06",
-   "t": 1793777646.0,
-   "mcap": 7879.056283854879,
-   "whale_usd": 184.27198689266396,
-   "whale_type": "kol",
-   "wallet": "vwsyZk6VcumuymXY2gmG_qnae4iprGwOKwYXZDOkeI9ylJz05GjXnv85zlsjO003bewnow6bDrFv_pabppXsYOjVpFwIh0g=",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.0028842348557951846,
-   "views": 17
-  },
-  {
-   "token_address": "7ymF66Z6VhgNiwadtVhjTtT6U7iQRpSxeiRrhfufhigh",
-   "symbol": "HIGH",
-   "ts": "2026-11-04T07:35:07",
-   "t": 1793777707.0,
-   "mcap": 235290.90600410203,
-   "whale_usd": 939.539782,
-   "whale_type": "kol",
-   "wallet": "Yy50B7_t_qWLWtRyByD0Mii4dzKTU_I_71P3dJiC1J2_oCNd1RZfa1Aodf8oqWpgsNpN31gf1CHcGjdh9te7MFMVh8IfVgOc",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.06835941693596813,
-   "views": 666
-  },
-  {
-   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
-   "symbol": "AMD",
-   "ts": "2026-11-04T07:35:51",
-   "t": 1793777751.0,
-   "mcap": 1352277.2609142126,
-   "whale_usd": 425.9485011316544,
-   "whale_type": "whale",
-   "wallet": "hspL1Nd9BdOVJycQICVUiUlNhNVyXIFuQD6Iztw1UrDOSdvIZI5EKDMUveemYi-N3knvg48LqwsDEF4oo633r1Ztk4JieFcE",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.011634828151730999,
-   "views": 19053
-  },
   {
    "token_address": "8fivA3o2tNZs8VsQrLh47Z9CUvfhboYxaPg7cPaRpump",
    "symbol": "Elun",
@@ -52215,7 +52177,49 @@
    "significance": "notable",
    "pct_port": 0.07113043891573549,
    "views": 19
+  },
+  {
+   "token_address": "GidZcBsn9aKBs7QoNfyYJCRMTEKJNWWJoJTSvoVfpump",
+   "symbol": "WALRUS",
+   "ts": "2026-11-05T23:07:19",
+   "t": 1793920039.0,
+   "mcap": 6632.2363636572845,
+   "whale_usd": 350.7790222167969,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0028234018615302206,
+   "views": 12
+  },
+  {
+   "token_address": "Kb14sP5LEek4jBGgtMCts1QFdFXpk5WJBnSRA1EduhA",
+   "symbol": "DBTC",
+   "ts": "2026-11-05T23:07:54",
+   "t": 1793920074.0,
+   "mcap": 7113.306764949812,
+   "whale_usd": 101.68295610487985,
+   "whale_type": "whale",
+   "wallet": "B2mWOC7CpMDN7l-Q3aNs-ilBJwM7a5iiDO-sT9pcCwbd6DaE38D8NW5kWOxWLjCjG9z-zx_WKb6YBy0TrTEjDne_Nu8-KndF",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0021448888700079044,
+   "views": 17
+  },
+  {
+   "token_address": "24NPnATWSw43V2SiucStyxmAL9VCuNzzq7AxiGfBpump",
+   "symbol": "Race",
+   "ts": "2026-11-05T23:09:38",
+   "t": 1793920178.0,
+   "mcap": 10798.853509186301,
+   "whale_usd": 224.34939971169115,
+   "whale_type": "kol",
+   "wallet": "S0RHW9sCCbnzG8K_gITVp_YdZcM9W9ZH5YcHfu9zACd87-I4LmX0rR0xSoL7dULmBAUbxjZHgpKQ-IXXmbu6qXNpSbSolSBZ",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009474585038289412,
+   "views": 12
   }
  ],
- "last_retarget": 1793915984.351171
+ "last_retarget": 1793920016.0638044
 }
