@@ -8348,56 +8348,6 @@
  ],
  "observed": [
   {
-   "token_address": "3JdeP1VBHgRPunmjTj1D6w6ZZePwGAwjUr2tCufwpump",
-   "symbol": "RATIO",
-   "ts": "2026-11-03T07:44:23",
-   "t": 1793691863.0,
-   "mcap": 59126.42481814652,
-   "whale_usd": 590.7751798977458,
-   "whale_type": "whale",
-   "wallet": "wUj0RIXCIblHxbdd3mao2GLgIO5_dfwaG9hRsPXdyKhhZdpUsE_NTn0OOlswsb6HpIdvxE7vYjbRIlzc6IFmPrVLshjQxdS0"
-  },
-  {
-   "token_address": "AT1RTHcvWERAUEaFYaRgPkuesm6jfhHEpChJbAjoG4d9",
-   "symbol": "SI",
-   "ts": "2026-11-03T07:46:46",
-   "t": 1793692006.0,
-   "mcap": 6840.519745310303,
-   "whale_usd": 827.3580480122397,
-   "whale_type": "kol",
-   "wallet": "CwJv4B8eeeEVEYeRWDtI64iSb533JcP9xtWbWtpTfaLmFw8IIsqgSdTNdeFb2_PEd5N5Sy_yd_A-XfLP0LCaTJSJHlM-JHY8"
-  },
-  {
-   "token_address": "GKEHgd7jrCda4E8U5EReSTANGPG3DCjyRkQN4zBWpump",
-   "symbol": "ROTTAI",
-   "ts": "2026-11-03T07:52:49",
-   "t": 1793692369.0,
-   "mcap": 9735.252189825644,
-   "whale_usd": 100.28390699999727,
-   "whale_type": "kol",
-   "wallet": "pPvjMFMbgYswhC0K8wVsLD4uIQlxhbbWN-UJX_5F8qa4YkEei-tuFZNju3q5TQM_DYDkgdGRlb76u0Y8qvsP0e2esVksB0wz"
-  },
-  {
-   "token_address": "DGTRwmxvW4k7JvD2k5LDhrDq136QBjuQ8ikHnkuopump",
-   "symbol": "pls",
-   "ts": "2026-11-03T07:53:28",
-   "t": 1793692408.0,
-   "mcap": 5846.106887474889,
-   "whale_usd": 125.88116885440104,
-   "whale_type": "kol",
-   "wallet": "CwJv4B8eeeEVEYeRWDtI64iSb533JcP9xtWbWtpTfaLmFw8IIsqgSdTNdeFb2_PEd5N5Sy_yd_A-XfLP0LCaTJSJHlM-JHY8"
-  },
-  {
-   "token_address": "J1pZjNKh4BnbXBsroE4acJv3TYzCGxTn46VrZii6orEZ",
-   "symbol": "XDG",
-   "ts": "2026-11-03T07:54:59",
-   "t": 1793692499.0,
-   "mcap": 107668.57303678968,
-   "whale_usd": 847.6358889251416,
-   "whale_type": "kol",
-   "wallet": "VbISUA7Cdugdlc_NTPCJqPp1zI_lXAuWZRUWGO8nuBpRugIEOvLpJJyyKkhSFO4eTeE41Y0GBRdCpGhQyJMFZ94WZuZY8wM7"
-  },
-  {
    "token_address": "J2ftCjfu7MGejUKqJvecymH8Pgsd5tUwpNJUvbyGpump",
    "symbol": "\u0e23\u0e16\u0e44\u0e16",
    "ts": "2026-11-03T07:57:07",
@@ -45682,6 +45632,76 @@
    "significance": "noise",
    "pct_port": 0.002308403841029736,
    "views": 11
+  },
+  {
+   "token_address": "7tRqzDMMYpVzfzSogLH6yQ2eFCrYPVUdeAZf4Hx6pump",
+   "symbol": "gifcoin",
+   "ts": "2026-11-05T02:58:00",
+   "t": 1793847480.0,
+   "mcap": 20679.315639372813,
+   "whale_usd": 146.78746032714844,
+   "whale_type": "kol",
+   "wallet": "3N-lusEVT1NJztwphQbQycde9R-D4KXJsf3JniVgQtyXJ4WBEmmxAmK1XrnrT1P3tcQN223Wru9WPF0KtFSiKztFoOKRrMhF",
+   "n_wallets30": 4,
+   "significance": "noise",
+   "pct_port": 0.009794831953594305,
+   "views": 26
+  },
+  {
+   "token_address": "9FCjRfsuH4ziTqE39dH2wjcpRF5necYUKYpoNtCFdwKE",
+   "symbol": "MOSQUE",
+   "ts": "2026-11-05T02:59:50",
+   "t": 1793847590.0,
+   "mcap": 9173.445505439304,
+   "whale_usd": 595.0447528496079,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.004768059352932968,
+   "views": 13
+  },
+  {
+   "token_address": "6sBvfTnThBPUQsEWjiXdgCnHwxGZfEDqegtVu4vLpump",
+   "symbol": "WANTED",
+   "ts": "2026-11-05T03:00:44",
+   "t": 1793847644.0,
+   "mcap": 34486.24311223515,
+   "whale_usd": 497.7524261474609,
+   "whale_type": "whale",
+   "wallet": "eM60GxCUhJ4I1pBb_Gsjt7lk2qerkJ3oKwxzQo5GRz5GWgojyJXca4EArLWbd62LlXtLOPrFiz3w0gNXdLq-1FUKMdrxfL0e",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0009526691533587273,
+   "views": 31
+  },
+  {
+   "token_address": "8HH2BU3ioNWoA4kx9YGDMRu7DMxjLmq5dRz34Buepump",
+   "symbol": "MID",
+   "ts": "2026-11-05T03:01:41",
+   "t": 1793847701.0,
+   "mcap": 7108.994395821355,
+   "whale_usd": 301.2433247271765,
+   "whale_type": "kol",
+   "wallet": "EtmAUZWjIn2VcnKQCY1lQLKxSy_M4V-7mNT1K42WKKQCe-P5Kz1m-zD47MFoJO1pE4j_A_z-v83lXrIlGsNLLvh9VZ2oLnr8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010196046289079051,
+   "views": 16
+  },
+  {
+   "token_address": "5UimpcLU4iXeWMcPHDsuiFZuANR5oocDpLYHLgKvzeFB",
+   "symbol": "MOSQUE",
+   "ts": "2026-11-05T03:02:38",
+   "t": 1793847758.0,
+   "mcap": 8343.754416273441,
+   "whale_usd": 204.81423978131716,
+   "whale_type": "kol",
+   "wallet": "EtmAUZWjIn2VcnKQCY1lQLKxSy_M4V-7mNT1K42WKKQCe-P5Kz1m-zD47MFoJO1pE4j_A_z-v83lXrIlGsNLLvh9VZ2oLnr8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.007106950612045613,
+   "views": 14
   }
  ],
  "last_retarget": 1793843171.9409761
