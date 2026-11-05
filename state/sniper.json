@@ -10121,16 +10121,6 @@
  ],
  "observed": [
   {
-   "token_address": "B3UB8mFHBgKCHbf1bHsW4QorUR9bvuVXcZNaX8V4pump",
-   "symbol": "Thesis",
-   "ts": "2026-11-04T01:25:59",
-   "t": 1793755559.0,
-   "mcap": 5139.4945330685005,
-   "whale_usd": 125.46343635763186,
-   "whale_type": "kol",
-   "wallet": "455Jf_0W_5F64fZ6gx57tUmKrnLZ08FeAjuPQP7BYN5nTeRJhMm046rpy_8yT7Al-CxMrBXZJfrfEDV_AlGpmw9-Dlb84CJT"
-  },
-  {
    "token_address": "FZnSMd1hPu5MVgttmtfDZUPN5gcuexvrh3CB67UuQshb",
    "symbol": "HELIA",
    "ts": "2026-11-04T01:26:32",
@@ -51272,6 +51262,20 @@
    "significance": "major",
    "pct_port": 0.134738506766284,
    "views": 18
+  },
+  {
+   "token_address": "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump",
+   "symbol": "OTC",
+   "ts": "2026-11-05T19:11:23",
+   "t": 1793905883.0,
+   "mcap": 4870817.704241104,
+   "whale_usd": 998.8999710083008,
+   "whale_type": "whale",
+   "wallet": "vPhpcgys3LVPoXRrtjNTOcZK4u7sxzu-ikNWUOSNQLQ7ryVDVCPWVXdM6_CxqGcah1Yh9_5BMAdsaAAV6Qh_OPSv6j4RA7ms",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 1566
   }
  ],
  "last_retarget": 1793903162.752738
