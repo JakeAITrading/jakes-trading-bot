@@ -8743,19 +8743,30 @@
    },
    "expected_avg_pct": 5.4,
    "expected_trades_in_samples": 96.0
+  },
+  {
+   "at": "2026-11-05T06:14:50Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.2,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 5.7,
+   "expected_trades_in_samples": 93.0
   }
  ],
  "observed": [
-  {
-   "token_address": "9E3tAqWKnCMSvRaQCdumB2DLjrBx1e4xUH8LzabMBraP",
-   "symbol": "thicc",
-   "ts": "2026-11-03T18:30:59",
-   "t": 1793730659.0,
-   "mcap": 24590.748580521904,
-   "whale_usd": 462.32530127377584,
-   "whale_type": "kol",
-   "wallet": "VH5PVM0DzQmeTy4IGQzobBnIpAbG4oJg5p4WkzJ_iyVtt-cUuDnctDAggoLWo0JD452ItzKnsS3XpPt7igmNUgObL_TFagK0"
-  },
   {
    "token_address": "A74Mf7x6q6BJmoVR7hLXedPeYwY5eB8NnrtMQezCvCsH",
    "symbol": "Bingus",
@@ -46809,6 +46820,20 @@
    "significance": "major",
    "pct_port": 0.1280824876924256,
    "views": 10
+  },
+  {
+   "token_address": "E1PpVMPtWPhPUKL7DbF6f2eAmuwo3CHBkKusKk54pump",
+   "symbol": "ZELDA",
+   "ts": "2026-11-05T06:17:05",
+   "t": 1793859425.0,
+   "mcap": 53597.81294348664,
+   "whale_usd": 679.5850219726562,
+   "whale_type": "whale",
+   "wallet": "ZwLSaqBPQ-apWDoxAGJgVgff8uM1MBuoeCWA5rIfig8NfRXRV0Yq8MODBOxUpw8zv_2Ymw__hPpa_mjXKDzzED5Ij2E0zDE=",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.03957960332806076,
+   "views": 65
   }
  ],
  "last_retarget": 1793858688.9553745
