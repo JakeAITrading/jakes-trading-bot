@@ -9373,29 +9373,30 @@
    },
    "expected_avg_pct": 1.1,
    "expected_trades_in_samples": 112.0
+  },
+  {
+   "at": "2026-11-05T11:06:18Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.08,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.4,
+    "min_mcap": 50000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "kol",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 0.9,
+   "expected_trades_in_samples": 106.0
   }
  ],
  "observed": [
-  {
-   "token_address": "JcPLcB4WN61b2i6cZctiXW2R9AYCAKCQo6tqFVNpump",
-   "symbol": "Pog",
-   "ts": "2026-11-03T19:49:40",
-   "t": 1793735380.0,
-   "mcap": 6423.762897611596,
-   "whale_usd": 276.70065208641904,
-   "whale_type": "kol",
-   "wallet": "YaMDtbWTI39780oyvIsOUTKNt4teivKxxv-SfAff5TQ-KmhvUSiROF5tEkgWGX_w75UjKtI3wEKNgOlwNV0OI9QGtgKXMcib"
-  },
-  {
-   "token_address": "6V7cF52p3eSkRuoVXnAryWVwoyS775DERenYPMMYBPxS",
-   "symbol": "POINTFARMC",
-   "ts": "2026-11-03T19:50:10",
-   "t": 1793735410.0,
-   "mcap": 28421.163864014216,
-   "whale_usd": 600.0,
-   "whale_type": "whale",
-   "wallet": "jZOPC93OVMak6cpiaQeypV_ysdLnle1ixt53Ev0P9LQbAdt34AJD0UlR6h0nGzf4y36kLApS7527kaswHt_1dd3FtW5kzfZ5"
-  },
   {
    "token_address": "FfH6zeDiDYjySz4npwSzT2iwkezyJpopfS8JFvEVpump",
    "symbol": "Relic",
@@ -48119,6 +48120,34 @@
    "significance": "notable",
    "pct_port": 0.06305143836391876,
    "views": 243
+  },
+  {
+   "token_address": "FPpFmAzL1YXm7tCSrTpAnLpNzecds2dLomrRSTFVpump",
+   "symbol": "ButtOn",
+   "ts": "2026-11-05T11:04:59",
+   "t": 1793876699.0,
+   "mcap": 17149.443194,
+   "whale_usd": 199.0,
+   "whale_type": "kol",
+   "wallet": "nw9tVoA-Q_dDCqWAz3l3XXVfHm8fuCwqION0nC7aFQ7fxynlOxSwhSKU4eNhdRvDNH_UZTpXljakIVQ1HCDep63lpX8Oh_o=",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.14062414873062262,
+   "views": 24
+  },
+  {
+   "token_address": "GJAFwWjJ3vnTsrQVabjBVK2TYB1YtRCQXRDfDgUnpump",
+   "symbol": "ACT",
+   "ts": "2026-11-05T11:08:14",
+   "t": 1793876894.0,
+   "mcap": 8621820.850963036,
+   "whale_usd": 4804.562769332086,
+   "whale_type": "whale",
+   "wallet": "4nmjwEQvQ40aTeQoFHmOjP0cp4vFDEXvxqSglhtxqOlR9P0GqwqxlYGaMvlTeNKZFFJMVUv8Lp3Oy5LxgO13OKDz1h_EC260",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.9923999001265542,
+   "views": 389
   }
  ],
  "last_retarget": 1793874973.9205902
