@@ -9583,19 +9583,30 @@
    },
    "expected_avg_pct": 9.4,
    "expected_trades_in_samples": 53.0
+  },
+  {
+   "at": "2026-11-05T12:43:32Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 200000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "whale",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 13.8,
+   "expected_trades_in_samples": 32.0
   }
  ],
  "observed": [
-  {
-   "token_address": "C6NniJqUMTMhGGgr1RNyDsUgbLQwrLfrxhm8kG3opump",
-   "symbol": "WENLAMBO",
-   "ts": "2026-11-03T20:21:35",
-   "t": 1793737295.0,
-   "mcap": 61943.629159558004,
-   "whale_usd": 186.71226818860328,
-   "whale_type": "kol",
-   "wallet": "ImG9GRnAMAk3_QViHbYq1QBaGd6qg0xUB8UNrvsEMbyQHADhBisWYGlccgyVFAfZGu1eJRuuzMw1dDxse0VJCgJRwmx1fb-L"
-  },
   {
    "token_address": "7jMWD4oDUkDEmhien1JngPKGq7nEiUXHLhZyP2YMpump",
    "symbol": "Chickens",
@@ -48557,6 +48568,20 @@
    "significance": "notable",
    "pct_port": 0.05685752482521518,
    "views": 87
+  },
+  {
+   "token_address": "52e9K9NtXT9m6yX4ykfKE4WuGc8uocjTNuvfsHbWpump",
+   "symbol": "Bank",
+   "ts": "2026-11-05T12:46:01",
+   "t": 1793882761.0,
+   "mcap": 96258.7668250676,
+   "whale_usd": 281.73041258913577,
+   "whale_type": "kol",
+   "wallet": "--Rq1Do2VPldJYHa94pqYfzFIJh_BnF85G_QhgPacTH6tnOwSv1qMZTbXSpaLVFCua-H-6-c_EoaQhRx4ie7BVZFd-lSlLg=",
+   "n_wallets30": 3,
+   "significance": "notable",
+   "pct_port": 0.034800031560508586,
+   "views": 152
   }
  ],
  "last_retarget": 1793880387.7972512
