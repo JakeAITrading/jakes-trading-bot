@@ -8638,19 +8638,30 @@
    },
    "expected_avg_pct": 14.7,
    "expected_trades_in_samples": 74.0
+  },
+  {
+   "at": "2026-11-05T05:24:43Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 500000,
+    "min_whale_usd": 500,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 13.5,
+   "expected_trades_in_samples": 71.0
   }
  ],
  "observed": [
-  {
-   "token_address": "GDLwAiq9CgCoxVmrpABsjsqv3bjmABaYL7VhWfuqZDvN",
-   "symbol": "MEMESTOCK",
-   "ts": "2026-11-03T18:16:30",
-   "t": 1793729790.0,
-   "mcap": 6058.449798729271,
-   "whale_usd": 129.17764866571488,
-   "whale_type": "kol",
-   "wallet": "wswQ5LRJFYPuaQnvlzSIwusbAylIIc8JafcIO6TsjwFMufDOLJVoyigmvBfQ8mXcblJh---wM-7XWe7y8dF4D3gdgmAPDAu3"
-  },
   {
    "token_address": "EbZ4LcjeHmt24RKdAQtwmXyMSx348ZgTUaau9Ctac2u1",
    "symbol": "inu",
@@ -46560,6 +46571,20 @@
    "significance": "noise",
    "pct_port": 0.014466228818136442,
    "views": 10
+  },
+  {
+   "token_address": "HsZXb9rppRQarZHHCvuLkKP7sAKPMCwrarf5KTTcpump",
+   "symbol": "Lucia",
+   "ts": "2026-11-05T05:20:51",
+   "t": 1793856051.0,
+   "mcap": 339379.4763670474,
+   "whale_usd": 473.4814949279724,
+   "whale_type": "whale",
+   "wallet": "UaoKVSrzglnqnmXK8bNJe69BFe1SUQYew7mlhYxTr-CpjPS2xP0UcIlTKubXucmGwNO9dUWlzBD8p6Ru2WefwYJYZPe03A4v",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.021360215748765003,
+   "views": 38
   }
  ],
  "last_retarget": 1793855079.035782
