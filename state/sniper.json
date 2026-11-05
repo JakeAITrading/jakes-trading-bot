@@ -9016,19 +9016,30 @@
    },
    "expected_avg_pct": 6.0,
    "expected_trades_in_samples": 65.0
+  },
+  {
+   "at": "2026-11-05T08:22:02Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.2,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.2,
+    "min_mcap": 200000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "whale",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 9.5,
+   "expected_trades_in_samples": 50.0
   }
  ],
  "observed": [
-  {
-   "token_address": "HhUauBWXhWXesMo9iYKqak7UhTAeibND7Npjsi7Mpump",
-   "symbol": "Bichler",
-   "ts": "2026-11-03T19:04:38",
-   "t": 1793732678.0,
-   "mcap": 5916.685950069223,
-   "whale_usd": 400.1951675805158,
-   "whale_type": "kol",
-   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf"
-  },
   {
    "token_address": "G33uXh4BbYHFWGcN8uaLMdWXDRZwswAMGm7vGmYupump",
    "symbol": "REPUBLICAN",
@@ -47345,6 +47356,20 @@
    "n_wallets30": 1,
    "significance": "noise",
    "pct_port": 0.005298813652307034,
+   "views": 15
+  },
+  {
+   "token_address": "4SNjyFjTE9EAXtAvDhSnAG3ugeRGTyaYyZ7uRxedpump",
+   "symbol": "SHORT",
+   "ts": "2026-11-05T08:19:55",
+   "t": 1793866795.0,
+   "mcap": 13142.423995304853,
+   "whale_usd": 349.04998779296875,
+   "whale_type": "kol",
+   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.01677628454205773,
    "views": 15
   }
  ],
