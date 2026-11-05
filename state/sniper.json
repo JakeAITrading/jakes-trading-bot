@@ -10097,26 +10097,6 @@
  ],
  "observed": [
   {
-   "token_address": "BARShnLDrwEmRV9FKK1fCRkm592eMQYDSJgFMvqg2Kwb",
-   "symbol": "BARS",
-   "ts": "2026-11-04T00:28:37",
-   "t": 1793752117.0,
-   "mcap": 9852.577932178974,
-   "whale_usd": 183.88912170545544,
-   "whale_type": "kol",
-   "wallet": "Cgs4m7efROs_797VdLlSiD0b9A4FTOGkuDF_Nfd_YUU7uHXzrtL6tgr25FM_5we8JcbixvWf3weAf1JU34_KcFV_V5Rb25bx"
-  },
-  {
-   "token_address": "37gLowuHZZ6tF44gXqsnS6VBw9kGdfnqffxdTjmfLoat",
-   "symbol": "PAIR",
-   "ts": "2026-11-04T00:28:46",
-   "t": 1793752126.0,
-   "mcap": 22777.845515520312,
-   "whale_usd": 455.125576448565,
-   "whale_type": "kol",
-   "wallet": "O0FKzJhcP5S-8wrEC5jG4R4e7iiwVuVZpzmAxVqgiHCLDSVXIWbfJ5Iz_tcvm1WraZK0j5ekoyDcTj2rOzXLYY8Rj_hIsyPx"
-  },
-  {
    "token_address": "HV5dDHodf46zXunYAPbYpYs7THtrriiptqzczHKvpump",
    "symbol": "dumocrats",
    "ts": "2026-11-04T00:29:05",
@@ -50871,6 +50851,34 @@
    "significance": "notable",
    "pct_port": 0.05571065942473831,
    "views": 18
+  },
+  {
+   "token_address": "4sWNB8zGWHkh6UnmwiEtzNxL4XrN7uK9tosbESbJFfVs",
+   "symbol": "xSOL",
+   "ts": "2026-11-05T18:14:09",
+   "t": 1793902449.0,
+   "mcap": 8364922.947255573,
+   "whale_usd": 1046.5570079926401,
+   "whale_type": "whale",
+   "wallet": "2Ox4sl9O98Nv5gTr8gud2kh-X9SLK9GfFq682HN2Lu-WNRBmSpF4LTNLeQmb_z9BphpyXWRJw7SgQ86JYGaTbBK8d5HPzsCe",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 373
+  },
+  {
+   "token_address": "5izkW6J9Kp1Ph9P72J8YxYN9qpybMeZusd4M37hFpump",
+   "symbol": "gatito",
+   "ts": "2026-11-05T18:14:11",
+   "t": 1793902451.0,
+   "mcap": 16652.533304295503,
+   "whale_usd": 297.5593882949979,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010381632518663397,
+   "views": 16
   }
  ],
  "last_retarget": 1793899114.4308112
