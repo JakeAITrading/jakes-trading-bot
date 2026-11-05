@@ -10173,20 +10173,6 @@
  ],
  "observed": [
   {
-   "token_address": "AVxETM6mCa5S5NFpNZrjJRLDUwtoATDvG2EQB6Q9pump",
-   "symbol": "WOKE",
-   "ts": "2026-11-04T04:15:21",
-   "t": 1793765721.0,
-   "mcap": 27654.27882003756,
-   "whale_usd": 899.0251562765835,
-   "whale_type": "trader",
-   "wallet": "jFZSmVa9jRtbCwE72Pvie14zkrbAdYLsXoqOqDkSH1k9Se3xXDV5XLvNbXAn6xac5fITdAn3Ro4J5MAgWOiH4oxG45qIzzIp",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.022360898540736657,
-   "views": 866
-  },
-  {
    "token_address": "6QUHcqYuiPRHxhnYZoygewXtNQr9kUrhc9Tmwgtbpump",
    "symbol": "RAM",
    "ts": "2026-11-04T04:15:36",
@@ -52171,6 +52157,20 @@
    "significance": "noise",
    "pct_port": 0.0010616431181622217,
    "views": 663
+  },
+  {
+   "token_address": "6QHZp9d2xBQmiSTimFe5caVRrrEjrWAoB1RhSDvkpump",
+   "symbol": "X59",
+   "ts": "2026-11-05T21:11:23",
+   "t": 1793913083.0,
+   "mcap": 5061.253887106432,
+   "whale_usd": 131.40599918365479,
+   "whale_type": "whale",
+   "wallet": "WWbaBfrXk7qkEHi5zgW0FYklNdRaW0w-4xyYtSnoX1RBeifDObmOWK7dD7K0CnIYWsgkdOHs0i9-CeW3vqpps6yhVA8mGZsg",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.010375860181149466,
+   "views": 17
   }
  ],
  "last_retarget": 1793912373.2918365
