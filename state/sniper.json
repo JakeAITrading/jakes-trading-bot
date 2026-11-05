@@ -8995,19 +8995,30 @@
    },
    "expected_avg_pct": 6.0,
    "expected_trades_in_samples": 65.0
+  },
+  {
+   "at": "2026-11-05T08:12:01Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.2,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "whale",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 6.0,
+   "expected_trades_in_samples": 65.0
   }
  ],
  "observed": [
-  {
-   "token_address": "27rsHtbDEVgZ8nqSQUX3QaF5u38X2UkwTbKLdr8cs7j6",
-   "symbol": "I&M",
-   "ts": "2026-11-03T19:00:07",
-   "t": 1793732407.0,
-   "mcap": 13326.37020823313,
-   "whale_usd": 241.98216456233118,
-   "whale_type": "kol",
-   "wallet": "MzSuI275EvoggN-6RJVAU85P-Pc81znaR-GljhWXxL-fFAJYTIY4lJpZwhqONBCrDp_ip6BvPnb7dri9sGVR1RUUznOMcBcH"
-  },
   {
    "token_address": "GKfxbrZJNzVgVEoJurJjV8C3qvfuWMHhKsz8AqnQXUBY",
    "symbol": "MAYA",
@@ -47309,6 +47320,20 @@
    "significance": "notable",
    "pct_port": 0.046175271389852474,
    "views": 20
+  },
+  {
+   "token_address": "7y5RFCQTjRGEuwCo4hNpy5dKgWnWFnicMuJR8Rr2CTvU",
+   "symbol": "AIRDROP",
+   "ts": "2026-11-05T08:11:16",
+   "t": 1793866276.0,
+   "mcap": 18279.222435875385,
+   "whale_usd": 214.04942321777344,
+   "whale_type": "whale",
+   "wallet": "0W3dyMysmUU6WE9yvFlgGTLw6WjKySSZT8_pJHBwQO1D1HYAYAsROtdVSDY1lUkn6aRDIR2v7BnofZvSmiXZM6LYxxn8Ip4a",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.018322316252355367,
+   "views": 15
   }
  ],
  "last_retarget": 1793862712.2230513
