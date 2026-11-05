@@ -8890,29 +8890,30 @@
    },
    "expected_avg_pct": 8.8,
    "expected_trades_in_samples": 50.0
+  },
+  {
+   "at": "2026-11-05T07:21:54Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.25,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": null,
+    "min_mcap": 20000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "whale",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 7.9,
+   "expected_trades_in_samples": 57.0
   }
  ],
  "observed": [
-  {
-   "token_address": "FqBVbBeoxJfLi5corNFsrDG54SFfBfFwjqtjgZK8pump",
-   "symbol": "ENTRY",
-   "ts": "2026-11-03T18:45:50",
-   "t": 1793731550.0,
-   "mcap": 26973.819331033155,
-   "whale_usd": 490.0,
-   "whale_type": "whale",
-   "wallet": "YowFoju218ofW7RoFwtLNs8d6nKIBPA1-9Fv-oNL9TCghz-8-xk3d-dpwn0cP0ErekGAMSUD-BaMUXXWDymoDBMYcTIKKsll"
-  },
-  {
-   "token_address": "5gMmofmv9vU9Ya7pMLMRDYsPhoP2d5bHHHh3qeSd4CM1",
-   "symbol": "THICC",
-   "ts": "2026-11-03T18:45:57",
-   "t": 1793731557.0,
-   "mcap": 60189.089708728716,
-   "whale_usd": 180.89814001635798,
-   "whale_type": "whale",
-   "wallet": "_HyCm_uPIp4NTjVKlKKaKIkZP2fIeMplm8Kqsuq2ZpBB2juRIQfkpNzZ9IA2WgQKallEcjginhmEg9xuPo1hhvjOvpCEq-wP"
-  },
   {
    "token_address": "FLK5Cp8U3hTZS4y7uAUULyFCy2REkjzSKfSWSqKvqQWq",
    "symbol": "FATCOIN",
@@ -47080,6 +47081,34 @@
    "significance": "major",
    "pct_port": 0.1951374392291656,
    "views": 11
+  },
+  {
+   "token_address": "8JE8SbNyVeBfF5BYpEyk5zdXxUYkQjxyyh4VuiDYpump",
+   "symbol": "JW3",
+   "ts": "2026-11-05T07:20:51",
+   "t": 1793863251.0,
+   "mcap": 18920.616639661603,
+   "whale_usd": 418.3610578775806,
+   "whale_type": "kol",
+   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI=",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.06717490964500519,
+   "views": 138
+  },
+  {
+   "token_address": "8upv7s9NasqQuvVfqiBH9gEADQGx4fXQNRRKcXFwiyUw",
+   "symbol": "SLAB",
+   "ts": "2026-11-05T07:22:24",
+   "t": 1793863344.0,
+   "mcap": 13467.36098639667,
+   "whale_usd": 335.94116753084995,
+   "whale_type": "kol",
+   "wallet": "Ss4QHG6qJRTLUzVj4Kfr1_WYgeeynb2UW67MVrHz5YZuKxQGB6OK9goyhhfPDTW--MyJu3AQ5f1k8acO5lU5ccEz72GmRiSo",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.005729807902091445,
+   "views": 13
   }
  ],
  "last_retarget": 1793862712.2230513
