@@ -9436,19 +9436,30 @@
    },
    "expected_avg_pct": 0.8,
    "expected_trades_in_samples": 103.0
+  },
+  {
+   "at": "2026-11-05T11:36:21Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.08,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.4,
+    "min_mcap": 50000,
+    "max_mcap": 10000000,
+    "min_whale_usd": 100,
+    "whale_type": "kol",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 1.1,
+   "expected_trades_in_samples": 127.0
   }
  ],
  "observed": [
-  {
-   "token_address": "6Na6huTtPekKeeJpmtpq8mw2ZVAC2qCaRBj8KeB4pump",
-   "symbol": "Sexbot",
-   "ts": "2026-11-03T19:59:47",
-   "t": 1793735987.0,
-   "mcap": 11949.68444906408,
-   "whale_usd": 368.89766986406397,
-   "whale_type": "kol",
-   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI="
-  },
   {
    "token_address": "7G4RVdSCfaKSJ2maJkJMrhyuSmFpEHzSgUWoPn6Vpump",
    "symbol": "Pumpsalot",
@@ -48258,6 +48269,20 @@
    "significance": "major",
    "pct_port": 9.84421978167798,
    "views": 5629
+  },
+  {
+   "token_address": "98HEU4TvXB3xjB1t15fgxHwYDLUH4fDomvp2DCzJpump",
+   "symbol": "LEEROY",
+   "ts": "2026-11-05T11:39:50",
+   "t": 1793878790.0,
+   "mcap": 579417.5618915184,
+   "whale_usd": 337.0202331542969,
+   "whale_type": "kol",
+   "wallet": "RAeOuTcU_xWS09TwujXkaPh8ntUVyOYsEVSCAfWTBJLyTQniSzGuQluniShQmIXnaldaMdEPQCMB1M0Jnj4Jwvt-saSf-VmD",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.003467750582275819,
+   "views": 17654
   }
  ],
  "last_retarget": 1793874973.9205902
