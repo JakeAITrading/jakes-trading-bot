@@ -9478,6 +9478,27 @@
    },
    "expected_avg_pct": 3.1,
    "expected_trades_in_samples": 30.0
+  },
+  {
+   "at": "2026-11-05T11:56:23Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.08,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 100,
+    "whale_type": "kol",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 0.6,
+   "expected_trades_in_samples": 52.0
   }
  ],
  "observed": [
