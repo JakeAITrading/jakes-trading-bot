@@ -8239,29 +8239,30 @@
    },
    "expected_avg_pct": 15.6,
    "expected_trades_in_samples": 101.0
+  },
+  {
+   "at": "2026-11-05T02:16:17Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 13.1,
+   "expected_trades_in_samples": 113.0
   }
  ],
  "observed": [
-  {
-   "token_address": "5Zn8AUV1QSVYYSzfQ5sY7i7AaxQRvsZK4JEb5p8Tpump",
-   "symbol": "perpetual",
-   "ts": "2026-11-03T06:12:45",
-   "t": 1793686365.0,
-   "mcap": 6943.608241272159,
-   "whale_usd": 159.35451496190484,
-   "whale_type": "kol",
-   "wallet": "YaMDtbWTI39780oyvIsOUTKNt4teivKxxv-SfAff5TQ-KmhvUSiROF5tEkgWGX_w75UjKtI3wEKNgOlwNV0OI9QGtgKXMcib"
-  },
-  {
-   "token_address": "EcCpMnjc3wJQrCKSsyrzyJiXRwY6AZPLzSaWR2bPpump",
-   "symbol": "GTAFY",
-   "ts": "2026-11-03T06:17:18",
-   "t": 1793686638.0,
-   "mcap": 37753.62711166963,
-   "whale_usd": 1354.485378,
-   "whale_type": "whale",
-   "wallet": "-nJUcWL1miGXmddlWrWDfFhwP1OgrH-BbGmg-HFh9D1Fzticdw5KbrXgRV7M4GWYPl985AuGOgv_oI05rqny_Zt6r74TQM8="
-  },
   {
    "token_address": "Ebih1KdijjpQBaM83gUfGhRtTCpHzDkBZhCZedZwpump",
    "symbol": "Firecube",
@@ -45393,6 +45394,34 @@
    "significance": "noise",
    "pct_port": 0.002588985052008324,
    "views": 793
+  },
+  {
+   "token_address": "88JgZHVfWtdfhXqZbgb4ZniwSQ3UWnGh2Qv882mxmece",
+   "symbol": "FED",
+   "ts": "2026-11-05T02:19:02",
+   "t": 1793845142.0,
+   "mcap": 49951.893522305916,
+   "whale_usd": 1147.1497401989732,
+   "whale_type": "kol",
+   "wallet": "J30hLEGvqDDsyrQQ43jFwp3wTpMJ-yBETcPln1BL0PmOcVCn9kzhN3vVxNiozwjWf5p3-d0ZfYi6B_lpyuExnugAb5QjkjhJ",
+   "n_wallets30": 4,
+   "significance": "noise",
+   "pct_port": 0.019943740422776347,
+   "views": 147
+  },
+  {
+   "token_address": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "ts": "2026-11-05T02:19:44",
+   "t": 1793845184.0,
+   "mcap": 2299928.7630785243,
+   "whale_usd": 2985.1878662109375,
+   "whale_type": "whale",
+   "wallet": "atQjMCoNhNeevZn2Pt6qJN8Abm9uuWKi1e6LdEA3He7cBiNVyA-J4X3xiX1OF3EILDDNoTUH0CbsXxkM4BcgveBfrTJxN8WP",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.15572251902296086,
+   "views": 1098
   }
  ],
  "last_retarget": 1793843171.9409761
