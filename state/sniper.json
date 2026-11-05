@@ -9226,19 +9226,30 @@
    },
    "expected_avg_pct": 10.3,
    "expected_trades_in_samples": 44.0
+  },
+  {
+   "at": "2026-11-05T09:59:05Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.2,
+    "min_mcap": 200000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 250,
+    "whale_type": "whale",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 12.7,
+   "expected_trades_in_samples": 47.0
   }
  ],
  "observed": [
-  {
-   "token_address": "HuWrWRfatNZYcwh1jau2c8aDgHti3VLNJJoKKURopump",
-   "symbol": "GIVE",
-   "ts": "2026-11-03T19:28:11",
-   "t": 1793734091.0,
-   "mcap": 19184.00448630564,
-   "whale_usd": 152.44992899999988,
-   "whale_type": "whale",
-   "wallet": "rOpEYX9kwY0V2T7jr0J530KygrwZpkfNlVYpyEq4oav2jQXuoIPu0IxhF_r_tQgrEJn1urz-IEz-eHQ6SI0AP0GrRBWBDWws"
-  },
   {
    "token_address": "46gMMX6N3tAyZ9fMUwaaGK97u7kgJ8W9ArHZ2vsMpump",
    "symbol": "GTA$",
@@ -47780,6 +47791,20 @@
    "significance": "notable",
    "pct_port": 0.07336928580248392,
    "views": 16
+  },
+  {
+   "token_address": "upemvD1VNhN3ChCA1cvMHBEVArAjgM1AJT6Kbgqpump",
+   "symbol": "LINK",
+   "ts": "2026-11-05T09:56:43",
+   "t": 1793872603.0,
+   "mcap": 13087.124898381002,
+   "whale_usd": 191.85299602307956,
+   "whale_type": "kol",
+   "wallet": "Cgs4m7efROs_797VdLlSiD0b9A4FTOGkuDF_Nfd_YUU7uHXzrtL6tgr25FM_5we8JcbixvWf3weAf1JU34_KcFV_V5Rb25bx",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.023102237712226976,
+   "views": 24
   }
  ],
  "last_retarget": 1793870941.263696
