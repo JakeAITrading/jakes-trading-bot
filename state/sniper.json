@@ -8680,29 +8680,30 @@
    },
    "expected_avg_pct": 8.1,
    "expected_trades_in_samples": 74.0
+  },
+  {
+   "at": "2026-11-05T05:44:48Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.2,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 1000000,
+    "min_whale_usd": 500,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 5.6,
+   "expected_trades_in_samples": 98.0
   }
  ],
  "observed": [
-  {
-   "token_address": "4qzaxAJAin2LMy6TzbhqvSS6hoYLjgFiB8X8FMWjGMFt",
-   "symbol": "FLOATER",
-   "ts": "2026-11-03T18:21:29",
-   "t": 1793730089.0,
-   "mcap": 22531.556169269606,
-   "whale_usd": 179.39515752806977,
-   "whale_type": "whale",
-   "wallet": "KOcl8Wq3q5-YsnDpCnJp4pq3sQMuYFctYOcbXiCP1WuLKTlppOrSsYAew4CXwf6UNQFG_tj7sxxYQjWjI4W5T8dMeNlMN__u"
-  },
-  {
-   "token_address": "BBsSQjftvX7wPMaJgvD5b3YZRm2xKaEuJRnz7jx3pump",
-   "symbol": "GUS",
-   "ts": "2026-11-03T18:22:42",
-   "t": 1793730162.0,
-   "mcap": 8592.570338805672,
-   "whale_usd": 370.128303561852,
-   "whale_type": "kol",
-   "wallet": "O0FKzJhcP5S-8wrEC5jG4R4e7iiwVuVZpzmAxVqgiHCLDSVXIWbfJ5Iz_tcvm1WraZK0j5ekoyDcTj2rOzXLYY8Rj_hIsyPx"
-  },
   {
    "token_address": "G1sPgsNMMfEY8ebZUd6ioQyUmyo8Z93FUqG3xfQdpump",
    "symbol": "stocky",
@@ -46650,6 +46651,34 @@
    "significance": "noise",
    "pct_port": 0.003041207992363728,
    "views": 167
+  },
+  {
+   "token_address": "WecNBsywJKQLGfBKZzBSix3ykXJ11DfAGUiXCLypair",
+   "symbol": "PAIRS",
+   "ts": "2026-11-05T05:41:17",
+   "t": 1793857277.0,
+   "mcap": 80709.01821930964,
+   "whale_usd": 199.0,
+   "whale_type": "kol",
+   "wallet": "qF2aQ-9y7hFR6J1IbZQlFSF2_H550Yh4NJI3tmtAnvrKkTUfWfc2sswrTwrseRslM2IDdG_6JSSWFqMt8Ob0UXSH7XtKELQb",
+   "n_wallets30": 2,
+   "significance": "major",
+   "pct_port": 0.5757940366183613,
+   "views": 368
+  },
+  {
+   "token_address": "8QtbrC9d3BezyCwzBFUQbNsWJGte7ckrZ7HWcn81pump",
+   "symbol": "DICKBUTTIFIER",
+   "ts": "2026-11-05T05:42:56",
+   "t": 1793857376.0,
+   "mcap": 81406.18029127752,
+   "whale_usd": 236.73080227667705,
+   "whale_type": "kol",
+   "wallet": "--Rq1Do2VPldJYHa94pqYfzFIJh_BnF85G_QhgPacTH6tnOwSv1qMZTbXSpaLVFCua-H-6-c_EoaQhRx4ie7BVZFd-lSlLg=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.028089595754151635,
+   "views": 55
   }
  ],
  "last_retarget": 1793855079.035782
