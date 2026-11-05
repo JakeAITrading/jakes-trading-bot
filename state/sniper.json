@@ -9499,29 +9499,30 @@
    },
    "expected_avg_pct": 0.6,
    "expected_trades_in_samples": 52.0
+  },
+  {
+   "at": "2026-11-05T12:06:27Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.1,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.2,
+    "min_mcap": 50000,
+    "max_mcap": 250000,
+    "min_whale_usd": 100,
+    "whale_type": "kol",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 2.6,
+   "expected_trades_in_samples": 36.0
   }
  ],
  "observed": [
-  {
-   "token_address": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
-   "symbol": "CHOO",
-   "ts": "2026-11-03T20:06:58",
-   "t": 1793736418.0,
-   "mcap": 4233367.187040788,
-   "whale_usd": 466.12265123952,
-   "whale_type": "whale",
-   "wallet": "e7PlkHObus--VijfcWBL2zPYLb468tijIILWNo1uChEkgISVKcQmbjFtm0GKorrI8T3mNYZwcRAfSlRFMrIoN-DMY3egtQuS"
-  },
-  {
-   "token_address": "4CDJEhhXiC4Js7CzF8jDSa9wWEom5pfQEXMEPxvXpump",
-   "symbol": "SEXBOT",
-   "ts": "2026-11-03T20:07:10",
-   "t": 1793736430.0,
-   "mcap": 7353.542514465516,
-   "whale_usd": 295.3537887592829,
-   "whale_type": "kol",
-   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI="
-  },
   {
    "token_address": "AoaLDnNayfoNjP3SzLevDm4eXusE5edZpGhqQbZtBAQa",
    "symbol": "MAG",
@@ -48377,6 +48378,34 @@
    "significance": "noise",
    "pct_port": 0.014863257106474381,
    "views": 15
+  },
+  {
+   "token_address": "D3nNiCTSxPz1TMGJoDPMGqhGnyvCWAw9xAcWpfbtpump",
+   "symbol": "Lily",
+   "ts": "2026-11-05T12:02:50",
+   "t": 1793880170.0,
+   "mcap": 14880.15641371021,
+   "whale_usd": 389.04998779296875,
+   "whale_type": "kol",
+   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.007961085423170788,
+   "views": 10
+  },
+  {
+   "token_address": "FZs4YUPyD5sMzUv5fwiWBQx3s9Nzgvw62g8ytohwpump",
+   "symbol": "LILY",
+   "ts": "2026-11-05T12:04:41",
+   "t": 1793880281.0,
+   "mcap": 71150.705880987,
+   "whale_usd": 471.84949396357626,
+   "whale_type": "whale",
+   "wallet": "Efk40y7uAgxqttm-x6CHT0Wyw55z3Eoelh4kkwkTVceBTqw8sDsUZSgJoTJ5-OwvMONWfhcXVk0RZ-ka-Rd_h3KTx6bRRXJC",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.002662335870719016,
+   "views": 117
   }
  ],
  "last_retarget": 1793874973.9205902
