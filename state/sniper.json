@@ -8789,16 +8789,6 @@
  ],
  "observed": [
   {
-   "token_address": "crgTf7zikDydbQqagxgKS4aeJKKeL9MescP7wbhErN3",
-   "symbol": "ELON",
-   "ts": "2026-11-03T18:34:52",
-   "t": 1793730892.0,
-   "mcap": 33252.29408801533,
-   "whale_usd": 278.189624526759,
-   "whale_type": "kol",
-   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU"
-  },
-  {
    "token_address": "AbkZJK4cNfkH5bmPPdSR7GhFAZEtWpwkLT3RTH2Hpump",
    "symbol": "HYPE",
    "ts": "2026-11-03T18:37:01",
@@ -46883,6 +46873,20 @@
    "significance": "notable",
    "pct_port": 0.039730385488965236,
    "views": 11
+  },
+  {
+   "token_address": "CgV1JKA9iqoRGRobWFKZ4CYDEP8mAYe1k78jz8XKpump",
+   "symbol": "ZELDA",
+   "ts": "2026-11-05T06:30:00",
+   "t": 1793860200.0,
+   "mcap": 9756.250619830098,
+   "whale_usd": 152.35702436698375,
+   "whale_type": "whale",
+   "wallet": "4PvDVZ1bckrvs1CHiEeo3oPo57JG7pjb6VsmUO1zwYrOVzKY4cdzsC79NCKKzjWWvaWBgCGhKzqz7fq4agt-raYzR4PKVEpN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.003921302076860825,
+   "views": 16
   }
  ],
  "last_retarget": 1793858688.9553745
