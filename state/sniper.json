@@ -9083,16 +9083,6 @@
  ],
  "observed": [
   {
-   "token_address": "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump",
-   "symbol": "PsyopAnime",
-   "ts": "2026-11-03T19:07:52",
-   "t": 1793732872.0,
-   "mcap": 520591.0713673088,
-   "whale_usd": 451.4721510500347,
-   "whale_type": "whale",
-   "wallet": "3ybK_rNTSWNIc1-eKuZKTIMRLtSy0ST6ydAJMlaSMCheTuo6j_JiCdTX2K9QOX_pIWYvYIrfUuFWD8qcAKeZkhEAGcVfIFtk"
-  },
-  {
    "token_address": "DB4hmy6UXCyq5Musv66k7QcJYQyFDAkaeURwiaYj3yap",
    "symbol": "YAP",
    "ts": "2026-11-03T19:08:01",
@@ -47449,6 +47439,20 @@
    "significance": "notable",
    "pct_port": 0.03856823584425315,
    "views": 33
+  },
+  {
+   "token_address": "98HEU4TvXB3xjB1t15fgxHwYDLUH4fDomvp2DCzJpump",
+   "symbol": "LEEROY",
+   "ts": "2026-11-05T08:41:36",
+   "t": 1793868096.0,
+   "mcap": 307847.2019652953,
+   "whale_usd": 383.40326862931033,
+   "whale_type": "whale",
+   "wallet": "8FfJsKdjEHwLfNLJ7-HEPe58cgXXEmBcmfzhVk9obUofcudgdlSLgDsZ2hifBYgwMEUfcsZiGDWZ-aYqcV00fXBJ3hCX8bOw",
+   "n_wallets30": 2,
+   "significance": "major",
+   "pct_port": 0.4302526563587306,
+   "views": 14777
   }
  ],
  "last_retarget": 1793867336.1491938
