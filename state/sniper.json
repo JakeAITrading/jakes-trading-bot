@@ -8428,19 +8428,30 @@
    },
    "expected_avg_pct": 12.3,
    "expected_trades_in_samples": 127.0
+  },
+  {
+   "at": "2026-11-05T03:43:20Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.25,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": 0.1,
+    "min_mcap": 50000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 5.4,
+   "expected_trades_in_samples": 147.0
   }
  ],
  "observed": [
-  {
-   "token_address": "8DB8Fw5UiC1AzugQAfRyw3qL8omw772LJbdehNWhpump",
-   "symbol": "OMBRO",
-   "ts": "2026-11-03T09:28:37",
-   "t": 1793698117.0,
-   "mcap": 230674.29027612126,
-   "whale_usd": 231.26661901430032,
-   "whale_type": "kol",
-   "wallet": "CwJv4B8eeeEVEYeRWDtI64iSb533JcP9xtWbWtpTfaLmFw8IIsqgSdTNdeFb2_PEd5N5Sy_yd_A-XfLP0LCaTJSJHlM-JHY8"
-  },
   {
    "token_address": "82CfUnavgMwUzY1UkUnWpqKMRPqoBuSb15VnEjn1yx9a",
    "symbol": "MONEKO",
@@ -45934,6 +45945,20 @@
    "significance": null,
    "pct_port": null,
    "views": 699
+  },
+  {
+   "token_address": "9FPaHZYYNtzqQjhLSwee9X9mo1xjjVnRCUWQxaa5pump",
+   "symbol": "GS",
+   "ts": "2026-11-05T03:42:55",
+   "t": 1793850175.0,
+   "mcap": 6390.78507447266,
+   "whale_usd": 255.96050284710145,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.003559361295282872,
+   "views": 20
   }
  ],
  "last_retarget": 1793843171.9409761
