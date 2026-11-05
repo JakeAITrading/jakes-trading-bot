@@ -9247,49 +9247,30 @@
    },
    "expected_avg_pct": 12.7,
    "expected_trades_in_samples": 47.0
+  },
+  {
+   "at": "2026-11-05T10:09:06Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.2,
+    "min_mcap": 200000,
+    "max_mcap": 500000,
+    "min_whale_usd": 250,
+    "whale_type": "whale",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 17.2,
+   "expected_trades_in_samples": 32.0
   }
  ],
  "observed": [
-  {
-   "token_address": "CDTAv6Zym4At2pyJ4Bxbf8L5fsVGWpeVWY29r8mKpqrT",
-   "symbol": "ZOL",
-   "ts": "2026-11-03T19:30:01",
-   "t": 1793734201.0,
-   "mcap": 5483.493168867426,
-   "whale_usd": 128.71900743367794,
-   "whale_type": "kol",
-   "wallet": "wswQ5LRJFYPuaQnvlzSIwusbAylIIc8JafcIO6TsjwFMufDOLJVoyigmvBfQ8mXcblJh---wM-7XWe7y8dF4D3gdgmAPDAu3"
-  },
-  {
-   "token_address": "J3c6JWsSx5dxtZoEHcex7UWJvgaXNARz6ru2Ue57VsxD",
-   "symbol": "ZOL",
-   "ts": "2026-11-03T19:30:14",
-   "t": 1793734214.0,
-   "mcap": 9047.57598618744,
-   "whale_usd": 184.54337983322998,
-   "whale_type": "kol",
-   "wallet": "O0FKzJhcP5S-8wrEC5jG4R4e7iiwVuVZpzmAxVqgiHCLDSVXIWbfJ5Iz_tcvm1WraZK0j5ekoyDcTj2rOzXLYY8Rj_hIsyPx"
-  },
-  {
-   "token_address": "7R6AYvHyU5MyaTt5MPtRdt2daRUKedvCz8CXZkaspump",
-   "symbol": "OPOL",
-   "ts": "2026-11-03T19:31:04",
-   "t": 1793734264.0,
-   "mcap": 23282.171241589822,
-   "whale_usd": 495.64130042108275,
-   "whale_type": "whale",
-   "wallet": "wUj0RIXCIblHxbdd3mao2GLgIO5_dfwaG9hRsPXdyKhhZdpUsE_NTn0OOlswsb6HpIdvxE7vYjbRIlzc6IFmPrVLshjQxdS0"
-  },
-  {
-   "token_address": "8eAjzUDZsxXZWFpidSvCFzZHjzzVEFkJypwmEfCSDWsm",
-   "symbol": "ZOL",
-   "ts": "2026-11-03T19:31:11",
-   "t": 1793734271.0,
-   "mcap": 5034.749847254716,
-   "whale_usd": 131.2181400969944,
-   "whale_type": "kol",
-   "wallet": "WaStOFfnaOYFk4AL7mNTiMAaSvbobx_5aETuXM9nt21cl1UVhoPwMGN_KDH1DLsEwrBZvyHYLFL-gZ9K9CGHmimiBzkBhgjX"
-  },
   {
    "token_address": "4hFPbnzMNfMwntNennv9g58zJvgQNqwTq8fsULQvpump",
    "symbol": "BRO",
@@ -47817,6 +47798,62 @@
    "significance": "major",
    "pct_port": 0.12642337164292908,
    "views": 38
+  },
+  {
+   "token_address": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+   "symbol": "CHOO",
+   "ts": "2026-11-05T10:06:55",
+   "t": 1793873215.0,
+   "mcap": 3672754.1128622685,
+   "whale_usd": 2000.0,
+   "whale_type": "kol",
+   "wallet": "-qUDlbvuwZY1nLxvpJnUMT8wxnzSVdYoQN26K-Fz8E5VmPltejtqZro6are9iUeywo-6Hht5Ga1l6netHVSmIo5lhkKWLdgc",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 5999
+  },
+  {
+   "token_address": "Fb9LY9CPGEbenHGTfEvu9FYPga9wci9ucfcor6A4HtKy",
+   "symbol": "INUDEX",
+   "ts": "2026-11-05T10:07:37",
+   "t": 1793873257.0,
+   "mcap": 21694.626411772333,
+   "whale_usd": 134.1732737841126,
+   "whale_type": "kol",
+   "wallet": "Jgk6u8010Zl_T7MwB8ovNr6BiS5srLnACMAqu7ua1tKnNSI7d2_qANpdtbf8zdYpwGrSjJhbDqtCJSS65EWhvlDQNbZnaLTF",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.05977110099675637,
+   "views": 19
+  },
+  {
+   "token_address": "DFNnZi7mLegSKFhipUa964Z1DdLRKmggTr1vUhtwH6Bi",
+   "symbol": "STONKLANA",
+   "ts": "2026-11-05T10:09:40",
+   "t": 1793873380.0,
+   "mcap": 22040.358075305878,
+   "whale_usd": 115.4707546234131,
+   "whale_type": "whale",
+   "wallet": "hn07cVOal46LUbLSozVGQV60bhUiRSUeAK2_aYir66_S38wkaQZKFrcYTVCABLJZyjYw6fPzXdoZZYmTkTwBzG-QLxEucjd8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0022297737033521742,
+   "views": 85
+  },
+  {
+   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
+   "symbol": "AMD",
+   "ts": "2026-11-05T10:10:38",
+   "t": 1793873438.0,
+   "mcap": 966528.7009977069,
+   "whale_usd": 2970.0,
+   "whale_type": "whale",
+   "wallet": "oYRrNrtfQ0EdTVjFdjwLqjLYQGVc3UN0pbpPohU086VCYVMAHohzI1kxVMDWNZG7t2A4-q9eYHKQzrXisQdgo4b2sV9lrdY0",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.032212543754182775,
+   "views": 13670
   }
  ],
  "last_retarget": 1793870941.263696
