@@ -8596,29 +8596,30 @@
    },
    "expected_avg_pct": 10.8,
    "expected_trades_in_samples": 86.0
+  },
+  {
+   "at": "2026-11-05T05:04:39Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": 0.4,
+    "min_mcap": 100000,
+    "max_mcap": 500000,
+    "min_whale_usd": 250,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 12.2,
+   "expected_trades_in_samples": 78.0
   }
  ],
  "observed": [
-  {
-   "token_address": "8MUGC84gVy2LXaxQjjyQhzrSbfhWS4rxsQA5XJvgpump",
-   "symbol": "Ballsack",
-   "ts": "2026-11-03T18:10:57",
-   "t": 1793729457.0,
-   "mcap": 8983.49844646873,
-   "whale_usd": 112.72791950891866,
-   "whale_type": "kol",
-   "wallet": "3N-lusEVT1NJztwphQbQycde9R-D4KXJsf3JniVgQtyXJ4WBEmmxAmK1XrnrT1P3tcQN223Wru9WPF0KtFSiKztFoOKRrMhF"
-  },
-  {
-   "token_address": "7BVfgy6AtYGCEfzYj248ThexUk9aA748WrfibSiBF7N2",
-   "symbol": "SI",
-   "ts": "2026-11-03T18:10:59",
-   "t": 1793729459.0,
-   "mcap": 20787.99661830999,
-   "whale_usd": 112.674503,
-   "whale_type": "kol",
-   "wallet": "3N-lusEVT1NJztwphQbQycde9R-D4KXJsf3JniVgQtyXJ4WBEmmxAmK1XrnrT1P3tcQN223Wru9WPF0KtFSiKztFoOKRrMhF"
-  },
   {
    "token_address": "9WhUirbgTigT5ds9PX5YFxY74iCzLueFSRLjwdh4mxBD",
    "symbol": "STONKER",
@@ -46454,7 +46455,35 @@
    "significance": "notable",
    "pct_port": 0.035226704723082466,
    "views": 13
+  },
+  {
+   "token_address": "3tCqfDYkNgQYHFQEf99KGX9sKeD4gpNSxMZ8zADzpump",
+   "symbol": "STEAK",
+   "ts": "2026-11-05T05:03:44",
+   "t": 1793855024.0,
+   "mcap": 28369.748150980802,
+   "whale_usd": 214.0850136083136,
+   "whale_type": "kol",
+   "wallet": "--Rq1Do2VPldJYHa94pqYfzFIJh_BnF85G_QhgPacTH6tnOwSv1qMZTbXSpaLVFCua-H-6-c_EoaQhRx4ie7BVZFd-lSlLg=",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.007203771541982614,
+   "views": 64
+  },
+  {
+   "token_address": "22r9JGoWRBYc4Z1pkSFw8p2tdjefS2ZZshw1vr8bBC2K",
+   "symbol": "STONKS",
+   "ts": "2026-11-05T05:03:56",
+   "t": 1793855036.0,
+   "mcap": 562174.0672221342,
+   "whale_usd": 1174.1694784094216,
+   "whale_type": "whale",
+   "wallet": "KOcl8Wq3q5-YsnDpCnJp4pq3sQMuYFctYOcbXiCP1WuLKTlppOrSsYAew4CXwf6UNQFG_tj7sxxYQjWjI4W5T8dMeNlMN__u",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.45380068276727836,
+   "views": 8088
   }
  ],
- "last_retarget": 1793851402.7940607
+ "last_retarget": 1793855079.035782
 }
