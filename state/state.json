@@ -2,20 +2,11 @@
  "bought_today_usd": 10.0,
  "day": "2026-11-05",
  "last_traded": {
-  "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-05T00:03:33.992387+00:00",
+  "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-05T05:30:26.948179+00:00",
   "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "2026-11-03T22:41:29.717004+00:00",
   "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T02:59:00.283087+00:00"
  },
- "paper": {
-  "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": {
-   "entry_price": 0.0027278007473796606,
-   "opened_at": "2026-11-05T00:03:33.992457+00:00",
-   "stop_loss": 0.0010911202989518642,
-   "symbol": "CLAUDIA",
-   "take_profit": 0.005455601494759321,
-   "usd": 10.0
-  }
- },
+ "paper": {},
  "paper_closed": [
   {
    "closed_at": "2026-11-04T02:59:00.283059+00:00",
@@ -28,6 +19,19 @@
    "symbol": "CATE",
    "take_profit": 0.0764654353260994,
    "token_address": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+   "usd": 10.0
+  },
+  {
+   "closed_at": "2026-11-05T05:30:26.948145+00:00",
+   "entry_price": 0.0027278007473796606,
+   "exit_price": 0.002591310767456889,
+   "exit_reason": "smart money selling",
+   "opened_at": "2026-11-05T00:03:33.992457+00:00",
+   "pnl_usd": -0.5004,
+   "stop_loss": 0.0010911202989518642,
+   "symbol": "CLAUDIA",
+   "take_profit": 0.005455601494759321,
+   "token_address": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
    "usd": 10.0
   }
  ]
