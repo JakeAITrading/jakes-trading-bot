@@ -44084,6 +44084,20 @@
    "significance": "noise",
    "pct_port": 0.0032969309891532047,
    "views": 10
+  },
+  {
+   "token_address": "9Bu1SsQ2wUQ4T8zwUXCnoJKNJvxDwFP8UyuxS7p1pump",
+   "symbol": "WLFI",
+   "ts": "2026-11-05T01:07:41",
+   "t": 1793840861.0,
+   "mcap": 8716.221600479912,
+   "whale_usd": 400.295305,
+   "whale_type": "whale",
+   "wallet": "Fuo6s5IKsSMtjwKYbUKzhXlvbU0Rid53vak8dUEW47REio3LRUiqCDLYYwZ7AJmEZqOwL1G9ptS-7zf4iK5hS4ZgU2ku4e_B",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0012007449985864094,
+   "views": 18
   }
  ],
  "last_retarget": 1793836187.6947646
