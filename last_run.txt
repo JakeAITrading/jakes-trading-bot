@@ -1,1 +1,1 @@
-2026-11-05T17:47:00Z practice: no trades
+2026-11-05T17:52:37Z FAILED: Moby tool error: Error executing tool get_my_balances: The Moby API did not respond in time. This is transient. Wait a few seconds before trying again rather than immediately repeating the call.
