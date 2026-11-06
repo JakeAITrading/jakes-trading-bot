@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "DQvjwgUk7tmcQ9xuVSyvu5UGyR2HUdkUDovkH2qPa2SX",
-   "symbol": "Gooncoin",
-   "ts": "2026-11-04T22:57:26",
-   "t": 1793833046.0,
-   "mcap": 6107.56296737236,
-   "whale_usd": 149.05,
-   "whale_type": "kol",
-   "wallet": "4HqKGsfyUrogtZfkb5Y5Fn9ceCoF3ZPhJKmUAo5p4uphusLK3bP9qBC8pC4wksOmBawdJ3FMtBC5Wjo-g6m5KLoVHQUvxxNK",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.016143714849890335,
-   "views": 20
-  },
-  {
-   "token_address": "LWSYx94hV8NaFujStsqRZNsd1V8PkasADLTfiWjbfix",
-   "symbol": "FIX",
-   "ts": "2026-11-04T22:57:44",
-   "t": 1793833064.0,
-   "mcap": 112839.27208837064,
-   "whale_usd": 224.23126402136492,
-   "whale_type": "whale",
-   "wallet": "ySKG0sOD08yAjxafc-CsJX2mlB_53Q2nsf57ZnFf1pNCKQSDsFP9CR6ZThxRPA8ymscgwlSqfznGOvKkILmnVo6pa5iU5b-t",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.004842170374408671,
-   "views": 1184
-  },
-  {
    "token_address": "jTQ5g1JdhwXAh3iZ6DVd1ZcnqEsQrxAbWV5pAJYpump",
    "symbol": "ATTENTION",
    "ts": "2026-11-04T22:58:28",
@@ -52353,6 +52325,34 @@
    "significance": "noise",
    "pct_port": 0.015577784986548647,
    "views": 12
+  },
+  {
+   "token_address": "75BBkeZo96XCyDSUqCE5wZvqAsZC8u2zZASBBZ7wpump",
+   "symbol": "Monster",
+   "ts": "2026-11-06T20:14:17",
+   "t": 1793996057.0,
+   "mcap": 7745.9872045437805,
+   "whale_usd": 116.08835033006045,
+   "whale_type": "whale",
+   "wallet": "4PvDVZ1bckrvs1CHiEeo3oPo57JG7pjb6VsmUO1zwYrOVzKY4cdzsC79NCKKzjWWvaWBgCGhKzqz7fq4agt-raYzR4PKVEpN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.003054763749886444,
+   "views": 73
+  },
+  {
+   "token_address": "75bvfitEbxJpMTiEFcNRpSiR6w44XURVqnsmqy2apump",
+   "symbol": "Mover",
+   "ts": "2026-11-06T20:14:17",
+   "t": 1793996057.0,
+   "mcap": 5562.2276704525575,
+   "whale_usd": 135.0520892797649,
+   "whale_type": "kol",
+   "wallet": "455Jf_0W_5F64fZ6gx57tUmKrnLZ08FeAjuPQP7BYN5nTeRJhMm046rpy_8yT7Al-CxMrBXZJfrfEDV_AlGpmw9-Dlb84CJT",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.01036307832274324,
+   "views": 10
   }
  ],
  "last_retarget": 1793992612.2189195
