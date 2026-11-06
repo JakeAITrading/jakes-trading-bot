@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
-   "symbol": "PIRATE",
-   "ts": "2026-11-05T00:28:30",
-   "t": 1793838510.0,
-   "mcap": 68654.77759086013,
-   "whale_usd": 376.8381850795538,
-   "whale_type": "kol",
-   "wallet": "f5FR4_1XE4ljpJ9A4oErYt-LKwzBNGhOJGxSprQ9xtFbt1_EAJtnpRMauZYbBj3XmwRxhpIenMzBG6pOQkOnhhPnlbPBYFFq",
-   "n_wallets30": 1,
-   "significance": "major",
-   "pct_port": 0.30877094285916024,
-   "views": 877
-  },
-  {
    "token_address": "8aVoa9d2T9V4LKBvunGa471vgtZ2a3k5VN2euATipump",
    "symbol": "BATMAN",
    "ts": "2026-11-05T00:28:48",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.0002987979783261934,
    "views": 10
+  },
+  {
+   "token_address": "9L6CJjKtH88fBpSytqvRuze1RcB4ivPRFuNwDbV7pump",
+   "symbol": "Gamestock",
+   "ts": "2026-11-06T21:37:47",
+   "t": 1794001067.0,
+   "mcap": 6996.026513661491,
+   "whale_usd": 461.356046695073,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0019926400248551045,
+   "views": 11
   }
  ],
  "last_retarget": 1793996646.6069508
