@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "Qxm2HTFTM3yp175pxhK1Nm8kMYRBfBY3wddATEupump",
-   "symbol": "DIF",
-   "ts": "2026-11-05T03:29:06",
-   "t": 1793849346.0,
-   "mcap": 6652.221145486692,
-   "whale_usd": 130.4655829471476,
-   "whale_type": "kol",
-   "wallet": "Jgk6u8010Zl_T7MwB8ovNr6BiS5srLnACMAqu7ua1tKnNSI7d2_qANpdtbf8zdYpwGrSjJhbDqtCJSS65EWhvlDQNbZnaLTF",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.036812653637077246,
-   "views": 12
-  },
-  {
    "token_address": "E96jDgZjG8EWpzuDZntGH1wFRKBw3RvJmJjDPn83pump",
    "symbol": "DIF",
    "ts": "2026-11-05T03:29:09",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.009071502164189687,
    "views": 11
+  },
+  {
+   "token_address": "4V5U6TCB3QUoeHNf7cFaQzT1m79DdZadG1Jhh33fLoat",
+   "symbol": "Casino",
+   "ts": "2026-11-06T23:55:07",
+   "t": 1794009307.0,
+   "mcap": 51699.86780801324,
+   "whale_usd": 677.6420288085938,
+   "whale_type": "kol",
+   "wallet": "ibrSABs1xJP8w10hqp_SxWWQf2BJZKMO8VjXHgkbsLbrcrZ7G8sKgtOv1Vby9eQALrOxXFqXo_-SeLUZjFhVWwRnoRyUmjS8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.007449053760276498,
+   "views": 103
   }
  ],
  "last_retarget": 1794002771.422254
