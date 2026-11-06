@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "EjAvrinzCVfxp91cMRxLZcEqgNRvqw9zxovgpVtLJmq1",
-   "symbol": "MORTGAGE",
-   "ts": "2026-11-04T21:34:28",
-   "t": 1793828068.0,
-   "mcap": 7325.551905523753,
-   "whale_usd": 363.52751474709555,
-   "whale_type": "kol",
-   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI=",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.008183748530069822,
-   "views": 13
-  },
-  {
    "token_address": "6ZXySbfVYAciEzZzNao4LJisKMmpZBHSyHNri9r7pump",
    "symbol": "ALOW",
    "ts": "2026-11-04T21:34:41",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.001622319292324288,
    "views": 16
+  },
+  {
+   "token_address": "GT7wXqoYTgS2LycKCaB2XBoAMVjf1X4zPXd3T3zjpump",
+   "symbol": "AAC",
+   "ts": "2026-11-06T18:45:42",
+   "t": 1793990742.0,
+   "mcap": 6233.656677068211,
+   "whale_usd": 384.1065979003906,
+   "whale_type": "kol",
+   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.004079017438285169,
+   "views": 20
   }
  ],
  "last_retarget": 1793989005.0567324
