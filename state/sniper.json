@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "H79KHjMkRjZNn8tHCeggZmAVPg1Z5iH1i6XdJ94vWnvz",
-   "symbol": "Trump",
-   "ts": "2026-11-04T17:31:58",
-   "t": 1793813518.0,
-   "mcap": 9160.311492451001,
-   "whale_usd": 135.44036607461746,
-   "whale_type": "kol",
-   "wallet": "UBXCUwFZuscEon55DlRmDf0CdvlMZYCmD5R77N5WaQhRXmsmWQorlHp2mDA0Nk1Utg-0dBJHyuMMkWhAokFoG1Z7Zh-nOrEN",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.014467362160463687,
-   "views": 11
-  },
-  {
    "token_address": "WtQjoWZvmBkcsBfZJWD91bj8NQGh4j3vKHK9jRfpump",
    "symbol": "MAGA",
    "ts": "2026-11-04T17:32:23",
@@ -52353,6 +52339,20 @@
    "significance": null,
    "pct_port": null,
    "views": 1388
+  },
+  {
+   "token_address": "H34gDq8qHC5Ux6WCip9EawdSVz6h6SNk68DUi2ispump",
+   "symbol": "lad",
+   "ts": "2026-11-06T10:14:57",
+   "t": 1793960097.0,
+   "mcap": 7898.926924099214,
+   "whale_usd": 200.00000762939453,
+   "whale_type": "kol",
+   "wallet": "xDHn1DL5BtIh41oFYpg_-YrLxZhhR9HPMBXkYfyzLt6jPZ4_4ArIhwwIRyfmRDm9UJxeRYj7aA2kilnBJP0xon50BlXrPrdm",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.005072279684024402,
+   "views": 11
   }
  ],
  "last_retarget": 1793953830.59327
