@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "HmANFmkTXT8b4Jox5pNTuX5wEcBXhHufNB8i2fXGpump",
-   "symbol": "Meaningless",
-   "ts": "2026-11-04T17:16:02",
-   "t": 1793812562.0,
-   "mcap": 6733.674581482774,
-   "whale_usd": 142.4134005408675,
-   "whale_type": "whale",
-   "wallet": "B2mWOC7CpMDN7l-Q3aNs-ilBJwM7a5iiDO-sT9pcCwbd6DaE38D8NW5kWOxWLjCjG9z-zx_WKb6YBy0TrTEjDne_Nu8-KndF",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.00737056367263676,
-   "views": 18
-  },
-  {
    "token_address": "6VMScJ8VKeiKe4JcCXigEe1k3WycMhVaCoPKArQGpump",
    "symbol": "Groyper",
    "ts": "2026-11-04T17:18:42",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.01868300216034845,
    "views": 10
+  },
+  {
+   "token_address": "FNp2Hit1bpYfskkW2CaWbW9tTVis4wb3qMjEZ8E4pump",
+   "symbol": "UK",
+   "ts": "2026-11-06T09:34:06",
+   "t": 1793957646.0,
+   "mcap": 13349.70147581771,
+   "whale_usd": 365.6120389340358,
+   "whale_type": "kol",
+   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.01807334136978368,
+   "views": 17
   }
  ],
  "last_retarget": 1793953830.59327
