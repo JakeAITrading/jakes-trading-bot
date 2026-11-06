@@ -10329,20 +10329,6 @@
  ],
  "observed": [
   {
-   "token_address": "4B2tozkkGyofZ1ocW1hqb5CL6ViJbKMdSLQdLiUQV3kB",
-   "symbol": "MSFT",
-   "ts": "2026-11-04T15:12:28",
-   "t": 1793805148.0,
-   "mcap": 6357.75697111,
-   "whale_usd": 195.42240054983026,
-   "whale_type": "kol",
-   "wallet": "535SgN9hinUhrPVBELoYK4ibQUvYCYCA073zSgu9l7xXzvHEbKDY27pLRTBeNe9yW72DYycDuxpqGtdhYbnzH9Vag5cBtV91",
-   "n_wallets30": 1,
-   "significance": null,
-   "pct_port": null,
-   "views": 19
-  },
-  {
    "token_address": "3pnvX8y8L9BEhSiR8xj92GLNTstaZ7tL1yiNRi4Upump",
    "symbol": "TRUMP",
    "ts": "2026-11-04T15:12:45",
@@ -52327,6 +52313,20 @@
    "significance": "noise",
    "pct_port": 0.006858637097402711,
    "views": 11
+  },
+  {
+   "token_address": "5VCEFq1aATjga39QtDunYjJqYBx67w8V8TXwHrqopump",
+   "symbol": "Diamond",
+   "ts": "2026-11-06T03:37:58",
+   "t": 1793936278.0,
+   "mcap": 397801.8181900496,
+   "whale_usd": 683.3709868656297,
+   "whale_type": "whale",
+   "wallet": "Oq2ScWppZfPbOnFTp--rXw6XiLN0fJIFYFS_q781raqMONLNUJkDOscIWPpkR6fY8ciZrjO_22iMVUt1Rt5zr5Z-dr8kZlQ2",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.047811477641048546,
+   "views": 3204
   }
  ],
  "last_retarget": 1793935735.3804464
