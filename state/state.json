@@ -4,19 +4,10 @@
  "last_traded": {
   "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-05T05:30:26.948179+00:00",
   "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "2026-11-03T22:41:29.717004+00:00",
-  "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": "2026-11-06T00:03:59.957694+00:00",
+  "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": "2026-11-06T13:38:01.449086+00:00",
   "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T02:59:00.283087+00:00"
  },
- "paper": {
-  "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": {
-   "entry_price": 0.001144658774137497,
-   "opened_at": "2026-11-06T00:03:59.957707+00:00",
-   "stop_loss": 0.0010301928967237472,
-   "symbol": "Macca",
-   "take_profit": 0.0014880564063787462,
-   "usd": 10.0
-  }
- },
+ "paper": {},
  "paper_closed": [
   {
    "closed_at": "2026-11-04T02:59:00.283059+00:00",
@@ -42,6 +33,19 @@
    "symbol": "CLAUDIA",
    "take_profit": 0.005455601494759321,
    "token_address": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+   "usd": 10.0
+  },
+  {
+   "closed_at": "2026-11-06T13:38:01.449017+00:00",
+   "entry_price": 0.001144658774137497,
+   "exit_price": 0.0011105165671,
+   "exit_reason": "smart money selling",
+   "opened_at": "2026-11-06T00:03:59.957707+00:00",
+   "pnl_usd": -0.2983,
+   "stop_loss": 0.0010301928967237472,
+   "symbol": "Macca",
+   "take_profit": 0.0014880564063787462,
+   "token_address": "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump",
    "usd": 10.0
   }
  ]
