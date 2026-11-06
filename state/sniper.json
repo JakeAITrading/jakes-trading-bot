@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "GXiE8EhkUs3EbiTqNmj1CqxDroSRhcv6wKY355xEJ7zW",
-   "symbol": "LYTMUS",
-   "ts": "2026-11-04T17:15:14",
-   "t": 1793812514.0,
-   "mcap": 6532.4479692208115,
-   "whale_usd": 200.0,
-   "whale_type": "kol",
-   "wallet": "BWHcpAh__MKre6HDAX65R0qe3UUOkmeIBi3Fwxzs4EoIrLPDOEeOZ-JfCY7_xFvZpMz34P07PwbQbyWAKxQfIIO4A-3UgeaD",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.05919741094309323,
-   "views": 12
-  },
-  {
    "token_address": "HtavaLE9Dqhp6B3cUTvgDebtkPZ6YcDaY8WN3sukJGgi",
    "symbol": "Republicannon",
    "ts": "2026-11-04T17:15:46",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.0023548155898752924,
    "views": 13
+  },
+  {
+   "token_address": "B64vH5Ve4iKmzztYbKyNL9s2ZujV2KPQdFZVL8UJpump",
+   "symbol": "Tampon",
+   "ts": "2026-11-06T09:24:53",
+   "t": 1793957093.0,
+   "mcap": 6108.516572567169,
+   "whale_usd": 149.0500030517578,
+   "whale_type": "kol",
+   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0014575452099596141,
+   "views": 18
   }
  ],
  "last_retarget": 1793953830.59327
