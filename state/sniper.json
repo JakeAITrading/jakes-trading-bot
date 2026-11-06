@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "8tzxpoLmNx4ih3i4wGZA7aiKo4VMiQ5doUgvh3XMpump",
-   "symbol": "Adonitology",
-   "ts": "2026-11-04T16:48:39",
-   "t": 1793810919.0,
-   "mcap": 11217.628525628243,
-   "whale_usd": 191.59002376806598,
-   "whale_type": "kol",
-   "wallet": "RRjke89vZYbG_qGzOUse7E_h-r3aoysSwtr_0cf1etE8fHxXhk2pdjbIc4nsbw85ogKeNX-P_2BffRlyZ7WwcvPjv9EPzgvP",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.002542428358083881,
-   "views": 13
-  },
-  {
    "token_address": "2BfVg5Hyn4bHgdBXVdZyDMs5tqh5o4Ke9tLFMN9B3tBA",
    "symbol": "Toad",
    "ts": "2026-11-04T16:48:51",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.09152805773691151,
    "views": 108
+  },
+  {
+   "token_address": "4mkTArBkoLQfeMP8Qj6S3pebCEs1NMtpjM4UFGpbpump",
+   "symbol": "MarsCoin",
+   "ts": "2026-11-06T07:11:34",
+   "t": 1793949094.0,
+   "mcap": 7258.089681272395,
+   "whale_usd": 338.91472669313225,
+   "whale_type": "kol",
+   "wallet": "s112i534SlY2NglbqHcefLasQCnDxo97DlPQMzvLly540SgGFHzsOI1RP7zk9TKqILL4AObvVHgTrAqi_9_kWHhIoeOQQ9oc",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.16995772264543216,
+   "views": 20
   }
  ],
  "last_retarget": 1793947388.108075
