@@ -4053,27 +4053,6 @@
  ],
  "learning_log": [
   {
-   "at": "2026-11-04T09:08:15Z",
-   "new_samples": 40,
-   "live_samples": 600,
-   "settings": {
-    "take_profit": 0.4,
-    "limit_cushion": 0.0,
-    "max_runup": 1.0,
-    "max_spike": null,
-    "min_mcap": 100000,
-    "max_mcap": 1000000,
-    "min_whale_usd": 500,
-    "whale_type": "any",
-    "require_known": false,
-    "min_wallet_win": 0.0,
-    "max_wallets30": null,
-    "min_views": 0
-   },
-   "expected_avg_pct": 12.6,
-   "expected_trades_in_samples": 128.0
-  },
-  {
    "at": "2026-11-04T09:18:10Z",
    "new_samples": 40,
    "live_samples": 600,
@@ -10351,37 +10330,30 @@
    },
    "expected_avg_pct": 34.2,
    "expected_trades_in_samples": 18.0
+  },
+  {
+   "at": "2026-11-06T09:50:35Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.5,
+    "limit_cushion": 0.0,
+    "max_runup": null,
+    "max_spike": 0.2,
+    "min_mcap": 200000,
+    "max_mcap": 250000,
+    "min_whale_usd": 100,
+    "whale_type": "kol",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 36.0,
+   "expected_trades_in_samples": 21.0
   }
  ],
  "observed": [
-  {
-   "token_address": "4umLGSdhW61ysawhs3BtA61dhUPa4FTrHDyCTNMFpump",
-   "symbol": "AP",
-   "ts": "2026-11-04T17:23:58",
-   "t": 1793813038.0,
-   "mcap": 5053.905169916106,
-   "whale_usd": 143.205142810536,
-   "whale_type": "kol",
-   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
-   "n_wallets30": 1,
-   "significance": "major",
-   "pct_port": 2.0409062672652993,
-   "views": 15
-  },
-  {
-   "token_address": "5TRYYGdXb2heyByotCBYahr34x7n1ZgMAG1tHsh6U8iH",
-   "symbol": "Greg",
-   "ts": "2026-11-04T17:24:25",
-   "t": 1793813065.0,
-   "mcap": 13179.012057662476,
-   "whale_usd": 147.13387963649595,
-   "whale_type": "kol",
-   "wallet": "wswQ5LRJFYPuaQnvlzSIwusbAylIIc8JafcIO6TsjwFMufDOLJVoyigmvBfQ8mXcblJh---wM-7XWe7y8dF4D3gdgmAPDAu3",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.033012192618859904,
-   "views": 13
-  },
   {
    "token_address": "HxTKBVoLgSFFTXiuH6ik9GzCnKM8qiTRTPPKS3m2pump",
    "symbol": "AF",
@@ -52353,6 +52325,34 @@
    "significance": "noise",
    "pct_port": 0.014500795071081825,
    "views": 82
+  },
+  {
+   "token_address": "9PACXELBxKFDNcHjAnMcXjZiAXyYNjXBWiNtmVsCRpP5",
+   "symbol": "LIMMY",
+   "ts": "2026-11-06T09:49:50",
+   "t": 1793958590.0,
+   "mcap": 18007.9550773371,
+   "whale_usd": 167.8048964017362,
+   "whale_type": "kol",
+   "wallet": "Jgk6u8010Zl_T7MwB8ovNr6BiS5srLnACMAqu7ua1tKnNSI7d2_qANpdtbf8zdYpwGrSjJhbDqtCJSS65EWhvlDQNbZnaLTF",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.03055836321177374,
+   "views": 15
+  },
+  {
+   "token_address": "EW1b9rcLAJe634mgxb5r4bVYxDoGU37o7YazBzjTpump",
+   "symbol": "RM",
+   "ts": "2026-11-06T09:51:39",
+   "t": 1793958699.0,
+   "mcap": 151086.76652184507,
+   "whale_usd": 388.16591848242354,
+   "whale_type": "trader",
+   "wallet": "nyGCk8uEsoZuvqqUBZqtknQvZwpGSi07qnwvf4wY6BFWeLdEW7eQ580yCSFNmSYCg_SVOeODRk-ITluNzJ5ChcigUzJqDyt0",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.03183487767717819,
+   "views": 1291
   }
  ],
  "last_retarget": 1793953830.59327
