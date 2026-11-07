@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "4GMG7T7HvXhsYYTDHP9n1qT7jWiyaZky4jxSSwH7pump",
-   "symbol": "CASSO",
-   "ts": "2026-11-05T14:32:40",
-   "t": 1793889160.0,
-   "mcap": 361026.85110343515,
-   "whale_usd": 234.17278566628596,
-   "whale_type": "whale",
-   "wallet": "hspL1Nd9BdOVJycQICVUiUlNhNVyXIFuQD6Iztw1UrDOSdvIZI5EKDMUveemYi-N3knvg48LqwsDEF4oo633r1Ztk4JieFcE",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.006908114004926426,
-   "views": 96
-  },
-  {
    "token_address": "J4rP3zhpvk3r2tFasTAecU4g9gnxDDpaR2xAXnz873fu",
    "symbol": "LIBRE",
    "ts": "2026-11-05T14:33:45",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.07379283344031033,
    "views": 251
+  },
+  {
+   "token_address": "5yyMUjFfEK8dPk6PPPpuxba2VGpFA1vZxPPDrQKHBAGS",
+   "symbol": "DACITYCOIN",
+   "ts": "2026-11-07T12:18:41",
+   "t": 1794053921.0,
+   "mcap": 6433.717771869851,
+   "whale_usd": 106.7377642149692,
+   "whale_type": "kol",
+   "wallet": "DA_7ovzSmabTtEejMJITR2LpXjqNr5IIeUVASDvN3kGzHwZxdIBZ9VK_Q2CTm89MDsnIit0Urc2r9kFlCTNAN5edtjs-EP_d",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0116177476322292,
+   "views": 15
   }
  ],
  "last_retarget": 1794048875.342658
