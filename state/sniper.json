@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "5vxAv7yKtGa7pSz7gFFVgDNx54okCLUASauffJbBpump",
-   "symbol": "toyota",
-   "ts": "2026-11-05T22:27:36",
-   "t": 1793917656.0,
-   "mcap": 5142.22847414203,
-   "whale_usd": 581.7853532011213,
-   "whale_type": "kol",
-   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.0026061603299411653,
-   "views": 20
-  },
-  {
    "token_address": "9wR7RuRRU9pHNvpoyuSYxCFS4TsX3e3kQtAW5ARFpump",
    "symbol": "CAT",
    "ts": "2026-11-05T22:28:21",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.03104751403732876,
    "views": 2212
+  },
+  {
+   "token_address": "6nGocDUtGSJoSz1gUPgFGTpHtUSK3s7FN6zhB6AfLoat",
+   "symbol": "APU",
+   "ts": "2026-11-07T23:19:00",
+   "t": 1794093540.0,
+   "mcap": 80192.01050046831,
+   "whale_usd": 707.1300397543558,
+   "whale_type": "kol",
+   "wallet": "TjlUC1bYreD_lI8Tkir9k-WMh8HSxFaNu_gau-CIGe6VQdd9ESu38O3thG8y1Ta9cfVtu6GxFuZNd0mch-bNOFOkVbVwY55T",
+   "n_wallets30": 3,
+   "significance": "noise",
+   "pct_port": 0.010966996805603538,
+   "views": 97
   }
  ],
  "last_retarget": 1794092281.208545
