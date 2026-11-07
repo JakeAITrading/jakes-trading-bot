@@ -4053,27 +4053,6 @@
  ],
  "learning_log": [
   {
-   "at": "2026-11-05T07:01:47Z",
-   "new_samples": 40,
-   "live_samples": 600,
-   "settings": {
-    "take_profit": 0.2,
-    "limit_cushion": 0.0,
-    "max_runup": null,
-    "max_spike": 0.2,
-    "min_mcap": 20000,
-    "max_mcap": 1000000,
-    "min_whale_usd": 500,
-    "whale_type": "whale",
-    "require_known": false,
-    "min_wallet_win": 0.0,
-    "max_wallets30": null,
-    "min_views": 0
-   },
-   "expected_avg_pct": 8.9,
-   "expected_trades_in_samples": 58.0
-  },
-  {
    "at": "2026-11-05T07:11:52Z",
    "new_samples": 40,
    "live_samples": 600,
@@ -10351,6 +10330,27 @@
    },
    "expected_avg_pct": 10.9,
    "expected_trades_in_samples": 72.0
+  },
+  {
+   "at": "2026-11-07T07:40:24Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.25,
+    "limit_cushion": 0.0,
+    "max_runup": 0.5,
+    "max_spike": 0.1,
+    "min_mcap": 20000,
+    "max_mcap": 250000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 4.9,
+   "expected_trades_in_samples": 141.0
   }
  ],
  "observed": [
