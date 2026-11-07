@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "DDmGnuvroxVrb7CSyjYcezFU8gnAfhKasg4ZZezmpump",
-   "symbol": "AMD",
-   "ts": "2026-11-05T06:57:44",
-   "t": 1793861864.0,
-   "mcap": 574176.6486656755,
-   "whale_usd": 535.3269805908203,
-   "whale_type": "whale",
-   "wallet": "1kN_0CFIKfXO4lAeHGEnQf58bGPJ-OP_EkX-u8cAx6rZhF8enIls5415ah5jKSVFZ-N22E3-1OcBzHailVpcZi3_21_DgzJK",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.08770236841673691,
-   "views": 16400
-  },
-  {
    "token_address": "GxGYLpyyWwsizxrpr9T3xKrwGLWSH3t4NqcPysPnpump",
    "symbol": "titcoin",
    "ts": "2026-11-05T07:00:37",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.009732250086121446,
    "views": 608
+  },
+  {
+   "token_address": "8MDNKT9Y6CBeq3cHkMQDrvfwbyr1RmU3CYjGgDKFpump",
+   "symbol": "Corgi",
+   "ts": "2026-11-07T02:10:30",
+   "t": 1794017430.0,
+   "mcap": 5439.416327135405,
+   "whale_usd": 109.83680883795205,
+   "whale_type": "kol",
+   "wallet": "Lrchk7wKSijRHA-WoMJs96rSj3m5HHacRKpRlw03KXKdLwj1fYWkveQWCRyKQZt4uFEB_TzpBZfTqBqVK2ofx_C3LiOu_ZbQ",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009728129024379702,
+   "views": 11
   }
  ],
  "last_retarget": 1794017428.9304192
