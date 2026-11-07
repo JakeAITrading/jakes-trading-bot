@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "HWTosBwNiXhJoeXwTo91rKfDVZerKMiQCLx5UHiYpump",
-   "symbol": "WALLAHI",
-   "ts": "2026-11-05T05:16:41",
-   "t": 1793855801.0,
-   "mcap": 8186.000741261523,
-   "whale_usd": 201.77463665516552,
-   "whale_type": "whale",
-   "wallet": "LufZZGGTAPVgQ17KXtRjmanBR_VAeV11u7PjQ2D6EA2pYE9D6wif8KByieDOIXBLV_Zml6jOPXXr8WjPd5hTa8iNZboQJ7H2",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.003612399345053232,
-   "views": 20
-  },
-  {
    "token_address": "4HZegBgejasG4TeEXfqBiq3jcRNZ5CXRr3FToZsfpump",
    "symbol": "MAMDANI",
    "ts": "2026-11-05T05:19:05",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.0440968970868138,
    "views": 19
+  },
+  {
+   "token_address": "BLYdKSwcRnEmtesj5aP6NzV9EyRA9Dr83sL5yhW8pump",
+   "symbol": "POKEHOOD",
+   "ts": "2026-11-07T01:18:19",
+   "t": 1794014299.0,
+   "mcap": 65172.69162307328,
+   "whale_usd": 1326.042918873529,
+   "whale_type": "kol",
+   "wallet": "qrzJnaovstwUNxTKHmDq5c310W1AlKZEi9pMPS3zlVLcLk1uufqSr_A4hRkiAjY8p09A8G_9BsI-0xQhGPkESPw3KmCAhpmp",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.05653304428708202,
+   "views": 242
   }
  ],
  "last_retarget": 1794013407.9289174
