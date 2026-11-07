@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "3LkzLhRUzEpnoXJFU9qbUZFTBfD7dLPRmomVkxrSpump",
-   "symbol": "BATS",
-   "ts": "2026-11-05T13:33:37",
-   "t": 1793885617.0,
-   "mcap": 7380.9787863865495,
-   "whale_usd": 144.99563776917057,
-   "whale_type": "kol",
-   "wallet": "Lrchk7wKSijRHA-WoMJs96rSj3m5HHacRKpRlw03KXKdLwj1fYWkveQWCRyKQZt4uFEB_TzpBZfTqBqVK2ofx_C3LiOu_ZbQ",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.04469654061107914,
-   "views": 10
-  },
-  {
    "token_address": "77N4uxbENYNTbtD5dStPnczePyxHVHvUSbkCeXXWKcAP",
    "symbol": "Samsung",
    "ts": "2026-11-05T13:34:14",
@@ -52353,6 +52339,20 @@
    "significance": null,
    "pct_port": null,
    "views": 424
+  },
+  {
+   "token_address": "33SpTXu8rh9BmARB1EnW77Ucvon8eb2SRfiwUHKspump",
+   "symbol": "SLM",
+   "ts": "2026-11-07T08:54:07",
+   "t": 1794041647.0,
+   "mcap": 9516.661521047354,
+   "whale_usd": 253.61653617059346,
+   "whale_type": "kol",
+   "wallet": "ImG9GRnAMAk3_QViHbYq1QBaGd6qg0xUB8UNrvsEMbyQHADhBisWYGlccgyVFAfZGu1eJRuuzMw1dDxse0VJCgJRwmx1fb-L",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.006074719697534498,
+   "views": 11
   }
  ],
  "last_retarget": 1794038428.5335178
