@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "Gy75YN9b5AvQLaKHpzASQyzhJUPPyS522VWhXkhVpump",
-   "symbol": "ZOOM",
-   "ts": "2026-11-05T17:58:51",
-   "t": 1793901531.0,
-   "mcap": 5898.31961406162,
-   "whale_usd": 218.819091796875,
-   "whale_type": "kol",
-   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.003224629268892613,
-   "views": 15
-  },
-  {
    "token_address": "9J6pAVNbBFHtDMRVhAbFZ62HZ9gZLmetN94Qb3mgpump",
    "symbol": "I",
    "ts": "2026-11-05T17:59:35",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.07395034434819085,
    "views": 17
+  },
+  {
+   "token_address": "21azpu32qfuNZR6TkKdUZKVnDtmvTUSBrXxhRFE5pump",
+   "symbol": "Hakutaku",
+   "ts": "2026-11-07T18:41:10",
+   "t": 1794076870.0,
+   "mcap": 6183.7339068326455,
+   "whale_usd": 187.65177164749082,
+   "whale_type": "kol",
+   "wallet": "Y37q3-0EeqJMCis85zXi9cTcqVX-7F5XMW9TX4uM0WKdv6tHk6ucaqNl5BRBsRK-krEIlyrDks9toJt0t0SJS7hDcsXCNmA7",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009025695677301075,
+   "views": 383
   }
  ],
  "last_retarget": 1794076578.9124353
