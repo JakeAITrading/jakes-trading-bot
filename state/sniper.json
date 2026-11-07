@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "4cYdBTJ7i4NitksHFDdJbLzcfZG3f63EHjnaPQ16pump",
-   "symbol": "BONDED",
-   "ts": "2026-11-05T16:51:48",
-   "t": 1793897508.0,
-   "mcap": 5732.968020311091,
-   "whale_usd": 176.28772322438635,
-   "whale_type": "kol",
-   "wallet": "f8bVMo000CYyRxBDJvDvxUOZCreRdQ2jQkhQknOYsjSPhRYpF32HJXbo0ctoEE_lU0AjRLMgdIZuwsbhAALlXA5ypxqMJEMc",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.048852878090097515,
-   "views": 20
-  },
-  {
-   "token_address": "GBAuzk3Z56vSm7QMW5nAywknZvhvVVMPvdchGfVvpump",
-   "symbol": "CI",
-   "ts": "2026-11-05T16:51:53",
-   "t": 1793897513.0,
-   "mcap": 13044.837032794021,
-   "whale_usd": 299.0499897003174,
-   "whale_type": "kol",
-   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.012788507459330698,
-   "views": 25
-  },
-  {
    "token_address": "2z63MhtNHSTk7VGfKkEwVrL7vQE9RuSqEUgSPZ8S6map",
    "symbol": "MAP",
    "ts": "2026-11-05T16:52:57",
@@ -52353,6 +52325,34 @@
    "significance": "notable",
    "pct_port": 0.0453473305509115,
    "views": 11
+  },
+  {
+   "token_address": "BFaTJfsmdBEDs79msmJkLXAyKdp38DxixPPz3tKkpump",
+   "symbol": "589",
+   "ts": "2026-11-07T17:10:36",
+   "t": 1794071436.0,
+   "mcap": 5647.01076655183,
+   "whale_usd": 108.7026520915285,
+   "whale_type": "kol",
+   "wallet": "Lrchk7wKSijRHA-WoMJs96rSj3m5HHacRKpRlw03KXKdLwj1fYWkveQWCRyKQZt4uFEB_TzpBZfTqBqVK2ofx_C3LiOu_ZbQ",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009105939285292216,
+   "views": 13
+  },
+  {
+   "token_address": "A9jFHc2G5AsT4vL5Lq1WHUFLsqnQ9W5pVjrQDoxUBAGS",
+   "symbol": "BRANCH",
+   "ts": "2026-11-07T17:11:22",
+   "t": 1794071482.0,
+   "mcap": 13894.443327444606,
+   "whale_usd": 310.1172287841199,
+   "whale_type": "kol",
+   "wallet": "shBjz7PzCneKtdVGDwQL4d-WBuYScu8MIaFh782wA_MIEz89piIfJCFYpSH9bscC7yA_Bw_JV5o1jrGQ0sYMv4OMSai4k-C5",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.010214116050483883,
+   "views": 12
   }
  ],
  "last_retarget": 1794069959.7058697
