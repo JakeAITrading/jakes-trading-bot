@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "LKsRfGJjy25VZQJZL5tBZ6aMdtxHHA6PZ7Fp4mohype",
-   "symbol": "ELYSIUM",
-   "ts": "2026-11-05T12:36:59",
-   "t": 1793882219.0,
-   "mcap": 42789.93219486438,
-   "whale_usd": 497.5,
-   "whale_type": "kol",
-   "wallet": "C_YvWE0SBiLO1okpwrmj-iacLzjDdh9-NlkX9X86_VYJKfRimh0dR3ABTRZlmIs4c84dRTGUo-SMXBZMobcjhPalzubF5An8",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.02979980087224267,
-   "views": 42
-  },
-  {
-   "token_address": "5MYcYe3mwU7EGEicewe8VuhpzvpitXYnxbYowUZKpump",
-   "symbol": "CasoUeno",
-   "ts": "2026-11-05T12:39:32",
-   "t": 1793882372.0,
-   "mcap": 9347.412742499728,
-   "whale_usd": 120.57152917248459,
-   "whale_type": "kol",
-   "wallet": "Z9dUvU0pW7iYI21bYBLtR0h_nCUz6gNP-D_qRhQTnUSgECE1LParWpxNWeQgPB_ncTLfa1rNvMoVY50HIh9txPOMyS0dTmGw",
-   "n_wallets30": 3,
-   "significance": "noise",
-   "pct_port": 0.001971269754031111,
-   "views": 10
-  },
-  {
    "token_address": "D3nNiCTSxPz1TMGJoDPMGqhGnyvCWAw9xAcWpfbtpump",
    "symbol": "Lily",
    "ts": "2026-11-05T12:40:15",
@@ -52353,6 +52325,34 @@
    "significance": "notable",
    "pct_port": 0.04588534096448325,
    "views": 51
+  },
+  {
+   "token_address": "SMsXhePJF6uRgSAxzcKxQa4siGa9yEpqAN1iupCpump",
+   "symbol": "BERNTHAL",
+   "ts": "2026-11-07T07:02:57",
+   "t": 1794034977.0,
+   "mcap": 23946.120563778095,
+   "whale_usd": 528.8904937025509,
+   "whale_type": "kol",
+   "wallet": "zAoA2A0yj8Z__wcjkeEDZq_qH0cNxPXz_qtc9SLoaTIkqTrbHQtj_9gKun6prbvCAf1ISJxWM2tcym9P7xOQssp3zGNnWSEI",
+   "n_wallets30": 2,
+   "significance": "notable",
+   "pct_port": 0.03226091499066438,
+   "views": 33
+  },
+  {
+   "token_address": "77pr6xSfa3e8uvRmioAN4UVykYk53JZaXEhtsEzNpump",
+   "symbol": "BERNTHAL",
+   "ts": "2026-11-07T07:05:10",
+   "t": 1794035110.0,
+   "mcap": 8778.016308497172,
+   "whale_usd": 106.5167072252143,
+   "whale_type": "kol",
+   "wallet": "zYzjAmB2SBf5U4XpRmgUrI8v2aXLQ5CHYEMbud5wHM7w6PaQWi-YFbHKwYa2Aa5PVeNVHfgYPLyNmKvr2UMjfkIYd2KOIZnN",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.009072857645696795,
+   "views": 18
   }
  ],
  "last_retarget": 1794034815.8973477
