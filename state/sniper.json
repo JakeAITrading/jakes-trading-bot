@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "F2AvkmDtZdXbWXaS1ja8Mjgjy54zsHhDErWzeFCNpump",
-   "symbol": "GIVEST",
-   "ts": "2026-11-05T20:24:27",
-   "t": 1793910267.0,
-   "mcap": 45912.24795894042,
-   "whale_usd": 249.9999980926514,
-   "whale_type": "kol",
-   "wallet": "Y37q3-0EeqJMCis85zXi9cTcqVX-7F5XMW9TX4uM0WKdv6tHk6ucaqNl5BRBsRK-krEIlyrDks9toJt0t0SJS7hDcsXCNmA7",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.013481370603658564,
-   "views": 34
-  },
-  {
-   "token_address": "Df1V5yx5BGcXRaoCj7ktuzqzD51UeT2V7mexhiHupump",
-   "symbol": "HABITAT",
-   "ts": "2026-11-05T20:24:28",
-   "t": 1793910268.0,
-   "mcap": 5545.688964048168,
-   "whale_usd": 850.0748813846658,
-   "whale_type": "kol",
-   "wallet": "3N-lusEVT1NJztwphQbQycde9R-D4KXJsf3JniVgQtyXJ4WBEmmxAmK1XrnrT1P3tcQN223Wru9WPF0KtFSiKztFoOKRrMhF",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.09796256581861687,
-   "views": 11
-  },
-  {
    "token_address": "E339LCMzTWZXyM4hGGTKKcuFCJWJNtDkRshuLmVzpump",
    "symbol": "Punjimoguin",
    "ts": "2026-11-05T20:25:34",
@@ -52353,6 +52325,34 @@
    "significance": "major",
    "pct_port": 1.1618227817593805,
    "views": 12
+  },
+  {
+   "token_address": "H4Yco8GenmbchjBhNRinG96cXBgNJhFRPFyJYPwKpump",
+   "symbol": "VETO",
+   "ts": "2026-11-07T20:55:51",
+   "t": 1794084951.0,
+   "mcap": 277973.67271703744,
+   "whale_usd": 498.76324462890625,
+   "whale_type": "kol",
+   "wallet": "FureptpOBxrIVXmP-KPsuAos3IUGAz29bzhxxO9ioCzBeQplSQaGSDDv20qv2poAQfT4R4Ji5W-VFS-fVpOuWtd1KqkJ9kWQ",
+   "n_wallets30": 2,
+   "significance": null,
+   "pct_port": null,
+   "views": 1383
+  },
+  {
+   "token_address": "6NeJZtxtRU6PpobjfkB1QHUMUt6gfVSL6ia9kgafLoat",
+   "symbol": "FRODO",
+   "ts": "2026-11-07T20:56:22",
+   "t": 1794084982.0,
+   "mcap": 245865.14336988307,
+   "whale_usd": 1492.5059814453127,
+   "whale_type": "whale",
+   "wallet": "TH4UIA_RqaiPIzrrrPOZ0UJ2d2uD47lE_rdUqkFTnPzvjTKvy0UN770ytFipg410zp-7Yc9p96BwAroxiCJw0mlQva5yrsCp",
+   "n_wallets30": 10,
+   "significance": "noise",
+   "pct_port": 0.01559925123575331,
+   "views": 188
   }
  ],
  "last_retarget": 1794084649.50253
