@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "BBMRXQpKdKX61Bk1C2nH4gX4AwpVnoc6irDaTnvCfGgq",
-   "symbol": "COGE",
-   "ts": "2026-11-05T18:44:20",
-   "t": 1793904260.0,
-   "mcap": 6594.057585105834,
-   "whale_usd": 261.8712892394916,
-   "whale_type": "whale",
-   "wallet": "LufZZGGTAPVgQ17KXtRjmanBR_VAeV11u7PjQ2D6EA2pYE9D6wif8KByieDOIXBLV_Zml6jOPXXr8WjPd5hTa8iNZboQJ7H2",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.005516104918167007,
-   "views": 12
-  },
-  {
    "token_address": "FUkN5RbFZocTn9nRz1KjCbpSveiX1z5UL3Z6V1aJpump",
    "symbol": "COGE",
    "ts": "2026-11-05T18:44:38",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.005410815474705449,
    "views": 1039
+  },
+  {
+   "token_address": "4dFwoYryTJuHsSRciQ5yogSGB67KhfXctFyhx6hfLoat",
+   "symbol": "Chonky",
+   "ts": "2026-11-07T19:19:54",
+   "t": 1794079194.0,
+   "mcap": 60198.71943863079,
+   "whale_usd": 1193.4053955078125,
+   "whale_type": "whale",
+   "wallet": "ChzaatlA5WsaZziTvXLyT8eGqk-HGmsQC2ZoRwgrGbX2bnqAAIQDggaJoknT0gIb53OrfH4am5-EUdTzcbvEzZ7dgQn8EcKb",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.004036143653703308,
+   "views": 1184
   }
  ],
  "last_retarget": 1794076578.9124353
