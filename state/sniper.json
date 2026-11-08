@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "4gDTjBZvrHtwY2a3ebq66BN4FMH5V7RoSFdx63sqsbdS",
-   "symbol": "Zcashchan",
-   "ts": "2026-11-06T20:39:13",
-   "t": 1793997553.0,
-   "mcap": 16909.351034900003,
-   "whale_usd": 156.81826782226562,
-   "whale_type": "whale",
-   "wallet": "hspL1Nd9BdOVJycQICVUiUlNhNVyXIFuQD6Iztw1UrDOSdvIZI5EKDMUveemYi-N3knvg48LqwsDEF4oo633r1Ztk4JieFcE",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.00699814008237944,
-   "views": 33
-  },
-  {
-   "token_address": "7ypCq2CJ4fnbtS3z2B1W1UT2he5E3u7Md6Gy1ri7uGrQ",
-   "symbol": "ANT",
-   "ts": "2026-11-06T20:39:14",
-   "t": 1793997554.0,
-   "mcap": 963396.3000199168,
-   "whale_usd": 622.8719287067366,
-   "whale_type": "whale",
-   "wallet": "8cN6ukIw8WqztvKR1vn9E3myCb7i713pqRDk5QJc15v6Sy2Q4g6yd2gXJZH25Cyod4FS6bsu6i1Q-kjg9pokInS-SGn-jcvX",
-   "n_wallets30": 2,
-   "significance": "major",
-   "pct_port": 0.11878075348182932,
-   "views": 953
-  },
-  {
    "token_address": "FjeYiDWmJnSHBW5mK3TNwuk3HKZhGhw46VhH7q8WBe6n",
    "symbol": "zPEPE",
    "ts": "2026-11-06T20:40:23",
@@ -52353,6 +52325,34 @@
    "significance": "major",
    "pct_port": 0.30854282613447137,
    "views": 123
+  },
+  {
+   "token_address": "E5gvAoi2Lk5ua1bUFkMUY95CfxRxQXQ8w6zZzEeadnXX",
+   "symbol": "iCoin",
+   "ts": "2026-11-08T22:40:10",
+   "t": 1794177610.0,
+   "mcap": 46132.634452078215,
+   "whale_usd": 849.7094946872742,
+   "whale_type": "kol",
+   "wallet": "YaMDtbWTI39780oyvIsOUTKNt4teivKxxv-SfAff5TQ-KmhvUSiROF5tEkgWGX_w75UjKtI3wEKNgOlwNV0OI9QGtgKXMcib",
+   "n_wallets30": 4,
+   "significance": "notable",
+   "pct_port": 0.07414311483602704,
+   "views": 89
+  },
+  {
+   "token_address": "Cy5TzDyJ4mo6MBAbpwUcAgdfNiXYKrYUPrvhPGVU6XMR",
+   "symbol": "XMR20",
+   "ts": "2026-11-08T22:40:35",
+   "t": 1794177635.0,
+   "mcap": 129346.28052740045,
+   "whale_usd": 225.0,
+   "whale_type": "whale",
+   "wallet": "g29xkzbx0yazhows_bEU339dbELMZ2ukftpJISkjx7kSD3xhOk7ZZ2EgYC96FIpmxi-O2PuJlffS7kbJc17LYyq7cDHkLiD-",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.01189653885332231,
+   "views": 22
   }
  ],
  "last_retarget": 1794175038.7485924
