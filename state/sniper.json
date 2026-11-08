@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "Aq9XUf43RhqEmsGPkfrvDqvjJACUZxb3Pn4i3yTgpump",
-   "symbol": "Casino",
-   "ts": "2026-11-06T17:26:30",
-   "t": 1793985990.0,
-   "mcap": 15564.906789222732,
-   "whale_usd": 359.37494000953353,
-   "whale_type": "kol",
-   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
-   "n_wallets30": 4,
-   "significance": "major",
-   "pct_port": 0.26347875714763974,
-   "views": 126
-  },
-  {
-   "token_address": "4Rkh3bPDHAA9X2j95ssSvKbrVsiWfZDbgGiAbG2fLoat",
-   "symbol": "CRVL",
-   "ts": "2026-11-06T17:27:15",
-   "t": 1793986035.0,
-   "mcap": 21354.499040171504,
-   "whale_usd": 205.43632045818026,
-   "whale_type": "kol",
-   "wallet": "Lrchk7wKSijRHA-WoMJs96rSj3m5HHacRKpRlw03KXKdLwj1fYWkveQWCRyKQZt4uFEB_TzpBZfTqBqVK2ofx_C3LiOu_ZbQ",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.0321575391130714,
-   "views": 20
-  },
-  {
    "token_address": "BP1bcL67GTTD5zTQ3sKd8NAjjj1hzW8emVqHKHmsiPJj",
    "symbol": "CRL",
    "ts": "2026-11-06T17:27:15",
@@ -52353,6 +52325,34 @@
    "significance": "noise",
    "pct_port": 0.008079418287494259,
    "views": 16
+  },
+  {
+   "token_address": "DNYRJmZuD7cx3rXjaoosQyDx5QBV8ZS3eBWWnUFbpump",
+   "symbol": "SLINGOOR",
+   "ts": "2026-11-08T18:27:58",
+   "t": 1794162478.0,
+   "mcap": 162073.26775890458,
+   "whale_usd": 242.4239043149087,
+   "whale_type": "whale",
+   "wallet": "a0kuEnu6kLs09-RKKMH6jbiNqonI2zkO3G9n3CcUIkpnPa1s5-B-0oiu9gS_BoGartnpcL7aPVw94Lu_6ZCoJ8voJpcAXznB",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.01507403649828958,
+   "views": 673
+  },
+  {
+   "token_address": "3MBJfJ3AFU2vyXr9PaF4S1DaVeo4wW48y7E8q53DZbjU",
+   "symbol": "UPPIN",
+   "ts": "2026-11-08T18:27:59",
+   "t": 1794162479.0,
+   "mcap": 9488.247985340018,
+   "whale_usd": 173.7400265741008,
+   "whale_type": "kol",
+   "wallet": "DA_7ovzSmabTtEejMJITR2LpXjqNr5IIeUVASDvN3kGzHwZxdIBZ9VK_Q2CTm89MDsnIit0Urc2r9kFlCTNAN5edtjs-EP_d",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.06827032522085984,
+   "views": 53
   }
  ],
  "last_retarget": 1794159763.5452032
