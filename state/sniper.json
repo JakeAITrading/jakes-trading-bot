@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
-   "symbol": "SAPLING",
-   "ts": "2026-11-06T17:01:12",
-   "t": 1793984472.0,
-   "mcap": 3054144.489014482,
-   "whale_usd": 3998.240735160187,
-   "whale_type": "trader",
-   "wallet": "wNK1kIzWidmLMipldr3d-mPwKbVv00V31RsEp7cNkCxqbwW_S7ncvgYmzb_bSuGeLJWW97NY4v24aBkdlAaIqdvQCudzeVtg",
-   "n_wallets30": 1,
-   "significance": "major",
-   "pct_port": 0.24222352923010906,
-   "views": 734
-  },
-  {
    "token_address": "4PsYXyxYGe4ksDiTbUsK8AgsdMLosu8vVbb8z7cwpump",
    "symbol": "Tap",
    "ts": "2026-11-06T17:02:36",
@@ -52353,6 +52339,20 @@
    "significance": "major",
    "pct_port": 3.8629634707534173,
    "views": 44
+  },
+  {
+   "token_address": "GiHdaQzbn7VVC9CSTf7haHkhENxLDtfusg9x6HVKLLtL",
+   "symbol": "SUPA",
+   "ts": "2026-11-08T17:51:35",
+   "t": 1794160295.0,
+   "mcap": 6865.64453644678,
+   "whale_usd": 176.08194171408434,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0029364417129172584,
+   "views": 14
   }
  ],
  "last_retarget": 1794159763.5452032
