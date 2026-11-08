@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "4fuS4s8hhLBg6fpAdtYPuqkLgRw1sPDXGFbhdJLfLoat",
-   "symbol": "Yacht",
-   "ts": "2026-11-06T18:48:34",
-   "t": 1793990914.0,
-   "mcap": 20719.34795822017,
-   "whale_usd": 121.02836846494998,
-   "whale_type": "kol",
-   "wallet": "Jgk6u8010Zl_T7MwB8ovNr6BiS5srLnACMAqu7ua1tKnNSI7d2_qANpdtbf8zdYpwGrSjJhbDqtCJSS65EWhvlDQNbZnaLTF",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.03635434045039379,
-   "views": 20
-  },
-  {
    "token_address": "7avsUdWJLSxvVWt3JcC1hNxjBMaVDAy4Rnd1m5JpBaef",
    "symbol": "MAX",
    "ts": "2026-11-06T18:49:13",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.03488769403965141,
    "views": 11
+  },
+  {
+   "token_address": "8Up7NpwEverjyJSEgZrXG6hnrEfjeY4rHLg16kYypump",
+   "symbol": "PUSSY",
+   "ts": "2026-11-08T20:53:54",
+   "t": 1794171234.0,
+   "mcap": 82449.58651042363,
+   "whale_usd": 706.6242420559865,
+   "whale_type": "trader",
+   "wallet": "SvDnqfsJc9Fh7Gls5-pyduCwjv8iGM40ambazPqVgEHN1wXA5FcqYjTzTfdiXcIVuq7YkKurcx4i-m3aAqFMWNbM5cXTq5g=",
+   "n_wallets30": 11,
+   "significance": "notable",
+   "pct_port": 0.030321459739058042,
+   "views": 529
   }
  ],
  "last_retarget": 1794167402.9920578
