@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "4VTnR3UmTquiCD1Quz5Z577XdgzehWBK8yTc9482pump",
-   "symbol": "NWO",
-   "ts": "2026-11-06T06:06:52",
-   "t": 1793945212.0,
-   "mcap": 39486.191031281094,
-   "whale_usd": 248.87500000000003,
-   "whale_type": "kol",
-   "wallet": "hjXcOhkIRUemUcSG7peFPcYzkzcqNu4Ohiao06q84QsO_jbhqM9XCQ2qCoEqwKlE9GElD0hvgPAdC97VV3TvAomrvKi5UnY=",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.002255574736267997,
-   "views": 11
-  },
-  {
    "token_address": "69rBkkFxzg7aocWQXsCAyqz6qGdsrf1UQ4L9Gs97pump",
    "symbol": "MIMI",
    "ts": "2026-11-06T06:08:15",
@@ -52353,6 +52339,20 @@
    "significance": "notable",
    "pct_port": 0.08682544173558644,
    "views": 91
+  },
+  {
+   "token_address": "CSRRgTwf9o5KLgguS2M16aEAhV5PUUzfshrAAQ8opump",
+   "symbol": "RETARDIO",
+   "ts": "2026-11-08T09:20:55",
+   "t": 1794129655.0,
+   "mcap": 1604682.9646769306,
+   "whale_usd": 1231.4797276224576,
+   "whale_type": "whale",
+   "wallet": "bdVPO6g4GklFLOKf7NbxKtaX9-tsRPcGYP9nqGsMvQFJlOINyGo3SCNa8EeFhYQZ_fp02K7PV9AvGRzTW9zTh_ciN5TaDtzM",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.059352263939814985,
+   "views": 92
   }
  ],
  "last_retarget": 1794126223.1657424
