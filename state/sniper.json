@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "5SmvCQQspA87898zrYKSpVEdqCsYm8YiugQ2yo9XfGoW",
-   "symbol": "Elons",
-   "ts": "2026-11-06T11:09:01",
-   "t": 1793963341.0,
-   "mcap": 5970.0773817894515,
-   "whale_usd": 125.86983489990234,
-   "whale_type": "kol",
-   "wallet": "kZ4-_nNLhIicmSpBPMcBfK0msf5RpcNtWZRZt_HDIv0jI7Am3x1pbH3Vkk5T9egPpB8oJNWmTm7qOzpccuM4Gl5x0OfhW-YV",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.004974693822713459,
-   "views": 18
-  },
-  {
    "token_address": "cV8JPreMoD9Qy4asQPCAPccaezhFHUn8kJGtXVBpump",
    "symbol": "Elons",
    "ts": "2026-11-06T11:12:32",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.009994837485056834,
    "views": 14
+  },
+  {
+   "token_address": "2idV9Vmo6mpjj2MWusQayUdfaT9dacskN98RuC7bpump",
+   "symbol": "BALL",
+   "ts": "2026-11-08T14:31:51",
+   "t": 1794148311.0,
+   "mcap": 114223.05705842745,
+   "whale_usd": 2227.543701171875,
+   "whale_type": "kol",
+   "wallet": "e827RMl6AUSPHd3NYcMPFOMwwhWhsBRIe59doYvas2_kfSqh5zXewO5D1PURIbsrBjnkqy_54gMzXfyNjcWE7J1ohjCgVJgI",
+   "n_wallets30": 2,
+   "significance": "major",
+   "pct_port": 1.5325446968324146,
+   "views": 48
   }
  ],
  "last_retarget": 1794147916.341362
