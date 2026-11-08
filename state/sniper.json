@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "38EDtQs36gXcjnjcdnLbuF1b7Ppv4i5sbgF4muJ4pump",
-   "symbol": "BBX",
-   "ts": "2026-11-06T06:15:08",
-   "t": 1793945708.0,
-   "mcap": 25226.74337303087,
-   "whale_usd": 435.5818290684081,
-   "whale_type": "whale",
-   "wallet": "6oeigm4M2oGXTmNQOQgDRu1vMIqktq4tgioESZ62FhcRJvLsgf2j-M4__96MaTh-WXSlKXx9tsONVSo5AZ8p06c5RcoyrK6a",
-   "n_wallets30": 1,
-   "significance": null,
-   "pct_port": null,
-   "views": 210
-  },
-  {
    "token_address": "BZD1sXhUebR65TV1amtJeMr7qsuVM16cu31TpWwmY8ZD",
    "symbol": "SI",
    "ts": "2026-11-06T06:16:58",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.009393575243491159,
    "views": 19
+  },
+  {
+   "token_address": "9X3GyP7Y8Mdd6CXnuqaANFo6QVQp9n5bABTX2UKspump",
+   "symbol": "Titcoin",
+   "ts": "2026-11-08T09:42:59",
+   "t": 1794130979.0,
+   "mcap": 13716.42604378876,
+   "whale_usd": 445.947847022,
+   "whale_type": "kol",
+   "wallet": "gYpx_-GR-tFKu-pzV13bjawHYitraeayzAjx2QLBdCMflx7ARxNbeCboqyAtvvcF9yupTU3dmj-es1Lby6naGqUZORugSP0z",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.7173146225674174,
+   "views": 578
   }
  ],
  "last_retarget": 1794126223.1657424
