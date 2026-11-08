@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "HaNnbnMoXoN3GYxE3CKtmKprTgMdtVYBCJpUTvVhpump",
-   "symbol": "wMNST",
-   "ts": "2026-11-06T19:06:34",
-   "t": 1793991994.0,
-   "mcap": 34700.91542112641,
-   "whale_usd": 161.5604423203698,
-   "whale_type": "kol",
-   "wallet": "Lsh1Ls_XUbghavG-As6sLkiXfyOqxetwGjTT0vwt-Hd600MTQ4aSX588F9XB-zTN4bBatoxLLZbCidOvPIWxu4F0jRUBFVOa",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.005509174774597418,
-   "views": 19
-  },
-  {
    "token_address": "2jfBjJ2yVPmMugi4RHmMKbV1TbhYvXTLRq6iSaENpump",
    "symbol": "NEST",
    "ts": "2026-11-06T19:06:55",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.015516521652019397,
    "views": 10
+  },
+  {
+   "token_address": "AvuSQgdV2DNpnaaJfug7tvU3vmcJC6yp4W6Ccy9VLoat",
+   "symbol": "NVIDIH",
+   "ts": "2026-11-08T21:09:46",
+   "t": 1794172186.0,
+   "mcap": 38730.33347190358,
+   "whale_usd": 262.5829162597656,
+   "whale_type": "kol",
+   "wallet": "fHKEyX8GeoBhzv_3_6Bp6CUNRV5_pohswwZlwKAwUbJgd3R6cEwdAQa43IP7UGHbF45Lt-IZjA0fzyYx4VKvqDxijLN5BrDU",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.00443296630345306,
+   "views": 20
   }
  ],
  "last_retarget": 1794171426.6834607
