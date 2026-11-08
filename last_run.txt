@@ -1,1 +1,1 @@
-2026-11-08T16:44:10Z practice: no trades | max open positions reached
+2026-11-08T16:49:17Z practice: paper exit Rocco: take-profit, P&L $+3.72 [simulated] | daily buy budget used up

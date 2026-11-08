@@ -7,18 +7,9 @@
   "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": "2026-11-06T13:38:01.449086+00:00",
   "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T02:59:00.283087+00:00",
   "HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ": "2026-11-07T06:35:52.720786+00:00",
-  "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": "2026-11-08T00:00:27.639955+00:00"
+  "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": "2026-11-08T16:49:16.758071+00:00"
  },
- "paper": {
-  "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
-   "entry_price": 0.0005980508867651224,
-   "opened_at": "2026-11-08T00:00:27.639971+00:00",
-   "stop_loss": 0.0004485381650738418,
-   "symbol": "Rocco",
-   "take_profit": 0.0007774661527946592,
-   "usd": 10.0
-  }
- },
+ "paper": {},
  "paper_closed": [
   {
    "closed_at": "2026-11-04T02:59:00.283059+00:00",
@@ -70,6 +61,19 @@
    "symbol": "GP",
    "take_profit": 0.0011960896954406053,
    "token_address": "HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ",
+   "usd": 10.0
+  },
+  {
+   "closed_at": "2026-11-08T16:49:16.758028+00:00",
+   "entry_price": 0.0005980508867651224,
+   "exit_price": 0.0008205329650081694,
+   "exit_reason": "take-profit",
+   "opened_at": "2026-11-08T00:00:27.639971+00:00",
+   "pnl_usd": 3.7201,
+   "stop_loss": 0.0004485381650738418,
+   "symbol": "Rocco",
+   "take_profit": 0.0007774661527946592,
+   "token_address": "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump",
    "usd": 10.0
   }
  ]
