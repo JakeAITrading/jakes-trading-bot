@@ -1,14 +1,24 @@
 {
  "bought_today_usd": 10.0,
- "day": "2026-11-07",
+ "day": "2026-11-08",
  "last_traded": {
   "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-05T05:30:26.948179+00:00",
   "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "2026-11-03T22:41:29.717004+00:00",
   "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": "2026-11-06T13:38:01.449086+00:00",
   "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T02:59:00.283087+00:00",
-  "HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ": "2026-11-07T06:35:52.720786+00:00"
+  "HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ": "2026-11-07T06:35:52.720786+00:00",
+  "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": "2026-11-08T00:00:27.639955+00:00"
  },
- "paper": {},
+ "paper": {
+  "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": {
+   "entry_price": 0.0005980508867651224,
+   "opened_at": "2026-11-08T00:00:27.639971+00:00",
+   "stop_loss": 0.0004485381650738418,
+   "symbol": "Rocco",
+   "take_profit": 0.0007774661527946592,
+   "usd": 10.0
+  }
+ },
  "paper_closed": [
   {
    "closed_at": "2026-11-04T02:59:00.283059+00:00",
