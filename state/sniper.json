@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "7bDNtSnbwad2AUCsCe3v5VLgrxj95PcSci7ATcyGpump",
-   "symbol": "Boycoin",
-   "ts": "2026-11-06T05:41:35",
-   "t": 1793943695.0,
-   "mcap": 9496.69447436463,
-   "whale_usd": 214.32168579829522,
-   "whale_type": "whale",
-   "wallet": "LufZZGGTAPVgQ17KXtRjmanBR_VAeV11u7PjQ2D6EA2pYE9D6wif8KByieDOIXBLV_Zml6jOPXXr8WjPd5hTa8iNZboQJ7H2",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.0045271114310462225,
-   "views": 16
-  },
-  {
    "token_address": "7TrU2pLuFPA1c2ptSQxuVV8dYSL3tYtWKUhNUDXkpump",
    "symbol": "GIRL",
    "ts": "2026-11-06T05:42:33",
@@ -52353,6 +52339,20 @@
    "significance": null,
    "pct_port": null,
    "views": 5531
+  },
+  {
+   "token_address": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+   "symbol": "FLOAT",
+   "ts": "2026-11-08T08:39:21",
+   "t": 1794127161.0,
+   "mcap": 9901322.451961396,
+   "whale_usd": 1334.7599237990546,
+   "whale_type": "whale",
+   "wallet": "Wgrozrc_14KaVKtx4ZCeTXPO1sxZorK7VMGtXFq01JZkUpP_8gN6ha2sP144JFN9z0YJt07A9WqAXYzGbRPoqu7CSEX8h5jW",
+   "n_wallets30": 2,
+   "significance": "noise",
+   "pct_port": 0.007998366546534349,
+   "views": 13070
   }
  ],
  "last_retarget": 1794126223.1657424
