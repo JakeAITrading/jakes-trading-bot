@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "4SrWPnMz2SzP4sVxgFiB9Fk8d3iwJLn6AEs3RNPLpump",
-   "symbol": "POPO",
-   "ts": "2026-11-06T15:31:44",
-   "t": 1793979104.0,
-   "mcap": 5876.847808394814,
-   "whale_usd": 324.9132142605504,
-   "whale_type": "kol",
-   "wallet": "RRjke89vZYbG_qGzOUse7E_h-r3aoysSwtr_0cf1etE8fHxXhk2pdjbIc4nsbw85ogKeNX-P_2BffRlyZ7WwcvPjv9EPzgvP",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.004233602836314297,
-   "views": 16
-  },
-  {
    "token_address": "6YbQmWgxgbE2jfF1rh87FRTBhCUJtFbG6MN9hPyVpump",
    "symbol": "Elons",
    "ts": "2026-11-06T15:36:55",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.02658257506165517,
    "views": 11
+  },
+  {
+   "token_address": "Hy4iuJwuo9hAUMgMsNpFXANvKSnGmFFqcjBZuiCFpJCP",
+   "symbol": "PI",
+   "ts": "2026-11-08T16:28:13",
+   "t": 1794155293.0,
+   "mcap": 401239.6629557899,
+   "whale_usd": 894.82349677,
+   "whale_type": "whale",
+   "wallet": "7Qe2Q4zD_3caEKBGoHSGYV5CW6z6W0xKQoRKjK4xdw1i9ot-1_4AXZ_tTWfJNBaVj22yMFKqdyYJMWr1BTB8tYYw97-mRHSz",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.026665758288626717,
+   "views": 4397
   }
  ],
  "last_retarget": 1794151525.4897764
