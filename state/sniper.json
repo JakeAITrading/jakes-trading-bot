@@ -10355,34 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "7Rwv3SL15KY5yoaBUenysjmLussvFJCXZgAH4Yfnpump",
-   "symbol": "Padre",
-   "ts": "2026-11-06T05:06:09",
-   "t": 1793941569.0,
-   "mcap": 9798.016435524914,
-   "whale_usd": 121.82399187582092,
-   "whale_type": "kol",
-   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI=",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.0086619476691593,
-   "views": 12
-  },
-  {
-   "token_address": "A2LXQgwjW4pWRFNFctN9r96zzzCLB3Cd3xvFLekVQfcN",
-   "symbol": "CARDIFIER",
-   "ts": "2026-11-06T05:08:20",
-   "t": 1793941700.0,
-   "mcap": 19464.133735000003,
-   "whale_usd": 263.019287109375,
-   "whale_type": "whale",
-   "wallet": "LufZZGGTAPVgQ17KXtRjmanBR_VAeV11u7PjQ2D6EA2pYE9D6wif8KByieDOIXBLV_Zml6jOPXXr8WjPd5hTa8iNZboQJ7H2",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.0019979911331626603,
-   "views": 13
-  },
-  {
    "token_address": "HTccMmcAAjrj6tntbwvj8Lqd881P4a7eYxWzDS5zDv1D",
    "symbol": "B",
    "ts": "2026-11-06T05:10:18",
@@ -52353,6 +52325,34 @@
    "significance": "notable",
    "pct_port": 0.032021224096076266,
    "views": 2647
+  },
+  {
+   "token_address": "Aa6yTiP47ntwV3XFnC4gT5Hm2JaoTPsVbiekXLWmpump",
+   "symbol": "ELENA",
+   "ts": "2026-11-08T07:31:26",
+   "t": 1794123086.0,
+   "mcap": 6824.03060636716,
+   "whale_usd": 1813.8385811748303,
+   "whale_type": "kol",
+   "wallet": "CwJv4B8eeeEVEYeRWDtI64iSb533JcP9xtWbWtpTfaLmFw8IIsqgSdTNdeFb2_PEd5N5Sy_yd_A-XfLP0LCaTJSJHlM-JHY8",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.9252851609442743,
+   "views": 19
+  },
+  {
+   "token_address": "FCjUiz4euLwZ99Dp83g6JVjpBiCt9adYyoHgJyeMpump",
+   "symbol": "MI",
+   "ts": "2026-11-08T07:31:31",
+   "t": 1794123091.0,
+   "mcap": 12941.64303544676,
+   "whale_usd": 138.19913849940343,
+   "whale_type": "kol",
+   "wallet": "RAeOuTcU_xWS09TwujXkaPh8ntUVyOYsEVSCAfWTBJLyTQniSzGuQluniShQmIXnaldaMdEPQCMB1M0Jnj4Jwvt-saSf-VmD",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.014317146695736985,
+   "views": 13
   }
  ],
  "last_retarget": 1794119191.2360694
