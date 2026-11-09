@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "9vSn8HdKqamgHZBGeF6F8MnWRAj4pvnZtbthENSMpump",
-   "symbol": "Avery",
-   "ts": "2026-11-06T22:12:02",
-   "t": 1794003122.0,
-   "mcap": 6714.265055052238,
-   "whale_usd": 103.93812277119683,
-   "whale_type": "kol",
-   "wallet": "RRjke89vZYbG_qGzOUse7E_h-r3aoysSwtr_0cf1etE8fHxXhk2pdjbIc4nsbw85ogKeNX-P_2BffRlyZ7WwcvPjv9EPzgvP",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 2.6683167817695266e-06,
-   "views": 19
-  },
-  {
    "token_address": "7FZQASLKCynDqPfqYGJ42JxY9E4ys7o2TUoQvcZNpump",
    "symbol": "Avery",
    "ts": "2026-11-06T22:12:50",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.026014979716475713,
    "views": 19
+  },
+  {
+   "token_address": "BEhGKMb2xqz3UBLT7sQcRk9SWEi28P88SjJzF7ke5ZUo",
+   "symbol": "chuck",
+   "ts": "2026-11-09T01:19:18",
+   "t": 1794187158.0,
+   "mcap": 36223.37681008503,
+   "whale_usd": 862.3264912504593,
+   "whale_type": "kol",
+   "wallet": "YaMDtbWTI39780oyvIsOUTKNt4teivKxxv-SfAff5TQ-KmhvUSiROF5tEkgWGX_w75UjKtI3wEKNgOlwNV0OI9QGtgKXMcib",
+   "n_wallets30": 2,
+   "significance": "notable",
+   "pct_port": 0.0743981245530579,
+   "views": 14
   }
  ],
  "last_retarget": 1794184880.9548552
