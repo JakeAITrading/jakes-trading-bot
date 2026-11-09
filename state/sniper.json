@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump",
-   "symbol": "scamsem",
-   "ts": "2026-11-07T01:52:48",
-   "t": 1794016368.0,
-   "mcap": 443949.17893764906,
-   "whale_usd": 298.6499938964844,
-   "whale_type": "whale",
-   "wallet": "mzuzf9zQyj5BMUHa5VmVaSUFRAQPhIrr50y8A-NZYbq8xAF-xeIweGDXFVs3PnBugDYoTVYsNRTZDaQl5AWXsEFQWO2yU54R",
-   "n_wallets30": 1,
-   "significance": null,
-   "pct_port": null,
-   "views": 928
-  },
-  {
    "token_address": "8MDNWAp7eQzgBGG7s5Ab6M6hQchiqb7u2Z11gZeipump",
    "symbol": "RUGSEM",
    "ts": "2026-11-07T01:53:39",
@@ -52358,6 +52344,20 @@
    "significance": "notable",
    "pct_port": 0.061793307641071535,
    "views": 2666
+  },
+  {
+   "token_address": "61emu1AxeKKR6yYnPxkjV2GTaEx9s2tDnys843e8pump",
+   "symbol": "KITSTAR",
+   "ts": "2026-11-09T09:06:03",
+   "t": 1794215163.0,
+   "mcap": 7509.315764764324,
+   "whale_usd": 170.48766035353765,
+   "whale_type": "kol",
+   "wallet": "DA_7ovzSmabTtEejMJITR2LpXjqNr5IIeUVASDvN3kGzHwZxdIBZ9VK_Q2CTm89MDsnIit0Urc2r9kFlCTNAN5edtjs-EP_d",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.09953561760904499,
+   "views": 19
   }
  ],
  "last_retarget": 1794211823.9657192
