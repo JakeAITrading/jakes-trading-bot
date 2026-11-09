@@ -10360,34 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "6ad85MsyLf1m6hbtedKZLNjgG7aZGWg4kJ7mNitypump",
-   "symbol": "SCAMCHI",
-   "ts": "2026-11-07T02:04:49",
-   "t": 1794017089.0,
-   "mcap": 5586.974111793097,
-   "whale_usd": 267.3658082104739,
-   "whale_type": "kol",
-   "wallet": "MzSuI275EvoggN-6RJVAU85P-Pc81znaR-GljhWXxL-fFAJYTIY4lJpZwhqONBCrDp_ip6BvPnb7dri9sGVR1RUUznOMcBcH",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.007234607281668284,
-   "views": 20
-  },
-  {
-   "token_address": "GT2KFLgXfYHSzWxNpvpaFfo5rYtaFBjvkpSf1zwgpump",
-   "symbol": "TIMOTHY",
-   "ts": "2026-11-07T02:05:13",
-   "t": 1794017113.0,
-   "mcap": 6475.661848526215,
-   "whale_usd": 182.35068750077062,
-   "whale_type": "kol",
-   "wallet": "EtmAUZWjIn2VcnKQCY1lQLKxSy_M4V-7mNT1K42WKKQCe-P5Kz1m-zD47MFoJO1pE4j_A_z-v83lXrIlGsNLLvh9VZ2oLnr8",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.006086529610171084,
-   "views": 12
-  },
-  {
    "token_address": "2CjRU9rVZDDa4FuDiZpZjbaJkc1aq4T6Gctw51uEC55w",
    "symbol": "TIMOTHY",
    "ts": "2026-11-07T02:07:09",
@@ -52358,6 +52330,34 @@
    "significance": "noise",
    "pct_port": 0.010240001163394142,
    "views": 15
+  },
+  {
+   "token_address": "27iaWc5qjQAubC7ENwqD2zYGmm1UWJyMpXNz3DFQpump",
+   "symbol": "Anchor",
+   "ts": "2026-11-09T09:44:04",
+   "t": 1794217444.0,
+   "mcap": 17078.105884138495,
+   "whale_usd": 164.7494304833308,
+   "whale_type": "kol",
+   "wallet": "EtmAUZWjIn2VcnKQCY1lQLKxSy_M4V-7mNT1K42WKKQCe-P5Kz1m-zD47MFoJO1pE4j_A_z-v83lXrIlGsNLLvh9VZ2oLnr8",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.021926872626284535,
+   "views": 13
+  },
+  {
+   "token_address": "Bk9nuu8QhNamo9GA7u2RULjruh9Bykdyo2o21hxEpump",
+   "symbol": "CULPER",
+   "ts": "2026-11-09T09:46:22",
+   "t": 1794217582.0,
+   "mcap": 7125.296633603284,
+   "whale_usd": 148.4851538433404,
+   "whale_type": "kol",
+   "wallet": "DA_7ovzSmabTtEejMJITR2LpXjqNr5IIeUVASDvN3kGzHwZxdIBZ9VK_Q2CTm89MDsnIit0Urc2r9kFlCTNAN5edtjs-EP_d",
+   "n_wallets30": 2,
+   "significance": "notable",
+   "pct_port": 0.06431835725343255,
+   "views": 26
   }
  ],
  "last_retarget": 1794215430.6639056
