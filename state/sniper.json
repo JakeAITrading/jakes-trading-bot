@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "5uz626HLsA84NARLMWzDyfd3g93L87hC5YwW2x9mpump",
-   "symbol": "ALICE",
-   "ts": "2026-11-07T03:37:49",
-   "t": 1794022669.0,
-   "mcap": 7960.135917528532,
-   "whale_usd": 158.8173828125,
-   "whale_type": "kol",
-   "wallet": "Jgk6u8010Zl_T7MwB8ovNr6BiS5srLnACMAqu7ua1tKnNSI7d2_qANpdtbf8zdYpwGrSjJhbDqtCJSS65EWhvlDQNbZnaLTF",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.07837796535780367,
-   "views": 11
-  },
-  {
    "token_address": "BLYdKSwcRnEmtesj5aP6NzV9EyRA9Dr83sL5yhW8pump",
    "symbol": "POKEHOOD",
    "ts": "2026-11-07T03:38:08",
@@ -52358,6 +52344,20 @@
    "significance": "notable",
    "pct_port": 0.03180589852953123,
    "views": 26
+  },
+  {
+   "token_address": "NVDAVuiB7hwd3m5Wa1JuHNovPaPG6BH1QNztbKFxNjv",
+   "symbol": "NVDA",
+   "ts": "2026-11-09T12:09:10",
+   "t": 1794226150.0,
+   "mcap": 767439.4569191459,
+   "whale_usd": 2094.821236106678,
+   "whale_type": "whale",
+   "wallet": "9oYlxamRK1d6EaTvQ-zRmpblh0UPtsKvrNKwpT_etGS9DPDfmuOQUEhzJW64KQ6TL-YqEpnpnCo45Y8FLYKB2v93sZhPrw04",
+   "n_wallets30": 2,
+   "significance": "notable",
+   "pct_port": 0.09908610947365012,
+   "views": 627
   }
  ],
  "last_retarget": 1794223067.2658641
