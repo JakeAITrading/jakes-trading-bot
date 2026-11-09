@@ -1,7 +1,8 @@
 {
- "bought_today_usd": 0.0,
+ "bought_today_usd": 10.0,
  "day": "2026-11-09",
  "last_traded": {
+  "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp": "2026-11-09T00:06:15.028295+00:00",
   "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM": "2026-11-05T05:30:26.948179+00:00",
   "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "2026-11-03T22:41:29.717004+00:00",
   "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": "2026-11-06T13:38:01.449086+00:00",
@@ -9,7 +10,16 @@
   "HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ": "2026-11-07T06:35:52.720786+00:00",
   "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": "2026-11-08T16:49:16.758071+00:00"
  },
- "paper": {},
+ "paper": {
+  "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp": {
+   "entry_price": 0.00023154627706389874,
+   "opened_at": "2026-11-09T00:06:15.028308+00:00",
+   "stop_loss": 0.00017365970779792406,
+   "symbol": "Pepetide",
+   "take_profit": 0.00030101016018306835,
+   "usd": 10.0
+  }
+ },
  "paper_closed": [
   {
    "closed_at": "2026-11-04T02:59:00.283059+00:00",
