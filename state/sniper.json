@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "H4Yco8GenmbchjBhNRinG96cXBgNJhFRPFyJYPwKpump",
-   "symbol": "VETO",
-   "ts": "2026-11-07T03:12:00",
-   "t": 1794021120.0,
-   "mcap": 163978.78053011242,
-   "whale_usd": 243.53688049316406,
-   "whale_type": "whale",
-   "wallet": "F8wapcwXKp9b40gF6qfczUfp1kFvJzt1C-vAu-ebMde4T7UyDTnXmIFLrHjOIUy5WS_P7hPrI-B3H_s75R4Rk1eEnMiVffQ=",
-   "n_wallets30": 2,
-   "significance": "major",
-   "pct_port": 0.1303051744402095,
-   "views": 648
-  },
-  {
    "token_address": "CegVQvAftuBW6hxC2EZvtCctgCLvBCwkmdrrusW4pump",
    "symbol": "VETO",
    "ts": "2026-11-07T03:12:06",
@@ -52358,6 +52344,20 @@
    "significance": "noise",
    "pct_port": 0.026968566083509712,
    "views": 908
+  },
+  {
+   "token_address": "AWaBBNoVuwQ22B8Y5nEtLne2uEfk8UaYEFws7vT7pump",
+   "symbol": "ELYSION",
+   "ts": "2026-11-09T11:43:26",
+   "t": 1794224606.0,
+   "mcap": 811897.1439293999,
+   "whale_usd": 1115.7833846236463,
+   "whale_type": "whale",
+   "wallet": "rJiaryf3Qs8-tZNdl1mas0ntDlQ2hEdcva2o8-9Xe_nN5hE8-MXMKUxsR9Y_fg3Kyz54MgxYttPXB9fH7nkxidAoXa071Y6G",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 68
   }
  ],
  "last_retarget": 1794223067.2658641
