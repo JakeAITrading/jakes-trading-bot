@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "6mXFCoZ515w37YfmwXGJMPfQfiK5tr9WkihW3oN9pump",
-   "symbol": "PIRATE",
-   "ts": "2026-11-06T22:55:07",
-   "t": 1794005707.0,
-   "mcap": 204953.5646779641,
-   "whale_usd": 499.00048828125,
-   "whale_type": "kol",
-   "wallet": "ibrSABs1xJP8w10hqp_SxWWQf2BJZKMO8VjXHgkbsLbrcrZ7G8sKgtOv1Vby9eQALrOxXFqXo_-SeLUZjFhVWwRnoRyUmjS8",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.00968941406332088,
-   "views": 464
-  },
-  {
    "token_address": "6FhVPctYg363pQbs4iSvqyHe2cJzfsvFD96gePy6pump",
    "symbol": "EXFIL",
    "ts": "2026-11-06T22:55:36",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.004985892392455142,
    "views": 38
+  },
+  {
+   "token_address": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+   "symbol": "CLAUDIA",
+   "ts": "2026-11-09T02:41:29",
+   "t": 1794192089.0,
+   "mcap": 6113056.9009430725,
+   "whale_usd": 410.8418764623748,
+   "whale_type": "whale",
+   "wallet": "FwZano9jRguLzbcaAgmoRZFtRd08ul4dsL8urUbGXt1maBXqfh9vv7niFsJUeqphz2CktwUIoX_eRsWBlKXVlNP9QBi4BDxC",
+   "n_wallets30": 3,
+   "significance": "major",
+   "pct_port": 0.18085232915416816,
+   "views": 14921
   }
  ],
  "last_retarget": 1794188491.5936575
