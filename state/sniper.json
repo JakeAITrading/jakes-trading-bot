@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "41WpXn15fxQXEGhiKnkqHcoJn14tNXXgmymLKE57pump",
-   "symbol": "scamsem",
-   "ts": "2026-11-07T02:54:58",
-   "t": 1794020098.0,
-   "mcap": 1197348.0475961762,
-   "whale_usd": 239.0757637169463,
-   "whale_type": "whale",
-   "wallet": "Kv8U-zuK4A6PMGuSsGv3ydFALJ-6VOwInocSkOusB9GYv-gFii26IAarCPYEQ8HoGG3Ueh-gGyR4kSq7ddxbbHKP2QvA2tBz",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.031876624010731776,
-   "views": 2202
-  },
-  {
    "token_address": "DmTPEzzKvoJAW1njMhgGK3qEnTouyfxa7xusZZnpump",
    "symbol": "McEntee",
    "ts": "2026-11-07T02:55:58",
@@ -52358,6 +52344,20 @@
    "significance": "major",
    "pct_port": 0.5111245653362158,
    "views": 66
+  },
+  {
+   "token_address": "9QThLj6jrs1RMUBEAQDdfudqQ8Q5pesmQtaDSzttpump",
+   "symbol": "uiauiuaa",
+   "ts": "2026-11-09T11:06:35",
+   "t": 1794222395.0,
+   "mcap": 5579.8309404053725,
+   "whale_usd": 256.17247128030067,
+   "whale_type": "kol",
+   "wallet": "8Fyc0qYSLpJCaHWq3MpIqcJCyLB0RMkoTxFzfSqNnIuIpKDS5KKmVFYohA-oUhN2s0t3bIk6Aro7udc3JGS-0BBhR-wHUJjW",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.47602231668416933,
+   "views": 19
   }
  ],
  "last_retarget": 1794219453.0414186
