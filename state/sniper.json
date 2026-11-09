@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "HeNd9qndi5gTVezUjqSxSiXhz7mrLTaURYKsbMkQpump",
-   "symbol": "MEME",
-   "ts": "2026-11-07T06:30:16",
-   "t": 1794033016.0,
-   "mcap": 5954.575044597732,
-   "whale_usd": 184.8266986405888,
-   "whale_type": "kol",
-   "wallet": "535SgN9hinUhrPVBELoYK4ibQUvYCYCA073zSgu9l7xXzvHEbKDY27pLRTBeNe9yW72DYycDuxpqGtdhYbnzH9Vag5cBtV91",
-   "n_wallets30": 2,
-   "significance": "noise",
-   "pct_port": 0.012621990611801918,
-   "views": 18
-  },
-  {
    "token_address": "BSe1q3SL6KQPLeZHFG9nNw5VFbDL3ZXvBmtjBVpYpump",
    "symbol": "SMOOVE",
    "ts": "2026-11-07T06:30:29",
@@ -52358,6 +52344,20 @@
    "significance": "noise",
    "pct_port": 0.00932456258694741,
    "views": 12
+  },
+  {
+   "token_address": "avaxGHCq3T7hoxd73oY2KY9hJSTaeMibXvHy5KNzh5D",
+   "symbol": "AVAX",
+   "ts": "2026-11-09T14:45:31",
+   "t": 1794235531.0,
+   "mcap": 338111.6139691502,
+   "whale_usd": 291.3818016052246,
+   "whale_type": "whale",
+   "wallet": "Sfqt3iMXZGMj-UsD4a-ytYj9zf6lKV8dCpiQy4hpf-xxYCmEFLwNFvsRQs0JIs4KqXw3J4Q8DdS-52-u8IDfSO5R5t38RhWi",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 13
   }
  ],
  "last_retarget": 1794231713.9734936
