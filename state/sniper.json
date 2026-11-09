@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "HmVe2vupN3eFdXqUYKmw3JNUk3Y8qYLd5xhuN4hBpump",
-   "symbol": "Europoor",
-   "ts": "2026-11-07T06:42:57",
-   "t": 1794033777.0,
-   "mcap": 5274.623617879115,
-   "whale_usd": 127.17316117473977,
-   "whale_type": "kol",
-   "wallet": "MzSuI275EvoggN-6RJVAU85P-Pc81znaR-GljhWXxL-fFAJYTIY4lJpZwhqONBCrDp_ip6BvPnb7dri9sGVR1RUUznOMcBcH",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.003462728482906151,
-   "views": 18
-  },
-  {
    "token_address": "Ex8hKasfFCfj3yGuN5TyYRUjHePgVs3uYUJRT8geT7rv",
    "symbol": "apyUSD",
    "ts": "2026-11-07T06:49:05",
@@ -52357,6 +52343,20 @@
    "n_wallets30": 1,
    "significance": "noise",
    "pct_port": 0.011143448971853756,
+   "views": 16
+  },
+  {
+   "token_address": "CQqXKDfYGQNu89nFtE6Y6bdp9URRTxws5ycATVLqKJp9",
+   "symbol": "NVDA",
+   "ts": "2026-11-09T14:50:55",
+   "t": 1794235855.0,
+   "mcap": 17975.376977119595,
+   "whale_usd": 344.2074584960937,
+   "whale_type": "kol",
+   "wallet": "qsgqGm0ScPsQ7QYGc7hK1-fePWbvVBV5xNCoEMDEbqMZgixPVmkwYrVywW25V4zuBshdyy_HxDNrNywGQh4pzh8lxj5HzL4=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.015286453458695571,
    "views": 16
   }
  ],
