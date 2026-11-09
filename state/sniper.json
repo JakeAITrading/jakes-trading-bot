@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "Hy4iuJwuo9hAUMgMsNpFXANvKSnGmFFqcjBZuiCFpJCP",
-   "symbol": "PI",
-   "ts": "2026-11-07T01:43:17",
-   "t": 1794015797.0,
-   "mcap": 237231.12602892684,
-   "whale_usd": 199.0500030517578,
-   "whale_type": "whale",
-   "wallet": "VpXpFbPamrt-LsAF3mIy4ufFRgI5mSRpv4JoTMlDh6uXASK_CLMRVpGmgz51ocG7PF_OvoVcpNCScRpAXgNLqNb3RQMUkqDV",
-   "n_wallets30": 3,
-   "significance": "noise",
-   "pct_port": 0.02203036708926423,
-   "views": 3039
-  },
-  {
    "token_address": "5hU7D7SuQ8eJ2QEzNRmU8W2G4KiqbbP7AA4ggsVfLoat",
    "symbol": "ODDS",
    "ts": "2026-11-07T01:43:40",
@@ -52358,6 +52344,20 @@
    "significance": "noise",
    "pct_port": 0.006820689411389226,
    "views": 18
+  },
+  {
+   "token_address": "Big1krPP8QUkgg5fsfEZQmeuwAViNajzAxNhNYvXaSS1",
+   "symbol": "BTC",
+   "ts": "2026-11-09T08:35:52",
+   "t": 1794213352.0,
+   "mcap": 174499.25690094524,
+   "whale_usd": 107.1058058201951,
+   "whale_type": "whale",
+   "wallet": "0jYenE-1cFVKgykm5YfOrjaX7czBwwl3M22HS_yHpWLNUFnCYt6_gKIrhCYYCPY7ChaiT39kA-NWnJzeFhBFVNXihqbCnme6",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.03384108584640809,
+   "views": 452
   }
  ],
  "last_retarget": 1794211823.9657192
