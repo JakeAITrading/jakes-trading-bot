@@ -10355,20 +10355,6 @@
  ],
  "observed": [
   {
-   "token_address": "D4UsJvkdzQ7sNoMSZGxqUddpBzrVxKzmG7LAjW6PBAGS",
-   "symbol": "DDOS",
-   "ts": "2026-11-07T00:36:52",
-   "t": 1794011812.0,
-   "mcap": 9793.12062554527,
-   "whale_usd": 240.79303576227252,
-   "whale_type": "kol",
-   "wallet": "FoDt-vv0WoIUHMuYVv01uPFGzCaCMtEacjQBjixg1BG_cE3qYA5MxKYAH_7xhPPmWCWJ4q9FJAi0FFAlXTk-MyzSaePXYZw=",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.025312719965596735,
-   "views": 16
-  },
-  {
    "token_address": "EZr3zaL9oojKAtpNUYEihk4zWoZxbcKrNUM6SjEeBAGS",
    "symbol": "TRUMPCOIN",
    "ts": "2026-11-07T00:36:58",
@@ -52353,6 +52339,20 @@
    "significance": "noise",
    "pct_port": 0.012148082887107515,
    "views": 20
+  },
+  {
+   "token_address": "4xgqefa5WcdHWKXzqvM9MRJqWYGaHVEUnpUL4Vq5pump",
+   "symbol": "HUNG",
+   "ts": "2026-11-09T06:05:26",
+   "t": 1794204326.0,
+   "mcap": 54254.02498188293,
+   "whale_usd": 1286.117196223116,
+   "whale_type": "kol",
+   "wallet": "qrzJnaovstwUNxTKHmDq5c310W1AlKZEi9pMPS3zlVLcLk1uufqSr_A4hRkiAjY8p09A8G_9BsI-0xQhGPkESPw3KmCAhpmp",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.05675773808058436,
+   "views": 1193
   }
  ],
  "last_retarget": 1794204190.883918
