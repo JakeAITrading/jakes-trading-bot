@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "9GpJDZrgXvGXxGjffCZhhYfyLyZ94QTezQoipn74pump",
-   "symbol": "HABIBI",
-   "ts": "2026-11-08T03:03:57",
-   "t": 1794107037.0,
-   "mcap": 123618.88061503762,
-   "whale_usd": 1835.7026196037712,
-   "whale_type": "kol",
-   "wallet": "NGoDBRpq81N8P859iHv-Af8IPUhbIoxbOGaB2NGJUA7mxTH3XY1ljek_xMezMtlYyJdVJcOMjrFqLhSrHcg3zPzKk2vUPA0d",
-   "n_wallets30": 3,
-   "significance": "noise",
-   "pct_port": 0.004946557423287349,
-   "views": 1166
-  },
-  {
    "token_address": "CgvTH9N9Rk2yGWZ967npLcEVQnsKXnSVYYaisKb9pump",
    "symbol": "AlBuqqi",
    "ts": "2026-11-08T03:06:18",
@@ -52358,6 +52344,20 @@
    "significance": null,
    "pct_port": null,
    "views": 42
+  },
+  {
+   "token_address": "2uC7Dtm3Zo7xdishz769N6gFtmvtpndVeogvJEhJpump",
+   "symbol": "COMPANY",
+   "ts": "2026-11-10T09:14:01",
+   "t": 1794302041.0,
+   "mcap": 6525.74772175285,
+   "whale_usd": 138.33531914433752,
+   "whale_type": "kol",
+   "wallet": "oq1oFScP__0YFfNMLWUVhn7r1odKoqzqoN4Yw9uHHhS-giApi1KwEZ7mYbIJFQ0TiA0qFHZktztjXAF5iAiu5yyNeCiFgHCn",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 15
   }
  ],
  "last_retarget": 1794295985.3663795
