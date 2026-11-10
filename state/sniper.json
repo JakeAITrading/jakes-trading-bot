@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "5UWfbqWEcLqDSrA2SwNXQpvbqEhZ2kPyh3LaPEmzpump",
-   "symbol": "Whitehouse",
-   "ts": "2026-11-08T01:26:40",
-   "t": 1794101200.0,
-   "mcap": 73172.10814151764,
-   "whale_usd": 567.313232421875,
-   "whale_type": "whale",
-   "wallet": "ySsruX5yEreitKFIE3XYd1FH96IsMrieuPvyl_UK9OG7enzRBaR_CFb7Sk-2iGlHSbut91awUHaAl9lYNmykXJ-K7l2dyPIs",
-   "n_wallets30": 1,
-   "significance": "major",
-   "pct_port": 0.1323393430469714,
-   "views": 1210
-  },
-  {
    "token_address": "4Ppbp7WzyLp7GRFZ86kk3kufHKxuF5XydooUwpFQx9oZ",
    "symbol": "HABIBI",
    "ts": "2026-11-08T01:27:04",
@@ -52358,6 +52344,20 @@
    "significance": "noise",
    "pct_port": 0.00038882220637025973,
    "views": 19
+  },
+  {
+   "token_address": "SfN45ywcz5MnTmq6eUjEdsAj3Qye3SUQhuginTFgrey",
+   "symbol": "GREY",
+   "ts": "2026-11-10T06:09:51",
+   "t": 1794290991.0,
+   "mcap": 23667.34099779465,
+   "whale_usd": 547.8778406916192,
+   "whale_type": "kol",
+   "wallet": "UlLb8XiMsX3TitQp2gH0rJd21z-zvCJmJoifpeE56sQh9BhaSzNUOR20zcg7f9ta3-BWwC6QHK0-1lge3fObyUCs_hV_PtrU",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.07283840417117363,
+   "views": 31
   }
  ],
  "last_retarget": 1794287941.574489
