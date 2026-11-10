@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "CR7sSQVycswkzkwtJaNTujf54YPKKMEoN8UoQiSKX6JC",
-   "symbol": "FloatOTC",
-   "ts": "2026-11-07T22:48:27",
-   "t": 1794091707.0,
-   "mcap": 31958.123145159334,
-   "whale_usd": 116.43765383304917,
-   "whale_type": "kol",
-   "wallet": "FiZhN9Cc-ceAOfRjoqZ-hr_8rZiGux1aPdvSjSuuwb8GpbiFuSAa8T7kigdkLDtcPB80czFnyIcUteZC0pl15YHohyKIsD2D",
-   "n_wallets30": 1,
-   "significance": "notable",
-   "pct_port": 0.039610102396376655,
-   "views": 19
-  },
-  {
    "token_address": "22xUt4i2bogmxcbhnq1nh4KthanfJQi8NuzmmwKMpump",
    "symbol": "DANA",
    "ts": "2026-11-07T22:49:02",
@@ -52358,6 +52344,20 @@
    "significance": "noise",
    "pct_port": 0.005366196826164907,
    "views": 11
+  },
+  {
+   "token_address": "JAxk7phmXL9G2syv6DJ72ibddzTDhybmhZTNjpgKwF5A",
+   "symbol": "SEEDLING",
+   "ts": "2026-11-10T01:07:50",
+   "t": 1794272870.0,
+   "mcap": 24925.168438568842,
+   "whale_usd": 497.5,
+   "whale_type": "whale",
+   "wallet": "SiKdPuuglyfgxnHa5r89lCq5bajZypXZ3zuMit8Gm335iMT_e0eLI4HFOtq87Qr4ZnzCa45cfOGzsAwzvhfeQ1TLRcmazywM",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.005016370862713814,
+   "views": 19
   }
  ],
  "last_retarget": 1794272526.6556726
