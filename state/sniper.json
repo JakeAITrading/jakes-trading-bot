@@ -4058,27 +4058,6 @@
  ],
  "learning_log": [
   {
-   "at": "2026-11-08T02:42:13Z",
-   "new_samples": 40,
-   "live_samples": 600,
-   "settings": {
-    "take_profit": 0.5,
-    "limit_cushion": 0.0,
-    "max_runup": null,
-    "max_spike": 0.1,
-    "min_mcap": 20000,
-    "max_mcap": 250000,
-    "min_whale_usd": 100,
-    "whale_type": "any",
-    "require_known": false,
-    "min_wallet_win": 0.0,
-    "max_wallets30": 2,
-    "min_views": 0
-   },
-   "expected_avg_pct": 10.0,
-   "expected_trades_in_samples": 165.0
-  },
-  {
    "at": "2026-11-08T02:52:12Z",
    "new_samples": 40,
    "live_samples": 600,
@@ -10356,37 +10335,30 @@
    },
    "expected_avg_pct": 10.8,
    "expected_trades_in_samples": 116.0
+  },
+  {
+   "at": "2026-11-10T03:28:37Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.08,
+    "limit_cushion": 0.0,
+    "max_runup": 2.0,
+    "max_spike": null,
+    "min_mcap": 100000,
+    "max_mcap": 500000,
+    "min_whale_usd": 100,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.3,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 2.0,
+   "expected_trades_in_samples": 178.0
   }
  ],
  "observed": [
-  {
-   "token_address": "7WfSCPEGzkkdYXqu2dSFPgZF8Qg8qkyvag5do3wnHzNF",
-   "symbol": "Ash",
-   "ts": "2026-11-08T00:11:33",
-   "t": 1794096693.0,
-   "mcap": 21326.07187377289,
-   "whale_usd": 352.2301330566406,
-   "whale_type": "kol",
-   "wallet": "9QoSnGQtKFvAclXnDpRcdc6CvHyJWfY-giLJEoZ8w4cKD77iHGaNL2SCZgGNi0z75gEh7WrbfJpy94Oi6OMhX3vH5_Pxl8bf",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.003371269257470707,
-   "views": 15
-  },
-  {
-   "token_address": "ZCbKiX86euyC9QQjACn1BQsugcoJrcnMVex94EHPp3D",
-   "symbol": "HeliumCoin",
-   "ts": "2026-11-08T00:12:25",
-   "t": 1794096745.0,
-   "mcap": 20906.167264911346,
-   "whale_usd": 107.68311387428206,
-   "whale_type": "kol",
-   "wallet": "zAoA2A0yj8Z__wcjkeEDZq_qH0cNxPXz_qtc9SLoaTIkqTrbHQtj_9gKun6prbvCAf1ISJxWM2tcym9P7xOQssp3zGNnWSEI",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.004590208993716844,
-   "views": 14
-  },
   {
    "token_address": "8g1cFLgZASJFKCxrhrcLSFZjBcxSxZDkNev9z2ms2a3u",
    "symbol": "HELIUM",
@@ -52358,6 +52330,34 @@
    "significance": "major",
    "pct_port": 1.1090321719303895,
    "views": 126
+  },
+  {
+   "token_address": "9S1DYY1wKRuETUfQ88pDtpxrKf5CsEJcYompw2CRApad",
+   "symbol": "MEOW",
+   "ts": "2026-11-10T03:28:11",
+   "t": 1794281291.0,
+   "mcap": 92911.35833034123,
+   "whale_usd": 2141.2226686675003,
+   "whale_type": "kol",
+   "wallet": "iWQfpW_Dg6pHmFq2q-oUHaRioml9yF8GFNTGaIF5ZGvlGKRSJn3jGSWSxiWd3ZKtN-coz5gVTmEQooApxamwVFcQOkp8DV0o",
+   "n_wallets30": 1,
+   "significance": null,
+   "pct_port": null,
+   "views": 852
+  },
+  {
+   "token_address": "6GiRemcUa9XiWEMW1wx726C4cZH8rALwicjh9brepump",
+   "symbol": "GOONVIDIA",
+   "ts": "2026-11-10T03:30:01",
+   "t": 1794281401.0,
+   "mcap": 17623.675375944003,
+   "whale_usd": 255.72242006131876,
+   "whale_type": "kol",
+   "wallet": "tdYvsK_x3C4M3YswD7FmwSpsyeuR5os9P-3sC1KIjVUgMEt54SDn62O6WarHJq8ECb4z15ij8voSaWfDrIvFwLt697f0oxF6",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.17038440751759298,
+   "views": 11
   }
  ],
  "last_retarget": 1794280297.5199726
