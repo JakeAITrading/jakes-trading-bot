@@ -10360,34 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "EbVP41w4VbmSGgYDpfdG6bXysPzGtY6eg7NUL18Ppump",
-   "symbol": "HAWKTUAH",
-   "ts": "2026-11-07T23:10:03",
-   "t": 1794093003.0,
-   "mcap": 18814.81148302555,
-   "whale_usd": 499.0500030517578,
-   "whale_type": "kol",
-   "wallet": "Bo8ahFNbD3-W97IoWBJmOBe14je1HSVPWncMU5_iHYSIrmbqgQV9FNINPhju0rYoIpAuU0dgZ9HEtp-TwvbMzlqVwummBbwN",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.00513745751555441,
-   "views": 21
-  },
-  {
-   "token_address": "8KshoJmzTomSKtwppvj7R1cVSXi6DaYTeALVf6Q2jHRh",
-   "symbol": "FCAT",
-   "ts": "2026-11-07T23:10:37",
-   "t": 1794093037.0,
-   "mcap": 9835.004675551318,
-   "whale_usd": 149.0500030517578,
-   "whale_type": "kol",
-   "wallet": "4HqKGsfyUrogtZfkb5Y5Fn9ceCoF3ZPhJKmUAo5p4uphusLK3bP9qBC8pC4wksOmBawdJ3FMtBC5Wjo-g6m5KLoVHQUvxxNK",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.01868492394200693,
-   "views": 12
-  },
-  {
    "token_address": "zthZtGFQ26Xv2iwLwqetdd2gr7cVYmEjcaqLp2wpump",
    "symbol": "claudiv88",
    "ts": "2026-11-07T23:10:49",
@@ -52358,6 +52330,34 @@
    "significance": "major",
    "pct_port": 0.16265438004958738,
    "views": 90
+  },
+  {
+   "token_address": "H1VJLymDvP2KvZdVz4PMjgMu4XsjgcJrLPRq6oU8pump",
+   "symbol": "Billie",
+   "ts": "2026-11-10T01:51:40",
+   "t": 1794275500.0,
+   "mcap": 8589.083336119074,
+   "whale_usd": 192.9222695664048,
+   "whale_type": "kol",
+   "wallet": "K8U6791Rcdj3vtxE0SJBDjEfhTGDyFoRXRA7CSVTdcK-FwDTmfF8HPQkOiMUEdbmd8N2Nl5yvLcTHFQZesVvJiW4EdA2QGM=",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.062401367105567755,
+   "views": 14
+  },
+  {
+   "token_address": "HPsMMzfMCWS5MErR9LDD8z6iTjLBx6BrVvawdgUEpump",
+   "symbol": "Autoimmune",
+   "ts": "2026-11-10T01:53:13",
+   "t": 1794275593.0,
+   "mcap": 8351.99716675561,
+   "whale_usd": 185.90528419943075,
+   "whale_type": "whale",
+   "wallet": "ZXKIVsDWkYO6vusDjuH_esuAdEi0kDCmlyVrzzKp-qk9YMD9Qcd165NdGSkYIu9p4ujRqY8exRq2VA05S-kZgpbO1ZaD1jFI",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0019471397694146274,
+   "views": 104
   }
  ],
  "last_retarget": 1794272526.6556726
