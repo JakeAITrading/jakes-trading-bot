@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "9X3GyP7Y8Mdd6CXnuqaANFo6QVQp9n5bABTX2UKspump",
-   "symbol": "Titcoin",
-   "ts": "2026-11-08T12:47:01",
-   "t": 1794142021.0,
-   "mcap": 28039.05832838402,
-   "whale_usd": 442.2715112570277,
-   "whale_type": "kol",
-   "wallet": "kJGlv_jkO7ahifXNC-BsyJCi-LSgOSSIGFVBTuPcwMz6tSHvNOTeljqExEt4saTaG6qleeSvwY1rI128G8EUr0Z9KgLjPJY6",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.029920612619165222,
-   "views": 676
-  },
-  {
    "token_address": "7eyGqBK4114uiBfpVnrKLAb2HsqmUVNcetXZBfdjaV7V",
    "symbol": "Percolator",
    "ts": "2026-11-08T12:48:46",
@@ -52358,6 +52344,20 @@
    "significance": "notable",
    "pct_port": 0.06158378711465672,
    "views": 2809
+  },
+  {
+   "token_address": "3FVRCKJYNj1pZqpg6jHWDBaSbAYNdhckcLRvTeoeLK2B",
+   "symbol": "Mazinda",
+   "ts": "2026-11-10T16:17:48",
+   "t": 1794327468.0,
+   "mcap": 18071.63062039761,
+   "whale_usd": 262.71726986882277,
+   "whale_type": "kol",
+   "wallet": "9wHr1s2KrmS8rBZEHNRtoge1Ik1e_kXeqKzZdgs6_0AMrMGpE2FXbD3p_rW1OCzavilRF78R-ec-DJvMXBJBZRLJtLY5PtI=",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.00463034292758034,
+   "views": 16
   }
  ],
  "last_retarget": 1794327205.960073
