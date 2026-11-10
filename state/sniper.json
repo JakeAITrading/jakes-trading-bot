@@ -4058,27 +4058,6 @@
  ],
  "learning_log": [
   {
-   "at": "2026-11-08T09:13:51Z",
-   "new_samples": 40,
-   "live_samples": 600,
-   "settings": {
-    "take_profit": 0.2,
-    "limit_cushion": 0.0,
-    "max_runup": null,
-    "max_spike": 0.1,
-    "min_mcap": 20000,
-    "max_mcap": 250000,
-    "min_whale_usd": 100,
-    "whale_type": "any",
-    "require_known": false,
-    "min_wallet_win": 0.3,
-    "max_wallets30": null,
-    "min_views": 50
-   },
-   "expected_avg_pct": 9.1,
-   "expected_trades_in_samples": 69.0
-  },
-  {
    "at": "2026-11-08T09:23:54Z",
    "new_samples": 40,
    "live_samples": 600,
@@ -10356,23 +10335,30 @@
    },
    "expected_avg_pct": 13.3,
    "expected_trades_in_samples": 82.0
+  },
+  {
+   "at": "2026-11-10T10:00:20Z",
+   "new_samples": 40,
+   "live_samples": 600,
+   "settings": {
+    "take_profit": 0.4,
+    "limit_cushion": 0.0,
+    "max_runup": 1.0,
+    "max_spike": 0.4,
+    "min_mcap": 100000,
+    "max_mcap": 250000,
+    "min_whale_usd": 500,
+    "whale_type": "any",
+    "require_known": false,
+    "min_wallet_win": 0.0,
+    "max_wallets30": null,
+    "min_views": 0
+   },
+   "expected_avg_pct": 12.3,
+   "expected_trades_in_samples": 88.0
   }
  ],
  "observed": [
-  {
-   "token_address": "8rHoAfpdE89bi1SRRKaYUWfng3YpntoxZQyEQy9GPmZV",
-   "symbol": "MAGGIE",
-   "ts": "2026-11-08T03:24:28",
-   "t": 1794108268.0,
-   "mcap": 747121.8263228816,
-   "whale_usd": 969.1239061660553,
-   "whale_type": "kol",
-   "wallet": "CwJv4B8eeeEVEYeRWDtI64iSb533JcP9xtWbWtpTfaLmFw8IIsqgSdTNdeFb2_PEd5N5Sy_yd_A-XfLP0LCaTJSJHlM-JHY8",
-   "n_wallets30": 5,
-   "significance": "major",
-   "pct_port": 2.2216826251550277,
-   "views": 3821
-  },
   {
    "token_address": "5v2KAnPcADiZoVWc34YA58a5SV3dL9tmb7kWsYzjPDPG",
    "symbol": "ASSHOLE",
@@ -52357,6 +52343,20 @@
    "n_wallets30": 1,
    "significance": "major",
    "pct_port": 0.16342775671081788,
+   "views": 13
+  },
+  {
+   "token_address": "8SKTC4m5BN3uzwM9q6mVwuXvRdqQvtuAhbPknU2apump",
+   "symbol": "10trilly",
+   "ts": "2026-11-10T09:58:37",
+   "t": 1794304717.0,
+   "mcap": 6967.032732063672,
+   "whale_usd": 114.54852294921875,
+   "whale_type": "kol",
+   "wallet": "Dpw3H4UBKlNV5sSBSQMzBmxUJzB-KrdwMvdMtJyP03K1YVEz3X_IjtmN2ytsqbsJJohO4yrTo5GaTPIPaiNXs-NXHxUA282z",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0031502812895151193,
    "views": 13
   }
  ],
