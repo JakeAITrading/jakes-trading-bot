@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "37YCEZoMZ84mdY7z23uGLo9M8fGz2WmNMAX4Fsbapump",
-   "symbol": "TRADE",
-   "ts": "2026-11-08T03:40:30",
-   "t": 1794109230.0,
-   "mcap": 5978.721219435101,
-   "whale_usd": 289.8328361281583,
-   "whale_type": "kol",
-   "wallet": "6g2iHTk-DXpQ5Jvyy8T6YQu0TX3dahn6XNYBLd0Lmke0YLCyc9msNbCv8A-qLrFBoKbptxJyZDzn0khYepgjA6KxETwUjLpd",
-   "n_wallets30": 1,
-   "significance": "major",
-   "pct_port": 0.1309734137187313,
-   "views": 17
-  },
-  {
    "token_address": "2HbNwnhiL8HBK5mkdrcB9nbDxknPqGmJdXrtuH5fLoat",
    "symbol": "BINGUS",
    "ts": "2026-11-08T03:42:38",
@@ -52358,6 +52344,20 @@
    "significance": "major",
    "pct_port": 0.11959147948509204,
    "views": 13
+  },
+  {
+   "token_address": "3PkJbxKT4TqYmw8AXFSkc1EbC7sQA8b7CXiGPWYEpump",
+   "symbol": "ChainChomp",
+   "ts": "2026-11-10T10:40:35",
+   "t": 1794307235.0,
+   "mcap": 8279.715075332206,
+   "whale_usd": 178.5539433745762,
+   "whale_type": "kol",
+   "wallet": "535SgN9hinUhrPVBELoYK4ibQUvYCYCA073zSgu9l7xXzvHEbKDY27pLRTBeNe9yW72DYycDuxpqGtdhYbnzH9Vag5cBtV91",
+   "n_wallets30": 1,
+   "significance": "noise",
+   "pct_port": 0.0057004687866516746,
+   "views": 20
   }
  ],
  "last_retarget": 1794306019.7963994
