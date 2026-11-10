@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "9LucjVmcpZAHzgT9DxnnKudsdWo66A5oZhW46cSSpump",
-   "symbol": "Hijabies",
-   "ts": "2026-11-08T03:21:18",
-   "t": 1794108078.0,
-   "mcap": 12717.408026219346,
-   "whale_usd": 266.4462291502972,
-   "whale_type": "kol",
-   "wallet": "x-lN_kWV5yi2E6eN-y6MhoVIC7r-f8k6H6fz_sJLgql4vb--dB4_-9BF6QqcZGToJTNrQ_dg06emEzeMGMa-zCv8UyphhGTQ",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.0019789431262128426,
-   "views": 17
-  },
-  {
    "token_address": "8rHoAfpdE89bi1SRRKaYUWfng3YpntoxZQyEQy9GPmZV",
    "symbol": "MAGGIE",
    "ts": "2026-11-08T03:24:28",
@@ -52358,6 +52344,20 @@
    "significance": null,
    "pct_port": null,
    "views": 81
+  },
+  {
+   "token_address": "3RJ8MmZmbVBPqj7re8AHcrMvPq5MctYqu1ZHXMZkpump",
+   "symbol": "XOGE",
+   "ts": "2026-11-10T09:54:33",
+   "t": 1794304473.0,
+   "mcap": 12508.236977737397,
+   "whale_usd": 420.048095703125,
+   "whale_type": "kol",
+   "wallet": "s112i534SlY2NglbqHcefLasQCnDxo97DlPQMzvLly540SgGFHzsOI1RP7zk9TKqILL4AObvVHgTrAqi_9_kWHhIoeOQQ9oc",
+   "n_wallets30": 1,
+   "significance": "major",
+   "pct_port": 0.16342775671081788,
+   "views": 13
   }
  ],
  "last_retarget": 1794302415.517386
