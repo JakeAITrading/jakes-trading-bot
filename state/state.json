@@ -7,20 +7,11 @@
   "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "2026-11-03T22:41:29.717004+00:00",
   "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": "2026-11-06T13:38:01.449086+00:00",
   "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump": "2026-11-04T02:59:00.283087+00:00",
-  "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": "2026-11-10T00:04:20.068809+00:00",
+  "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": "2026-11-10T04:11:30.195742+00:00",
   "HTmQz7My6MehV7bjhJ6jde8nDND1yvsz68d24LP7YgUQ": "2026-11-07T06:35:52.720786+00:00",
   "HZbiEpF2oM658EpjNRRqxharz5L9Ddm8akpSH2R5pump": "2026-11-08T16:49:16.758071+00:00"
  },
- "paper": {
-  "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
-   "entry_price": 0.006734274327754974,
-   "opened_at": "2026-11-10T00:04:20.068827+00:00",
-   "stop_loss": 0.00269370973110199,
-   "symbol": "SI",
-   "take_profit": 0.008754556626081466,
-   "usd": 10.0
-  }
- },
+ "paper": {},
  "paper_closed": [
   {
    "closed_at": "2026-11-04T02:59:00.283059+00:00",
@@ -98,6 +89,19 @@
    "symbol": "Pepetide",
    "take_profit": 0.00030101016018306835,
    "token_address": "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp",
+   "usd": 10.0
+  },
+  {
+   "closed_at": "2026-11-10T04:11:30.195712+00:00",
+   "entry_price": 0.006734274327754974,
+   "exit_price": 0.00627156812697649,
+   "exit_reason": "smart money selling",
+   "opened_at": "2026-11-10T00:04:20.068827+00:00",
+   "pnl_usd": -0.6871,
+   "stop_loss": 0.00269370973110199,
+   "symbol": "SI",
+   "take_profit": 0.008754556626081466,
+   "token_address": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
    "usd": 10.0
   }
  ]
