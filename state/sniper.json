@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "5shzBFRCpn5H8fJcWyCpd1s7avjgY1gMbPBU6nFvukij",
-   "symbol": "invest",
-   "ts": "2026-11-08T12:45:25",
-   "t": 1794141925.0,
-   "mcap": 117845.09727774892,
-   "whale_usd": 119.6482925415039,
-   "whale_type": "whale",
-   "wallet": "MII2-XRLd0XIhrFLFTLT1Sf9ZjYTP-sAtWnIP30bcpRsP32uRCE0cYAPMmR-W0n2UqLrOCGmsZTgwgHC7agyIp2gcgs2kf9y",
-   "n_wallets30": 4,
-   "significance": "noise",
-   "pct_port": 0.011391298574595102,
-   "views": 4581
-  },
-  {
    "token_address": "9X3GyP7Y8Mdd6CXnuqaANFo6QVQp9n5bABTX2UKspump",
    "symbol": "Titcoin",
    "ts": "2026-11-08T12:47:01",
@@ -52358,6 +52344,20 @@
    "significance": "noise",
    "pct_port": 0.00395575802419448,
    "views": 12
+  },
+  {
+   "token_address": "2JXeyd1RsBv7rmbadaqwUWnW4pNAZNwUU7XgZDSnpump",
+   "symbol": "HCAT",
+   "ts": "2026-11-10T16:17:38",
+   "t": 1794327458.0,
+   "mcap": 138503.79794264797,
+   "whale_usd": 2161.6171962236986,
+   "whale_type": "kol",
+   "wallet": "FL5CgCK5NMuucwTL6dDGRrGSQdsVkOIvk752zCztA_RO1QsO2jzePfOMjnWuzCS-i5VMZuIltvwHnW_Oum-8vhnnXz9JBaie",
+   "n_wallets30": 1,
+   "significance": "notable",
+   "pct_port": 0.06158378711465672,
+   "views": 2809
   }
  ],
  "last_retarget": 1794327205.960073
