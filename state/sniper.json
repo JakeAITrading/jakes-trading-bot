@@ -10360,20 +10360,6 @@
  ],
  "observed": [
   {
-   "token_address": "22JKmY9YZfnQfb3pGYb6hctL5Jyvv3zhL3nQ8oyNuoYp",
-   "symbol": "Pepetide",
-   "ts": "2026-11-08T08:10:55",
-   "t": 1794125455.0,
-   "mcap": 185293.27518369316,
-   "whale_usd": 334.02500889225,
-   "whale_type": "whale",
-   "wallet": "GOeojmiH7ffwc7N1rTjKvoqI27z8V2EVF_EZW9JCRfV4YjWqMsBK0cBYVkIZ0VBenWZ-e3kSa9LYCx-5E6s2YYFRDES87-E=",
-   "n_wallets30": 1,
-   "significance": "noise",
-   "pct_port": 0.006102646075890945,
-   "views": 2777
-  },
-  {
    "token_address": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
    "symbol": "fone",
    "ts": "2026-11-08T08:11:33",
@@ -52358,6 +52344,20 @@
    "significance": "major",
    "pct_port": 0.24109510834732611,
    "views": 17
+  },
+  {
+   "token_address": "76indaHnwAuKrK2oBpBcPsVe1jRbYHCRYDsYuJ1MVys4",
+   "symbol": "DACITYCOIN",
+   "ts": "2026-11-10T14:31:55",
+   "t": 1794321115.0,
+   "mcap": 118528.69464850782,
+   "whale_usd": 241.04165649414062,
+   "whale_type": "whale",
+   "wallet": "mMm2WNfEZO_mcDu4_FSYatk1sjNfrnU9uLjqQQJxd2FgHDHlmCFln740G0V-4lTPLUz8S5zJReGAhTdQEPIgYVwpl0npOcOp",
+   "n_wallets30": 14,
+   "significance": "notable",
+   "pct_port": 0.04119350952606295,
+   "views": 580
   }
  ],
  "last_retarget": 1794317737.0441017
